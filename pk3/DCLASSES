@@ -1,0 +1,480 @@
+actor Doomrebel : PlayerPawn
+{
+Player.maxhealth 90
+Radius 16
+Height 56
+Player.AttackZOffset 8
+Player.JumpZ 8
+Player.ViewHeight 41
+Player.ForwardMove 1.1
+Player.SideMove 1.1
+Player.ColorRange 112, 127
+Player.SoundClass "Drebel"
+Player.DisplayName "Rebel"
+Player.StartItem "Pistol3"
+Player.StartItem "Mac-10"
+Player.StartItem "Mac10clip" 30
+Player.StartItem "Zenfist"
+Player.StartItem "Clip", 60
+Player.StartItem "Pis3ammo", 14
+Player.StartItem "Turbosphere"
+Player.StartItem "Ballesta"
+Player.StartItem "Arrowammo" 25
+Damagefactor Disintegrate, 0
+States
+{
+Spawn:
+COM2 A 0 A_JumpIfInventory("Rebelinv",1,3)
+COM2 A 1
+Loop
+COM2 A 0
+COM2 A 1 A_GiveInventory("Turbosphere",1)
+COM2 A 1 A_TakeInventory("Rebelinv",1)
+Goto Spawn
+See:
+COM2 ABCD 4
+Loop
+Missile:
+COM2 E 12 
+Goto Spawn
+Melee:
+COM2 F 4 bright
+Goto Missile
+Pain:
+COM2 G 4
+COM2 G 4 A_Pain
+Goto Spawn
+Death:
+COM2 H 0 A_GiveInventory("Rebelinv",1)
+COM2 H 7
+COM2 I 7 A_PlayerScream
+COM2 J 7 A_NoBlocking
+COM2 KLM 7
+COM2 N -1
+Stop
+XDeath:
+COM2 O 0 A_GiveInventory("Rebelinv",1)
+COM2 O 5
+COM2 P 5 A_XScream
+COM2 Q 5 A_NoBlocking
+COM2 RSTUV 5
+COM2 W -1
+Stop
+}
+}
+
+actor Freedoom : PlayerPawn
+{
+Health 120
+Player.Maxhealth 120
+Radius 16
+Height 56
+Player.AttackZOffset 8
+Player.JumpZ 8
+Player.ViewHeight 41
+Player.ForwardMove 0.8
+Player.SideMove 0.8
+Player.ColorRange 112, 127
+Player.SoundClass "Fredom"
+Player.DisplayName "Freedoom marine"
+Player.StartItem "M249-machinegun"
+Player.StartItem "Fmodminigun"
+Player.StartItem "Deserteagle"
+Player.StartItem "Clip" 50
+Player.StartItem "Miniammo" 250
+Player.StartItem "Hclip" 50
+Player.StartItem "Hammo" 100
+Player.StartItem "Stflamethrower"
+Player.StartItem "Smallgas" 50
+Player.StartItem "Berserker"
+Damagefactor Disintegrate, 0
+States
+{
+Spawn:
+HEVY A -1
+Loop
+See:
+HEVY ABCD 4
+Loop
+Missile:
+HEVY E 12 
+Goto Spawn
+Melee:
+HEVY F 6 bright
+Goto Missile
+Pain:
+HEVY G 4
+HEVY G 4 A_Pain
+Goto Spawn
+Death:
+HEVY H 7
+HEVY I 7 A_PlayerScream
+HEVY J 7 A_NoBlocking
+HEVY KLM 7
+HEVY N -1
+Stop
+XDeath:
+HEVY O 5
+HEVY P 5 A_XScream
+HEVY Q 5 A_NoBlocking
+HEVY RSTUV 5
+HEVY W -1
+Stop
+}
+}
+
+actor Sorcerer : PlayerPawn
+{
+Radius 16
+Height 56
+Player.maxhealth 100
+Player.AttackZOffset 8
+Player.JumpZ 8
+Player.ViewHeight 41
+Player.ForwardMove 0.9
+Player.SideMove 0.9
+Player.ColorRange 112, 127
+Player.SoundClass "player"
+Player.DisplayName "Sorcerer"
+Player.StartItem "Hellcharge" 100
+Player.StartItem "Manast", 400
+Player.StartItem "Hellfist"
+Player.StartItem "Clip" 120
+Player.StartItem "Pistol4"
+Player.StartItem "Pis4ammo" 20
+Player.Startitem "Sorc-hands"
+Damagefactor Disintegrate, 0
+States
+{
+Spawn:
+GO99 A 5
+GO99 A 0 A_GiveInventory("Hellcharge",1)
+Loop
+See:
+GO99 ABCD 4
+Loop
+Missile:
+GO99 E 12 
+Goto Spawn
+Melee:
+GO99 F 6 bright
+Goto Missile
+Pain:
+GO99 G 4
+GO99 G 4 A_Pain
+Goto Spawn
+Death:
+GO99 H 7
+GO99 I 7 A_PlayerScream
+GO99 J 7 A_NoBlocking
+GO99 KLM 7
+GO99 N -1
+Stop
+XDeath:
+GO99 O 5
+GO99 P 5 A_XScream
+GO99 Q 5 A_NoBlocking
+GO99 RSTUV 5
+GO99 W -1
+Stop
+}
+}
+
+actor 1337marine : PlayerPawn
+{
+Scale 1.0
+Health 85
+Radius 16
+Height 56
+Player.Maxhealth 85
+Player.AttackZOffset 8
+Player.JumpZ 8
+Player.ViewHeight 41
+Player.ForwardMove 0.8
+Player.SideMove 0.8
+Player.ColorRange 112, 127
+Player.SoundClass "1337"
+Player.DisplayName "1337 Marine"
+Player.StartItem "Dualberettas"
+Player.StartItem "Mightyfist"
+Player.StartItem "Pistolammo" 90
+Player.StartItem "Beretaclip" 30
+Player.StartItem "Voltgun"
+Player.StartItem "Cell" 100
+Player.StartItem "Resistancerune"
+Damagefactor Disintegrate, 0
+States
+{
+Spawn:
+HALO A 0 A_JumpIfInventory("1337inv",1,3)
+HALO A 1
+Loop
+HALO A 0
+HALO A 0 A_GiveInventory("Resistancerune",1)
+HALO A 0 A_TakeInventory("1337inv",1)
+See:
+HALO ABCD 4
+Loop
+Missile:
+HALO E 12 
+Goto Spawn
+Melee:
+HALO F 6 bright
+Goto Missile
+Pain:
+HALO G 4
+HALO G 4 A_Pain
+Goto Spawn
+Death:
+HALO H 0 A_GiveInventory("1337inv",1)
+HALO H 7
+HALO I 7 A_PlayerScream
+HALO J 7 A_NoBlocking
+HALO KLM 7
+HALO N -1
+Stop
+XDeath:
+HALO O 0 A_GiveInventory("1337inv",1)
+HALO O 5
+HALO P 5 A_XScream
+HALO Q 5 A_NoBlocking
+HALO RSTUV 5
+HALO W -1
+Stop
+}
+}
+
+actor Dukenukem : PlayerPawn
+{
+Health 100
+Radius 16
+Height 56
+Player.AttackZOffset 8
+Player.JumpZ 8
+Player.ViewHeight 41
+Player.ForwardMove 0.9
+Player.SideMove 0.9
+Player.ColorRange 112, 127
+Player.SoundClass "Duke"
+Player.DisplayName "Duke nukem"
+Player.StartItem "Dukepistol"
+Player.StartItem "Dukeclip" 20
+Player.StartItem "Clip" 50
+Player.StartItem "Dkfreezer"
+Player.StartItem "Cell" 50
+Player.StartItem "Dkdevastator"
+Player.StartItem "Devsammo" 30
+Player.StartItem "Mightyfist"
+Damagefactor Disintegrate, 0
+States
+{
+Spawn:
+DUKN A -1
+Loop
+See:
+DUKN ABCD 4
+Loop
+Missile:
+DUKN E 12 
+Goto Spawn
+Melee:
+DUKN E 6 bright
+Goto Missile
+Pain:
+DUKN G 4
+DUKN G 4 A_Pain
+Goto Spawn
+Death:
+DUKN H 7
+DUKN I 7 A_PlayerScream
+DUKN J 7 A_NoBlocking
+DUKN KLM 7
+DUKN N -1
+Stop
+XDeath:
+DUKN O 5
+DUKN P 5 A_XScream
+DUKN Q 5 A_NoBlocking
+DUKN RSTUV 5
+DUKN W -1
+Stop
+}
+}
+
+actor Dmarine : PlayerPawn
+{
+Health 100
+Radius 16
+Height 56
+Player.AttackZOffset 8
+Player.JumpZ 8
+Player.ViewHeight 41
+Player.ForwardMove 1.0
+Player.SideMove 1.0
+Player.ColorRange 112, 127
+Player.SoundClass "player"
+Player.DisplayName "Marine"
+Player.CrouchSprite "PLYC"
+Player.StartItem "Dualpistols"
+Player.StartItem "Zenfist"
+Player.StartItem "Clip" 80
+Player.StartItem "M16"
+Player.StartItem "M16clip" 40
+Player.StartItem "Multiple-launcher"
+Player.StartItem "Grenadeammo" 15
+Damagefactor Disintegrate, 0
+States
+{
+Spawn:
+PLAY A -1
+Loop
+See:
+PLAY ABCD 4
+Loop
+Missile:
+PLAY E 12 
+Goto Spawn
+Melee:
+PLAY F 6 bright
+Goto Missile
+Pain:
+PLAY G 4
+PLAY G 4 A_Pain
+Goto Spawn
+Death:
+PLAY H 8
+PLAY I 8 A_PlayerScream
+PLAY J 8 A_NoBlocking
+PLAY KLM 8
+PLAY N -1
+Stop
+XDeath:
+PLAY O 5
+PLAY P 5 A_XScream
+PLAY Q 5 A_NoBlocking
+PLAY RSTUV 5
+PLAY W -1
+Stop
+}
+}
+
+actor Stealthguy : PlayerPawn
+{
+Health 100
+Radius 16
+Height 56
+Player.AttackZOffset 8
+Player.JumpZ 8
+Player.ViewHeight 41
+Player.ForwardMove 0.9
+Player.SideMove 0.9
+Player.ColorRange 112, 127
+Player.SoundClass "player"
+Player.DisplayName "Stealth man"
+Player.StartItem "Sniperrifle2"
+Player.StartItem "9mmpistol"
+Player.StartItem "Mightyfist"
+Player.StartItem "Sniperammo" 30
+Player.StartItem "Clip" 50
+Player.StartItem "Blursphere"
+Player.StartItem "Handshotgun"
+Player.StartItem "Shell" 12
+Damagefactor Disintegrate, 0
+States
+{
+Spawn:
+TOSS A 0 A_JumpIfInventory("Stealthinv",1,3)
+TOSS A 1
+Loop
+TOSS A 0
+TOSS A 0 A_GiveInventory("Blursphere",1)
+TOSS A 0 A_TakeInventory("Stealthinv",1)
+See:
+TOSS ABCD 4
+Loop
+Missile:
+TOSS E 12 
+Goto Spawn
+Melee:
+TOSS F 6 bright
+Goto Missile
+Pain:
+TOSS G 4
+TOSS G 4 A_Pain
+Goto Spawn
+Death:
+TOSS H 0 A_GiveInventory("Stealthinv",1)
+TOSS H 7
+TOSS I 7 A_PlayerScream
+TOSS J 7 A_NoBlocking
+TOSS KLM 7
+TOSS N -1
+Stop
+XDeath:
+TOSS O 0 A_GiveInventory("Stealthinv",1)
+TOSS O 5
+TOSS P 5 A_XScream
+TOSS Q 5 A_NoBlocking
+TOSS RSTUV 5
+TOSS W -1
+Stop
+}
+}
+
+Actor Medicclass : PlayerPawn
+{
+Health 100
+Radius 16
+Height 56
+Player.AttackZOffset 8
+Player.JumpZ 8
+Player.ViewHeight 41
+Player.ForwardMove 1.1
+Player.SideMove 1.1
+Player.ColorRange 112, 127
+Player.SoundClass "player"
+Player.DisplayName "Medic"
+Player.StartItem "Firstaid-kit"
+Player.StartItem "Medkitdisp" 10
+Player.StartItem "Berserkdisp" 1
+Player.StartItem "Nighthawk"
+Player.StartItem "Nhclip" 12
+Player.StartItem "Clip" 100
+Player.StartItem "P-200"
+Player.StartItem "Cell" 60
+Player.StartItem "Zenfist"
+Damagefactor Disintegrate, 0
+States
+{
+Spawn:
+BLK4 A -1
+Loop
+See:
+BLK4 ABCD 4
+Loop
+Missile:
+BLK4 E 12 
+Goto Spawn
+Melee:
+BLK4 F 6 BRIGHT
+Goto Missile
+Pain:
+BLK4 G 4
+BLK4 G 4 A_Pain
+Goto Spawn
+Death:
+BLK4 H 7
+BLK4 I 7 A_PlayerScream
+BLK4 J 7 A_NoBlocking
+BLK4 KLM 5
+BLK4 N -1
+Stop
+XDeath:
+BLK4 O 5
+BLK4 P 5 A_XScream
+BLK4 Q 5 A_NoBlocking
+BLK4 RSTUV 5
+BLK4 W -1
+Stop
+}
+}

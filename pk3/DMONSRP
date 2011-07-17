@@ -1,0 +1,138 @@
+actor Cyberdemon2 : Cyberdemon replaces Cyberdemon
+{
+dropitem "Doomsphere" 70
+dropitem "Strengthrune" 35
+dropitem "Spreadrune" 25
+dropitem "Powerful" 40
+dropitem "gravityammo" 100
+}
+
+actor Archvile2 : Archvile replaces Archvile
+{
+dropitem "Turbosphere" 30
+dropitem "Hasterune" 20
+dropitem "Firessg" 60
+dropItem "Firegloves" 35
+dropitem "Fireammo" 255
+dropitem "Manast" 140
+}
+
+actor Hellknight2 : Hellknight replaces Hellknight
+{
+dropitem "P-200" 40
+dropitem "Disintegrater" 30
+dropitem "Arrowammo" 255
+dropitem "arrowquiver" 80
+dropitem "Manast" 100
+dropitem "Hellcharge" 255
+}
+
+actor Fatso2 : Fatso replaces Fatso
+{
+dropitem "Magnumsniper" 15
+dropitem "Resistancerune" 10
+dropitem "Dragunov" 30
+dropitem "fireammo" 168
+dropitem "devsammo" 170
+dropitem "smallgas" 200
+dropitem "biggas" 80
+}
+
+actor Baronofhell2 : Baronofhell replaces Baronofhell
+{
+dropitem "Regenerationrune" 10
+dropitem "Disintegrater" 20
+dropitem "largedevsammo" 100
+dropitem "gravityammo" 25
+dropitem "Beampack" 150
+dropitem "Bigbeampack" 40
+}
+
+actor arachnotron2 : arachnotron replaces arachnotron
+{
+dropitem "Beamgun" 20
+dropitem "Dkfreezer" 150
+dropitem "Cell" 255
+dropitem "Bigbeampack" 60
+dropitem "Beampack" 150
+dropitem "Rocketammo" 100
+}
+
+actor Zombieman2 : Zombieman replaces Zombieman
+{
+dropitem "Flaregun" 10
+dropitem "clip" 255
+dropitem "Hclip" 255
+dropitem "Pistolammo" 255
+dropitem "sniperammo" 255
+}
+
+actor Chaingunguy2: Chaingunguy replaces Chaingunguy
+{
+dropitem "M16" 180
+dropitem "Heavychaingun" 30
+dropitem "Miniammo" 100
+dropitem "Clip" 255
+}
+
+actor SpiderMastermind2 : SpiderMastermind replaces SpiderMastermind
+{
+dropitem "Prosperityrune" 20
+dropitem "Ragerune" 25
+dropitem "Drainrune" 40
+dropitem "Bfg7000" 70
+dropitem "Moleculeshooter" 60
+}
+
+Actor Hectebus2 : Hectebus replaces Hectebus
+{
+dropitem "Soulsphere" 80
+dropitem "gravityammo" 60
+}
+
+Actor Abaddon2 : Abaddon Replaces Abaddon
+{
+dropitem "Guardsphere" 30
+dropitem "Rifleplasma" 100
+dropitem "rocketammo" 120
+}
+
+Actor Cacodemon2 : Cacodemon replaces Cacodemon
+{
+dropitem "Guardsphere" 10
+dropitem "Tristaff" 40
+dropitem "fireammo" 120
+dropitem "Manast" 180
+dropitem "arrowquiver" 90
+}
+
+Actor Revenant2 : Revenant Replaces Revenant
+{
+dropitem "Akickback" 15
+dropitem "Fireammo" 75
+dropitem "Miniammo" 100
+dropitem "Arrowammo" 120
+dropitem "grenadeammo" 185
+dropitem "smggren" 185
+}
+
+Actor Shotgunguy2 : Shotgunguy replaces Shotgunguy
+{
+dropitem "Jmodshotgun" 253
+dropitem "Striker" 5
+dropitem "Shell" 255
+dropitem "Clip" 255
+}
+
+Actor SuperShotgunguy2 : SuperShotgunguy replaces Supershotgunguy
+{
+dropitem "Jmodsupershotgun" 128
+dropitem "grenadeammo" 120
+dropitem "smggren" 120
+dropitem "cell" 160
+}
+
+Actor Belphegor2 : Belphegor replaces Belphegor
+{
+dropitem "Disintegrater" 130
+}
