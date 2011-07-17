@@ -1,0 +1,15 @@
+Actor FireAmmo: Ammo
+{
+    Inventory.Amount 100
+    Inventory.MaxAmount 800
+    Ammo.BackpackAmount 500
+    Ammo.BackpackMaxAmount 1600
+    Inventory.Icon "FMISA5"
+    Inventory.PickupMessage "$JKE_PK_FIREAMMO"
+    States
+    {
+      Spawn:
+        TNT1 A -1
+        Stop
+    }
+}

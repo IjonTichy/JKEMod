@@ -34,6 +34,8 @@ addslotdefault 4 "HeavyChaingun"
 //   SLOT 6
 ////
 
+addslotdefault 6 "FireGloves"
+
 
 ////
 //   SLOT 7

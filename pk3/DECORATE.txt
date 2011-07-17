@@ -3,14 +3,17 @@
 ////
 
 #include "decorate/ammo/ballesta.txt"
+#include "decorate/ammo/firegloves.txt"
+#include "decorate/ammo/jkemana.txt"
 
 
 ////
 //   WEAPONS
 ////
 
+#include "decorate/weapons/ballesta.txt"
+#include "decorate/weapons/doublebarrelsg.txt"
 #include "decorate/weapons/dualpistols.txt"
+#include "decorate/weapons/firegloves.txt"
 #include "decorate/weapons/heavychaingun.txt"
 #include "decorate/weapons/zenfist.txt"
-#include "decorate/weapons/doublebarrelsg.txt"
-#include "decorate/weapons/ballesta.txt"

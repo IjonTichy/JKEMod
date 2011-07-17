@@ -12,6 +12,8 @@
 // Ammo
 JKE_PK_ARROWAMMO        = "You got 10 Ballesta arrows.";
 JKE_PK_ARROWQUIVER      = "You got a Ballesta arrow quiver.";
+JKE_PK_FIREAMMO         = "You got Pyro mana.";
+JKE_PK_JKEMANA          = "You got some mana.";
 
 // Weapons
 JKE_PK_DOUBLEBARRELSG   = "You have the double barreled shotgun!";

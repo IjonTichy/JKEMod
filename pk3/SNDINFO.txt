@@ -6,36 +6,45 @@
 //   BALLESTA
 ////
 
-jkemod/ballesta/fire            sounds/weapons/ballesta/fire.lmp
-jkemod/ballesta/explode         sounds/weapons/ballesta/explode.wav
+jkemod/ballesta/fire                sounds/weapons/ballesta/fire.lmp
+jkemod/ballesta/explode             sounds/weapons/ballesta/explode.wav
 
 
 ////
 //   DOUBLE BARRELED SHOTGUN
 ////
 
-jkemod/doublebarrelsg/up        sounds/weapons/doublebarrelsg/up.wav
-jkemod/doublebarrelsg/fire      sounds/weapons/doublebarrelsg/fire.wav
-jkemod/doublebarrelsg/open      sounds/weapons/doublebarrelsg/open.wav
-jkemod/doublebarrelsg/load      sounds/weapons/doublebarrelsg/load.wav
-jkemod/doublebarrelsg/close     sounds/weapons/doublebarrelsg/close.wav
+jkemod/doublebarrelsg/up            sounds/weapons/doublebarrelsg/up.wav
+jkemod/doublebarrelsg/fire          sounds/weapons/doublebarrelsg/fire.wav
+jkemod/doublebarrelsg/open          sounds/weapons/doublebarrelsg/open.wav
+jkemod/doublebarrelsg/load          sounds/weapons/doublebarrelsg/load.wav
+jkemod/doublebarrelsg/close         sounds/weapons/doublebarrelsg/close.wav
 
 
 ////
 //   DUAL PISTOLS
 ////
 
-jkemod/dualpistols/fire         sounds/weapons/dualpistols/fire.wav
+jkemod/dualpistols/fire             sounds/weapons/dualpistols/fire.wav
+
+
+////
+//   FIRE GLOVES
+////
+
+jkemod/firegloves/fire1             sounds/weapons/firegloves/fire1.wav
+jkemod/firegloves/fire2             sounds/weapons/firegloves/fire2.wav
+jkemod/firegloves/explode           sounds/weapons/firegloves/explode.wav
 
 
 ////
 //   HEAVY CHAINGUN
 ////
 
-jkemod/heavychaingun/up         sounds/weapons/heavychaingun/up.wav
-jkemod/heavychaingun/load       sounds/weapons/heavychaingun/load.lmp
-jkemod/heavychaingun/fire       sounds/weapons/heavychaingun/fire.wav
-jkemod/heavychaingun/altfire    sounds/weapons/heavychaingun/altfire.lmp
+jkemod/heavychaingun/up             sounds/weapons/heavychaingun/up.wav
+jkemod/heavychaingun/load           sounds/weapons/heavychaingun/load.lmp
+jkemod/heavychaingun/fire           sounds/weapons/heavychaingun/fire.wav
+jkemod/heavychaingun/altfire        sounds/weapons/heavychaingun/altfire.lmp
 
 
 ////

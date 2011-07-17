@@ -1,0 +1,294 @@
+Actor Firegloves : Weapon
+{
+    +WEAPON.NOAUTOAIM
+    Weapon.SelectionOrder 560
+    Weapon.AmmoUse1 30
+    Weapon.AmmoUse2 50
+    Weapon.AmmoGive1 600
+    Weapon.AmmoGive2 200
+    Weapon.AmmoType1 "FireAmmo"
+    Weapon.AmmoType2 "JKEMana"
+    Weapon.YAdjust 10
+    Inventory.PickupMessage "Fire gloves! now i can burn anything"
+    Obituary "-"
+    States
+    {
+      Ready:
+        JFLM ABC 3 A_WeaponReady
+        Loop
+      Deselect:
+        JFLM A 1 A_Lower
+        Loop
+      Select:
+        JFLM A 1 A_Raise
+        Loop
+      Fire:
+        JFLM D 14 A_PlaySound("vile/start", CHAN_WEAPON)
+        JFLM D 0 A_PlaySound("vile/firecrkl", CHAN_WEAPON)
+        JFLM E 1 bright A_FireBullets(0,0,1,4,"RfireA",1)
+        JFLM E 1 A_Light1
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireB",1)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireA",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireB",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireC",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireD",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireE",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireD",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireC",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireD",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireE",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireD",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireC",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireD",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireE",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireD",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireC",0)
+
+        JFLM E 0 A_PlaySound("vile/firecrkl", CHAN_WEAPON)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireD",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireE",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireD",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireC",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireD",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireE",0)
+
+        JFLM F 2 bright A_PlaySound("weapons/fgexplode", CHAN_WEAPON)
+        JFLM E 2 bright A_FireBullets(0,0,1,80,"RfireF",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireG",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireF",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireG",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireF",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireG",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireH",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireG",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireH",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireG",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireH",0)
+        JFLM F 2 bright A_FireBullets(0,0,1,6,"RfireG",0)
+        JFLM E 2 bright A_FireBullets(0,0,1,6,"RfireH",0)
+        JFLM G 15 A_Light0
+        Goto Ready
+
+
+      AltFire:
+        JFLM D 20
+        JFLM E 2 bright A_Light1
+        JFLM F 2 bright
+        JFLM E 2 bright A_FireCustomMissile("Smallfireball",0,1,0,0)
+        JFLM FE 2 bright
+        JFLM F 2 bright A_FireCustomMissile("Smallfireball",0,0,0,0)
+        JFLM EF 2 bright
+        JFLM E 2 bright A_FireCustomMissile("FireGloveBall",3,0,0,0)
+        JFLM F 2 bright
+        JFLM E 2 bright A_FireCustomMissile("FireGloveBall",-3,0,0,0)
+        JFLM FE 2 bright
+        JFLM F 2 bright A_FireCustomMissile("Smallfireball",0,0,0,0)
+        JFLM EF 2 bright
+        JFLM E 2 bright A_FireCustomMissile("Meteorball",0,0,0,0)
+        JFLM FE 2 bright
+        JFLM F 2 bright A_FireCustomMissile("Meteorball",0,0,0,0)
+        JFLM E 2 bright
+        JFLM F 2 bright A_FireCustomMissile("Smallfireball",0,0,0,0)
+        JFLM EF 2 bright
+        JFLM E 2 bright A_FireCustomMissile("Blastshot",4,0,0,0)
+        JFLM F 2 bright A_FireCustomMissile("Blastshot",-4,0,0,0)
+        JFLM E 2 bright
+        JFLM F 2 bright A_FireCustomMissile("Smallfireball",0,0,0,0)
+        JFLM G 20 A_Light0
+        Goto Ready
+      Spawn:
+        JFLM Z -1
+        Stop
+    }
+}
+
+actor GloveFire: BulletPuff
+{
+    +PUFFONACTORS
+    +BLOODLESSIMPACT
+    RenderStyle Add
+    VSpeed 0
+}
+
+Actor RfireA: GloveFire
+{
+    States
+    {
+      Spawn:
+        RFRE A 3 bright
+        Stop
+    }
+}
+
+Actor RfireB: GloveFire
+{
+    States
+    {
+      Spawn:
+        RFRE B 3 bright
+        Stop
+    }
+}
+
+Actor RfireC: GloveFire
+{
+    States
+    {
+      Spawn:
+        RFRE C 3 bright
+        Stop
+    }
+}
+
+Actor RfireC: GloveFire
+{
+    States
+    {
+      Spawn:
+        RFRE C 3 bright
+        Stop
+    }
+}
+
+Actor RfireD: GloveFire
+{
+    States
+    {
+      Spawn:
+        RFRE D 3 bright
+        Stop
+    }
+}
+
+Actor RfireE: GloveFire
+{
+    States
+    {
+      Spawn:
+        RFRE E 3 bright
+        Stop
+    }
+}
+
+Actor RfireF: GloveFire
+{
+    States
+    {
+      Spawn:
+        RFRE F 3 bright
+        Stop
+    }
+}
+
+Actor RfireG: GloveFire
+{
+    States
+    {
+      Spawn:
+        RFRE G 3 bright
+        Stop
+    }
+}
+
+Actor RfireH: GloveFire
+{
+    States
+    {
+      Spawn:
+        RFRE H 3 bright
+        Stop
+    }
+}
+
+Actor FireGloveBall
+{
+    Radius 8
+    Height 7
+    Speed 50
+    Projectile
+
+    Damage 15
+    SeeSound "jkemod/firegloves/fire1"
+    DeathSound "jkemod/firegloves/explode"
+    States
+    {
+      Spawn:
+        FMIS A 1 bright
+        Loop
+      Death:
+        RFRE ABCDEFGH 2 bright
+        Stop
+    }
+}
+
+Actor Meteorball
+{
+    +MISSILE
+    +MISSILEMORE
+    +MISSILEEVENMORE
+    +NOGRAVITY
+    +NOTELEPORT
+    SeeSound "jkemod/firegloves/fire2"
+    DeathSound "jkemod/firegloves/explode"
+    Radius 10
+    Height 10
+    Damage 30
+    Speed 40
+    States
+    {
+      Spawn:
+        COMT ABC 2 bright
+        Loop
+      Death:
+        COMT DEFGHI 3 bright
+        Stop
+    }
+}
+
+Actor Blastshot
+{
+    Projectile
+
+    +FLOORHUGGER
+    +EXPLODEONWATER
+    +NOEXTREMEDEATH
+    +BLOODLESSIMPACT
+    +RIPPER
+    SeeSound "jkemod/firegloves/fire2"
+    DeathSound "jkemod/firegloves/explode"
+    Radius 18
+    Height 15
+    Damage 13
+    Speed 15
+    States
+    {
+      Spawn:
+        HBFR ABC 3 bright
+        Loop
+      Death:
+        TRGF ABCDABCD 3 bright
+        Stop
+    }
+}
+
+Actor Smallfireball
+{
+    Projectile
+    +NOEXTREMEDEATH
+
+    SeeSound "jkemod/firegloves/fire2"
+    DeathSound "jkemod/firegloves/explode"
+    Radius 5
+    Height 5
+    Damage 13
+    Speed 40
+    States
+    {
+      Spawn:
+        FFRA ABCD 2 bright
+        Loop
+      Death:
+        FFRG ABCD 3 bright
+        Stop
+    }
+}
