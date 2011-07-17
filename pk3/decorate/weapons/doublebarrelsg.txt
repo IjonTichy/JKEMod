@@ -1,0 +1,45 @@
+actor DoubleBarrelSG : Weapon
+{
+    SpawnID 199
+    Weapon.SelectionOrder 300
+    Weapon.AmmoType "Shell"
+    Weapon.AmmoUse 2
+    Weapon.AmmoGive 80
+
+    Weapon.upsound "jkemod/doublebarrelsg/up"
+
+    Inventory.PickupMessage "$JKE_PK_DOUBLEBARRELSG"
+    Obituary "$JKE_MP_DOUBLEBARRELSG"
+    States
+    {
+      Ready:
+        ST2A A 1 A_WeaponReady
+        Loop
+      Deselect:
+        ST2A A 1 A_Lower
+        Loop
+      Select:
+        ST2A A 1 A_Raise
+        Loop
+      Fire:
+        ST2F A 0 A_PlaySound("jkemod/doublebarrelsg/fire", CHAN_WEAPON)
+        ST2F A 0 A_FireBullets(12, 12, 30, 6, "Bulletpuff", 1)
+        ST2F A 3 bright A_Light2
+        ST2A A 8 A_Light0
+        ST2A B 6
+        ST2A C 5
+        ST2A D 5 A_PlaySound("jkemod/doublebarrelsg/open", CHAN_WEAPON)
+        ST2A E 0 A_FireCustomMissile("Emptybullet1", 30, 0, 0, 7)
+        ST2A E 0 A_FireCustomMissile("Emptybullet1", 33, 0, 0, 7)
+        ST2A E 7
+        ST2A F 5 A_PlaySound("jkemod/doublebarrelsg/load", CHAN_WEAPON)
+        ST2A G 4
+        ST2A H 5
+        ST2A A 2 A_ReFire
+        ST2A A 2 A_PlaySound("jkemod/doublebarrelsg/close", CHAN_WEAPON)
+        Goto Ready
+      Spawn:
+        SSG2 A -1
+        Stop
+    }
+}

@@ -6,7 +6,7 @@
 
 // PK meaning "pickup"
 
-JKE_PK_DOUBLEBARRELEDSG = "You have the double barreled shotgun!";
+JKE_PK_DOUBLEBARRELSG   = "You have the double barreled shotgun!";
 JKE_PK_DUALPISTOLS      = "You picked up dual pistols!";
 JKE_PK_HEAVYCHAINGUN    = "\ck*chk-chink*\c- Hehvy masheen gun!";
 JKE_PK_ZENFIST          = "You picked up two disembodied arms. Eeewww.";
@@ -19,7 +19,7 @@ JKE_PK_ZENFIST          = "You picked up two disembodied arms. Eeewww.";
 //  %h: him/her/it
 //  %p: his/her/its
 
-JKE_MP_DOUBLEBARRELEDSG = "%k cleaned the floor of %o.";
+JKE_MP_DOUBLEBARRELSG   = "%k cleaned the floor of %o.";
 JKE_MP_DUALPISTOLS      = "%k capped %o.";
 JKE_MP_HEAVYCHAINGUN    = "%k filled %o full of lead.";
 JKE_MP_ZENFIST          = "%k beat the everloving snot out of %o.";

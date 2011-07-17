@@ -14,7 +14,7 @@ actor ZenFist: Weapon
     Weapon.SelectionOrder 1000
     Weapon.Kickback 100
 
-    Weapon.PickupMessage "$JKE_PK_ZENFIST"
+    Inventory.PickupMessage "$JKE_PK_ZENFIST"
     Obituary "$JKE_MP_ZENFIST"
 
     States

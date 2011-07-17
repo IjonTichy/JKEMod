@@ -6,10 +6,11 @@
 //   DOUBLE BARRELED SHOTGUN
 ////
 
-jkemod/doublebarreledsg/up      sounds/weapons/doublebarreledsg/up.wav
-jkemod/doublebarreledsg/fire    sounds/weapons/doublebarreledsg/fire.wav
-jkemod/doublebarreledsg/load    sounds/weapons/doublebarreledsg/load.wav
-jkemod/doublebarreledsg/close   sounds/weapons/doublebarreledsg/close.wav
+jkemod/doublebarrelsg/up        sounds/weapons/doublebarrelsg/up.wav
+jkemod/doublebarrelsg/fire      sounds/weapons/doublebarrelsg/fire.wav
+jkemod/doublebarrelsg/open      sounds/weapons/doublebarrelsg/open.wav
+jkemod/doublebarrelsg/load      sounds/weapons/doublebarrelsg/load.wav
+jkemod/doublebarrelsg/close     sounds/weapons/doublebarrelsg/close.wav
 
 ////
 //   DUAL PISTOLS
