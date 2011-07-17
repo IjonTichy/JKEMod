@@ -3,6 +3,14 @@
 // Please keep this in alphabetical order
 
 ////
+//   BALLESTA
+////
+
+jkemod/ballesta/fire            sounds/weapons/ballesta/fire.lmp
+jkemod/ballesta/explode         sounds/weapons/ballesta/explode.wav
+
+
+////
 //   DOUBLE BARRELED SHOTGUN
 ////
 
@@ -11,6 +19,7 @@ jkemod/doublebarrelsg/fire      sounds/weapons/doublebarrelsg/fire.wav
 jkemod/doublebarrelsg/open      sounds/weapons/doublebarrelsg/open.wav
 jkemod/doublebarrelsg/load      sounds/weapons/doublebarrelsg/load.wav
 jkemod/doublebarrelsg/close     sounds/weapons/doublebarrelsg/close.wav
+
 
 ////
 //   DUAL PISTOLS

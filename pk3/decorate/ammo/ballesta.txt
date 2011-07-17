@@ -1,0 +1,30 @@
+Actor BallestaAmmo: Ammo
+{
+    Inventory.Amount 10
+    Inventory.MaxAmount 100
+    Ammo.BackpackAmount 20
+    Ammo.BackpackMaxAmount 170
+
+    Inventory.PickupMessage "$JKE_PK_ARROWAMMO"
+    Inventory.Icon "ARRWB0"
+
+    States
+    {
+      Spawn:
+        ARRW B -1
+        stop
+    }
+}
+
+Actor BallestaQuiver: BallestaAmmo
+{
+    Inventory.PickupMessage "$JKE_PK_ARROWQUIVER"
+    Inventory.Amount 15
+    Scale 0.3
+    States
+    {
+      Spawn:
+        QUIV A -1
+        Stop
+    }
+}

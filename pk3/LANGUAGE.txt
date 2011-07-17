@@ -4,15 +4,26 @@
 
 [ enu default ]
 
-// PK meaning "pickup"
 
+//// Pickups
+//
+// PK means "pickup"
+
+// Ammo
+JKE_PK_ARROWAMMO        = "You got 10 Ballesta arrows.";
+JKE_PK_ARROWQUIVER      = "You got a Ballesta arrow quiver.";
+
+// Weapons
 JKE_PK_DOUBLEBARRELSG   = "You have the double barreled shotgun!";
 JKE_PK_DUALPISTOLS      = "You picked up dual pistols!";
 JKE_PK_HEAVYCHAINGUN    = "\ck*chk-chink*\c- Hehvy masheen gun!";
 JKE_PK_ZENFIST          = "You picked up two disembodied arms. Eeewww.";
+JKE_PK_BALLESTA         = "You got the Ballesta!";
 
 
-// MP meaning "multiplayer", as in "multiplayer kill"
+//// Obituaries
+//
+// MP means "multiplayer", as in "multiplayer kill"
 //  %o: victim's name
 //  %k: killer's name
 //  %g: he /she/it, depending on the gender of the victim
@@ -23,3 +34,4 @@ JKE_MP_DOUBLEBARRELSG   = "%k cleaned the floor of %o.";
 JKE_MP_DUALPISTOLS      = "%k capped %o.";
 JKE_MP_HEAVYCHAINGUN    = "%k filled %o full of lead.";
 JKE_MP_ZENFIST          = "%k beat the everloving snot out of %o.";
+JKE_MP_BALLESTA         = "%k shoved an exploding arrow through %o.";

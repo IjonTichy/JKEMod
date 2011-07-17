@@ -21,6 +21,7 @@ addslotdefault 3 "DoubleBarrelSG"
 //   SLOT 4
 ////
 
+addslotdefault 4 "Ballesta"
 addslotdefault 4 "HeavyChaingun"
 
 
