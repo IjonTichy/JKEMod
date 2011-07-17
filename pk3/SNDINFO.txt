@@ -1,0 +1,35 @@
+// NOTE:
+//
+// Please keep this in alphabetical order
+
+////
+//   DOUBLE BARRELED SHOTGUN
+////
+
+jkemod/doublebarreledsg/up      sounds/weapons/doublebarreledsg/up.wav
+jkemod/doublebarreledsg/fire    sounds/weapons/doublebarreledsg/fire.wav
+jkemod/doublebarreledsg/load    sounds/weapons/doublebarreledsg/load.wav
+jkemod/doublebarreledsg/close   sounds/weapons/doublebarreledsg/close.wav
+
+////
+//   DUAL PISTOLS
+////
+
+jkemod/dualpistols/fire         sounds/weapons/dualpistols/fire.wav
+
+
+////
+//   HEAVY CHAINGUN
+////
+
+jkemod/heavychaingun/up         sounds/weapons/heavychaingun/up.wav
+jkemod/heavychaingun/load       sounds/weapons/heavychaingun/load.lmp
+jkemod/heavychaingun/fire       sounds/weapons/heavychaingun/fire.wav
+jkemod/heavychaingun/altfire    sounds/weapons/heavychaingun/altfire.lmp
+
+
+////
+//   ZEN FISTS
+////
+
+jkemod/zenfist/altfire          DSPUNCH

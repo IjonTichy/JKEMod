@@ -1,0 +1,53 @@
+actor PunchSide: Inventory
+{
+    Inventory.MaxAmount 1
+    +UNDROPPABLE
+}
+
+actor ZenFist: Weapon
+{
+    +UNDROPPABLE
+    +NOALERT
+    +WEAPON.MELEEWEAPON
+    +WEAPON.WIMPY_WEAPON
+
+    Weapon.SelectionOrder 1000
+    Weapon.Kickback 100
+
+    Weapon.PickupMessage "$JKE_PK_ZENFIST"
+    Obituary "$JKE_MP_ZENFIST"
+
+    States
+    {
+      Ready:
+        FIST A 1 A_WeaponReady
+        Loop
+      Deselect:
+        FIST A 0 A_Lower
+        FIST A 1 A_Lower
+        Loop
+      Select:
+        FIST A 0 A_Raise
+        FIST A 1 A_Raise
+        Loop
+      Fire:
+        FIST B 0 A_JumpIfInventory("PunchSide",1,6)
+        FIST B 2
+        FIST C 3 A_Punch
+        FIST BA 2
+        FIST A 0 A_GiveInventory("PunchSide")
+        Goto Ready
+        FIST D 2
+        FIST E 3 A_Punch
+        FIST DA 2
+        FIST A 0 A_TakeInventory("PunchSide")
+        Goto Ready
+      AltFire:
+        KICK ABC 2
+        KICK D 0 A_PlaySound("jkemod/zenfist/altfire", CHAN_WEAPON)
+        KICK D 3 A_CustomPunch(40,1,0,"BulletPuff")
+        KICK EDCB 2
+        KICK A 2 A_ReFire
+        Goto Ready
+    }
+}

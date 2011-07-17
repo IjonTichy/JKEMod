@@ -1,0 +1,25 @@
+// NOTE:
+//
+// Please keep this in alphabetical order
+
+[ enu default ]
+
+// PK meaning "pickup"
+
+JKE_PK_DOUBLEBARRELEDSG = "You have the double barreled shotgun!";
+JKE_PK_DUALPISTOLS      = "You picked up dual pistols!";
+JKE_PK_HEAVYCHAINGUN    = "\ck*chk-chink*\c- Hehvy masheen gun!";
+JKE_PK_ZENFIST          = "You picked up two disembodied arms. Eeewww.";
+
+
+// MP meaning "multiplayer", as in "multiplayer kill"
+//  %o: victim's name
+//  %k: killer's name
+//  %g: he /she/it, depending on the gender of the victim
+//  %h: him/her/it
+//  %p: his/her/its
+
+JKE_MP_DOUBLEBARRELEDSG = "%k cleaned the floor of %o.";
+JKE_MP_DUALPISTOLS      = "%k capped %o.";
+JKE_MP_HEAVYCHAINGUN    = "%k filled %o full of lead.";
+JKE_MP_ZENFIST          = "%k beat the everloving snot out of %o.";

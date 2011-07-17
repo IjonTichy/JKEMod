@@ -1,0 +1,53 @@
+////
+//   SLOT 1
+////
+
+addslotdefault 1 "ZenFist"
+
+////
+//   SLOT 2
+////
+
+addslotdefault 2 "DualPistols"
+
+
+////
+//   SLOT 3
+////
+
+addslotdefault 3 "DoubleBarreledSG"
+
+////
+//   SLOT 4
+////
+
+addslotdefault 4 "HeavyChaingun"
+
+
+////
+//   SLOT 5
+////
+
+
+////
+//   SLOT 6
+////
+
+
+////
+//   SLOT 7
+////
+
+////
+//   SLOT 8
+////
+
+
+////
+//   SLOT 9
+////
+
+
+////
+//   SLOT 0
+////

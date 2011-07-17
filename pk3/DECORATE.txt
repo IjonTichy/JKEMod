@@ -1,0 +1,4 @@
+#include "decorate/weapons/dualpistols.txt"
+#include "decorate/weapons/heavychaingun.txt"
+#include "decorate/weapons/zenfist.txt"
+#include "decorate/weapons/doublebarreledsg.txt"
