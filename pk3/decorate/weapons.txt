@@ -1,0 +1,7 @@
+#include "decorate/weapons/ballesta.txt"
+#include "decorate/weapons/doublebarrelsg.txt"
+#include "decorate/weapons/dualpistols.txt"
+#include "decorate/weapons/dualplasmarifles.txt"
+#include "decorate/weapons/firegloves.txt"
+#include "decorate/weapons/heavychaingun.txt"
+#include "decorate/weapons/zenfist.txt"

@@ -29,12 +29,34 @@ jkemod/dualpistols/fire             sounds/weapons/dualpistols/fire.wav
 
 
 ////
+//   DUAL PLASMA RIFLES
+////
+
+$alias jkemod/dualplasmarifles/up   jkemod/doublebarrelsg/up
+jkemod/dualplasmarifles/fire        sounds/weapons/dualplasmarifles/fire.lmp
+jkemod/dualplasmarifles/explode     sounds/weapons/dualplasmarifles/explode.wav
+jkemod/dualplasmarifles/charge      sounds/weapons/dualplasmarifles/charge.lmp
+jkemod/dualplasmarifles/unload      sounds/weapons/dualplasmarifles/unload.lmp
+jkemod/dualplasmarifles/slide       sounds/weapons/dualplasmarifles/slide.lmp
+jkemod/dualplasmarifles/load1       sounds/weapons/dualplasmarifles/load1.wav
+jkemod/dualplasmarifles/load2       sounds/weapons/dualplasmarifles/load2.wav
+jkemod/dualplasmarifles/load3       sounds/weapons/dualplasmarifles/load3.wav
+
+$limit jkemod/dualplasmarifles/fire 0
+$limit jkemod/dualplasmarifles/explode 0
+
+
+////
 //   FIRE GLOVES
 ////
 
 jkemod/firegloves/fire1             sounds/weapons/firegloves/fire1.wav
 jkemod/firegloves/fire2             sounds/weapons/firegloves/fire2.wav
 jkemod/firegloves/explode           sounds/weapons/firegloves/explode.wav
+
+$limit jkemod/firegloves/fire1 0
+$limit jkemod/firegloves/fire2 0
+$limit jkemod/firegloves/explode 0
 
 
 ////
