@@ -51,7 +51,7 @@ actor JSniperRifle : Weapon 10293
         SPRL C 4
         SPRL D 4
         SPRL E 4
-        SPRL E 0 A_FireCustomMissile("BulletCasing", -65, 0, 5, 6)
+        SPRL E 0 A_FireCustomMissile("AssaultCasing", -65, 0, 5, 6)
         SNIP A 8
         Goto Ready
 
