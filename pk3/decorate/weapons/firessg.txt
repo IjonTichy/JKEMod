@@ -93,6 +93,8 @@ actor FireSSGShot1: FastProjectile
 
     Damage (3 * random(1, 8) )
 
+    Obituary "$JKE_MP_FIRESSG1"
+
     States
     {
       Spawn:
@@ -112,6 +114,8 @@ actor FireSSGShot2: FastProjectile
     Speed 80
 
     Damage (20 * random(1, 10))
+
+    Obituary "$JKE_MP_FIRESSG2"
 
     States
     {

@@ -140,16 +140,6 @@ Actor RfireC: GloveFire
     }
 }
 
-Actor RfireC: GloveFire
-{
-    States
-    {
-      Spawn:
-        RFRE C 3 bright
-        Stop
-    }
-}
-
 Actor RfireD: GloveFire
 {
     States

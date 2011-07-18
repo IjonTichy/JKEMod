@@ -1,3 +1,10 @@
-This is a repository for JKEMod - a Skulltag weapon compilation thingy.
+This is a repository for JKEMod - a Skulltag weapon compilation thingy. No, I'm
+not making it from scratch - right now, I'm restructuring it so that JKEMod is
+easy to work with and manipulate. That is all I am doing right now (along with
+some edits as I see them necessary/useful), so don't expect anything more (maybe
+slight weapon behaviour changes?).
 
 More will be added as more comes - whaddya expect, this just opened up
+
+
+Current amount of weapons: 10

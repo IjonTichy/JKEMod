@@ -51,6 +51,7 @@ addslotdefault 6 "FireGloves"
 ////
 
 addslotdefault 8 "JSniperRifle"
+addslotdefault 8 "MagnumSniper"
 
 
 ////

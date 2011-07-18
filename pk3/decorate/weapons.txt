@@ -7,4 +7,5 @@
 #include "decorate/weapons/heavychaingun.txt"
 #include "decorate/weapons/jshotgun.txt"
 #include "decorate/weapons/jsniperrifle.txt"
+#include "decorate/weapons/magnumsniper.txt"
 #include "decorate/weapons/zenfist.txt"

@@ -25,6 +25,7 @@ JKE_PK_FIRESSG                  = "You got the incendiary super shotgun!";
 JKE_PK_HEAVYCHAINGUN            = "\ck*chk-chink*\c- Hehvy masheen gun!";
 JKE_PK_JSHOTGUN                 = "You picked up a shotgun.";
 JKE_PK_JSNIPERRIFLE             = "You got a sniper rifle!";
+JKE_PK_MAGNUMSNIPER             = "You got the magnum sniper!";
 JKE_PK_ZENFIST                  = "You picked up two disembodied arms. Eeewww.";
 
 
@@ -42,8 +43,10 @@ JKE_MP_DOUBLEBARRELSG           = "%k cleaned the floor of %o.";
 JKE_MP_DUALPISTOLS              = "%k capped %o.";
 JKE_MP_DUALPLASMARIFLES_PLASMA  = "%k melted %o's face.";
 JKE_MP_DUALPLASMARIFLES_RAIL    = "%k blasted two gaping holes in %o.";
-JKE_MP_FIRESSG                  = "%k melted %o's face."
+JKE_MP_FIRESSG1                 = "%k melted %o's face.";
+JKE_MP_FIRESSG2                 = "%k scorched the skin off of %o.";
 JKE_MP_HEAVYCHAINGUN            = "%k filled %o full of lead.";
 JKE_MP_JSHOTGUN                 = "%k hunted down %o like a deer.";
 JKE_MP_JSNIPERRIFLE             = "%o never saw %k or the bullet.";
+JKE_MP_MAGNUMSNIPER             = "%k took out %o from the shadows.";
 JKE_MP_ZENFIST                  = "%k beat the everloving snot out of %o.";
