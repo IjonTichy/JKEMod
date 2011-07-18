@@ -16,6 +16,8 @@ addslotdefault 2 "DualPistols"
 ////
 
 addslotdefault 3 "DoubleBarrelSG"
+addslotdefault 3 "JShotgun"
+
 
 ////
 //   SLOT 4

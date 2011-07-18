@@ -95,6 +95,14 @@ jkemod/heavychaingun/load           sounds/weapons/heavychaingun/load.lmp
 jkemod/heavychaingun/fire           sounds/weapons/heavychaingun/fire.wav
 jkemod/heavychaingun/altfire        sounds/weapons/heavychaingun/altfire.lmp
 
+////
+//   J-SHOTGUN
+////
+
+jkemod/jshotgun/fire                sounds/weapons/jshotgun/fire.wav
+jkemod/jshotgun/load                sounds/weapons/jshotgun/load.lmp
+jkemod/jshotgun/pump                sounds/weapons/jshotgun/pump.wav
+
 
 ////
 //   J-SNIPER RIFLE
