@@ -3,6 +3,33 @@
 // Please keep this in alphabetical order
 
 ////
+//   ASSORTED
+////
+
+///
+// Shell casings
+
+$random jkemod/casings/bounce
+{
+    jkemod/casings/bounce1
+    jkemod/casings/bounce2
+    jkemod/casings/bounce3
+    jkemod/casings/bounce4
+    jkemod/casings/bounce5
+    jkemod/casings/bounce6
+    jkemod/casings/bounce7
+}
+
+jkemod/casings/bounce1              sounds/casings/bounce1.wav
+jkemod/casings/bounce2              sounds/casings/bounce2.wav
+jkemod/casings/bounce3              sounds/casings/bounce3.wav
+jkemod/casings/bounce4              sounds/casings/bounce4.wav
+jkemod/casings/bounce5              sounds/casings/bounce5.wav
+jkemod/casings/bounce6              sounds/casings/bounce6.wav
+jkemod/casings/bounce7              sounds/casings/bounce7.wav
+
+
+////
 //   BALLESTA
 ////
 
@@ -67,6 +94,14 @@ jkemod/heavychaingun/up             sounds/weapons/heavychaingun/up.wav
 jkemod/heavychaingun/load           sounds/weapons/heavychaingun/load.lmp
 jkemod/heavychaingun/fire           sounds/weapons/heavychaingun/fire.wav
 jkemod/heavychaingun/altfire        sounds/weapons/heavychaingun/altfire.lmp
+
+
+////
+//   J-SNIPER RIFLE
+////
+
+jkemod/jsniperrifle/fire            sounds/weapons/jsniperrifle/fire.wav
+jkemod/jsniperrifle/load            sounds/weapons/jsniperrifle/load.wav
 
 
 ////

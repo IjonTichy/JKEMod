@@ -1,0 +1,74 @@
+actor Casing
+{
+    Height 1
+    Radius 1
+    Scale 0.2
+    Speed 4
+
+    Projectile
+    Damage 0
+
+    +CLIENTSIDEONLY
+    +DOOMBOUNCE
+    -NOGRAVITY
+
+    SeeSound "jkemod/casings/bounce"
+}
+
+actor BulletCasing: Casing
+{
+    States
+    {
+      Spawn:
+        BLCS ABCDEF 2
+        Goto Spawn+1
+      Death:
+        BLCS A 0 A_Jump(200, 2)
+        BLCS A 400
+        Stop
+        BLCS B 0 A_Jump(200, 2)
+        BLCS B 400
+        Stop
+        BLCS C 0 A_Jump(200, 2)
+        BLCS C 400
+        Stop
+        BLCS D 0 A_Jump(200, 2)
+        BLCS D 400
+        Stop
+        BLCS E 0 A_Jump(200, 2)
+        BLCS E 400
+        Stop
+        BLCS F 0
+        BLCS F 400
+        Stop
+    }
+}
+
+actor ShellCasing: Casing
+{
+    States
+    {
+      Spawn:
+        SHCS ABCDEF 2
+        Goto Spawn+1
+      Death:
+        SHCS A 0 A_Jump(200, 2)
+        SHCS A 400
+        Stop
+        SHCS B 0 A_Jump(200, 2)
+        SHCS B 400
+        Stop
+        SHCS C 0 A_Jump(200, 2)
+        SHCS C 400
+        Stop
+        SHCS D 0 A_Jump(200, 2)
+        SHCS D 400
+        Stop
+        SHCS E 0 A_Jump(200, 2)
+        SHCS E 400
+        Stop
+        SHCS F 0
+        SHCS F 400
+        Stop
+    }
+}

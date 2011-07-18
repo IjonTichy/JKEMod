@@ -42,9 +42,12 @@ addslotdefault 6 "FireGloves"
 //   SLOT 7
 ////
 
+
 ////
 //   SLOT 8
 ////
+
+addslotdefault 8 "JSniperRifle"
 
 
 ////

@@ -4,4 +4,5 @@
 #include "decorate/weapons/dualplasmarifles.txt"
 #include "decorate/weapons/firegloves.txt"
 #include "decorate/weapons/heavychaingun.txt"
+#include "decorate/weapons/jsniperrifle.txt"
 #include "decorate/weapons/zenfist.txt"

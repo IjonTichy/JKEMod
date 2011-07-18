@@ -14,14 +14,16 @@ JKE_PK_ARROWAMMO                = "You got 10 Ballesta arrows.";
 JKE_PK_ARROWQUIVER              = "You got a Ballesta arrow quiver.";
 JKE_PK_FIREAMMO                 = "You got Pyro mana.";
 JKE_PK_JKEMANA                  = "You got some mana.";
+JKE_PK_JSNIPERRIFLE             = "You got bolt-action sniper rounds.";
 
 // Weapons
+JKE_PK_BALLESTA                 = "You got the Ballesta!";
 JKE_PK_DOUBLEBARRELSG           = "You have the double barreled shotgun!";
 JKE_PK_DUALPISTOLS              = "You picked up dual pistols!";
 JKE_PK_DUALPLASMARIFLES         = "You found dual plasma rifles!";
 JKE_PK_HEAVYCHAINGUN            = "\ck*chk-chink*\c- Hehvy masheen gun!";
+JKE_PK_JSNIPERRIFLE             = "You got a sniper rifle!";
 JKE_PK_ZENFIST                  = "You picked up two disembodied arms. Eeewww.";
-JKE_PK_BALLESTA                 = "You got the Ballesta!";
 
 
 //// Obituaries
@@ -33,10 +35,11 @@ JKE_PK_BALLESTA                 = "You got the Ballesta!";
 //  %h: him/her/it
 //  %p: his/her/its
 
+JKE_MP_BALLESTA                 = "%k shoved an exploding arrow through %o.";
 JKE_MP_DOUBLEBARRELSG           = "%k cleaned the floor of %o.";
 JKE_MP_DUALPISTOLS              = "%k capped %o.";
 JKE_MP_DUALPLASMARIFLES_PLASMA  = "%k melted %o's face.";
 JKE_MP_DUALPLASMARIFLES_RAIL    = "%k blasted two gaping holes in %o.";
 JKE_MP_HEAVYCHAINGUN            = "%k filled %o full of lead.";
+JKE_MP_JSNIPERRIFLE             = "%o never saw %k or the bullet.";
 JKE_MP_ZENFIST                  = "%k beat the everloving snot out of %o.";
-JKE_MP_BALLESTA                 = "%k shoved an exploding arrow through %o.";
