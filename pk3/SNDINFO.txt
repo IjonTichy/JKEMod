@@ -85,6 +85,16 @@ $limit jkemod/firegloves/fire1 0
 $limit jkemod/firegloves/fire2 0
 $limit jkemod/firegloves/explode 0
 
+////
+//   FIRE SSG
+////
+
+$alias jkemod/firessg/up            jkemod/doublebarrelsg/up
+$alias jkemod/firessg/fire          jkemod/doublebarrelsg/fire
+$alias jkemod/firessg/open          jkemod/doublebarrelsg/open
+$alias jkemod/firessg/load          jkemod/doublebarrelsg/load
+$alias jkemod/firessg/close         jkemod/doublebarrelsg/close
+
 
 ////
 //   HEAVY CHAINGUN
