@@ -49,6 +49,17 @@ jkemod/doublebarrelsg/close         sounds/weapons/doublebarrelsg/close.wav
 
 
 ////
+//   DUAL BERETTAS
+////
+
+jkemod/dualberettas/up              sounds/weapons/dualberettas/up.wav
+jkemod/dualberettas/fire            sounds/weapons/dualberettas/fire.wav
+jkemod/dualberettas/click           sounds/weapons/dualberettas/click.wav
+jkemod/dualberettas/open            sounds/weapons/dualberettas/open.wav
+jkemod/dualberettas/load1           sounds/weapons/dualberettas/load1.wav
+jkemod/dualberettas/load2           sounds/weapons/dualberettas/load2.wav
+
+////
 //   DUAL PISTOLS
 ////
 
@@ -120,6 +131,15 @@ jkemod/jshotgun/pump                sounds/weapons/jshotgun/pump.wav
 
 jkemod/jsniperrifle/fire            sounds/weapons/jsniperrifle/fire.wav
 jkemod/jsniperrifle/load            sounds/weapons/jsniperrifle/load.wav
+
+
+////
+//   M16
+////
+
+jkemod/m16/fire                     sounds/weapons/m16/fire.lmp
+jkemod/m16/out                      sounds/weapons/m16/out.wav
+jkemod/m16/in                       sounds/weapons/m16/in.wav
 
 ////
 //   MAGNUM SNIPER

@@ -1,4 +1,5 @@
 #include "decorate/ammo/ballesta.txt"
+#include "decorate/ammo/dualberettas.txt"
 #include "decorate/ammo/firegloves.txt"
 #include "decorate/ammo/jkemana.txt"
 #include "decorate/ammo/jsniperrifle.txt"

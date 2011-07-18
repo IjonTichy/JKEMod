@@ -8,6 +8,7 @@ addslotdefault 1 "ZenFist"
 //   SLOT 2
 ////
 
+addslotdefault 2 "DualBerettas"
 addslotdefault 2 "DualPistols"
 
 
@@ -26,6 +27,7 @@ addslotdefault 3 "JShotgun"
 
 addslotdefault 4 "Ballesta"
 addslotdefault 4 "HeavyChaingun"
+addslotdefault 4 "M16"
 
 
 ////
