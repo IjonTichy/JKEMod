@@ -1,0 +1,352 @@
+actor PlasmaCounter: Ammo
+{
+    +IGNORESKILL
+    Inventory.Amount       1
+    Inventory.MaxAmount    20
+
+    Ammo.BackpackAmount    30
+    Ammo.BackpackMaxAmount 30
+
+    Inventory.Icon "CELLA0"
+}
+
+ACTOR "Plasma Rifle": DoomWeapon
+{
+    Weapon.SelectionOrder 100
+    Weapon.AmmoUse1  1
+    Weapon.AmmoUse2  4
+    Weapon.AmmoGive1   80
+    Weapon.AmmoGive2   20
+    Weapon.AmmoType1     "Cell"
+    Weapon.AmmoType2     "Cell"
+
+    Weapon.SlotNumber 6
+    Weapon.SisterWeapon "Power Plasma Rifle"
+
+    +NOAUTOFIRE
+
+    Inventory.PickupMessage "$BDW_PK_PLASMARIFLE"
+
+    States
+    {
+      Ready:
+        PKPL AAAAAAAA 1 A_WeaponReady
+        PKPL A 0 A_GiveInventory("PlasmaCounter", 1)
+        Loop
+      Deselect:
+        PKPL A 0 A_GiveInventory("PlasmaCounter", 30)
+        PKPL A 1 A_Lower
+        Loop
+      Select:
+        PKPL A 1 A_Raise
+        Loop
+
+      Fire:
+        PKPL A 0 A_GunFlash
+        PKPL A 3 A_FireCustomMissile("BetterPlasma")
+        PKPL B 0 A_ReFire
+
+        PKPL B 3
+        PKPL C 2
+        PKPL D 12
+        PKPL C 2
+        PKPL BA 1
+        Goto Ready
+
+      AltFire:
+        PKPL A 0 A_GunFlash
+        PKPL A 4 A_FireCustomMissile("BetterRipperPlasma")
+        PKPL B 0 A_ReFire
+
+        PKPL B 3
+        PKPL C 2
+        PKPL D 12
+        PKPL C 2
+        PKPL BA 1
+        Goto Ready
+
+
+      Flash:
+        PLSF B 3 Bright A_Light1
+        PLSF A 3 Bright A_Light1
+        TNT1 A 1 Bright A_Light1
+        Goto LightDone
+
+      AltFlash:
+        YLSF B 4 Bright A_Light1
+        YLSF A 4 Bright A_Light1
+        TNT1 A 1 Bright A_Light1
+        Goto LightDone
+      Spawn:
+        PLAS A -1
+        Stop
+    }
+}
+
+ACTOR "Power Plasma Rifle": DoomWeapon
+{
+    Weapon.SelectionOrder 100
+    Weapon.AmmoUse1  2
+    Weapon.AmmoUse2  16
+    Weapon.AmmoGive1   80
+    Weapon.AmmoGive2   20
+    Weapon.AmmoType1     "Cell"
+    Weapon.AmmoType2     "Cell"
+
+    +NOAUTOFIRE
+    +POWERED_UP
+
+    Weapon.SisterWeapon "Plasma Rifle"
+
+    Inventory.PickupMessage "$BDW_PK_PLASMARIFLE"
+
+    States
+    {
+      Ready:
+        PKPL A 0 A_GiveInventory("PlasmaCounter", 30)
+        PKPL A 1 A_WeaponReady
+        Loop
+      Deselect:
+        PKPL A 0 A_GiveInventory("PlasmaCounter", 30)
+        PKPL A 1 A_Lower
+        Loop
+      Select:
+        PKPL A 1 A_Raise
+        Loop
+
+      Fire:
+        PKPL A 0 A_GunFlash
+        RLSF A 2 bright A_FireCustomMissile("BetterPowerPlasma")
+        RLSF B 2 bright
+        PKPL B 0 A_ReFire
+        PKPL B 3
+        PKPL C 2
+        PKPL D 12
+        PKPL C 2
+        PKPL BA 1
+        Goto Ready
+
+      AltFire:
+        GLSF A 4 bright A_FireCustomMissile("BetterPowerRipperPlasma")
+        GLSF B 4 bright
+        PKPL B 0 A_ReFire
+        PKPL B 3
+        PKPL C 2
+        PKPL D 12
+        PKPL C 2
+        PKPL BA 1
+        Goto Ready
+
+
+      Spawn:
+        PLAS A -1
+        Stop
+    }
+}
+
+actor BetterPlasma
+{
+    Radius 13
+    Height 8
+    Speed 40
+    Damage ( (5*random(1,5)) + 25 )
+    Projectile
+    +RANDOMIZE
+    RenderStyle Add
+    Alpha 0.75
+    SeeSound "betterdoomweapons/plasmafire"
+    DeathSound "betterdoomweapons/plasmaexplode"
+    Obituary "$BDW_MP_PLASMARIFLE"
+    States
+    {
+      Spawn:
+        PLSS AB 4 bright
+        loop
+      Death:
+        PLSE ABCDE 4 bright
+        stop
+    }
+}
+
+actor BetterRipperPlasma
+{
+    Radius 13
+    Height 8
+    Speed 30
+    Damage ( random(4, 8) * 4 )
+    Projectile
+    +RANDOMIZE
+    +RIPPER
+    RenderStyle Add
+    Alpha 0.75
+    SeeSound "betterdoomweapons/plasmafire"
+    DeathSound "betterdoomweapons/plasmaexplode"
+
+    Obituary "$BDW_MP_PLASMARIFLE2"
+    States
+    {
+      Spawn:
+        YPLS AAAABBBB 1 bright A_SpawnItemEx("BetterRipperPlasmaTrail")
+        loop
+      Death:
+        YPLS CDEFG 4 bright
+        stop
+    }
+}
+
+actor BetterRipperPlasmaTrail: RandomSpawner
+{
+    +CLIENTSIDEONLY
+    dropitem "BetterRipperPlasmaTrail1"
+    dropitem "BetterRipperPlasmaTrail2"
+    dropitem "BetterRipperPlasmaTrail3"
+    dropitem "BetterRipperPlasmaTrail4"
+}
+
+actor BetterRipperPlasmaTrailBase
+{
+    +RANDOMIZE
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+    RenderStyle Add
+    Alpha 0.5
+    Scale 0.4
+}
+
+actor BetterRipperPlasmaTrail1: BetterRipperPlasmaTrailBase
+{
+    States
+    {
+      Spawn:
+        YPLS DEFG 5 bright A_FadeOut(0.05)
+        stop
+    }
+}
+
+actor BetterRipperPlasmaTrail2: BetterRipperPlasmaTrailBase
+{
+    States
+    {
+      Spawn:
+        YPLS DEFG 4 bright A_FadeOut(0.05)
+        stop
+    }
+}
+
+actor BetterRipperPlasmaTrail3: BetterRipperPlasmaTrailBase
+{
+    States
+    {
+      Spawn:
+        YPLS DEFG 3 bright A_FadeOut(0.05)
+        stop
+    }
+}
+
+actor BetterRipperPlasmaTrail4: BetterRipperPlasmaTrailBase
+{
+    States
+    {
+      Spawn:
+        YPLS DEFG 3 bright A_FadeOut(0.05)
+        stop
+    }
+}
+
+
+actor BetterPowerPlasma
+{
+    Radius 13
+    Height 8
+    Speed 35
+    Damage 10
+    Projectile
+    RenderStyle Add
+
+    +RANDOMIZE
+    +FORCERADIUSDMG
+
+    Alpha 0.75
+    Obituary "$BDW_MP_PLASMARIFLE_POWER"
+
+    SeeSound "betterdoomweapons/plasmafire"
+    DeathSound "betterdoomweapons/plasmaexplode"
+    Decal PlasmaScorch
+    States
+    {
+      Spawn:
+        RPLS AB 6 bright
+        loop
+      Death:
+        RPLS A 0 A_Explode(48,64, 0)
+        RPLS CDEFG 4 bright
+        stop
+    }
+}
+
+actor BetterPowerRipperPlasma
+{
+    Damage 6
+    Radius 13
+    Height 8
+    Speed 30
+    Projectile
+    RenderStyle Add
+
+    +RANDOMIZE
+    +RIPPER
+    +FORCERADIUSDMG
+
+    Alpha 0.75
+    SeeSound "betterdoomweapons/plasmafire"
+    DeathSound "betterdoomweapons/plasmaexplode"
+    Obituary "$BDW_MP_PLASMARIFLE2_POWER"
+    decal PlasmaScorch
+    States
+    {
+      Spawn:
+        GPLS A 3
+        goto Spawn2
+
+      Spawn2:
+        GPLS A 0 A_SpawnItemEx("TinyPlasma", 0,0,0, random(10,15),0,0, 90)
+        GPLS B 3 bright A_SpawnItemEx("TinyPlasma", 0,0,0, random(10,15),0,0, 270)
+        GPLS A 0 A_SpawnItemEx("TinyPlasma", 0,0,0, random(10,15),0,0, 90)
+        GPLS A 3 bright A_SpawnItemEx("TinyPlasma", 0,0,0, random(10,15),0,0, 270)
+        loop
+
+      Death:
+        GPLS A 0 A_Explode(48,64, 0)
+        GPLS CDEFG 4 bright
+        stop
+    }
+}
+
+actor TinyPlasma
+{
+    Speed 20
+    Damage 2
+    Scale 0.2
+
+    Projectile
+    RenderStyle Add
+
+    +RIPPER
+    +PUFFGETSOWNER
+    +FORCERADIUSDMG
+
+    Alpha 0.75
+    Obituary "$BDW_MP_PLASMARIFLE2_POWER"
+    DeathSound "betterdoomweapons/plasmaexplode"
+    States
+    {
+      Spawn:
+        GPLS ABAB 6 bright
+        GPLS A 0 A_Stop
+        //fallthrough
+      Death:
+        GPLS A 0 A_Explode(16,64, 0)
+        GPLS CDEFG 4
+        stop
+    }
+}

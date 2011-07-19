@@ -1,0 +1,16 @@
+actor JKERocketBox: CustomInventory replaces RocketBox
+{
+    Inventory.PickupMessage "$JKE_PK_JKEROCKETBOX"
+
+    States
+    {
+      Spawn:
+        BROK A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_GiveInventory("RocketAmmo", 5)
+        TNT1 A 0 A_GiveInventory("ExplosiveAmmo", 5)
+        stop
+    }
+}

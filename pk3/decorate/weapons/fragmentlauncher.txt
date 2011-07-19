@@ -1,0 +1,219 @@
+Actor FragmentChunk
+{
+    Projectile
+    -NOGRAVITY
+    +DOOMBOUNCE
+    +DEHEXPLOSION
+
+    Speed 25
+    Radius 5
+    Height 5
+    DeathSound "jkemod/fragmentlauncher/chunkexplode"
+    States
+    {
+      Spawn:
+        FSHD ABC 3
+        Loop
+      Death:
+        BAL1 B 0 A_Explode(50, 80, 1)
+        BAL1 CDE 6 bright
+        Stop
+    }
+}
+
+actor FragmentShell
+{
+    Projectile
+    -NOGRAVITY
+    +DOOMBOUNCE
+    +DEHEXPLOSION
+
+    Height 4
+    Radius 4
+    Speed 30
+    Damage 10
+    DeathSound "misc/explosion"
+    States
+    {
+      Spawn:
+        GASG A 5
+        GASG B 0
+        Loop
+      Death:
+        BNG4 A 1 A_Explode(130, 100, 1)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 0)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 0)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 0)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 0)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 0)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 20)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 20)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 20)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 20)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 20)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 40)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 40)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 40)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 40)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 40)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 60)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 60)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 60)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 60)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 60)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 80)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 80)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 80)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 80)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 80)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 100)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 100)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 100)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 100)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 100)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 120)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 120)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 120)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 120)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 120)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 140)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 140)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 140)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 140)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 140)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 160)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 160)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 160)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 160)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 160)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 180)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 180)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 180)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 180)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 180)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 200)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 200)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 200)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 200)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 200)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 220)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 220)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 220)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 220)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 220)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 240)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 240)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 240)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 240)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 240)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 260)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 260)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 260)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 260)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 260)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 280)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 280)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 280)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 280)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 280)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 300)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 300)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 300)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 300)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 300)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 320)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 320)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 320)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 320)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 320)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, -13.8918542134, 340)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, -6.97245941981, 340)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 80.0, 0, 0.0, 340)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 79.6955758473, 0, 6.97245941981, 340)
+        BAL1 C 0 A_SpawnItemEx("FragmentShard", 0, 0, 0, 78.784620241, 0, 13.8918542134, 340)
+        BNG4 A 0 A_ChangeFlag("NOGRAVITY", 0)
+        BNG4 A 2 bright A_Stop
+        BNG4 BCDEFGHIJKLM 3 bright
+        stop
+    }
+}
+
+actor FragmentShard
+{
+    Projectile
+    +PUFFGETSOWNER
+    Height 3
+    Radius 3
+    Speed 40
+    Scale 0.5
+    Damage (3)
+    States
+    {
+      Spawn:
+        FSHD ABC 3
+        loop
+      Death:
+        TNT1 A 0
+        stop
+    }
+}
+
+actor Fragmentlauncher: Weapon
+{
+    weapon.AmmoGive 10
+    weapon.AmmoType1 "ExplosiveAmmo"
+    weapon.AmmoType2 "ExplosiveAmmo"
+    weapon.AmmoUse1 1
+    weapon.AmmoUse2 1
+    weapon.selectionorder 460
+    Inventory.PickupMessage "$JKE_PK_FRAGMENTLAUNCHER"
+    Obituary "$JKE_MP_FRAGMENTLAUNCHER"
+    states
+    {
+      Ready:
+        FLAK A 1 A_WeaponReady
+        Loop
+      Select:
+        FLAK A 1 A_Raise
+        Loop
+      Deselect:
+        FLAK A 1 A_Lower
+        Loop
+
+      Fire:
+        FLAK B 0 A_FireCustomMissile("FragmentChunk", 0, 1, 0, 0)
+        FLAK B 0 A_FireCustomMissile("FragmentChunk", 3, 0, 0, 0)
+        FLAK B 0 A_FireCustomMissile("FragmentChunk", 6, 0, 0, 0)
+        FLAK B 0 A_FireCustomMissile("FragmentChunk", -3, 0, 0, 0)
+        FLAK B 0 A_FireCustomMissile("FragmentChunk", -7, 0, 0, 0)
+        FLAK B 0 A_FireCustomMissile("FragmentChunk", 9, 0, 0, 0)
+        FLAK B 0 A_PlaySound("jkemod/fragmentlauncher/fire", CHAN_WEAPON)
+        FLAK B 4 bright A_Light1
+        FLAK C 4 bright
+        goto GenericReload
+
+      AltFire:
+        FLAK B 0 A_FireCustomMissile("FragmentShell", 0, 1, 0, 0)
+        FLAK B 0 A_PlaySound("jkemod/fragmentlauncher/fire", CHAN_WEAPON)
+        FLAK B 4 bright A_Light1
+        FLAK C 4 bright
+        goto GenericReload
+
+      GenericReload:
+        FLAK C 0 A_Light0
+        FLAK A 5 A_CheckReload
+        FLAK D 4 A_PlaySound("jkemod/fragmentlauncher/open", CHAN_WEAPON)
+        FLAK E 4
+        FLAK F 4
+        FLAK G 4
+        FLAK H 4 A_PlaySound("jkemod/fragmentlauncher/load", CHAN_WEAPON)
+        FLAK I 4
+        FLAK J 4
+        FLAK A 1 A_ReFire
+        Goto Ready
+
+      Spawn:
+        FLKW K -1
+        stop
+    }
+}

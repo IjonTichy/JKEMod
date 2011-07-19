@@ -1,13 +1,19 @@
+addplayerclass BetterPlayer
+
+
 ////
 //   SLOT 1
 ////
 
+addslotdefault 1 " Chainsaw "
+addslotdefault 1 " Fists "
 addslotdefault 1 "ZenFist"
 
 ////
 //   SLOT 2
 ////
 
+addslotdefault 2 " Pistol "
 addslotdefault 2 "DualBerettas"
 addslotdefault 2 "DualPistols"
 
@@ -16,6 +22,8 @@ addslotdefault 2 "DualPistols"
 //   SLOT 3
 ////
 
+addslotdefault 3 " Shotgun "
+addslotdefault 3 "Super Shotgun"
 addslotdefault 3 "DoubleBarrelSG"
 addslotdefault 3 "FireSSG"
 addslotdefault 3 "JShotgun"
@@ -25,6 +33,7 @@ addslotdefault 3 "JShotgun"
 //   SLOT 4
 ////
 
+addslotdefault 4 " Chaingun "
 addslotdefault 4 "Ballesta"
 addslotdefault 4 "HeavyChaingun"
 addslotdefault 4 "M16"
@@ -34,11 +43,15 @@ addslotdefault 4 "M16"
 //   SLOT 5
 ////
 
+addslotdefault 5 "Rocket Launcher"
+addslotdefault 5 "FragmentLauncher"
+
 
 ////
 //   SLOT 6
 ////
 
+addslotdefault 6 "Plasma Rifle"
 addslotdefault 6 "DualPlasmaRifles"
 addslotdefault 6 "FireGloves"
 
@@ -46,6 +59,8 @@ addslotdefault 6 "FireGloves"
 ////
 //   SLOT 7
 ////
+
+addslotdefault 7 " BFG9000 "
 
 
 ////

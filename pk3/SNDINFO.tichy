@@ -1,0 +1,39 @@
+betterdoomweapons/punch                 sounds/tichy/punch.ogg
+
+betterdoomweapons/sawup                 sounds/tichy/saw_up.ogg
+betterdoomweapons/sawready              sounds/tichy/saw_ready.ogg
+betterdoomweapons/sawmiss               sounds/tichy/saw_miss.ogg
+betterdoomweapons/sawhit                sounds/tichy/saw_hit.ogg
+
+betterdoomweapons/pistolfire            sounds/tichy/pistol_fire.ogg
+betterdoomweapons/pistolaltfire         sounds/tichy/pistol_altfire.ogg
+
+bdw/sf1                                 sounds/tichy/shotgun_fire1.ogg
+bdw/sf2                                 sounds/tichy/shotgun_fire2.ogg
+bdw/sf3                                 sounds/tichy/shotgun_fire3.ogg
+$random betterdoomweapons/shotfire      { bdw/sf1 bdw/sf2 bdw/sf3 }
+
+betterdoomweapons/shotreload            sounds/tichy/shotgun_reload.ogg
+
+betterdoomweapons/ssgfire               sounds/tichy/ssg_fire.ogg
+betterdoomweapons/ssgopen               sounds/tichy/ssg_open.ogg
+betterdoomweapons/ssgload               sounds/tichy/ssg_load.ogg
+betterdoomweapons/ssgclose              sounds/tichy/ssg_close.ogg
+
+betterdoomweapons/chaingunfire          sounds/tichy/chaingun_fire.lmp
+
+betterdoomweapons/rocketfire            sounds/tichy/rocket_fire.ogg
+betterdoomweapons/rocketaltfire         sounds/tichy/rocket_altfire.ogg
+betterdoomweapons/rocketexplode         sounds/tichy/rocket_explode.ogg
+
+$limit betterdoomweapons/rocketexplode  0
+
+betterdoomweapons/plasmafire            sounds/tichy/plasma_fire.ogg
+betterdoomweapons/plasmaexplode         sounds/tichy/plasma_explode.ogg
+
+$limit betterdoomweapons/plasmafire     0
+$limit betterdoomweapons/plasmaexplode  0
+
+
+betterdoomweapons/bfgfire               sounds/tichy/bfg_fire.ogg
+betterdoomweapons/bfgexplode            sounds/tichy/bfg_explode.ogg

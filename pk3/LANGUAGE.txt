@@ -9,10 +9,15 @@
 //
 // PK means "pickup"
 
+// Replacements
+JKE_PK_JKEROCKETBOX             = "You picked up a pack of explosives.";
+
+
 // Ammo
 JKE_PK_ARROWAMMO                = "You found 10 Ballesta arrows.";
 JKE_PK_ARROWQUIVER              = "You found a Ballesta arrow quiver.";
 JKE_PK_BERETTAAMMO              = "You found a Beretta clip.";
+JKE_PK_EXPLOSIVEAMMO            = "You found polymorphic explosive ammo.";
 JKE_PK_FIREAMMO                 = "You found Pyro mana.";
 JKE_PK_JKEMANA                  = "You found some mana.";
 JKE_PK_JSNIPERRIFLE             = "You found bolt-action sniper rounds.";
