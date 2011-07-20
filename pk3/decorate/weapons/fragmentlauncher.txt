@@ -213,7 +213,7 @@ actor Fragmentlauncher: Weapon
         Goto Ready
 
       Spawn:
-        FLKW K -1
+        FLAK Z -1
         stop
     }
 }

@@ -125,6 +125,22 @@ $alias jkemod/firessg/load              jkemod/doublebarrelsg/load
 $alias jkemod/firessg/close             jkemod/doublebarrelsg/close
 
 ////
+//   FLARE GUn
+////
+
+$alias jkemod/flaregun/up               jkemod/ballesta/up
+
+jkemod/flaregun/fire                    sounds/weapons/flaregun/fire.wav
+jkemod/flaregun/open                    sounds/weapons/flaregun/open.wav
+jkemod/flaregun/load                    sounds/weapons/flaregun/load.wav
+jkemod/flaregun/close                   sounds/weapons/flaregun/close.wav
+
+$alias  jkemod/flaregun/explode         weapons/rocklx
+$volume jkemod/flaregun/explode         0.4
+
+
+
+////
 //   FRAGMENT LAUNCHER
 ////
 

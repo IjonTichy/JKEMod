@@ -1,4 +1,5 @@
 #include "decorate/general.txt"
+#include "decorate/casings.txt"
 #include "decorate/ammo.txt"
 #include "decorate/weapons.txt"
-#include "decorate/casings.txt"
+#include "decorate/replaces.txt"

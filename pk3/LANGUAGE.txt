@@ -23,12 +23,13 @@ JKE_PK_JKEMANA                  = "You found some mana.";
 JKE_PK_JSNIPERRIFLE             = "You found bolt-action sniper rounds.";
 
 // Weapons
-JKE_PK_BALLESTA                 = "You got the Ballesta!";
-JKE_PK_DOUBLEBARRELSG           = "You have the double barreled shotgun!";
+JKE_PK_BALLESTA                 = "You found the Ballesta!";
+JKE_PK_DOUBLEBARRELSG           = "You got a double barreled shotgun!";
 JKE_PK_DUALBERETTAS             = "You picked up two berettas.";
 JKE_PK_DUALPISTOLS              = "You picked up two pistols.";
 JKE_PK_DUALPLASMARIFLES         = "You got dual plasma rifles!";
 JKE_PK_FIRESSG                  = "You got the incendiary super shotgun!";
+JKE_PK_FLAREGUN                 = "You found a flare gun.";
 JKE_PK_HEAVYCHAINGUN            = "\ck*chk-chink*\c- Hehvy masheen gun!";
 JKE_PK_JSHOTGUN                 = "You picked up a shotgun.";
 JKE_PK_JSNIPERRIFLE             = "You got a sniper rifle!";
@@ -52,6 +53,7 @@ JKE_MP_DUALPLASMARIFLES_PLASMA  = "%k melted %o's face.";
 JKE_MP_DUALPLASMARIFLES_RAIL    = "%k blasted two gaping holes in %o.";
 JKE_MP_FIRESSG1                 = "%k melted %o's face.";
 JKE_MP_FIRESSG2                 = "%k scorched the skin off of %o.";
+JKE_MP_FLAREGUN                 = "%k lit up %o.";
 JKE_MP_HEAVYCHAINGUN            = "%k filled %o full of lead.";
 JKE_MP_JSHOTGUN                 = "%k hunted down %o like a deer.";
 JKE_MP_JSNIPERRIFLE             = "%o never saw %k or the bullet.";
