@@ -61,6 +61,7 @@ addslotdefault 6 "Plasma Rifle"
 //   SLOT 7
 ////
 
+addslotdefault 7 "BFG7000"
 addslotdefault 7 " BFG9000 "
 
 

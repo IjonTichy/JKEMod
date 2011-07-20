@@ -56,6 +56,20 @@ jkemod/ballesta/explode                 sounds/weapons/ballesta/explode.wav
 
 
 ////
+//   BFG7000
+////
+
+$alias jkemod/bfg7000/plasmaexplode     weapons/plasmax
+$alias jkemod/bfg7000/explode           weapons/bfgx
+
+jkemod/bfg7000/load                     sounds/weapons/bfg7000/load.lmp
+jkemod/bfg7000/fire                     sounds/weapons/bfg7000/fire.wav
+jkemod/bfg7000/plasmafire               sounds/weapons/bfg7000/plasma.wav
+
+$limit jkemod/bfg7000/plasmafire        0
+$limit jkemod/bfg7000/plasmaexplode     0
+
+////
 //   DOUBLE BARRELED SHOTGUN
 ////
 

@@ -24,6 +24,7 @@ JKE_PK_JSNIPERRIFLE             = "You found bolt-action sniper rounds.";
 
 // Weapons
 JKE_PK_BALLESTA                 = "You found the Ballesta!";
+JKE_PK_BFG7000                  = "You found a BFG9000 prototype!";
 JKE_PK_DOUBLEBARRELSG           = "You got a double barreled shotgun!";
 JKE_PK_DUALBERETTAS             = "You picked up two berettas.";
 JKE_PK_DUALPISTOLS              = "You picked up two pistols.";
