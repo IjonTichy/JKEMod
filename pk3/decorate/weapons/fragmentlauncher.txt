@@ -9,6 +9,7 @@ Actor FragmentChunk
     Radius 5
     Height 5
     DeathSound "jkemod/fragmentlauncher/chunkexplode"
+    Obituary "$JKE_MP_FRAGMENTLAUNCHER1"
     States
     {
       Spawn:
@@ -33,6 +34,7 @@ actor FragmentShell
     Speed 30
     Damage 10
     DeathSound "misc/explosion"
+    Obituary "$JKE_MP_FRAGMENTLAUNCHER2"
     States
     {
       Spawn:
@@ -147,6 +149,7 @@ actor FragmentShard
     Speed 40
     Scale 0.5
     Damage (3)
+    Obituary "$JKE_MP_FRAGMENTLAUNCHER2"
     States
     {
       Spawn:
@@ -167,7 +170,6 @@ actor Fragmentlauncher: Weapon
     weapon.AmmoUse2 1
     weapon.selectionorder 460
     Inventory.PickupMessage "$JKE_PK_FRAGMENTLAUNCHER"
-    Obituary "$JKE_MP_FRAGMENTLAUNCHER"
     states
     {
       Ready:

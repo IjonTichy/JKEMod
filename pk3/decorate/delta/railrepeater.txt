@@ -1,0 +1,56 @@
+ACTOR RailRepeater: Weapon
+{
+    Weapon.SelectionOrder 400
+
+    Weapon.AmmoType "Cell"
+    Weapon.AmmoGive 100
+    Weapon.AmmoUse 1
+
+    Inventory.PickupMessage "$JKE_PK_RAILREPEATER"
+    Obituary "$JKE_MP_RAILREPEATER"
+
+    States
+    {
+      Spawn:
+        MINI A -1
+        loop
+
+      Ready:
+        MING A 9 A_WeaponReady
+        Loop
+
+      Deselect:
+        TNT1 A 0 A_Lower
+        MING A 1 A_Lower
+        loop
+
+      Select:
+        TNT1 A 0 A_Raise
+        MING A 1 A_Raise
+        loop
+
+      Fire:
+        MING A 0 A_PlaySound("jkemod/railrepeater/revup")
+        MING HGFEDCB 2
+        MING AHGFEDBAHFC 1
+        goto Hold
+
+      Hold:
+        MINF A 0 A_GunFlash
+        MINF A 0
+        MINF A 0 A_PlaySound("jkemod/railrepeater/hold")
+        MINF A 1 bright A_RailAttack(60, 3, 1, "none" , "00 00 FF", 0)
+        MING E 1 bright
+        MINF B 1 bright A_RailAttack(60, 5, 1, "none" , "00 00 FF", 0)
+        MING H 1 bright
+        MINF C 1 bright A_RailAttack(60, 2, 1, "none" , "00 00 FF", 0)
+        MING C 1 bright
+        MING C 0 A_ReFire
+        MING A 0 A_PlaySound("jkemod/railrepeater/revdown")
+        MING CHFDBHGFEDCB 1
+        MING HGFEDCB 2
+        MING HGFE 3
+        MING DCB 4
+        Goto Ready
+    }
+}

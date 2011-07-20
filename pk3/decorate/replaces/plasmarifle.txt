@@ -1,0 +1,4 @@
+actor JKEPlasmaRifle: RandomSpawner replaces PlasmaRifle
+{
+    dropitem "Plasma Rifle"
+}

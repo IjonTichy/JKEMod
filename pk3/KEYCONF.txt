@@ -33,7 +33,6 @@ addslotdefault 3 "Super Shotgun"
 //   SLOT 4
 ////
 
-addslotdefault 4 "Ballesta"
 addslotdefault 4 " Chaingun "
 addslotdefault 4 "HeavyChaingun"
 addslotdefault 4 "M16"
@@ -43,6 +42,7 @@ addslotdefault 4 "M16"
 //   SLOT 5
 ////
 
+addslotdefault 5 "Ballesta"
 addslotdefault 5 "FlareGun"
 addslotdefault 5 "FragmentLauncher"
 addslotdefault 5 "Rocket Launcher"
@@ -55,6 +55,7 @@ addslotdefault 5 "Rocket Launcher"
 addslotdefault 6 "DualPlasmaRifles"
 addslotdefault 6 "FireGloves"
 addslotdefault 6 "Plasma Rifle"
+addslotdefault 6 "TriStaff"
 
 
 ////
@@ -63,14 +64,12 @@ addslotdefault 6 "Plasma Rifle"
 
 addslotdefault 7 "BFG7000"
 addslotdefault 7 " BFG9000 "
+addslotdefault 7 "RailRepeater"
 
 
 ////
 //   SLOT 8
 ////
-
-addslotdefault 8 "JSniperRifle"
-addslotdefault 8 "MagnumSniper"
 
 
 ////
@@ -81,3 +80,6 @@ addslotdefault 8 "MagnumSniper"
 ////
 //   SLOT 0
 ////
+
+addslotdefault 0 "JSniperRifle"
+addslotdefault 0 "MagnumSniper"

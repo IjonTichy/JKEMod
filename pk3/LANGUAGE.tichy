@@ -1,11 +1,11 @@
 [ enu default ]
 
-PICKUP_PISTOL_DROPPED       = "A pistol. Maybe it's worth something.";
+BDW_PK_PISTOL               = "A pistol. Maybe it's worth something.";
 BDW_PK_SHOTGUN              = "Name's Doomguy. Cleanup.";
-BDW_PK_SHOTGUN2             = "Can't you break your nose with this thing's recoil?";
+BDW_PK_SUPERSHOTGUN         = "Can't you break your nose with this thing's recoil?";
 BDW_PK_CHAINGUN             = "Hey, chaingun! The hell with respect!";
-BDW_PK_LAUNCHER             = "\cbROCKET LAUNCHER FOUND. COMMENCE FLYING.\c-";
-BDW_PK_PLASMA               = "You got the plasma rifle!";
+BDW_PK_ROCKETLAUNCHER       = "\cbROCKET LAUNCHER FOUND. COMMENCE FLYING.\c-";
+BDW_PK_PLASMARIFLE          = "You got the plasma rifle!";
 BDW_PK_BFG9000              = "... and my gun is very, very large.";
 
 BDW_PK_POWERSPHERE          = "The fires of Hell course through your veins...";

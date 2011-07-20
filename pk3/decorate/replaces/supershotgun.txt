@@ -1,0 +1,6 @@
+actor JKESuperShotgun: RandomSpawner replaces SuperShotgun
+{
+    dropitem "Super Shotgun"
+    dropitem "DoubleBarrelSG"
+    dropitem "FireSSG"
+}

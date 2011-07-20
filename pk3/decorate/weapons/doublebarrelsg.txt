@@ -39,7 +39,7 @@ actor DoubleBarrelSG : Weapon
         ST2A A 2 A_PlaySound("jkemod/doublebarrelsg/close", CHAN_WEAPON)
         Goto Ready
       Spawn:
-        SSG2 A -1
+        ST2A Z -1
         Stop
     }
 }

@@ -13,4 +13,5 @@
 #include "decorate/weapons/jsniperrifle.txt"
 #include "decorate/weapons/m16.txt"
 #include "decorate/weapons/magnumsniper.txt"
+#include "decorate/weapons/tristaff.txt"
 #include "decorate/weapons/zenfist.txt"

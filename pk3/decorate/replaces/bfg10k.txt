@@ -1,0 +1,4 @@
+actor JKEBFG10k: RandomSpawner replaces BFG10k
+{
+    dropitem "RailRepeater"
+}

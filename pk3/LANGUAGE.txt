@@ -10,6 +10,7 @@
 // PK means "pickup"
 
 // Replacements
+JKE_PK_JKECLIPBOX               = "You picked up a pack of various bullets.";
 JKE_PK_JKEROCKETBOX             = "You picked up a pack of explosives.";
 
 
@@ -35,6 +36,7 @@ JKE_PK_HEAVYCHAINGUN            = "\ck*chk-chink*\c- Hehvy masheen gun!";
 JKE_PK_JSHOTGUN                 = "You picked up a shotgun.";
 JKE_PK_JSNIPERRIFLE             = "You got a sniper rifle!";
 JKE_PK_MAGNUMSNIPER             = "You got the magnum sniper!";
+JKE_PK_TRISTAFF                 = "You got a pitchfork made of wands - wait what.";
 JKE_PK_ZENFIST                  = "You picked up two disembodied arms. Eeewww.";
 
 
@@ -48,10 +50,13 @@ JKE_PK_ZENFIST                  = "You picked up two disembodied arms. Eeewww.";
 //  %p: his/her/its
 
 JKE_MP_BALLESTA                 = "%k shoved an exploding arrow through %o.";
+JKE_MP_BFG7000                  = "%k showed %o the power of the BFG7000.";
 JKE_MP_DOUBLEBARRELSG           = "%k cleaned the floor of %o.";
 JKE_MP_DUALPISTOLS              = "%k capped %o.";
 JKE_MP_DUALPLASMARIFLES_PLASMA  = "%k melted %o's face.";
 JKE_MP_DUALPLASMARIFLES_RAIL    = "%k blasted two gaping holes in %o.";
+JKE_MP_FRAGMENTLAUNCHER1        = "%k tore and blew up %o.";
+JKE_MP_FRAGMENTLAUNCHER2        = "%k gave %o some shrapnel for %p troubles.";
 JKE_MP_FIRESSG1                 = "%k melted %o's face.";
 JKE_MP_FIRESSG2                 = "%k scorched the skin off of %o.";
 JKE_MP_FLAREGUN                 = "%k lit up %o.";
@@ -59,4 +64,5 @@ JKE_MP_HEAVYCHAINGUN            = "%k filled %o full of lead.";
 JKE_MP_JSHOTGUN                 = "%k hunted down %o like a deer.";
 JKE_MP_JSNIPERRIFLE             = "%o never saw %k or the bullet.";
 JKE_MP_MAGNUMSNIPER             = "%k took out %o from the shadows.";
+JKE_MP_TRISTAFF                 = "%k beamed %o.";
 JKE_MP_ZENFIST                  = "%k beat the everloving snot out of %o.";

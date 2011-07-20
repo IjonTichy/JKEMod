@@ -1,0 +1,4 @@
+actor JKEChaingun: RandomSpawner replaces Chaingun
+{
+    dropitem "M16"
+}

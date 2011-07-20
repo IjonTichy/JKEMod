@@ -1,0 +1,5 @@
+actor JKEShotgun: RandomSpawner replaces Shotgun
+{
+    dropitem "JShotgun"
+    dropitem " Shotgun "
+}

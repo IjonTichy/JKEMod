@@ -1,0 +1,4 @@
+actor JKERailgun: RandomSpawner replaces Railgun
+{
+    dropitem "DualPlasmaRifles"
+}

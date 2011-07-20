@@ -1,0 +1,5 @@
+actor JKEChainsaw: RandomSpawner replaces Chainsaw
+{
+    dropitem "FireGloves"
+    dropitem "TriStaff"
+}

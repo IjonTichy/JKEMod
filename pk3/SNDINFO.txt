@@ -211,6 +211,14 @@ jkemod/magnumsniper/out                 sounds/weapons/magnumsniper/out.wav
 jkemod/magnumsniper/in                  sounds/weapons/magnumsniper/in.wav
 
 ////
+//   TRI-STAFF
+////
+
+jkemod/tristaff/up                      sounds/weapons/tristaff/up.lmp
+jkemod/tristaff/fire                    sounds/weapons/tristaff/fire.lmp
+
+
+////
 //   ZEN FISTS
 ////
 

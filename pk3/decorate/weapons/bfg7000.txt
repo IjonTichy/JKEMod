@@ -53,6 +53,9 @@ actor BFG7000Plasma
 
     SeeSound "jkemod/bfg7000/plasmafire"
     DeathSound "jkemod/bfg7000/plasmaexplode"
+
+    Obituary "$JKE_MP_BFG7000"
+
     States
     {
       Spawn:
@@ -84,6 +87,8 @@ actor BFG7000Ball
 
     RenderStyle Add
     Damage 4
+
+    Obituary "$JKE_MP_BFG7000"
 
     States
     {
