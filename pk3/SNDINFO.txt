@@ -7,6 +7,11 @@
 ////
 
 ///
+// Click
+
+jkemod/assorted/click                   sounds/assorted/click.wav
+
+///
 // Generic Explosion
 
 $random jkemod/assorted/explode
@@ -86,7 +91,6 @@ jkemod/doublebarrelsg/close             sounds/weapons/doublebarrelsg/close.wav
 
 jkemod/dualberettas/up                  sounds/weapons/dualberettas/up.wav
 jkemod/dualberettas/fire                sounds/weapons/dualberettas/fire.wav
-jkemod/dualberettas/click               sounds/weapons/dualberettas/click.wav
 jkemod/dualberettas/open                sounds/weapons/dualberettas/open.wav
 jkemod/dualberettas/load1               sounds/weapons/dualberettas/load1.wav
 jkemod/dualberettas/load2               sounds/weapons/dualberettas/load2.wav
@@ -139,7 +143,7 @@ $alias jkemod/firessg/load              jkemod/doublebarrelsg/load
 $alias jkemod/firessg/close             jkemod/doublebarrelsg/close
 
 ////
-//   FLARE GUn
+//   FLARE GUN
 ////
 
 $alias jkemod/flaregun/up               jkemod/ballesta/up
@@ -201,6 +205,15 @@ jkemod/m16/fire                         sounds/weapons/m16/fire.lmp
 jkemod/m16/out                          sounds/weapons/m16/out.wav
 jkemod/m16/in                           sounds/weapons/m16/in.wav
 
+
+////
+//   POWERFUL
+////
+
+jkemod/powerful/fire                    sounds/weapons/powerful/fire.wav
+$alias jkemod/powerful/explode          jkemod/assorted/explosion4
+
+
 ////
 //   MAGNUM SNIPER
 ////
@@ -209,6 +222,7 @@ jkemod/magnumsniper/fire                sounds/weapons/magnumsniper/fire.lmp
 jkemod/magnumsniper/load                sounds/weapons/magnumsniper/load.lmp
 jkemod/magnumsniper/out                 sounds/weapons/magnumsniper/out.wav
 jkemod/magnumsniper/in                  sounds/weapons/magnumsniper/in.wav
+
 
 ////
 //   TRI-STAFF

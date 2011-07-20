@@ -1,3 +1,7 @@
+weapons/2pistolsnd     DSPISTL
+weapons/chainatck      DSCHNGN2
+weapons/chainatc2      DSCHNGN3
+weapons/chainload      DSCGN2L1
 weapons/dossgfire      SHTFIRE
 weapons/dossgbopn      SHOTBOPN
 weapons/dossgload      SHOTLOAD
@@ -79,6 +83,7 @@ weapons/voltfire        DSLIGHT
 weapons/voltfire2       DSLIGH2
 weapons/uziclick        DSUZICK
 weapons/uzishot         DSUZI
+weapons/kick            DSPUNCH
 weapons/d200pfr         DSD200FI
 weapons/d200sfr         DSLASER
 weapons/hshotfr         DSSG11

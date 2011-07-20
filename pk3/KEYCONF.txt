@@ -2,7 +2,7 @@ addplayerclass BetterPlayer
 
 
 ////
-//   SLOT 1
+//   SLOT 1 - MELEE CLASS
 ////
 
 addslotdefault 1 " Chainsaw "
@@ -10,7 +10,7 @@ addslotdefault 1 " Fists "
 addslotdefault 1 "ZenFist"
 
 ////
-//   SLOT 2
+//   SLOT 2 - PISTOL CLASS
 ////
 
 addslotdefault 2 "DualBerettas"
@@ -19,7 +19,7 @@ addslotdefault 2 " Pistol "
 
 
 ////
-//   SLOT 3
+//   SLOT 3 - SHOTGUN CLASS
 ////
 
 addslotdefault 3 "DoubleBarrelSG"
@@ -30,7 +30,7 @@ addslotdefault 3 "Super Shotgun"
 
 
 ////
-//   SLOT 4
+//   SLOT 4 - RAPID-FIRE CLASS
 ////
 
 addslotdefault 4 " Chaingun "
@@ -39,7 +39,7 @@ addslotdefault 4 "M16"
 
 
 ////
-//   SLOT 5
+//   SLOT 5 - EXPLOSIVE CLASS
 ////
 
 addslotdefault 5 "Ballesta"
@@ -49,17 +49,15 @@ addslotdefault 5 "Rocket Launcher"
 
 
 ////
-//   SLOT 6
+//   SLOT 6 - PLASMA/RAIL CLASS
 ////
 
 addslotdefault 6 "DualPlasmaRifles"
-addslotdefault 6 "FireGloves"
 addslotdefault 6 "Plasma Rifle"
-addslotdefault 6 "TriStaff"
 
 
 ////
-//   SLOT 7
+//   SLOT 7 - BFG CLASS
 ////
 
 addslotdefault 7 "BFG7000"
@@ -68,17 +66,20 @@ addslotdefault 7 "RailRepeater"
 
 
 ////
-//   SLOT 8
+//   SLOT 8 - OVERPOWERED CLASS
 ////
 
+addslotdefault 8 "Powerful"
 
 ////
-//   SLOT 9
+//   SLOT 9 - MAGIC CLASS
 ////
 
+addslotdefault 9 "FireGloves"
+addslotdefault 9 "TriStaff"
 
 ////
-//   SLOT 0
+//   SLOT 0 - SNIPER CLASS
 ////
 
 addslotdefault 0 "JSniperRifle"

@@ -100,7 +100,7 @@ actor DualBerettas: Weapon
 
       ReloadStart:
         BRR2 A 2
-        BRR2 B 2 A_PlaySound("jkemod/dualberettas/click", CHAN_WEAPON)
+        BRR2 B 2 A_PlaySound("jkemod/assorted/click", CHAN_WEAPON)
         BRR2 CDEF 2
         BRR2 G 2 A_PlaySound("jkemod/dualberettas/out", CHAN_WEAPON)
         BRR2 HI 2
