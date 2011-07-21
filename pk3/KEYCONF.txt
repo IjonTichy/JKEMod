@@ -74,6 +74,7 @@ addslotdefault 7 "DKDevastator"
 ////
 
 addslotdefault 8 "Powerful"
+addslotdefault 8 "SuperShotNuke"
 
 ////
 //   SLOT 9 - MAGIC CLASS

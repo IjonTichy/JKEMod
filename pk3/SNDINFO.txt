@@ -262,6 +262,17 @@ jkemod/magnumsniper/in                  sounds/weapons/magnumsniper/in.wav
 jkemod/mightyfist/fire                  sounds/weapons/mightyfist/fire.lmp
 jkemod/mightyfist/hit                   DSPUNCH
 
+
+////
+//   SUPER SHOTNUKE
+////
+
+jkemod/supershotnuke/fire               sounds/weapons/supershotnuke/fire.wav
+$alias jkemod/supershotnuke/open        betterdoomweapons/ssgopen
+$alias jkemod/supershotnuke/load        betterdoomweapons/ssgload
+$alias jkemod/supershotnuke/close       betterdoomweapons/ssgclose
+
+
 ////
 //   TRI-STAFF
 ////
