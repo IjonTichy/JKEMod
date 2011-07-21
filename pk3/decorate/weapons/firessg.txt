@@ -93,6 +93,8 @@ actor FireSSGShot1: FastProjectile
 
     Damage (3 * random(1, 8) )
 
+    RenderStyle Add
+
     Obituary "$JKE_MP_FIRESSG1"
 
     States
@@ -112,6 +114,8 @@ actor FireSSGShot2: FastProjectile
     Height 6
     Radius 6
     Speed 80
+
+    RenderStyle Add
 
     Damage (20 * random(1, 10))
 

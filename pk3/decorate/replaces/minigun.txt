@@ -1,5 +1,4 @@
 actor JKEMinigun: RandomSpawner replaces Minigun
 {
-    dropitem " Chaingun "
     dropitem "HeavyChaingun"
 }

@@ -2,6 +2,7 @@ actor M16: Weapon
 {
     Scale 0.2
     +AMMO_OPTIONAL
+    +NOALERT
 
     weapon.selectionorder 400
 
@@ -28,10 +29,11 @@ actor M16: Weapon
         Loop
       Fire:
         RIFL A 0 A_JumpIfNoAmmo("AltFire")
+        RIFL A 0 A_AlertMonsters
         RIFL B 0 A_PlaySound("jkemod/m16/fire", CHAN_WEAPON)
         RIFL B 0 bright A_FireBullets(3, 2, 1, 8, "BulletPuff", 1)
         RIFL B 2 bright A_Light1
-        RIFL C 2 A_FireCustomMissile("AssaultCasing", 55, 0, 3, 7)
+        RIFL C 2 A_FireCustomMissile("AssaultCasing", -55, 0, 8)
         RIFL D 0 A_ReFire
         RIFL D 3 A_Light0
         RIFL E 3

@@ -74,6 +74,20 @@ jkemod/bfg7000/plasmafire               sounds/weapons/bfg7000/plasma.wav
 $limit jkemod/bfg7000/plasmafire        0
 $limit jkemod/bfg7000/plasmaexplode     0
 
+
+////
+//   DEVASTATOR
+////
+
+jkemod/dkdevastator/fire                sounds/weapons/dkdevastator/fire.wav
+jkemod/dkdevastator/explode             sounds/weapons/dkdevastator/explode.wav
+
+$limit jkemod/dkdevastator/fire         0
+$limit jkemod/dkdevastator/explode      0
+$volume jkemod/dkdevastator/explode     0.3
+
+
+
 ////
 //   DOUBLE BARRELED SHOTGUN
 ////
@@ -171,6 +185,14 @@ jkemod/fragmentlauncher/shellexplode    sounds/weapons/fragmentlauncher/load.lmp
 $alias  jkemod/fragmentlauncher/chunkexplode weapons/rocklx
 $volume jkemod/fragmentlauncher/chunkexplode 0.4
 
+
+////
+//   FREEZETHROWER
+////
+
+jkemod/dkfreezethrower/fire             sounds/weapons/dkfreezethrower/fire.lmp
+jkemod/dkfreezethrower/explode          sounds/weapons/dkfreezethrower/explode.lmp
+
 ////
 //   HEAVY CHAINGUN
 ////
@@ -179,6 +201,15 @@ jkemod/heavychaingun/up                 sounds/weapons/heavychaingun/up.wav
 jkemod/heavychaingun/load               sounds/weapons/heavychaingun/load.lmp
 jkemod/heavychaingun/fire               sounds/weapons/heavychaingun/fire.wav
 jkemod/heavychaingun/altfire            sounds/weapons/heavychaingun/altfire.lmp
+
+
+////
+//   J-PISTOL
+////
+
+jkemod/jpistol/fire                     sounds/weapons/jpistol/fire.lmp
+$alias jkemod/jpistol/load             jkemod/doublebarrelsg/load
+
 
 ////
 //   J-SHOTGUN
@@ -198,20 +229,20 @@ jkemod/jsniperrifle/load                sounds/weapons/jsniperrifle/load.wav
 
 
 ////
+//   POWERFUL
+////
+
+jkemod/powerful/fire                    sounds/weapons/powerful/fire.wav
+$alias jkemod/powerful/explode          jkemod/assorted/explosion4
+
+
+////
 //   M16
 ////
 
 jkemod/m16/fire                         sounds/weapons/m16/fire.lmp
 jkemod/m16/out                          sounds/weapons/m16/out.wav
 jkemod/m16/in                           sounds/weapons/m16/in.wav
-
-
-////
-//   POWERFUL
-////
-
-jkemod/powerful/fire                    sounds/weapons/powerful/fire.wav
-$alias jkemod/powerful/explode          jkemod/assorted/explosion4
 
 
 ////
@@ -223,6 +254,13 @@ jkemod/magnumsniper/load                sounds/weapons/magnumsniper/load.lmp
 jkemod/magnumsniper/out                 sounds/weapons/magnumsniper/out.wav
 jkemod/magnumsniper/in                  sounds/weapons/magnumsniper/in.wav
 
+
+////
+//   MIGHTY FIST
+////
+
+jkemod/mightyfist/fire                  sounds/weapons/mightyfist/fire.lmp
+jkemod/mightyfist/hit                   DSPUNCH
 
 ////
 //   TRI-STAFF

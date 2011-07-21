@@ -8,6 +8,7 @@ actor MagnumSniper: Weapon
 {
     +WEAPON.NOAUTOAIM
     +AMMO_OPTIONAL
+    +NOALERT
     Weapon.SelectionOrder 350
 
     Weapon.AmmoUse1 1
@@ -40,6 +41,7 @@ actor MagnumSniper: Weapon
         PLSC A 0 A_JumpIfInventory("MainFired", 1, "Fire")
         PLSC A 0 A_ZoomFactor(1.0, ZOOM_INSTANT)
 
+        PLSC A 0 A_AlertMonsters
         PLSC A 0 A_GunFlash
         PLSC A 0 A_PlaySound("jkemod/magnumsniper/fire", CHAN_WEAPON)
         PLSC A 0 A_RailAttack(320, 3, 0, none, "FF 00 00", 1, 0, "MagnumPuff")

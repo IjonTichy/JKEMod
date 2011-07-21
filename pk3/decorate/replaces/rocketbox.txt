@@ -12,6 +12,7 @@ actor JKERocketBox: CustomInventory replaces RocketBox
         TNT1 A 0 A_GiveInventory("RocketAmmo", 5)
         TNT1 A 0 A_GiveInventory("ExplosiveAmmo", 5)
         TNT1 A 0 A_GiveInventory("BallestaAmmo", 15)
+        TNT1 A 0 A_GiveInventory("DevastatorAmmo", 25)
         stop
     }
 }

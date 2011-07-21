@@ -1,484 +1,3 @@
-actor Dkfreezer : Weapon 21229
-{
-    Inventory.PickupMessage "You got duke-nukem's freezer!"
-    weapon.AmmoGive1 50
-    weapon.AmmoType1 "Cell"
-    weapon.AmmoUse1 1
-    weapon.selectionorder 470
-    Obituary "-"
-    states
-    {
-      Ready:
-        FREZ A 1 A_WeaponReady
-        Loop
-      Select:
-        FREZ A 1 A_Raise
-        Loop
-      Deselect:
-        FREZ A 1 A_Lower
-        Loop
-      Fire:
-        FREZ C 1 A_PlaySound("weapons/frezshot", CHAN_WEAPON)
-        FREZ D 1 A_FireCustomMissile("Freezeball", 0, 1, 3, 0)
-        FREZ E 1
-        FREZ F 1
-        FREZ B 2 A_ReFire
-        Goto Ready
-      Spawn:
-        FREZ P -1
-        stop
-    }
-}
-
-Actor Freezeball
-{
-    +MISSILE
-    +MISSILEMORE
-    +NOGRAVITY
-    +ICEDamage
-    +DOOMBOUNCE
-    +NOTELEPORT
-    Speed 30
-    Damage 5
-    Radius 8
-    Height 8
-    DeathSound "missile/frezxplod"
-    Scale 0.2
-    reactiontime 20
-    States
-    {
-      Spawn:
-        FRZS A 0 A_Countdown
-        FRZS A 2
-        FRZS B 2
-        FRZS C 2
-        Loop
-      Death:
-        FRZE ABCDE 3
-        Stop
-    }
-}
-
-Actor Dkminiproj
-{
-    +MISSILE
-    +MISSILEMORE
-    +MISSILEEVENMORE
-    +NOGRAVITY
-    +NOTELEPORT
-    Speed 40
-    Damage 10
-    Radius 6
-    Height 5
-    Scale 0.3
-    SeeSound "missile/devasshot"
-    DeathSound "missile/devasxplod"
-    States
-    {
-      Spawn:
-        MNSS A 1
-        Loop
-      Death:
-        SOD0 E 0 A_Explode(90, 100, 1)
-        SOD0 EFGHIJKLMNO 3
-        Stop
-    }
-}
-
-Actor Dkdevastator : Weapon 21239
-{
-    Inventory.PickupMessage "You have Duke-nukem's devastator! TOTAL PWNAGE now!"
-    weapon.AmmoGive 12
-    weapon.AmmoType "DevsAmmo"
-    weapon.AmmoUse1 1
-    weapon.selectionorder 500
-    Obituary "-"
-    states
-    {
-      Ready:
-        DEVG A 1 A_WeaponReady
-      Select:
-        DEVG A 1 A_Raise
-        loop
-      Deselect:
-        DEVG A 1 A_Lower
-        loop
-      Fire:
-        DEVG B 0 A_Light1
-        DEVG B 1 A_FireCustomMissile("Dkminiproj", 2, 1, -8, 0)
-        DEVG B 1
-        DEVG A 1 A_JumpIfNoAmmo(9)
-        DEVG B 2 A_FireCustomMissile("Dkminiproj", 0, 1, -8, 0)
-        DEVG B 6 A_JumpIfNoAmmo(7)
-        DEVG A 4 A_Light0
-        DEVG C 0 A_Light1
-        DEVG C 1 A_FireCustomMissile("Dkminiproj", -2, 1, 8, 0)
-        DEVG C 1
-        DEVG A 1 A_JumpIfNoAmmo(3)
-        DEVG C 2 A_FireCustomMissile("Dkminiproj", 0, 1, 8, 0)
-        DEVG C 6 A_Light0
-        DEVG A 4
-        Goto Ready
-      Spawn:
-        DVST A -1
-        stop
-    }
-}
-
-actor DevsAmmo : Ammo 21232
-{
-    Inventory.Amount 8
-    Inventory.MaxAmount 80
-    Ammo.BackpackAmount 15
-    Ammo.BackpackMaxAmount 200
-    Inventory.PickupSound "misc/i_pkup"
-    Inventory.PickupMessage "Some missiles for the devastator"
-    Inventory.Icon "MNRAA0"
-    states
-    {
-      Spawn:
-        MNRA A -1
-        stop
-    }
-}
-
-Actor LargedevsAmmo : DevsAmmo
-{
-    Inventory.Amount 25
-    Inventory.PickupMessage "Box with missiles for devastator....yes!"
-    States
-    {
-      Spawn:
-        MNRB A -1
-        Stop
-    }
-}
-
-actor Deserteagle : Weapon 21234
-{
-    Inventory.PickupMessage "You got a desert eagle!"
-    weapon.AmmoGive1 25
-    weapon.AmmoType1 "Clip"
-    weapon.AmmoUse1 1
-    weapon.selectionorder 850
-    AttackSound "weapons/desertfire"
-    Obituary "-"
-    states
-    {
-      Ready:
-        DSRT A 1 A_WeaponReady
-      Select:
-        DSRT A 0 A_Raise
-        DSRT A 1 A_Raise
-        loop
-      Deselect:
-        DSRT A 0 A_Lower
-        DSRT A 1 A_Lower
-        loop
-      Fire:
-        DSRT D 0 A_Light1
-        DSRT D 2
-        DSRT B 3 bright A_FireBullets(4, 1, 1, 9, "Bulletpuff", 1)
-        DSRT C 3 A_Light0
-        DSRT C 0 A_FireCustomMissile("AssaultCasing", -60, 0, 5, 0)
-        DSRT A 6
-        DSRT A 0 A_ReFire
-        Goto Ready
-      Spawn:
-        DSRP A -1
-        stop
-    }
-}
-
-Actor Pis3Ammo : Ammo
-{
-    Inventory.MaxAmount 14
-}
-
-actor Pistol3 : Weapon 21235
-{
-    +AMMO_OPTIONAL
-    Inventory.PickupMessage "You have a pistol, kind of useful"
-    weapon.AmmoGive1 28
-    weapon.AmmoType1 "Pis3Ammo"
-    weapon.AmmoType2 "Clip"
-    weapon.AmmoGive2 40
-    weapon.AmmoUse1 1
-    weapon.selectionorder 1200
-    AttackSound "weapons/pist3fire"
-    Obituary "-"
-    states
-    {
-      Ready:
-        PIS3 A 1 A_WeaponReady
-      Select:
-        PIS3 A 0 A_Raise
-        PIS3 A 1 A_Raise
-        loop
-      Deselect:
-        PIS3 A 0 A_Lower
-        PIS3 A 1 A_Lower
-        loop
-      Fire:
-        PIS3 A 0 A_JumpIfInventory("Pis3Ammo", 1, 2)
-        PIS3 A 0
-        Goto AltFire
-        PIS3 D 2
-        PIS3 B 0
-        PIS3 B 2 bright A_FireBullets(4, 2, 1, 6, "Bulletpuff", 1)
-        PIS3 C 3 bright
-        PIS3 C 0 A_FireCustomMissile("AssaultCasing", -46, 0, 2, 6)
-        PIS3 D 4
-        PIS3 A 2 A_ReFire
-        PIS3 A 2
-        Goto Ready
-      AltFire:
-        PIS3 A 0 A_JumpIfInventory("Pis3Ammo", 14, 2)
-        PIS3 A 0 A_JumpIfInventory("Clip", 1, 2)
-        PIS3 A 0
-        Goto Ready
-        PIS3 C 2 Offset (0, 40)
-        PIS3 C 0 A_PlaySound("weapons/weapclick", CHAN_WEAPON)
-        PIS3 C 2 Offset (0, 50)
-        PIS3 C 2 Offset (0, 60)
-        PIS3 C 30 Offset (0, 70)
-        PIS3 C 0 A_PlaySound("weapons/dossgload", CHAN_WEAPON)
-        PIS3 C 15 Offset (0, 70)
-        PIS3 C 2 Offset (0, 60)
-        PIS3 C 2 Offset (0, 50)
-        PIS3 C 2 Offset (0, 40)
-        PIS3 A 2
-        PIS3 A 0
-        PIS3 A 0 A_TakeInventory("Clip", 1)
-        PIS3 A 0 A_GiveInventory("Pis3Ammo", 1)
-        PIS3 A 0 A_JumpIfInventory("Pis3Ammo", 14, 4)
-        PIS3 A 0 A_JumpIfInventory("Clip", 1, 2)
-        PIS3 A 0
-        Goto AltFire+21
-        PIS3 A 0
-        Goto AltFire+15
-        PIS3 A 1
-        Goto Ready
-      Spawn:
-        PISS A -1
-        stop
-    }
-}
-
-Actor Pis4Ammo : Ammo
-{
-    Inventory.MaxAmount 20
-}
-
-actor Pistol4 : Weapon 21236
-{
-    +AMMO_OPTIONAL
-    Inventory.PickupMessage "Another weirdo pistol for the collection"
-    weapon.AmmoGive1 40
-    weapon.AmmoGive2 40
-    weapon.AmmoType1 "Pis4Ammo"
-    weapon.AmmoType2 "Clip"
-    weapon.AmmoUse1 1
-    AttackSound "weapons/pist4fire"
-    weapon.selectionorder 1000
-    Obituary "-"
-    states
-    {
-      Ready:
-        PIS4 A 1 A_WeaponReady
-      Select:
-        PIS4 A 0 A_Raise
-        PIS4 A 1 A_Raise
-        loop
-      Deselect:
-        PIS4 A 0 A_Lower
-        PIS4 A 1 A_Lower
-        loop
-      Fire:
-        PIS4 A 0 A_JumpIfInventory("Pis4Ammo", 1, 2)
-        PIS4 A 0
-        Goto AltFire
-        PIS4 B 1
-        PIS4 D 3 bright A_FireBullets(4, 2, 1, 6, "Bulletpuff", 1)
-        PIS4 C 3
-        PIS4 C 0 A_FireCustomMissile("AssaultCasing", -46, 0, 4, 6)
-        PIS4 A 3
-        PIS4 A 0 A_ReFire
-        Goto Ready
-      AltFire:
-        PIS4 A 0 A_JumpIfInventory("Pis4Ammo", 20, 2)
-        PIS4 A 0 A_JumpIfInventory("Clip", 1, 2)
-        PIS4 A 0
-        Goto Ready
-        PIS4 B 2 Offset (0, 30)
-        PIS4 B 0 A_PlaySound("weapons/weapclick", CHAN_WEAPON)
-        PIS4 B 2 Offset (0, 40)
-        PIS4 B 2 Offset (0, 50)
-        PIS4 B 20 Offset (0, 60)
-        PIS4 B 0 A_PlaySound("weapons/dossgload", CHAN_WEAPON)
-        PIS4 B 15 Offset (0, 60)
-        PIS4 B 2 Offset (0, 50)
-        PIS4 B 2 Offset (0, 40)
-        PIS4 B 2 Offset (0, 30)
-        PIS4 A 2
-        PIS4 A 0
-        PIS4 A 0 A_TakeInventory("Clip", 1)
-        PIS4 A 0 A_GiveInventory("Pis4Ammo", 1)
-        PIS4 A 0 A_JumpIfInventory("Pis4Ammo", 20, 4)
-        PIS4 A 0 A_JumpIfInventory("Clip", 1, 2)
-        PIS4 A 0
-        Goto AltFire+21
-        PIS4 A 0
-        Goto AltFire+15
-        PIS4 A 2
-        Goto Ready
-      Spawn:
-        PISS A -1
-        stop
-    }
-}
-
-Actor Fist1 : Inventory
-{
-    Inventory.MaxAmount 1
-}
-
-Actor Fist2 : Inventory
-{
-    Inventory.MaxAmount 1
-}
-
-Actor Fist3 : Inventory
-{
-    Inventory.MaxAmount 1
-}
-
-Actor Fist4 : Inventory
-{
-    Inventory.MaxAmount 1
-}
-
-
-Actor Kick1 : Inventory
-{
-    Inventory.MaxAmount 1
-}
-
-Actor Kick2 : Inventory
-{
-    Inventory.MaxAmount 1
-}
-
-actor Mightyfist : Weapon 21237
-{
-    +INVENTORY.UNDROPPABLE
-    +NOALERT
-    +WEAPON.MELEEWEAPON
-    +WEAPON.WIMPY_WEAPON
-    weapon.kickback 200
-    weapon.selectionorder 1800
-    Obituary "-"
-    AttackSound "weapons/fisthit"
-    states
-    {
-      Ready:
-        PUNG A 0 A_TakeInventory("Kick2", 1)
-        PUNG A 0 A_TakeInventory("Kick1", 1)
-        PUNG A 0 A_TakeInventory("Fist4", 1)
-        PUNG A 0 A_TakeInventory("Fist3", 1)
-        PUNG A 0 A_TakeInventory("Fist2", 1)
-        PUNG A 0 A_TakeInventory("Fist1", 1)
-        PUNG A 1 A_WeaponReady
-        Loop
-      Select:
-        PUNG A 0 A_Raise
-        PUNG A 1 A_Raise
-        loop
-      Deselect:
-        PUNG A 0 A_Lower
-        PUNG A 1 A_Lower
-        loop
-      Fire:
-        PUNG A 0 A_JumpIfInventory("Kick2", 1, 62)
-        PUNG A 0 A_JumpIfInventory("Kick1", 1, 55)
-        PUNG A 0 A_JumpIfInventory("Fist4", 1, 43)
-        PUNG A 0 A_JumpIfInventory("Fist3", 1, 32)
-        PUNG A 0 A_JumpIfInventory("Fist2", 1, 21)
-        PUNG A 0 A_JumpIfInventory("Fist1", 1, 11)
-        PUNG A 0
-        PUNG B 3
-        PUNG C 0 A_PlaySound("weapons/fistfast", CHAN_WEAPON)
-        PUNG C 2
-        PUNG D 2 A_CustomPunch(15, 1, 0, "Bulletpuff")
-        PUNG C 2
-        PUNG B 3
-        PUNG L 2
-        PUNG L 0 A_GiveInventory("Fist1")
-        TNT1 A 5 A_ReFire
-        Goto Ready//11
-        PUNG E 3
-        PUNG F 2
-        PUNG G 1
-        PUNG F 0 A_PlaySound("weapons/fistfast", CHAN_WEAPON)
-        PUNG F 2
-        PUNG E 3 A_CustomPunch(15, 1, 0, "Bulletpuff")
-        PUNG L 3
-        PUNG L 0 A_GiveInventory("Fist2", 1)
-        TNT1 A 5 A_ReFire
-        Goto Ready//21
-        PUNG B 3
-        PUNG C 2
-        PUNG H 2
-        PUNG I 0 A_PlaySound("weapons/fistfast", CHAN_WEAPON)
-        PUNG I 1
-        PUNG J 1 A_CustomPunch(15, 1, 0, "Bulletpuff")
-        PUNG K 2
-        TNT1 A 1
-        TNT1 A 0 A_GiveInventory("Fist3", 1)
-        TNT1 A 5 A_ReFire
-        Goto Ready//32
-        PUNC F 2
-        PUNC G 2
-        PUNC H 2
-        PUNC I 0 A_PlaySound("weapons/fistfast", CHAN_WEAPON)
-        PUNC I 2
-        PUNC J 1 A_Punch
-        PUNC K 1
-        PUNC L 1
-        PUNC L 0 A_GiveInventory("Fist4", 1)
-        TNT1 A 5 A_ReFire
-        Goto Ready//43
-        PUNA M 2
-        PUNA N 2
-        PUNA O 2
-        PUNA P 0 A_PlaySound("weapons/fistfast", CHAN_WEAPON)
-        PUNA P 2
-        PUNA Q 1 A_Punch
-        PUNA R 1
-        PUNA S 1
-        PUNA T 1
-        PUNA T 0 A_GiveInventory("Kick1", 1)
-        TNT1 A 5 A_ReFire
-        Goto Ready//55
-        KEKE A 3
-        KEKE B 0 A_PlaySound("weapons/fistfast", CHAN_WEAPON)
-        KEKE B 2 A_CustomPunch(20, 1, 0, "Bulletpuff")
-        KEKE A 6
-        KEKE B 0 A_GiveInventory("Kick2", 1)
-        TNT1 A 5 A_ReFire
-        Goto Ready//62
-        KEKE C 3
-        KEKE D 0 A_PlaySound("weapons/fistfast", CHAN_WEAPON)
-        KEKE D 3 A_CustomPunch(25, 1, 0, "Bulletpuff")
-        KEKE C 5
-        TNT1 A 15
-        Goto Ready
-      Spawn:
-        TNT1 A -1
-        stop
-    }
-}
-
 actor Ssgonsteroids : Weapon 21238
 {
     Inventory.PickupMessage "You got Supershotgun on steroids!...do weapons get on drugs?"
@@ -536,7 +55,7 @@ actor Ssgonsteroids : Weapon 21238
     }
 }
 
-Actor Nopoof : Bulletpuff
+actor Nopoof : Bulletpuff
 {
     States
     {
@@ -546,7 +65,7 @@ Actor Nopoof : Bulletpuff
     }
 }
 
-Actor Loadshell : Inventory
+actor Loadshell : Inventory
 {
     Inventory.MaxAmount 10
 }
@@ -577,7 +96,7 @@ actor Greenmolecule
     }
 }
 
-Actor Atomo
+actor Atomo
 {
     Radius 12
     Height 12
@@ -710,13 +229,13 @@ actor Moleculeshooter : Weapon 21240
     }
 }
 
-Actor HAmmo : Ammo
+actor HAmmo : Ammo
 {
     Inventory.MaxAmount 100
     Inventory.Icon "CLIPA0"
 }
 
-Actor Hclip : Ammo 21241
+actor Hclip : Ammo 21241
 {
     Inventory.Amount 100
     Inventory.MaxAmount 250
@@ -810,7 +329,7 @@ actor M249-machinegun : Weapon 21242
     }
 }
 
-Actor BAmmo : Ammo
+actor BAmmo : Ammo
 {
     Inventory.MaxAmount 7
 }
@@ -831,7 +350,7 @@ actor Beampack : Ammo 21243
     }
 }
 
-Actor Bigbeampack : Beampack
+actor Bigbeampack : Beampack
 {
     Inventory.Amount 15
     Inventory.PickupMessage "Big Ammo pack for lasergun"
@@ -843,7 +362,7 @@ Actor Bigbeampack : Beampack
     }
 }
 
-Actor Explodepuff
+actor Explodepuff
 {
     +NOGRAVITY
     +NOTELEPORT
@@ -966,7 +485,7 @@ actor Hellmis
     }
 }
 
-Actor Hellcharge : Ammo
+actor Hellcharge : Ammo
 {
     Inventory.MaxAmount 100
 }
@@ -1008,22 +527,22 @@ actor Hellfist : Weapon
     }
 }
 
-Actor Rebelinv : Inventory
+actor Rebelinv : Inventory
 {
     Inventory.MaxAmount 1
 }
 
-Actor Stealthinv : Inventory
+actor Stealthinv : Inventory
 {
     Inventory.MaxAmount 1
 }
 
-Actor 1337inv : Inventory
+actor 1337inv : Inventory
 {
     Inventory.MaxAmount 1
 }
 
-Actor Redplasma-1
+actor Redplasma-1
 {
     Radius 6
     Height 5
@@ -1049,7 +568,7 @@ Actor Redplasma-1
     }
 }
 
-Actor Bigredplasma
+actor Bigredplasma
 {
     Radius 8
     Height 8
@@ -1076,7 +595,7 @@ Actor Bigredplasma
     }
 }
 
-Actor Redxplosion
+actor Redxplosion
 {
     +NOGRAVITY
     +NOTELEPORT
@@ -1160,7 +679,7 @@ actor D-1000 : Weapon 21246
     }
 }
 
-Actor Voltgun : Weapon 21248
+actor Voltgun : Weapon 21248
 {
     Inventory.PickupMessage "You got the voltage gun"
     weapon.AmmoGive1 100
@@ -1290,7 +809,7 @@ actor Uzi : Weapon 21250
     }
 }
 
-Actor UziAmmo : Ammo
+actor UziAmmo : Ammo
 {
     Inventory.MaxAmount 50
 }
@@ -1324,7 +843,7 @@ actor Purpmis
     }
 }
 
-Actor Purptracer
+actor Purptracer
 {
     RenderStyle Add
     Alpha 0.6
@@ -1477,7 +996,7 @@ actor Handshotgun : Weapon 21254
     }
 }
 
-Actor Berserker : Weapon
+actor Berserker : Weapon
 {
     +NOALERT
     +WEAPON.MELEEWEAPON
@@ -1514,7 +1033,7 @@ Actor Berserker : Weapon
     }
 }
 
-Actor 9mmpistol : Weapon
+actor 9mmpistol : Weapon
 {
     +WEAPON.NOAUTOFIRE
     +NOALERT
@@ -1633,12 +1152,12 @@ actor Striker : Weapon
     }
 }
 
-Actor Shellround : Ammo
+actor Shellround : Ammo
 {
     Inventory.MaxAmount 16
 }
 
-Actor Fmodminigun : Weapon
+actor Fmodminigun : Weapon
 {
     +DONTBOB
     Inventory.PickupMessage "You got the minigun!"
@@ -1754,13 +1273,13 @@ Actor Fmodminigun : Weapon
     }
 }
 
-Actor Picinfo : Inventory
+actor Picinfo : Inventory
 {
     -INVBAR
     Inventory.MaxAmount 1
 }
 
-Actor Picinfo2 : Inventory
+actor Picinfo2 : Inventory
 {
     -INVBAR
     Inventory.MaxAmount 1
@@ -1782,7 +1301,7 @@ actor MiniAmmo : Ammo
     }
 }
 
-Actor Dukepistol : Weapon
+actor Dukepistol : Weapon
 {
     +AMMO_OPTIONAL
     Inventory.PickupMessage "You got Dn's pistol"
@@ -1860,12 +1379,12 @@ Actor Dukepistol : Weapon
     }
 }
 
-Actor Dukeclip : Ammo
+actor Dukeclip : Ammo
 {
     Inventory.MaxAmount 20
 }
 
-Actor Smgsorc : Weapon
+actor Smgsorc : Weapon
 {
     Inventory.PickupMessage "You got the smg with grenade launcher"
     weapon.AmmoGive1 70
@@ -1918,7 +1437,7 @@ Actor Smgsorc : Weapon
     }
 }
 
-Actor Smggren : Ammo
+actor Smggren : Ammo
 {
     Inventory.MaxAmount 10
     Ammo.BackpackAmount 10
@@ -1926,7 +1445,7 @@ Actor Smggren : Ammo
     Inventory.Icon "SRSHA0"
 }
 
-Actor Bproject
+actor Bproject
 {
     Radius 6
     Height 8
@@ -1955,7 +1474,7 @@ Actor Bproject
     }
 }
 
-Actor Jmodrlauncher : Weapon 19232
+actor Jmodrlauncher : Weapon 19232
 {
     Inventory.PickupMessage "You got the RPG!"
     weapon.AmmoType "RocketAmmo"
@@ -1993,7 +1512,7 @@ Actor Jmodrlauncher : Weapon 19232
     }
 }
 
-Actor Redplasma22
+actor Redplasma22
 {
     Radius 8
     Height 8
@@ -2115,7 +1634,7 @@ actor Plasmadriver : Weapon 19343
     }
 }
 
-Actor Wsmoke
+actor Wsmoke
 {
     RenderStyle Add
     +NOBLOCKMAP
@@ -2137,7 +1656,7 @@ Actor Wsmoke
 }
 
 
-Actor Multiple-launcher : Weapon
+actor Multiple-launcher : Weapon
 {
     +WEAPON.NOAUTOFIRE
     Inventory.PickupMessage "You got the multiple launcher!"
@@ -2276,25 +1795,25 @@ Actor Multiple-launcher : Weapon
     }
 }
 
-Actor Mode2inv : Inventory
+actor Mode2inv : Inventory
 {
     -INVBAR
     Inventory.MaxAmount 1
 }
 
-Actor Mode3inv : Inventory
+actor Mode3inv : Inventory
 {
     -INVBAR
     Inventory.MaxAmount 1
 }
 
-Actor Loadinv : Inventory
+actor Loadinv : Inventory
 {
     -INVBAR
     Inventory.MaxAmount 1
 }
 
-Actor Multiplemis1
+actor Multiplemis1
 {
     +NOGRAVITY
     +NOTELEPORT
@@ -2320,7 +1839,7 @@ Actor Multiplemis1
     }
 }
 
-Actor Icepick1
+actor Icepick1
 {
     +NOGRAVITY
     +NOTELEPORT
@@ -2371,7 +1890,7 @@ actor Flmgrenade
     }
 }
 
-Actor Flaming
+actor Flaming
 {
     +RIPPER
     +MISSILE
@@ -2443,7 +1962,7 @@ actor Firstaid-kit : Weapon
     }
 }
 
-Actor F-ripper : Weapon replaces Chainsaw
+actor F-ripper : Weapon replaces Chainsaw
 {
     +WEAPON.MELEEWEAPON
     Inventory.PickupMessage "The ripper saw! time to cut some asses"
@@ -2498,7 +2017,7 @@ Actor F-ripper : Weapon replaces Chainsaw
     }
 }
 
-Actor Medkitdisp : Ammo
+actor Medkitdisp : Ammo
 {
     Inventory.Amount 1
     Inventory.MaxAmount 10
@@ -2507,7 +2026,7 @@ Actor Medkitdisp : Ammo
     Inventory.Icon "MEDIA0"
 }
 
-Actor Berserkdisp : Ammo
+actor Berserkdisp : Ammo
 {
     Inventory.Amount 1
     Inventory.MaxAmount 1
@@ -2516,7 +2035,7 @@ Actor Berserkdisp : Ammo
     Inventory.Icon "PSTRA0"
 }
 
-Actor Disgpuff
+actor Disgpuff
 {
     +NOGRAVITY
     +NOTELEPORT
@@ -2569,7 +2088,7 @@ actor Disintegrater : Weapon
     }
 }
 
-Actor Jmodsupershotgun : Weapon
+actor Jmodsupershotgun : Weapon
 {
     Scale 0.3
     Inventory.PickupMessage "You got some cool supershotgun"
@@ -2615,7 +2134,7 @@ Actor Jmodsupershotgun : Weapon
     }
 }
 
-Actor Randomweapsg : RandomSpawner replaces Shotgun
+actor Randomweapsg : RandomSpawner replaces Shotgun
 {
     DropItem "Jmodshotgun"
     DropItem "Pumpshotgun"
@@ -2624,7 +2143,7 @@ Actor Randomweapsg : RandomSpawner replaces Shotgun
 }
 
 
-Actor Randomweapssg : RandomSpawner replaces Supershotgun
+actor Randomweapssg : RandomSpawner replaces Supershotgun
 {
     DropItem "Doublebarreledsg"
     DropItem "Firessg"
@@ -2632,7 +2151,7 @@ Actor Randomweapssg : RandomSpawner replaces Supershotgun
     DropItem "Quadshotgun"
 }
 
-Actor Randomweapslot4 : RandomSpawner replaces Chaingun
+actor Randomweapslot4 : RandomSpawner replaces Chaingun
 {
     DropItem "Heavychaingun"
     DropItem "M249-machinegun"
@@ -2641,7 +2160,7 @@ Actor Randomweapslot4 : RandomSpawner replaces Chaingun
     DropItem "Smgsorc"
 }
 
-Actor Randomweapslot5 : RandomSpawner replaces Rocketlauncher
+actor Randomweapslot5 : RandomSpawner replaces Rocketlauncher
 {
     DropItem "Fgrenadelauncher2"
     DropItem "Fragmentlauncher"
@@ -2649,7 +2168,7 @@ Actor Randomweapslot5 : RandomSpawner replaces Rocketlauncher
     DropItem "Grlauncher2"
 }
 
-Actor Randomweapslot6 : RandomSpawner replaces Plasmarifle
+actor Randomweapslot6 : RandomSpawner replaces Plasmarifle
 {
     DropItem "Plasmadriver"
     DropItem "Rifleplasma"
@@ -2658,7 +2177,7 @@ Actor Randomweapslot6 : RandomSpawner replaces Plasmarifle
     DropItem "Busterrifle"
 }
 
-Actor Randomweapslot7 : RandomSpawner replaces Bfg9000
+actor Randomweapslot7 : RandomSpawner replaces Bfg9000
 {
     DropItem "Bfg10k"
     DropItem "D-1000"
@@ -2669,7 +2188,7 @@ Actor Randomweapslot7 : RandomSpawner replaces Bfg9000
     DropItem "Ssgonsteroids"
 }
 
-Actor Pumpshotgun : Weapon
+actor Pumpshotgun : Weapon
 {
     +AMMO_OPTIONAL
     Inventory.PickupMessage "You got the pump shotgun"
@@ -2767,22 +2286,22 @@ Actor Pumpshotgun : Weapon
     }
 }
 
-Actor ShellAmmo2 : Ammo
+actor ShellAmmo2 : Ammo
 {
     Inventory.MaxAmount 8
 }
 
-Actor Wsorcpic1 : Inventory
+actor Wsorcpic1 : Inventory
 {
     Inventory.MaxAmount 1
 }
 
-Actor Wsorcpic2 : Inventory
+actor Wsorcpic2 : Inventory
 {
     Inventory.MaxAmount 1
 }
 
-Actor Sorcpuffexplode
+actor Sorcpuffexplode
 {
     +NOGRAVITY
     +NOTELEPORT
@@ -2802,7 +2321,7 @@ Actor Sorcpuffexplode
     }
 }
 
-Actor Diskripper
+actor Diskripper
 {
     +NOGRAVITY
     +NOBLOCKMAP
@@ -2831,7 +2350,7 @@ Actor Diskripper
 
 
 
-Actor Sorc-hands : Weapon
+actor Sorc-hands : Weapon
 {
     +INVENTORY.UNDROPPABLE
     Inventory.PickupMessage "No shit sherlock, you cant pick up this"
@@ -2970,7 +2489,7 @@ Actor Sorc-hands : Weapon
     }
 }
 
-Actor Pentfire
+actor Pentfire
 {
     +FLOORHUGGER
     +NOTELEPORT
@@ -3001,7 +2520,7 @@ Actor Pentfire
     }
 }
 
-Actor Pentspawner
+actor Pentspawner
 {
     +QUARTERGRAVITY
     +MISSILE
@@ -3122,7 +2641,7 @@ Actor Pentspawner
 }
 
 
-Actor Grtracer
+actor Grtracer
 {
     +NOGRAVITY
     +NOBLOCKMAP
@@ -3140,7 +2659,7 @@ Actor Grtracer
     }
 }
 
-Actor Grlaunmis
+actor Grlaunmis
 {
     +DOOMBOUNCE
     +MISSILE
@@ -3212,7 +2731,7 @@ actor Grlauncher2 : Weapon
     }
 }
 
-Actor Chplasma
+actor Chplasma
 {
     +NOGRAVITY
     +NOBLOCKMAP
@@ -3271,7 +2790,7 @@ actor Y23H : Weapon
     }
 }
 
-Actor Quadshotgun : Weapon
+actor Quadshotgun : Weapon
 {
     Inventory.PickupMessage "You got the quad shotgun"
     weapon.AmmoGive1 16
@@ -3307,18 +2826,18 @@ Actor Quadshotgun : Weapon
     }
 }
 
-Actor Fbfg90002 : Bfg9000
+actor Fbfg90002 : Bfg9000
 {
 }
 
-Actor Fgrenadelauncher2 : Grenadelauncher
+actor Fgrenadelauncher2 : Grenadelauncher
 {
 }
 //---------------
 
 
 
-Actor Tehfatal
+actor Tehfatal
 {
     Damage 0
     Speed 7
@@ -3343,7 +2862,7 @@ Actor Tehfatal
     }
 }
 
-Actor Sometrac
+actor Sometrac
 {
     +NOBLOCKMAP
     +NOTELEPORT
@@ -3359,7 +2878,7 @@ Actor Sometrac
     }
 }
 
-Actor Tfatal2
+actor Tfatal2
 {
     Radius 10
     Height 10
@@ -3387,7 +2906,7 @@ Actor Tfatal2
     }
 }
 
-Actor Tfatal3
+actor Tfatal3
 {
     +MISSILE
     +NOGRAVITY
@@ -3412,7 +2931,7 @@ Actor Tfatal3
     }
 }
 
-Actor Akickback : Weapon
+actor Akickback : Weapon
 {
     +INVENTORY.UNDROPPABLE
     +WEAPON.MELEEWEAPON
@@ -3517,7 +3036,7 @@ Actor Akickback : Weapon
     }
 }
 
-Actor Nrickmis
+actor Nrickmis
 {
     Radius 6
     Height 8
@@ -3538,7 +3057,7 @@ Actor Nrickmis
     }
 }
 
-Actor Nrickmis2
+actor Nrickmis2
 {
     Radius 6
     Height 8
@@ -3559,7 +3078,7 @@ Actor Nrickmis2
     }
 }
 
-ACTOR Rickrollpls : DoomWeapon
+actor Rickrollpls : DoomWeapon
 {
     Weapon.SelectionOrder 200
     Obituary "%o was rickrolled by %k"
@@ -3603,7 +3122,7 @@ ACTOR Rickrollpls : DoomWeapon
 
 //----------------------
 
-Actor Mac-10 : Weapon
+actor Mac-10 : Weapon
 {
     +AMMO_OPTIONAL
     Inventory.PickupMessage "You got the mac-10"
@@ -3679,12 +3198,12 @@ Actor Mac-10 : Weapon
     }
 }
 
-Actor Mac10clip : Ammo
+actor Mac10clip : Ammo
 {
     Inventory.MaxAmount 30
 }
 
-Actor Shotty : Weapon
+actor Shotty : Weapon
 {
     Inventory.PickupMessage "You got the shotty, pretty useful"
     weapon.AmmoGive1 10
@@ -3807,12 +3326,12 @@ actor Nighthawk : Weapon
     }
 }
 
-Actor Nhclip : Ammo
+actor Nhclip : Ammo
 {
     Inventory.MaxAmount 12
 }
 
-Actor Flameball001
+actor Flameball001
 {
     Radius 10
     Height 8
@@ -3837,7 +3356,7 @@ Actor Flameball001
     }
 }
 
-Actor Aflaming
+actor Aflaming
 {
     Radius 8
     Height 32
@@ -3888,7 +3407,7 @@ Actor Aflaming
     }
 }
 
-Actor Flameball002
+actor Flameball002
 {
     Radius 10
     Height 8
@@ -3929,7 +3448,7 @@ actor Smallgas : Ammo
     }
 }
 
-Actor Biggas : Smallgas
+actor Biggas : Smallgas
 {
     Inventory.Amount 80
     Inventory.PickupMessage "Picked up a big Amount of gas"
@@ -3941,7 +3460,7 @@ Actor Biggas : Smallgas
     }
 }
 
-Actor Stflamethrower : Weapon
+actor Stflamethrower : Weapon
 {
     Inventory.PickupMessage "You got a flamethrower"
     weapon.AmmoGive1 50
@@ -3981,7 +3500,7 @@ Actor Stflamethrower : Weapon
     }
 }
 
-Actor Flamerocket
+actor Flamerocket
 {
     Radius 6
     Height 8
@@ -4011,7 +3530,7 @@ Actor Flamerocket
     }
 }
 
-Actor Fltrace1
+actor Fltrace1
 {
     Radius 1
     Height 1
@@ -4061,7 +3580,7 @@ actor Spawnflame
     }
 }
 
-Actor Firebomblauncher : Weapon
+actor Firebomblauncher : Weapon
 {
     Inventory.PickupMessage "You got the fire bomb launcher, use with caution"
     weapon.AmmoGive1 120
@@ -4094,12 +3613,12 @@ Actor Firebomblauncher : Weapon
     }
 }
 
-Actor Drnvclip : Ammo
+actor Drnvclip : Ammo
 {
     Inventory.MaxAmount 15
 }
 
-Actor Dragunov : Weapon
+actor Dragunov : Weapon
 {
     +WEAPON.NOAUTOFIRE
     +AMMO_OPTIONAL
@@ -4194,7 +3713,7 @@ actor Busterpro
     }
 }
 
-Actor Bustertrail
+actor Bustertrail
 {
     Damage 0
     Projectile
@@ -4209,7 +3728,7 @@ Actor Bustertrail
     }
 }
 
-Actor Busterpro2
+actor Busterpro2
 {
     Radius 6
     Height 8
@@ -4310,7 +3829,7 @@ actor Busterrifle : Weapon
     }
 }
 
-Actor Uacpro
+actor Uacpro
 {
     Radius 6
     Height 8
@@ -4382,7 +3901,7 @@ actor Uacplasmagun : Weapon
     }
 }
 /*
-Actor Prottracer
+actor Prottracer
 {
     Damage 0
     Speed 0
@@ -4397,7 +3916,7 @@ Actor Prottracer
     }
 }
 
-Actor Protpro
+actor Protpro
 {
     Radius 6
     Height 8

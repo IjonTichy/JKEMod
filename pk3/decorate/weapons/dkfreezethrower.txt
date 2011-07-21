@@ -1,0 +1,62 @@
+actor DKFreezethrower: Weapon
+{
+    weapon.AmmoGive1 50
+    weapon.AmmoType1 "Cell"
+    weapon.AmmoUse1 1
+    weapon.selectionorder 470
+
+    Inventory.PickupMessage "$JKE_PK_DKFREEZETHROWER"
+    Obituary "$JKE_MP_DKFREEZETHROWER"
+    states
+    {
+      Ready:
+        FREZ A 1 A_WeaponReady
+        Loop
+      Select:
+        FREZ A 1 A_Raise
+        Loop
+      Deselect:
+        FREZ A 1 A_Lower
+        Loop
+      Fire:
+        FREZ C 0 A_PlaySound("jkemod/dkfreezethrower/fire", CHAN_WEAPON)
+        FREZ D 1 A_FireCustomMissile("FreezethrowerShot", 0, 1, 6)
+        FREZ E 1
+        FREZ F 2
+        FREZ B 2 A_ReFire
+        Goto Ready
+      Spawn:
+        FREZ P -1
+        stop
+    }
+}
+
+Actor FreezethrowerShot
+{
+    Speed 30
+    Radius 8
+    Height 8
+
+    Projectile
+    +HEXENBOUNCE
+
+    Damage 5
+    DamageType Ice
+
+    Scale 0.2
+    reactiontime 20
+    States
+    {
+      Spawn:
+        FRZS A 0 A_Countdown
+        FRZS A 2
+        FRZS B 2
+        FRZS C 2
+        Loop
+      Death:
+        FRZE A 0 A_Stop
+        FRZE A 0 A_PlaySound("jkemod/dkfreezethrower/explode")
+        FRZE ABCDE 3
+        Stop
+    }
+}

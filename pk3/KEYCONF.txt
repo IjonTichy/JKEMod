@@ -7,6 +7,7 @@ addplayerclass BetterPlayer
 
 addslotdefault 1 " Chainsaw "
 addslotdefault 1 " Fists "
+addslotdefault 1 "MightyFist"
 addslotdefault 1 "ZenFist"
 
 ////
@@ -15,6 +16,7 @@ addslotdefault 1 "ZenFist"
 
 addslotdefault 2 "DualBerettas"
 addslotdefault 2 "DualPistols"
+addslotdefault 2 "JPistol"
 addslotdefault 2 " Pistol "
 
 
@@ -52,6 +54,7 @@ addslotdefault 5 "Rocket Launcher"
 //   SLOT 6 - PLASMA/RAIL CLASS
 ////
 
+addslotdefault 6 "DKFreezethrower"
 addslotdefault 6 "DualPlasmaRifles"
 addslotdefault 6 "Plasma Rifle"
 
@@ -63,6 +66,7 @@ addslotdefault 6 "Plasma Rifle"
 addslotdefault 7 "BFG7000"
 addslotdefault 7 " BFG9000 "
 addslotdefault 7 "RailRepeater"
+addslotdefault 7 "DKDevastator"
 
 
 ////

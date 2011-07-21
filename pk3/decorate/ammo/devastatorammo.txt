@@ -1,0 +1,29 @@
+actor DevastatorAmmo: Ammo
+{
+    Inventory.Amount 5
+    Inventory.MaxAmount 100
+
+    Ammo.BackpackAmount 15
+    Ammo.BackpackMaxAmount 200
+
+    Inventory.PickupMessage "Some missiles for the devastator"
+    Inventory.Icon "MNRAA0"
+    states
+    {
+      Spawn:
+        MNRA A -1
+        stop
+    }
+}
+
+Actor DevastatorBox: DevastatorAmmo
+{
+    Inventory.Amount 25
+    Inventory.PickupMessage "Box with missiles for devastator....yes!"
+    States
+    {
+      Spawn:
+        MNRB A -1
+        Stop
+    }
+}

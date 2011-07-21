@@ -3,6 +3,7 @@ actor DualBerettas: Weapon
     Scale 0.2
 
     +AMMO_OPTIONAL
+    +NOALERT
 
     weapon.AmmoGive1 60
     Weapon.AmmoGive2 60
@@ -45,6 +46,7 @@ actor DualBerettas: Weapon
 
       Fire:
         BRT2 A 0 A_JumpIfNoAmmo("Reload")
+        BRT2 A 0 A_AlertMonsters
         BRT2 A 0 A_PlaySound("jkemod/dualberettas/fire", CHAN_WEAPON)
         BRT2 A 0 A_FireBullets(2, 1, -1, 9, "BulletPuff", 1)
 
@@ -121,6 +123,11 @@ actor DualBerettas: Weapon
       ReloadEnd:
         BRT2 A 3
         Goto Ready
+
+      NoReload:
+        BRT2 A 1
+        BRT2 A 0 A_ReFire
+        goto Ready
 
       Spawn:
         1337 A -1
