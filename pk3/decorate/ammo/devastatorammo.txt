@@ -6,7 +6,7 @@ actor DevastatorAmmo: Ammo
     Ammo.BackpackAmount 15
     Ammo.BackpackMaxAmount 200
 
-    Inventory.PickupMessage "Some missiles for the devastator"
+    Inventory.PickupMessage "$JKE_PK_DEVASTATORAMMO"
     Inventory.Icon "MNRAA0"
     states
     {
@@ -19,7 +19,7 @@ actor DevastatorAmmo: Ammo
 Actor DevastatorBox: DevastatorAmmo
 {
     Inventory.Amount 25
-    Inventory.PickupMessage "Box with missiles for devastator....yes!"
+    Inventory.PickupMessage "$JKE_PK_DEVASTATORBOX"
     States
     {
       Spawn:

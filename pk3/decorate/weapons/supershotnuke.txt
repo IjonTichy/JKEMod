@@ -27,16 +27,16 @@ actor SuperShotNuke: Weapon 21238
 
       RealFire:
         PKS2 A 0 A_Stop
-        PKS2 A 0 ThrustThing(angle*256/360, 32*-cos(pitch), 0, 0)
-        PKS2 A 0 ThrustThingZ(0, 128*sin(pitch), 0, 1)
+        PKS2 A 0 ThrustThing(angle*256/360, 64*-cos(pitch), 0, 0)
+        PKS2 A 0 ThrustThingZ(0, 256*sin(pitch), 0, 1)
         PKS2 A 0 A_PlaySound("jkemod/supershotnuke/fire", CHAN_WEAPON)
-        PKS2 A 0 A_FireBullets(16, 16, 500, 250, "SuperShotNukePuff", 1)
+        PKS2 A 0 A_TakeInventory("SuperShotNukeCounter", 10)
+        PKS2 A 0 A_FireBullets(16, 16, 1000, 250, "SuperShotNukePuff", 1)
         PKS2 C 1 bright
         PKS2 E 140
         PKS2 D 35
         PKS2 C 18
         PKS2 B 9
-        PKS2 A 0 A_TakeInventory("SuperShotNukeCounter", 10)
         Goto Ready
 
       AltFire:
@@ -102,7 +102,7 @@ actor SuperShotNukePuff: BulletPuff
     States
     {
       Spawn:
-        SOD0 EEEEEEEEEEEEFFFFFFFFFFFFGGGGGGGGGGGGHHHHHHHHHHHHIIIIIIIIIIIIJJJJJJJJJJJJKKKKKKKKKKKKLLLLLLLLLLLLMMMMMMMMMMMMNNNNNNNNNNNNOOOOOOOOOOO 2 bright A_Explode(1024, 256, 0)
+        SOD0 EEEEEEEEEEEEFFFFFFFFFFFFGGGGGGGGGGGGHHHHHHHHHHHHIIIIIIIIIIIIJJJJJJJJJJJJKKKKKKKKKKKKLLLLLLLLLLLLMMMMMMMMMMMMNNNNNNNNNNNNOOOOOOOOOOO 2 bright A_Explode(1024, 512, 0)
         Stop
     }
 }

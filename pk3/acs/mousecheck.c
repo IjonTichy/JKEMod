@@ -15,8 +15,9 @@ script 759 OPEN
 
 script 760 (void)   /* generic attack/alt attack handler */
 {
+    int pln = PlayerNumber();
     int buttons;
-    while (!CheckInventory("PlayerDead"))
+    while (!dead[pln])
     {
         buttons = GetPlayerInput(-1, MODINPUT_BUTTONS);
         if (buttons & BT_ATTACK)

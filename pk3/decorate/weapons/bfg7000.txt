@@ -6,8 +6,8 @@ actor BFG7000: Weapon
     weapon.selectionorder 520
     weapon.yadjust -10
 
-    Inventory.PickupMessage "$JKEMOD_PK_BFG7000"
-    Obituary "$JKEMOD_MP_BFG9000"
+    Inventory.PickupMessage "$JKE_PK_BFG7000"
+    Obituary "$JKE_MP_BFG7000"
     States
     {
       Ready:

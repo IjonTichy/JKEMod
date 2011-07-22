@@ -98,7 +98,7 @@ actor HeavyChaingun: Weapon
         CHG2 D 27
         Goto Ready
       Spawn:
-        MG2W A -1
+        CHG2 Z -1
         Stop
     }
 }

@@ -1,6 +1,5 @@
 actor JKEBFG9000: RandomSpawner replaces BFG9000
 {
-    dropitem "BFG7000"
     dropitem " BFG9000 "
     dropitem "RailRepeater"
 }
