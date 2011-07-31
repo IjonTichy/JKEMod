@@ -10,8 +10,8 @@ BDW_PK_BFG9000              = "... and my gun is very, very large.";
 
 BDW_PK_POWERSPHERE          = "The fires of Hell course through your veins...";
 
-BDW_MP_FIST                 = "%k pummeled %o.";
-BDW_MP_FIST_POWER           = "%k broke %o.";
+BDW_MP_FISTS                = "%k pummeled %o.";
+BDW_MP_FISTS_POWER          = "%k broke %o.";
 BDW_MP_CHAINSAW             = "%k sacrificed %o to Khorne.";
 BDW_MP_CHAINSAW_POWER       = "%k added %o to the rivers of blood.";
 BDW_MP_PISTOL               = "%k picked off %o with his pistol.";

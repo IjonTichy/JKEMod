@@ -264,6 +264,14 @@ jkemod/mightyfist/hit                   DSPUNCH
 
 
 ////
+//   MOLECULE SHOOTER
+////
+
+$alias jkemod/moleculeshooter/load      jkemod/bfg7000/load
+$alias jkemod/moleculeshooter/fire      betterdoomweapons/rocketaltfire   // See SNDINFO.tichy
+jkemod/moleculeshooter/up               sounds/weapons/moleculeshooter/up.lmp
+
+////
 //   SUPER SHOTNUKE
 ////
 

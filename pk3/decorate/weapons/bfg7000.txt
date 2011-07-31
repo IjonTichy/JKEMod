@@ -1,10 +1,10 @@
 actor BFG7000: Weapon
 {
-    weapon.AmmoType1 "Cell"
-    weapon.AmmoUse1 150
-    weapon.AmmoGive1 150
-    weapon.selectionorder 520
-    weapon.yadjust -10
+    Weapon.AmmoType1 "Cell"
+    Weapon.AmmoUse1 150
+    Weapon.AmmoGive1 150
+    Weapon.SelectionOrder 520
+    Weapon.yadjust -10
 
     Inventory.PickupMessage "$JKE_PK_BFG7000"
     Obituary "$JKE_MP_BFG7000"
@@ -32,7 +32,7 @@ actor BFG7000: Weapon
         BFGZ C 105
         Goto Ready
       Spawn:
-        BZRO A -1
+        BFGZ Z -1
         stop
     }
 }
@@ -93,9 +93,9 @@ actor BFG7000Ball
     States
     {
       Spawn:
-        BFS1 AAAAAABBBBBBAAAAAABBBBBBAAAAAABBBBBBAAAAAABBBBBBAAAAAABBBBBB 1 bright A_Explode(32, 128, 0)
-        BFS1 AAABBBAAABBBAAABBBAAABBBAAABBB 1 bright A_Explode(32, 128, 0)
-        BFS1 ABABAB 1 bright A_Explode(32, 128, 0)
+        BFS1 AAAAAABBBBBBAAAAAABBBBBBAAAAAABBBBBBAAAAAABBBBBBAAAAAABBBBBB 1 bright A_Explode(64, 128, 0)
+        BFS1 AAABBBAAABBBAAABBBAAABBBAAABBB 1 bright A_Explode(64, 128, 0)
+        BFS1 ABABAB 1 bright A_Explode(64, 128, 0)
         goto SpamLoop
 
       SpamLoop:
