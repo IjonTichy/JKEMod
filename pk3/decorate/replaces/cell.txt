@@ -5,7 +5,7 @@ actor JKECell: CustomInventory replaces Cell
     States
     {
       Spawn:
-        CELP A -1
+        CELL A -1
         stop
 
       Pickup:

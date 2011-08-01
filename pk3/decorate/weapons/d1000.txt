@@ -68,7 +68,7 @@ actor D-1000: Weapon
         goto Ready
 
       Spawn:
-        WDEV A -1
+        D1VG Z -1
         stop
     }
 }
