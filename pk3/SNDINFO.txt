@@ -89,6 +89,16 @@ $limit jkemod/bfg7000/plasmaexplode     0
 
 
 ////
+//   D-1000
+////
+
+$alias jkemod/d1000/charge              weapons/bfg10kf
+$alias jkemod/d1000/cool                weapons/bfg10kcool
+$alias jkemod/d1000/plasmaexplode       weapons/plasmax
+$alias jkemod/d1000/plasmabigexplode    weapons/bfgx
+$alias jkemod/d1000/puffexplode         weapons/rocklx
+
+////
 //   DEVASTATOR
 ////
 

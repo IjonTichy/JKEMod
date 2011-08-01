@@ -1,6 +1,7 @@
 #include "decorate/weapons/ballesta.txt"
 #include "decorate/weapons/beamgun.txt"
 #include "decorate/weapons/bfg7000.txt"
+#include "decorate/weapons/d1000.txt"
 #include "decorate/weapons/dkdevastator.txt"
 #include "decorate/weapons/dkfreezethrower.txt"
 #include "decorate/weapons/doublebarrelsg.txt"

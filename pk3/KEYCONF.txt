@@ -76,6 +76,7 @@ addslotdefault 7 "RailRepeater"
 ////
 
 addslotdefault 8 "BFG7000"
+addslotdefault 8 "D-1000"
 addslotdefault 8 "Powerful"
 addslotdefault 8 "SuperShotNuke"
 
