@@ -53,7 +53,7 @@ actor MightyFist: Weapon 21237
         MFST B 3
         MFST L 2
         TNT1 A 5 A_ReFire
-        Goto Ready
+        goto Ready
 
       Fire2:
         MFST E 3
@@ -64,7 +64,7 @@ actor MightyFist: Weapon 21237
         MFST E 3 A_CustomPunch(15, 1, 0, "MightyBulletPuff")
         MFST L 3
         TNT1 A 5 A_ReFire
-        Goto Ready
+        goto Ready
 
       Fire3:
         MFST B 3
@@ -76,7 +76,7 @@ actor MightyFist: Weapon 21237
         MFST K 2
         TNT1 A 1
         TNT1 A 5 A_ReFire
-        Goto Ready
+        goto Ready
 
       Fire4:
         PUNC F 2
@@ -88,7 +88,7 @@ actor MightyFist: Weapon 21237
         PUNC K 1
         PUNC L 1
         TNT1 A 5 A_ReFire
-        Goto Ready
+        goto Ready
 
       Fire5:
         PUNA M 2
@@ -101,7 +101,7 @@ actor MightyFist: Weapon 21237
         PUNA S 1
         PUNA T 1
         TNT1 A 5 A_ReFire
-        Goto Ready
+        goto Ready
 
       Fire6:
         KEKE A 3
@@ -109,7 +109,7 @@ actor MightyFist: Weapon 21237
         KEKE B 2 A_CustomPunch(20, 1, 0, "MightyBulletPuff")
         KEKE A 6
         TNT1 A 5 A_ReFire
-        Goto Ready
+        goto Ready
 
       Fire7:
         KEKE C 3
@@ -117,7 +117,7 @@ actor MightyFist: Weapon 21237
         KEKE D 3 A_CustomPunch(25, 1, 0, "MightyBulletPuff")
         KEKE C 5
         TNT1 A 15
-        Goto Ready
+        goto Ready
 
       Spawn:
         TNT1 A -1

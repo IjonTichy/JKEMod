@@ -30,7 +30,7 @@ actor BFG7000: Weapon
         BFGZ H 4 bright A_FireCustomMissile("BFG7000Ball", 0, 1, 6)
         BFGZ I 4 A_Light0
         BFGZ C 105
-        Goto Ready
+        goto Ready
       Spawn:
         BFGZ Z -1
         stop

@@ -7,7 +7,7 @@ actor DKFreezethrower: Weapon
 
     Inventory.PickupMessage "$JKE_PK_DKFREEZETHROWER"
     Obituary "$JKE_MP_DKFREEZETHROWER"
-    states
+    States
     {
       Ready:
         FREZ A 1 A_WeaponReady
@@ -24,7 +24,7 @@ actor DKFreezethrower: Weapon
         FREZ E 1
         FREZ F 2
         FREZ B 2 A_ReFire
-        Goto Ready
+        goto Ready
       Spawn:
         FREZ P -1
         stop

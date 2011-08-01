@@ -13,7 +13,7 @@ actor MoleculeDebris
     Scale 0.8
 
     Alpha 0.8
-    states
+    States
     {
       Spawn:
         MDBR ABCD 4 bright
@@ -159,12 +159,12 @@ actor MoleculeShooter: Weapon
         RBFD L 4 bright
         RBFD MN 4 bright
         RBFD OPQRS 4
-        Goto Ready
+        goto Ready
 
       Flash:
         RBFF B  4 bright A_Light2
         RBFF CD 4 bright A_Light1
-        Goto LightDone
+        goto LightDone
 
       Spawn:
         RBFD U -1
