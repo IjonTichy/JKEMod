@@ -1,0 +1,15 @@
+actor M249Ammo: Ammo
+{
+    Inventory.Amount 100
+    Inventory.MaxAmount 250
+    Ammo.BackpackAmount 50
+    Ammo.BackpackMaxAmount 500
+    Inventory.Icon "SWAMA0"
+    Inventory.PickupMessage "$JKE_PK_M249AMMO"
+    States
+    {
+      Spawn:
+        SWAM A -1
+        Stop
+    }
+}

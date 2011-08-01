@@ -38,6 +38,7 @@ addslotdefault 3 "Super Shotgun"
 addslotdefault 4 " Chaingun "
 addslotdefault 4 "HeavyChaingun"
 addslotdefault 4 "M16"
+addslotdefault 4 "M249 Machine Gun"
 
 
 ////
@@ -88,5 +89,6 @@ addslotdefault 9 "TriStaff"
 //   SLOT 0 - SNIPER CLASS
 ////
 
+addslotdefault 0 "BeamGun"
 addslotdefault 0 "JSniperRifle"
 addslotdefault 0 "MagnumSniper"

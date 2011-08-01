@@ -1,4 +1,8 @@
+#include "decorate/replaces/cell.txt"
+#include "decorate/replaces/cellpack.txt"
+#include "decorate/replaces/clip.txt"
 #include "decorate/replaces/clipbox.txt"
+#include "decorate/replaces/rocketammo.txt"
 #include "decorate/replaces/rocketbox.txt"
 
 

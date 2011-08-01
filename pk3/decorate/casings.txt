@@ -84,6 +84,7 @@ actor ShellCasing: Casing
 
     }
 }
+
 actor PistolCasing: Casing
 {
     Scale 0.4

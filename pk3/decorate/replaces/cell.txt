@@ -1,0 +1,16 @@
+actor JKECell: CustomInventory replaces Cell
+{
+    Inventory.PickupMessage "$JKE_PK_JKECELL"
+
+    States
+    {
+      Spawn:
+        CELP A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_GiveInventory("Cell", 20)
+        TNT1 A 0 A_GiveInventory("BeamAmmo", 7)
+        stop
+    }
+}

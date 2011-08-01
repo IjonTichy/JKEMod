@@ -10,13 +10,19 @@
 // PK means "pickup"
 
 // Replacements
+JKE_PK_JKECELL                  = "You picked up a battery.";
+JKE_PK_JKECELLPACK              = "You picked up a large battery.";
+JKE_PK_JKECLIP                  = "You picked up various bullets.";
 JKE_PK_JKECLIPBOX               = "You picked up a pack of various bullets.";
+JKE_PK_JKEROCKETAMMO            = "You picked up a few explosives.";
 JKE_PK_JKEROCKETBOX             = "You picked up a pack of explosives.";
 
 
 // Ammo
 JKE_PK_ARROWAMMO                = "You found 10 Ballesta arrows.";
 JKE_PK_ARROWQUIVER              = "You found a Ballesta arrow quiver.";
+JKE_PK_BEAMAMMO                 = "You picked up a beam pack.";
+JKE_PK_BEAMPACK                 = "You picked up a large beam pack.";
 JKE_PK_BERETTAAMMO              = "You found a Beretta clip.";
 JKE_PK_DEVASTATORAMMO           = "AMMO FOR DEVASTATOR";
 JKE_PK_DEVASTATORBOX            = "LOTS OF AMMO FOR DEVASTATOR";
@@ -25,9 +31,11 @@ JKE_PK_FIREAMMO                 = "You found Pyro mana.";
 JKE_PK_GRAVITYAMMO              = "You pluck some gravity ammo out of the air.";
 JKE_PK_JKEMANA                  = "You found some mana.";
 JKE_PK_JSNIPERRIFLE             = "You found bolt-action sniper rounds.";
+JKE_PK_M249AMMO                 = "You picked up some .55cal bullets.";
 
 // Weapons
 JKE_PK_BALLESTA                 = "You found the Ballesta!";
+JKE_PK_BEAMGUN                  = "You got the beam gun!";
 JKE_PK_BFG7000                  = "You found a BFG9000 prototype!";
 JKE_PK_DKDEVASTATOR             = "DEVASTATOR WEAPON";
 JKE_PK_DOUBLEBARRELSG           = "You got a double barreled shotgun!";
@@ -43,6 +51,7 @@ JKE_PK_JPISTOL                  = "You picked up a pistol.";
 JKE_PK_JSHOTGUN                 = "You picked up a shotgun.";
 JKE_PK_JSNIPERRIFLE             = "You got a sniper rifle!";
 JKE_PK_M16                      = "You got the M16.";
+JKE_PK_M249MACHINEGUN           = "You picked up the M249 machine gun!";
 JKE_PK_MAGNUMSNIPER             = "You got the magnum sniper!";
 JKE_PK_MIGHTYFIST               = "You picked up two disembodied arms. Eeewww.";
 JKE_PK_MOLECULESHOOTER          = "You got the molecule shooter!";
@@ -62,6 +71,7 @@ JKE_PK_ZENFIST                  = "You picked up two disembodied arms. Eeewww.";
 //  %p: his/her/its
 
 JKE_MP_BALLESTA                 = "%k shoved an exploding arrow through %o.";
+JKE_MP_BEAMGUN                  = "%k shot %o with a supersonic explosion.";
 JKE_MP_BFG7000                  = "%k showed %o the power of the BFG7000.";
 JKE_MP_DKFREEZETHROWER          = "%k froze %o.";
 JKE_MP_DOUBLEBARRELSG           = "%k cleaned the floor of %o.";
@@ -78,6 +88,7 @@ JKE_MP_JPISTOL                  = "%k picked off %o.";
 JKE_MP_JSHOTGUN                 = "%k hunted down %o like a deer.";
 JKE_MP_JSNIPERRIFLE             = "%o never saw %k or the bullet.";
 JKE_MP_M16                      = "%k eliminated %o.";
+JKE_MP_M249MACHINEGUN           = "%k littered %o with lead.";
 JKE_MP_MAGNUMSNIPER             = "%k took out %o from the shadows.";
 JKE_MP_MIGHTYFIST               = "%k beat down %o.";
 JKE_MP_MOLECULESHOOTER          = "%k atomised %o.";
