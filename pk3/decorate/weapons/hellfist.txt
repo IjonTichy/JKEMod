@@ -1,0 +1,82 @@
+actor HellFistCounter: Ammo
+{
+    +IGNORESKILL
+    Inventory.MaxAmount 100
+}
+
+actor HellFist: Weapon
+{
+    +INVENTORY.UNDROPPABLE
+    Weapon.SelectionOrder 1600
+    Weapon.AmmoType "HellFistCounter"
+    Weapon.AmmoGive 100
+    Weapon.AmmoUse 10
+    Inventory.PickupMessage "$JKE_PK_HELLFIST"
+    Obituary "$JKE_MP_HELLFIST_MELEE"
+    States
+    {
+      Select:
+        BHND A 0 A_Raise
+        BHND A 1 bright A_Raise
+        loop
+
+      Deselect:
+        BHND A 0 A_Lower
+        BHND A 1 bright A_Lower
+        loop
+
+      Ready:
+        BHND A 3 bright A_WeaponReady
+        BHND B 0 A_GiveInventory("HellFistCounter", 1)
+        BHND BC 3 bright A_WeaponReady
+        BHND A 0 A_GiveInventory("HellFistCounter", 1)
+        BHND AB 3 bright A_WeaponReady
+        BHND C 0 A_GiveInventory("HellFistCounter", 1)
+        BHND C 3 bright A_WeaponReady
+        Loop
+
+      Fire:
+        BHND DE 3 bright
+        BHND F 6 bright A_FireCustomMissile("HellFistShot", 0, 1, 4, 0)
+        BHND ED 3 bright
+        goto Ready
+
+      AltFire:
+        BHND D 3 bright
+        BHND E 1 bright
+        BHND F 6 bright A_CustomPunch(100+random(0, 100), 1, 0, "Bulletpuff", 0)
+        BHND E 1 bright
+        BHND D 3 bright
+        goto Ready
+
+      Spawn:
+        TNT1 A 0
+        stop
+    }
+}
+
+actor HellFistShot
+{
+    Radius 8
+    Height 8
+    Speed 20
+
+    Projectile
+    Damage (100 + random(0, 40))
+
+    RenderStyle Add
+    SeeSound "jkemod/hellfist/fire"
+    DeathSound "jkemod/hellfist/explode"
+
+    Obituary "$JKE_MP_HELLFIST_ACID"
+
+    States
+    {
+      Spawn:
+        BAL7 AB 4 bright
+        loop
+      Death:
+        BAL7 CDE 6 bright
+        stop
+    }
+}

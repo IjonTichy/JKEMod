@@ -12,6 +12,7 @@
 #include "decorate/weapons/flaregun.txt"
 #include "decorate/weapons/fragmentlauncher.txt"
 #include "decorate/weapons/heavychaingun.txt"
+#include "decorate/weapons/hellfist.txt"
 #include "decorate/weapons/jpistol.txt"
 #include "decorate/weapons/jshotgun.txt"
 #include "decorate/weapons/jsniperrifle.txt"

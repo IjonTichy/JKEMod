@@ -207,6 +207,7 @@ $volume jkemod/fragmentlauncher/chunkexplode 0.4
 jkemod/dkfreezethrower/fire             sounds/weapons/dkfreezethrower/fire.lmp
 jkemod/dkfreezethrower/explode          sounds/weapons/dkfreezethrower/explode.lmp
 
+
 ////
 //   HEAVY CHAINGUN
 ////
@@ -216,6 +217,13 @@ jkemod/heavychaingun/load               sounds/weapons/heavychaingun/load.lmp
 jkemod/heavychaingun/fire               sounds/weapons/heavychaingun/fire.wav
 jkemod/heavychaingun/altfire            sounds/weapons/heavychaingun/altfire.lmp
 
+
+////
+//   HELL FIST
+////
+
+$alias jkemod/hellfist/fire             baron/attack
+$alias jkemod/hellfist/explode          baron/shotx
 
 ////
 //   J-PISTOL
