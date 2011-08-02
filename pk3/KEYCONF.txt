@@ -59,6 +59,7 @@ addslotdefault 5 "Rocket Launcher"
 
 addslotdefault 6 "DKFreezethrower"
 addslotdefault 6 "DualPlasmaRifles"
+addslotdefault 6 "P-200"
 addslotdefault 6 "Plasma Rifle"
 addslotdefault 6 "VoltGun"
 

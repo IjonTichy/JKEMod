@@ -318,6 +318,17 @@ $alias jkemod/moleculeshooter/load      jkemod/bfg7000/load
 $alias jkemod/moleculeshooter/fire      betterdoomweapons/rocketaltfire   // See SNDINFO.tichy
 jkemod/moleculeshooter/up               sounds/weapons/moleculeshooter/up.lmp
 
+
+////
+//   P-200
+////
+
+jkemod/p200/fire                        sounds/weapons/p200/fire.wav
+jkemod/p200/altfire                     sounds/weapons/p200/altfire.lmp
+
+$alias jkemod/p200/explode              weapons/plasmax
+
+
 ////
 //   SUPER SHOTNUKE
 ////
