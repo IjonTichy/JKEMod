@@ -222,6 +222,16 @@ jkemod/dkfreezethrower/explode          sounds/weapons/dkfreezethrower/explode.l
 
 
 ////
+//   HAND SHOTGUN
+////
+
+jkemod/handshotgun/fire                 sounds/weapons/handshotgun/fire.lmp
+$alias jkemod/handshotgun/open          betterdoomweapons/ssgopen
+$alias jkemod/handshotgun/load          betterdoomweapons/ssgload
+$alias jkemod/handshotgun/close         betterdoomweapons/ssgclose
+
+
+////
 //   HEAVY CHAINGUN
 ////
 
