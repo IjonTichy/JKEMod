@@ -7,6 +7,7 @@ actor BeamGunCounter: Ammo
 actor BeamGun: Weapon
 {
     +AMMO_OPTIONAL
+    +NOALERT
     Weapon.AmmoGive1 7
     Weapon.AmmoGive2 7
     Weapon.AmmoType1 "BeamGunCounter"
@@ -30,31 +31,45 @@ actor BeamGun: Weapon
         Loop
 
       Fire:
-        BMGN A 0 A_JumpIfInventory("BeamGunCounter", 1, "RealFire")
-        goto AltFire
+        BMGN A 0 A_JumpIfNoAmmo("AltFire")
 
-      RealFire:
-        BMGN A 50 A_PlaySound("jkemod/beamgun/charge", CHAN_WEAPON)
+        BMGN A 35 A_PlaySound("jkemod/beamgun/charge", CHAN_WEAPON)
 
+      ReFire:
+        BMGN L 0 A_AlertMonsters
         BMGN L 0 A_Light2
         BMGN L 0 A_PlaySound("jkemod/beamgun/fire", CHAN_WEAPON)
         BMGN L 0 A_RailAttack(400, 2, 0, "EF 60 00", "FF FF 00", 1, 0)
-        BMGN L 4 bright A_FireBullets(0, 0, 1, 0, "BeamGunPuff")
-
-        BMGN A 8 A_Light0
+        BMGN L 0 A_FireBullets(0, 0, 1, 0, "BeamGunPuff")
+        BMGN L 1 bright offset(4,  35)
+        BMGN L 3 bright offset(12, 41)
+        BMGN A 3 A_Light0
+        BMGN A 2 offset(10, 40)
+        BMGN A 1 offset(8, 38)
+        BMGN A 1 offset(6, 37)
+        BMGN A 1 offset(4, 35)
+        BMGN A 1 offset(2, 34)
+        BMGN A 8 offset(-1, 32)
+        BMGN A 0 A_ReFire
         goto Ready
+
+      Hold:
+        BMGN A 0 A_JumpIfNoAmmo("AltFire")
+        goto ReFire
 
 
       AltFire:
+        BMGN A 0 A_ClearRefire
         BMGN A 0 A_JumpIfInventory("BeamGunCounter", 0, "NoReload")
         BMGN A 0 A_JumpIfInventory("BeamAmmo", 1, "ReloadStart")
         goto NoReload
 
       ReloadStart:
+        BMGN B 0 A_PlaySound("jkemod/beamgun/load1", CHAN_WEAPON)
         BMGN BCDEFG 1
-        BMGN H 0 A_PlaySound("jkemod/beamgun/load2", CHAN_WEAPON)
         BMGN HIJ 2
-        BMGN K 15
+        BMGN K 12
+        BMGN K 9 A_PlaySound("jkemod/beamgun/load2", CHAN_WEAPON)
         goto ReloadLoop
 
       ReloadLoop:
@@ -68,6 +83,7 @@ actor BeamGun: Weapon
         BMGN JIH 2
         BMGN G 2 A_PlaySound("jkemod/beamgun/load3", CHAN_WEAPON)
         BMGN FEDCBA 1
+        BMGN A 4
         goto Ready
 
       NoReload:

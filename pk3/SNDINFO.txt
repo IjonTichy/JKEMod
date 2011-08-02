@@ -162,13 +162,17 @@ $limit jkemod/dualplasmarifles/explode 0
 //   FIRE GLOVES
 ////
 
+$alias jkemod/firegloves/fire           vile/start
+$alias jkemod/firegloves/crackle        vile/firecrkl
+$alias jkemod/firegloves/explode        jkemod/assorted/explode4
+
 jkemod/firegloves/fire1                 sounds/weapons/firegloves/fire1.wav
 jkemod/firegloves/fire2                 sounds/weapons/firegloves/fire2.wav
-jkemod/firegloves/explode               sounds/weapons/firegloves/explode.wav
+jkemod/firegloves/explode1              sounds/weapons/firegloves/explode.wav
 
 $limit jkemod/firegloves/fire1 0
 $limit jkemod/firegloves/fire2 0
-$limit jkemod/firegloves/explode 0
+$limit jkemod/firegloves/explode1 0
 
 ////
 //   FIRE SSG
@@ -193,7 +197,6 @@ jkemod/flaregun/close                   sounds/weapons/flaregun/close.wav
 
 $alias  jkemod/flaregun/explode         weapons/rocklx
 $volume jkemod/flaregun/explode         0.4
-
 
 
 ////
@@ -332,6 +335,25 @@ $alias jkemod/supershotnuke/close       betterdoomweapons/ssgclose
 jkemod/tristaff/up                      sounds/weapons/tristaff/up.lmp
 jkemod/tristaff/fire                    sounds/weapons/tristaff/fire.lmp
 
+
+////
+//   UZI
+////
+
+jkemod/uzi/fire                         sounds/weapons/uzi/fire.wav
+
+$alias jkemod/uzi/open                  jkemod/dualberettas/open
+$alias jkemod/uzi/load                  jkemod/flaregun/load
+
+jkemod/uzi/cock                         sounds/weapons/uzi/cock.wav
+
+
+////
+//   VOLT GUN
+////
+
+jkemod/voltgun/fire                     sounds/weapons/voltgun/fire.lmp
+jkemod/voltgun/altfire                  sounds/weapons/voltgun/altfire.wav
 
 ////
 //   ZEN FISTS

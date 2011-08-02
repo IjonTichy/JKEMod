@@ -7,6 +7,7 @@ actor M249Counter: Ammo
 actor "M249 Machine Gun": Weapon
 {
     +AMMO_OPTIONAL
+    +NOALERT
     Weapon.AmmoType1 "M249Counter"
     Weapon.AmmoType2 "M249Ammo"
     Weapon.AmmoGive1 200
@@ -34,14 +35,14 @@ actor "M249 Machine Gun": Weapon
         Loop
 
       Fire:
-        M249 A 0 A_JumpIfInventory("M249Counter", 1, "RealFire")
-        goto AltFire
+        M249 A 0 A_JumpIfNoAmmo("AltFire")
 
-      RealFire:
+        M249 A 0 A_AlertMonsters
         M249 B 0 A_Recoil(0.3)
         M249 B 0 A_FireCustomMissile("AssaultCasing", -48, 0, 7, 6)
         M249 B 3 bright A_FireBullets(4, 2, 1, 8, "Bulletpuff", 1)
 
+        M249 A 0 A_AlertMonsters
         M249 C 0 A_Recoil(0.3)
         M249 C 0 A_FireCustomMissile("AssaultCasing", -45, 0, 7, 6)
         M249 C 3 bright A_FireBullets(4, 2, 1, 8, "Bulletpuff", 1)

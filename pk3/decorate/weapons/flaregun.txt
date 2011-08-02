@@ -20,6 +20,7 @@ actor FlareGunShot
 
     Projectile
     -NOGRAVITY
+    +DEHEXPLOSION
 
     Gravity 0.125
 
@@ -28,12 +29,12 @@ actor FlareGunShot
     States
     {
       Spawn:
-        FLAR A 1 A_SpawnItemEx("FlareGunTrail")
-        FLAR A 8
+        FLAR A 0 A_SpawnItemEx("FlareGunTrail")
+        FLAR A 8 bright
         Loop
       Death:
         FREX A 0 A_Explode(112, 96)
-        FREX ABC 3
+        FREX ABC 3 bright
         Stop
     }
 }

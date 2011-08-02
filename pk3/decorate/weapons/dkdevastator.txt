@@ -62,6 +62,7 @@ actor DKDevastatorShot
 
     Projectile
     +DEHEXPLOSION
+    +FORCERADIUSDMG
 
     Damage 10
 

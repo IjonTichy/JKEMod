@@ -25,4 +25,6 @@
 #include "decorate/weapons/moleculeshooter.txt"
 #include "decorate/weapons/supershotnuke.txt"
 #include "decorate/weapons/tristaff.txt"
+#include "decorate/weapons/uzi.txt"
+#include "decorate/weapons/voltgun.txt"
 #include "decorate/weapons/zenfist.txt"

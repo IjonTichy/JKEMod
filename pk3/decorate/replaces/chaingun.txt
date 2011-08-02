@@ -3,4 +3,5 @@ actor JKEChaingun: RandomSpawner replaces Chaingun
     dropitem " Chaingun "
     dropitem "M16"
     dropitem "M249 Machine Gun"
+    dropitem " Uzi "
 }

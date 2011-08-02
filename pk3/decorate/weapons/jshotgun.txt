@@ -26,6 +26,7 @@ actor JShotgun : Weapon
       Fire:
         DHSG A 0 A_JumpIfNoAmmo("AltFire")
 
+        DHSG A 0 A_AlertMonsters
         DHSG A 0 A_PlaySound("jkemod/jshotgun/fire", CHAN_WEAPON)
         DHSF A 0 A_Light1
         DHSF A 3 bright A_FireBullets(6, 6, 10, 5, "BulletPuff", 1)
@@ -40,8 +41,13 @@ actor JShotgun : Weapon
 
       AltFire:
         DHSG A 0 A_JumpIfInventory("JShellCounter", 0, "NoReload")
-        DHSG A 0 A_JumpIfInventory("Shell", 1, "ReloadLoop")
+        DHSG A 0 A_JumpIfInventory("Shell", 1, "ReloadStart")
         Goto NoReload
+
+      ReloadStart:
+        DHSG F 3
+        DHSR G 8
+        Goto ReloadLoop
 
       ReloadLoop:
         DHSR A 3
@@ -61,8 +67,8 @@ actor JShotgun : Weapon
 
       ReloadEnd:
         DHSR H 5  A_PlaySound("jkemod/jshotgun/pump", CHAN_WEAPON)
-        DHSR G 5
-        DHSG GF 3
+        DHSR G 8
+        DHSG F 3
         Goto Ready
 
       NoReload:
