@@ -74,6 +74,12 @@ $alias jkemod/beamgun/load3             jkemod/dualplasmarifles/load3
 
 
 ////
+//   BERSERKER
+////
+
+jkemod/berserker/hit                    sounds/weapons/berserker/hit.wav
+
+////
 //   BFG7000
 ////
 

@@ -36,6 +36,7 @@ JKE_PK_M249AMMO                 = "You picked up some .55cal bullets.";
 // Weapons
 JKE_PK_BALLESTA                 = "You found the Ballesta!";
 JKE_PK_BEAMGUN                  = "You got the beam gun!";
+JKE_PK_BERSERKER                = "You found Wolverine's claws. Huh.";
 JKE_PK_BFG7000                  = "You found a BFG9000 prototype!";
 JKE_PK_D1000                    = "You found the long-lost D-1000 plasma cannon!";
 JKE_PK_DKDEVASTATOR             = "DEVASTATOR WEAPON";
@@ -79,6 +80,7 @@ JKE_PK_ZENFIST                  = "You picked up two disembodied arms. Eeewww.";
 
 JKE_MP_BALLESTA                 = "%k shoved an exploding arrow through %o.";
 JKE_MP_BEAMGUN                  = "%k shot %o with a supersonic explosion.";
+JKE_MP_BERSERKER                = "%k gutted %o.";
 JKE_MP_BFG7000                  = "%k showed %o the power of the BFG7000.";
 JKE_MP_D1000                    = "%k vaporised %o.";
 JKE_MP_DKFREEZETHROWER          = "%k froze %o.";

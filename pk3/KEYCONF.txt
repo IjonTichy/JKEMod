@@ -5,6 +5,7 @@ addplayerclass BetterPlayer
 //   SLOT 1 - MELEE CLASS
 ////
 
+addslotdefault 1 "Berserker"
 addslotdefault 1 " Chainsaw "
 addslotdefault 1 " Fists "
 addslotdefault 1 "HellFist"
