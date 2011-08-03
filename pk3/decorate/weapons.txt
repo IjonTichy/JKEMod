@@ -12,6 +12,7 @@
 #include "decorate/weapons/firegloves.txt"
 #include "decorate/weapons/firessg.txt"
 #include "decorate/weapons/flaregun.txt"
+#include "decorate/weapons/fmodminigun.txt"
 #include "decorate/weapons/fragmentlauncher.txt"
 #include "decorate/weapons/handshotgun.txt"
 #include "decorate/weapons/heavychaingun.txt"

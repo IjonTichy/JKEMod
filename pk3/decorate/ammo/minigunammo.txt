@@ -1,0 +1,15 @@
+actor MinigunAmmo: Ammo
+{
+    Inventory.Amount 50
+    Inventory.MaxAmount 600
+    Ammo.BackpackAmount 150
+    Ammo.BackpackMaxAmount 900
+    Inventory.PickupMessage "$JKE_PK_MINIGUNAMMO"
+    Inventory.Icon "DTAMA0"
+    States
+    {
+      Spawn:
+        DTAM A -1
+        stop
+    }
+}

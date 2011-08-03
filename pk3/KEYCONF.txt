@@ -40,6 +40,7 @@ addslotdefault 3 "Super Shotgun"
 ////
 
 addslotdefault 4 " Chaingun "
+addslotdefault 4 "FModMinigun"
 addslotdefault 4 "HeavyChaingun"
 addslotdefault 4 "M16"
 addslotdefault 4 "M249 Machine Gun"

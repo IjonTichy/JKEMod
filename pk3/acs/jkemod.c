@@ -24,7 +24,8 @@ Script 901 (int line)
     }
 }
 
-Script 902 (int speed)
+Script 902 (int speedInt, int speedFrac)
 {
+    int speed = (speedInt << 16) + ((speedFrac << 16) / 100);
     SetActorProperty(0, APROP_Speed, speed);
 }

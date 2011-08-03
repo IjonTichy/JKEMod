@@ -206,6 +206,25 @@ $volume jkemod/flaregun/explode         0.4
 
 
 ////
+//   FMOD MINIGUN
+////
+
+jkemod/fmodminigun/up                   sounds/weapons/fmodminigun/up.wav
+jkemod/fmodminigun/spin                 sounds/weapons/fmodminigun/spin.wav
+jkemod/fmodminigun/down                 sounds/weapons/fmodminigun/down.wav
+
+jke/mg/f1                               sounds/weapons/fmodminigun/fire1.wav
+jke/mg/f2                               sounds/weapons/fmodminigun/fire2.wav
+jke/mg/f3                               sounds/weapons/fmodminigun/fire3.wav
+
+$random jkemod/fmodminigun/fire
+{
+    jke/mg/f1
+    jke/mg/f2
+    jke/mg/f3
+}
+
+////
 //   FRAGMENT LAUNCHER
 ////
 
