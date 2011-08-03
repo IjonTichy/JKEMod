@@ -365,6 +365,14 @@ $alias jkemod/p200/explode              weapons/plasmax
 
 
 ////
+//   SPITFIRER
+////
+
+jkemod/spitfirer/fire                   sounds/weapons/spitfirer/fire.wav
+$alias jkemod/spitfirer/altfire         jkemod/fragmentlauncher/fire
+$alias jkemod/spitfirer/open            jkemod/fragmentlauncher/open
+
+////
 //   STRIKER
 ////
 

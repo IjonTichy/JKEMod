@@ -44,6 +44,7 @@ addslotdefault 4 "FModMinigun"
 addslotdefault 4 "HeavyChaingun"
 addslotdefault 4 "M16"
 addslotdefault 4 "M249 Machine Gun"
+addslotdefault 4 "SpitFirer"
 addslotdefault 4 " Uzi "
 
 

@@ -27,6 +27,7 @@
 #include "decorate/weapons/moleculeshooter.txt"
 #include "decorate/weapons/p200.txt"
 #include "decorate/weapons/powerful.txt"
+#include "decorate/weapons/spitfirer.txt"
 #include "decorate/weapons/striker.txt"
 #include "decorate/weapons/supershotnuke.txt"
 #include "decorate/weapons/tristaff.txt"

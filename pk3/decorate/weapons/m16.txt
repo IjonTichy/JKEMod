@@ -31,7 +31,7 @@ actor M16: Weapon
         RIFL A 0 A_JumpIfNoAmmo("AltFire")
         RIFL A 0 A_AlertMonsters
         RIFL B 0 A_PlaySound("jkemod/m16/fire", CHAN_WEAPON)
-        RIFL B 0 bright A_FireBullets(3, 2, 1, 8, "BulletPuff", 1)
+        RIFL B 0 bright A_FireBullets(0.75, 0.75, 1, 8, "BulletPuff", 1)
         RIFL B 2 bright A_Light1
         RIFL C 2 A_FireCustomMissile("AssaultCasing", -55, 0, 8)
         RIFL D 0 A_ReFire

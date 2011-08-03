@@ -40,12 +40,12 @@ actor "M249 Machine Gun": Weapon
         M249 A 0 A_AlertMonsters
         M249 B 0 A_Recoil(0.3)
         M249 B 0 A_FireCustomMissile("AssaultCasing", -48, 0, 7, 6)
-        M249 B 3 bright A_FireBullets(4, 2, 1, 8, "Bulletpuff", 1)
+        M249 B 3 bright A_FireBullets(1, 1, 1, 8, "Bulletpuff", 1)
 
         M249 A 0 A_AlertMonsters
         M249 C 0 A_Recoil(0.3)
         M249 C 0 A_FireCustomMissile("AssaultCasing", -45, 0, 7, 6)
-        M249 C 3 bright A_FireBullets(4, 2, 1, 8, "Bulletpuff", 1)
+        M249 C 3 bright A_FireBullets(1, 1, 1, 8, "Bulletpuff", 1)
 
         M249 A 10 A_ReFire
         goto Ready

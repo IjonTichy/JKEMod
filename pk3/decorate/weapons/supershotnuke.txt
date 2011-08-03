@@ -109,8 +109,6 @@ actor SuperShotNukePuff: BulletPuff
 
 actor SuperShotNukeCounter: Ammo
 {
-    Inventory.Amount 1
+    +IGNORESKILL
     Inventory.MaxAmount 10
-    Ammo.BackpackAmount 0
-    Ammo.BackpackMaxAmount 10
 }
