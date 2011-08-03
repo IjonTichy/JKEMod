@@ -6,6 +6,8 @@ actor P200Shot
 
     Projectile
     Damage 5
+    +FORCERADIUSDMG
+    +NODAMAGETHRUST
 
     RenderStyle Add
     Translation "112:127=250:254"

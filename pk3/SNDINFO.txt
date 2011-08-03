@@ -346,6 +346,16 @@ $alias jkemod/p200/explode              weapons/plasmax
 
 
 ////
+//   STRIKER
+////
+
+jkemod/striker/fire                     sounds/weapons/striker/fire.wav
+jkemod/striker/in                       sounds/weapons/striker/in.wav
+jkemod/striker/load                     sounds/weapons/striker/load.wav
+jkemod/striker/out                      sounds/weapons/striker/out.wav
+
+
+////
 //   SUPER SHOTNUKE
 ////
 

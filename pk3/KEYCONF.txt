@@ -31,6 +31,7 @@ addslotdefault 3 "FireSSG"
 addslotdefault 3 "HandShotgun"
 addslotdefault 3 "JShotgun"
 addslotdefault 3 " Shotgun "
+addslotdefault 3 "Striker"
 addslotdefault 3 "Super Shotgun"
 
 

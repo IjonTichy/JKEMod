@@ -3,4 +3,5 @@ actor JKEShotgun: RandomSpawner replaces Shotgun
     dropitem "HandShotgun"
     dropitem "JShotgun"
     dropitem " Shotgun "
+    dropitem "Striker"
 }

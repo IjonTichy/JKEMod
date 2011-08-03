@@ -2,12 +2,15 @@
 
 import shutil, os
 
+oldStart = 'JAC'
+newStart = 'STK'
+
 ls = os.listdir('.')
 playersprites = []
 
 for image in ls:
-    if image.startswith('MAN3'):
-        newname = 'JMAN' + image[4:]
+    if image.startswith(oldStart):
+        newname = newStart + image[len(oldStart):]
         playersprites.append((image, newname))
 
 for (oldname, newname) in playersprites:
