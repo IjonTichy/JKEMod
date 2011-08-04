@@ -363,6 +363,23 @@ jkemod/moleculeshooter/up               sounds/weapons/moleculeshooter/up.lmp
 
 
 ////
+//   MULTIGUN
+////
+
+jkemod/multigun/load                    sounds/weapons/multigun/load.lmp
+jkemod/multigun/switch                  sounds/weapons/multigun/switch.wav
+
+$alias jkemod/multigun/rocketfire       jkemod/jrocketlauncher/fire
+$alias jkemod/multigun/rocketexplode    jkemod/assorted/explode
+
+jkemod/multigun/icefire                 sounds/weapons/multigun/icefire.wav
+jkemod/multigun/iceexplode              sounds/weapons/multigun/iceexplode.wav
+
+$alias jkemod/multigun/flamefire        jkemod/fragmentlauncher/fire
+$alias jkemod/multigun/flameexplode     jkemod/assorted/explode
+$alias jkemod/multigun/flame            vile/firecrkl
+
+////
 //   P-200
 ////
 
@@ -370,6 +387,14 @@ jkemod/p200/fire                        sounds/weapons/p200/fire.wav
 jkemod/p200/altfire                     sounds/weapons/p200/altfire.lmp
 
 $alias jkemod/p200/explode              weapons/plasmax
+
+
+////
+//   PLASMA DRIVER
+////
+
+jkemod/plasmadriver/fire                sounds/weapons/plasmadriver/fire.wav
+$alias jkemod/plasmadriver/explode      weapons/plasmax
 
 
 ////

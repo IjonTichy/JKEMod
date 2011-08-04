@@ -54,7 +54,7 @@ actor BallestaArrow
         stop
 
       Death:
-        CFCF Q 0 A_Explode(15, 30, 0)
+        CFCF Q 0 A_Explode(32, 64, 0)
         CFCF QRSTUVWXYZ 2
         stop
     }

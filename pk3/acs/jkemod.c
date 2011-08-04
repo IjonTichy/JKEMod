@@ -1,30 +1,27 @@
 #library "jkemod"
 #include "zcommon.acs"
 
+int multigunStrings[3] = {
+    "Missiles",
+    "Ice shards",
+    "Flame grenades"};
+
 script 900 (int trigger)
 {
-    SetPlayerproperty(0, trigger, 0);
+    SetPlayerProperty(0, trigger, 0);
 }
 
-Script 901 (int line)
+script 901 (void)
 {
-    switch (line)
-    {
-      case 0:
-        Print(s:"Missile launcher mode");
-        break;
+    int curMode = CheckInventory("MultigunMode");
+    int newMode = (curMode + 1) % 3;
 
-      case 1:
-        Print(s:"Shotgun ice launcher mode");
-        break;
-
-      case 2:
-        Print(s:"Fire spread launcher mode");
-        break;
-    }
+    TakeInventory("MultigunMode", 0x7FFFFFFF);
+    GiveInventory("MultigunMode", newMode);
+    Print(s:multigunStrings[newMode]);
 }
 
-Script 902 (int speedInt, int speedFrac)
+script 902 (int speedInt, int speedFrac)
 {
     int speed = (speedInt << 16) + ((speedFrac << 16) / 100);
     SetActorProperty(0, APROP_Speed, speed);

@@ -1,4 +1,4 @@
-actor SuperShotNuke: Weapon 21238
+actor SuperShotNuke: Weapon
 {
     Inventory.PickupMessage "$JKE_PK_SUPERSHOTNUKE"
     weapon.AmmoGive1 10

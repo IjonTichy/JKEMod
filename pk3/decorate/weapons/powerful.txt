@@ -1,4 +1,4 @@
-actor Powerful : Weapon 21228
+actor Powerful : Weapon
 {
     Game Doom
     Inventory.PickupMessage "$JKE_PK_POWERFUL"

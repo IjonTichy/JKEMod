@@ -3,7 +3,7 @@ actor FistCounter: Inventory
     Inventory.MaxAmount 7
 }
 
-actor MightyFist: Weapon 21237
+actor MightyFist: Weapon
 {
     +UNDROPPABLE
     +NOALERT

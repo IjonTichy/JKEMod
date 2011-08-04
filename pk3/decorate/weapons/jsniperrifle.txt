@@ -1,4 +1,4 @@
-actor JSniperRifle : Weapon 10293
+actor JSniperRifle : Weapon
 {
     +WEAPON.NOAUTOAIM
     Weapon.SelectionOrder 500
