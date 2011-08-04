@@ -1,0 +1,90 @@
+actor JRocketLauncher: Weapon
+{
+    Weapon.AmmoType "RocketAmmo"
+    Weapon.AmmoUse 1
+    Weapon.AmmoGive 4
+
+    Weapon.SelectionOrder 500
+
+    Inventory.PickupMessage "$JKE_PK_JROCKETLAUNCHER"
+    Obituary "$JKE_MP_JROCKETLAUNCHER"
+
+    States
+    {
+      Select:
+        D3RL A 1 A_Raise
+        loop
+
+      Deselect:
+        D3RL A 1 A_Lower
+        loop
+
+      Ready:
+        D3RL A 1 A_WeaponReady
+        loop
+
+      Fire:
+        D3RL A 0 A_GunFlash
+        D3RL A 0 A_Recoil(3)
+        D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON)
+        D3RL A 0 A_FireCustomMissile("JRocketLauncherSmoke", 0, 1, 5, 0)
+        D3RL A 0 bright A_FireCustomMissile("JRocketLauncherShot", 0, 1, 5, 0)
+        D3RL C 2 bright
+        D3RL DE 1 bright
+        D3RL F 20
+        D3RL E 3
+        D3RL D 2
+        D3RL CB 1
+        goto Ready
+
+      Flash:
+        D3RF C 2 bright
+        D3RF DE 1 bright
+        goto LightDone
+
+      Spawn:
+        D3RL Z -1
+        stop
+    }
+}
+
+
+actor JRocketLauncherSmoke
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+    RenderStyle Translucent
+    Alpha 0.4
+    States
+    {
+      Spawn:
+        PUF2 ABCDEFGHIJKLMNOPQRSTUVWXYZ 2
+        PUF3 ABC 2
+        stop
+    }
+}
+
+actor JRocketLauncherShot
+{
+    Radius 6
+    Height 8
+    Speed 40
+
+    Projectile
+    Damage 30
+
+    +ROCKETTRAIL
+    +DEHEXPLOSION
+
+    States
+    {
+      Spawn:
+        RMMS A 1 bright
+        loop
+      Death:
+        MISL B 0 A_PlaySound("jkemod/jrocketlauncher/explode")
+        MISL B 0 A_Explode(160, 160)
+        MISL BBBBCCCDD 2 bright
+        stop
+    }
+}

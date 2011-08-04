@@ -55,6 +55,7 @@ addslotdefault 4 " Uzi "
 addslotdefault 5 "Ballesta"
 addslotdefault 5 "FlareGun"
 addslotdefault 5 "FragmentLauncher"
+addslotdefault 5 "JRocketLauncher"
 addslotdefault 5 "Rocket Launcher"
 
 

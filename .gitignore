@@ -1,4 +1,6 @@
 ####
-# this ends up taking way too much space
+# these end up taking way too much space
 ####
-jkemod.pk3
+
+jkemod*.pk3
+jkemod*.zip

@@ -18,6 +18,7 @@
 #include "decorate/weapons/heavychaingun.txt"
 #include "decorate/weapons/hellfist.txt"
 #include "decorate/weapons/jpistol.txt"
+#include "decorate/weapons/jrocketlauncher.txt"
 #include "decorate/weapons/jshotgun.txt"
 #include "decorate/weapons/jsniperrifle.txt"
 #include "decorate/weapons/m16.txt"

@@ -278,7 +278,15 @@ $alias jkemod/hellfist/explode          baron/shotx
 ////
 
 jkemod/jpistol/fire                     sounds/weapons/jpistol/fire.lmp
-$alias jkemod/jpistol/load             jkemod/doublebarrelsg/load
+$alias jkemod/jpistol/load              jkemod/doublebarrelsg/load
+
+
+////
+//   J-ROCKET LAUNCHER
+////
+
+jkemod/jrocketlauncher/fire             sounds/weapons/jrocketlauncher/fire.wav
+$alias jkemod/jrocketlauncher/explode   betterdoomweapons/rocketexplode
 
 
 ////

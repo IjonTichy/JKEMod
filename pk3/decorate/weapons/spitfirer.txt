@@ -1,4 +1,4 @@
-actor SpitFirer: Weapon
+actor Spitfirer: Weapon
 {
     Weapon.AmmoType1 "Clip"
     Weapon.AmmoType2 "ExplosiveAmmo"
@@ -37,7 +37,7 @@ actor SpitFirer: Weapon
 
       AltFire:
         SPFR B 0 A_PlaySound("jkemod/spitfirer/altfire", CHAN_WEAPON)
-        SPFR B 1 A_FireCustomMissile("Grenadest", 0, 1, 2, 3)
+        SPFR B 1 A_FireCustomMissile("SpitfirerGrenade", 0, 1, 2, 3)
         SPFR G 1
         SPFR I 10
         SPFR I 10 A_PlaySound("jkemod/spitfirer/open", CHAN_WEAPON)
@@ -59,12 +59,12 @@ actor SpitFirer: Weapon
 
 
       Spawn:
-        MGUU A -1
+        SPFR Z -1
         stop
     }
 }
 
-actor Grenadest
+actor SpitfirerGrenade
 {
     Height 4
     Radius 4
@@ -77,6 +77,8 @@ actor Grenadest
 
     Damage 25
     ReactionTime 3
+
+    Obituary "$JKE_MP_SPITFIRER_GRENADE"
 
     States
     {

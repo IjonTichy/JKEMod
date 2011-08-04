@@ -1,0 +1,46 @@
+Berserker
+ Chainsaw 
+ Fists 
+HellFist
+MightyFist
+ZenFist
+DualBerettas
+DualPistols
+JPistol
+ Pistol 
+DoubleBarrelSG
+FireSSG
+HandShotgun
+JShotgun
+ Shotgun 
+Striker
+Super Shotgun
+ Chaingun 
+FModMinigun
+HeavyChaingun
+M16
+M249 Machine Gun
+SpitFirer
+ Uzi 
+Ballesta
+FlareGun
+FragmentLauncher
+Rocket Launcher
+DKFreezethrower
+DualPlasmaRifles
+P-200
+Plasma Rifle
+VoltGun
+ BFG9000 
+DKDevastator
+MoleculeShooter
+RailRepeater
+BFG7000
+D-1000
+Powerful
+SuperShotNuke
+FireGloves
+TriStaff
+BeamGun
+JSniperRifle
+MagnumSniper
