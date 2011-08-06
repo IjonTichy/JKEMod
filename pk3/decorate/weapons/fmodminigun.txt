@@ -56,15 +56,16 @@ actor FModMinigun: Weapon
         D3CG A 0 Radius_Quake(2, 3, 0, 1, 0)
         D3CG A 0 A_GunFlash
 
-        D3CF A 0 A_FireCustomMissile("AssaultCasing", -55, 0, 3, 3)
+        D3CF A 0 A_FireCustomMissile("AssaultCasing", random(-400, -700)/10.0, 0, 3, 3)
         D3CG A 1 bright A_FireBullets(5, 5, 1, 10, "BulletPuff")
 
-        D3CF A 0 A_FireCustomMissile("AssaultCasing", -47, 0, 3, 3)
+        D3CF A 0 A_FireCustomMissile("AssaultCasing", random(-400, -700)/10.0, 0, 3, 3)
         D3CG B 1 bright A_FireBullets(5, 5, 1, 10, "BulletPuff")
 
         D3CG A 0 A_JumpIfNoAmmo("Down")
         D3CG A 0 A_JumpIfInventory("AltFired", 1, 1)
         goto Down
+
         D3CG A 0 A_JumpIfInventory("MainFired", 1, "Shoot")
         D3CG A 0 A_ReFire
         goto Down

@@ -90,7 +90,7 @@ actor Multigun: Weapon
 
 
       Spawn:
-        BREK A -1
+        SBRG Z -1
         stop
     }
 }
@@ -220,7 +220,7 @@ actor MultigunFire
     States
     {
       Spawn:
-        FIRE ABABCBCBCDCDCDEDEDEFEFGFG 2 bright A_Explode(16, 64)
+        FIRE ABABCBCBCDCDCDEDEDEFEFGFG 2 bright A_Explode(2, 64)
         FIRE HGH 2 bright
         stop
     }

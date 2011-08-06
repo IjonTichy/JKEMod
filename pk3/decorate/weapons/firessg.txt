@@ -31,9 +31,9 @@ actor FireSSG: Weapon
       Fire:
         FSH2 A 0        A_GunFlash
         FSH2 A 0        A_PlaySound("jkemod/firessg/fire", CHAN_WEAPON)
-        FSH2 A        0 A_FireCustomMissile("FireSSGShot1", random(-15, 15), 1,  5, 0, 0, random(-7, 7))
-        FSH2 AAAAAAA  0 A_FireCustomMissile("FireSSGShot1", random(-15, 15), 0,  5, 0, 0, random(-7, 7))
-        FSH2 AAAAAAAA 0 A_FireCustomMissile("FireSSGShot1", random(-15, 15), 0, -5, 0, 0, random(-7, 7))
+        FSH2 A        0 A_FireCustomMissile("FireSSGShot1", random(-150, 150)/10.0, 1,  5, 0, 0, random(-70, 70)/10.0)
+        FSH2 AAAAAAAAA  0 A_FireCustomMissile("FireSSGShot1", random(-150, 150)/10.0, 0,  5, 0, 0, random(-70, 70)/10.0)
+        FSH2 AAAAAAAAAA 0 A_FireCustomMissile("FireSSGShot1", random(-150, 150)/10.0, 0, -5, 0, 0, random(-70, 70)/10.0)
         FSH2 A 2 offset(0, 33) bright A_Recoil(5)
         FSH2 A 2 offset(0, 40) bright
         FSH2 A 2 offset(0, 36) bright
@@ -95,7 +95,7 @@ actor FireSSGShot1: FastProjectile
     Radius 5
     Speed 80
 
-    Damage (8)
+    Damage (4)
 
     RenderStyle Add
 
@@ -121,7 +121,7 @@ actor FireSSGShot2: FastProjectile
 
     RenderStyle Add
 
-    Damage (40)
+    Damage (20)
 
     Obituary "$JKE_MP_FIRESSG2"
 

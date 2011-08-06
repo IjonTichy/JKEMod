@@ -167,7 +167,7 @@ actor MoleculeShooter: Weapon
         goto LightDone
 
       Spawn:
-        RBFD U -1
+        RBFD Z -1
         stop
     }
 }

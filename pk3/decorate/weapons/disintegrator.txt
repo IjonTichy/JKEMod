@@ -1,0 +1,58 @@
+actor Disintegrator: Weapon
+{
+    Scale 0.3
+
+    Weapon.AmmoType1 "Cell"
+    Weapon.AmmoUse1 15
+    Weapon.AmmoGive1 100
+
+    Weapon.SelectionOrder 1300
+
+    Inventory.PickupMessage "$JKE_PK_DISINTEGRATOR"
+    Obituary "$JKE_MP_DISINTEGRATOR"
+    States
+    {
+      Select:
+        PLPF A 1 A_Raise
+        loop
+
+      Deselect:
+        PLPF A 1 A_Lower
+        loop
+
+      Ready:
+        PLPF A 1 A_WeaponReady
+        Loop
+
+      Fire:
+        PLPF A 0 A_PlaySound("jkemod/disintegrator/fire", CHAN_WEAPON)
+        PLPF A 0 A_Light2
+        PLPF A 1 bright A_FireBullets(5, 4, 30, 10, "DisintegratorPuff", 1)
+        PLPF B 2 bright
+        PLPF CD 2 bright A_Light1
+        PLPF E 2 A_Light0
+        PLPF F 27
+        PLPF E 2
+        goto Ready
+      Spawn:
+        PLP1 A -1
+        stop
+    }
+}
+
+actor DisintegratorPuff: BulletPuff
+{
+    +PUFFONACTORS
+    RenderStyle Add
+    Alpha 1.0
+    Scale 0.5
+
+    DamageType Disintegrate
+
+    States
+    {
+      Spawn:
+        BNG3 ABCDEFGH 2 bright A_FadeOut(0.1)
+        Stop
+    }
+}

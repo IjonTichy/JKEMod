@@ -7,6 +7,11 @@
 ////
 
 ///
+// None
+
+jkemod/assorted/none                    sounds/assorted/none.ogg
+
+///
 // Click
 
 jkemod/assorted/click                   sounds/assorted/click.wav
@@ -115,6 +120,12 @@ $limit jkemod/dkdevastator/fire         0
 $limit jkemod/dkdevastator/explode      0
 $volume jkemod/dkdevastator/explode     0.3
 
+
+////
+//   DISINTEGRATOR
+////
+
+jkemod/disintegrator/fire               sounds/weapons/disintegrator/fire.lmp
 
 
 ////
@@ -280,6 +291,14 @@ $alias jkemod/hellfist/explode          baron/shotx
 jkemod/jpistol/fire                     sounds/weapons/jpistol/fire.lmp
 $alias jkemod/jpistol/load              jkemod/doublebarrelsg/load
 
+////
+//   J-RIPPER
+////
+
+jkemod/jripper/up                       sounds/weapons/jripper/up.lmp
+jkemod/jripper/down                     sounds/weapons/jripper/down.lmp
+jkemod/jripper/hit                      sounds/weapons/jripper/hit.lmp
+
 
 ////
 //   J-ROCKET LAUNCHER
@@ -304,6 +323,16 @@ jkemod/jshotgun/pump                    sounds/weapons/jshotgun/pump.wav
 
 jkemod/jsniperrifle/fire                sounds/weapons/jsniperrifle/fire.wav
 jkemod/jsniperrifle/load                sounds/weapons/jsniperrifle/load.wav
+
+
+////
+//   J-SUPER SHOTGUN
+////
+
+jkemod/jsupershotgun/fire               sounds/weapons/jsupershotgun/fire.lmp
+jkemod/jsupershotgun/open               sounds/weapons/jsupershotgun/open.lmp
+jkemod/jsupershotgun/load               sounds/weapons/jsupershotgun/load.lmp
+jkemod/jsupershotgun/close              sounds/weapons/jsupershotgun/close.lmp
 
 
 ////
@@ -344,6 +373,12 @@ jkemod/magnumsniper/load                sounds/weapons/magnumsniper/load.lmp
 jkemod/magnumsniper/out                 sounds/weapons/magnumsniper/out.wav
 jkemod/magnumsniper/in                  sounds/weapons/magnumsniper/in.wav
 
+
+////
+//   MEDISPENSER
+////
+
+$alias jkemod/medispenser/fire          jkemod/doublebarrelsg/up
 
 ////
 //   MIGHTY FIST

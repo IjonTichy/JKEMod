@@ -27,7 +27,7 @@ actor JRocketLauncher: Weapon
         D3RL A 0 A_GunFlash
         D3RL A 0 A_Recoil(3)
         D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON)
-        D3RL A 0 A_FireCustomMissile("JRocketLauncherSmoke", 0, 1, 5, 0)
+        D3RL A 0 A_FireCustomMissile("JRocketLauncherSmoke", 0, 0, 5, 0)
         D3RL A 0 bright A_FireCustomMissile("JRocketLauncherShot", 0, 1, 5, 0)
         D3RL C 2 bright
         D3RL DE 1 bright

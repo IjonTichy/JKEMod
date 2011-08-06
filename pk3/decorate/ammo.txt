@@ -9,3 +9,4 @@
 #include "decorate/ammo/jsniperammo.txt"
 #include "decorate/ammo/m249ammo.txt"
 #include "decorate/ammo/minigunammo.txt"
+#include "decorate/ammo/nukeshell.txt"

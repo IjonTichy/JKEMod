@@ -30,14 +30,16 @@ actor BetterPlayer: DoomPlayer
     Player.StartItem "IAmTheBetterPlayer"
     Player.StartItem "BetterAmmoGiver"
 
+    // ordered by each weapon's usefulness for me
+
     Player.StartItem "Super Shotgun"
-    Player.StartItem " Fists "
-    Player.StartItem " Chainsaw "
-    Player.StartItem " Pistol "
-    Player.StartItem " Shotgun "
+    Player.StartItem "Plasma Rifle"
     Player.StartItem " Chaingun "
     Player.StartItem "Rocket Launcher"
-    Player.StartItem "Plasma Rifle"
+    Player.StartItem " Pistol "
+    Player.StartItem " Shotgun "
+    Player.StartItem " Chainsaw "
+    Player.StartItem " Fists "
     Player.CrouchSprite "BPLC"
 
     States

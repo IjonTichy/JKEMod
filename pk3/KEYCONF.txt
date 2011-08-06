@@ -9,6 +9,8 @@ addslotdefault 1 "Berserker"
 addslotdefault 1 " Chainsaw "
 addslotdefault 1 " Fists "
 addslotdefault 1 "HellFist"
+addslotdefault 1 "JRipper"
+addslotdefault 1 "Medispenser"  // yeah, it really doesn't fall into any of them
 addslotdefault 1 "MightyFist"
 addslotdefault 1 "ZenFist"
 
@@ -30,6 +32,7 @@ addslotdefault 3 "DoubleBarrelSG"
 addslotdefault 3 "FireSSG"
 addslotdefault 3 "HandShotgun"
 addslotdefault 3 "JShotgun"
+addslotdefault 3 "JSuperShotgun"
 addslotdefault 3 " Shotgun "
 addslotdefault 3 "Striker"
 addslotdefault 3 "Super Shotgun"
@@ -64,6 +67,7 @@ addslotdefault 5 "Rocket Launcher"
 //   SLOT 6 - PLASMA/RAIL CLASS
 ////
 
+addslotdefault 6 "Disintegrator"
 addslotdefault 6 "DKFreezethrower"
 addslotdefault 6 "DualPlasmaRifles"
 addslotdefault 6 "P-200"

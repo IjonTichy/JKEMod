@@ -53,12 +53,12 @@ actor PlasmaDriverShot
     Speed 40
 
     Projectile
-    Damage 6
+    Damage 8
 
     RenderStyle Add
     Alpha 0.9
 
-    SeeSound "missile/redshot"
+    SeeSound "jkemod/plasmadriver/fire"
     DeathSound "jkemod/plasmadriver/explode"
     Obituary "$JKE_MP_PLASMADRIVER_PLASMA"
 
@@ -87,11 +87,12 @@ actor PlasmaDriverShotSmall: PlasmaDriverShot
     Radius 5
     Height 5
 
-    Damage 3
+    Damage 2
 
     Alpha 0.7
     Scale 0.4
 
+    SeeSound "jkemod/assorted/none"
     States
     {
       Spawn:

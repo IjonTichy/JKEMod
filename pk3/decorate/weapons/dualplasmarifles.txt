@@ -76,7 +76,7 @@ Actor DualPlasmaRifleBall
     Scale 0.5
 
     Projectile
-    Damage 4
+    Damage (30 + random(1, 20))
 
     SeeSound "jkemod/dualplasmarifles/fire"
     DeathSound "jkemod/dualplasmarifles/explode"

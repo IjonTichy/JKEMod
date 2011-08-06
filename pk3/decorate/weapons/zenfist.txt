@@ -44,10 +44,27 @@ actor ZenFist: Weapon
         Goto Ready
       AltFire:
         KICK ABC 2
-        KICK D 0 A_PlaySound("jkemod/zenfist/altfire", CHAN_WEAPON)
-        KICK D 3 A_CustomPunch(40,1,0,"BulletPuff")
+        KICK D 3 A_CustomPunch(40,1,0,"ZenFistPuff")
         KICK EDCB 2
         KICK A 2 A_ReFire
         Goto Ready
+    }
+}
+
+
+actor ZenFistPuff: BulletPuff
+{
+    +PUFFONACTORS
+    SeeSound "jkemod/zenfist/altfire"
+
+    States
+    {
+      Melee:
+        TNT1 A 0
+        stop
+
+      Crash:
+        PUFF CD 4
+        stop
     }
 }

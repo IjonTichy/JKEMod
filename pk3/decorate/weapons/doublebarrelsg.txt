@@ -23,7 +23,7 @@ actor DoubleBarrelSG : Weapon
         Loop
       Fire:
         ST2F A 0 A_PlaySound("jkemod/doublebarrelsg/fire", CHAN_WEAPON)
-        ST2F A 0 A_FireBullets(12, 12, 30, 6, "Bulletpuff", 1)
+        ST2F A 0 A_FireBullets(12, 12, 20, 6, "Bulletpuff", 1)
         ST2F A 3 bright A_Light2
         ST2A A 8 A_Light0
         ST2A B 6
