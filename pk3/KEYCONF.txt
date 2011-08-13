@@ -1,12 +1,15 @@
 addplayerclass BetterPlayer
+addplayerclass StrifeMarine
 
 
 ////
 //   SLOT 1 - MELEE CLASS
 ////
 
+addslotdefault 1 "Sigil"          // lolstrife
 addslotdefault 1 "Berserker"
 addslotdefault 1 " Chainsaw "
+addslotdefault 1 "DWeapKnife"
 addslotdefault 1 " Fists "
 addslotdefault 1 "HellFist"
 addslotdefault 1 "JRipper"
@@ -20,6 +23,7 @@ addslotdefault 1 "ZenFist"
 
 addslotdefault 2 "DualBerettas"
 addslotdefault 2 "DualPistols"
+addslotdefault 2 "DWeapEnforcer"
 addslotdefault 2 "JPistol"
 addslotdefault 2 " Pistol "
 
@@ -29,6 +33,7 @@ addslotdefault 2 " Pistol "
 ////
 
 addslotdefault 3 "DoubleBarrelSG"
+addslotdefault 3 "DWeapShotgun"
 addslotdefault 3 "FireSSG"
 addslotdefault 3 "HandShotgun"
 addslotdefault 3 "JShotgun"
@@ -43,6 +48,7 @@ addslotdefault 3 "Super Shotgun"
 ////
 
 addslotdefault 4 " Chaingun "
+addslotdefault 4 "DWeapChaingun"
 addslotdefault 4 "FModMinigun"
 addslotdefault 4 "HeavyChaingun"
 addslotdefault 4 "M16"
@@ -56,6 +62,7 @@ addslotdefault 4 " Uzi "
 ////
 
 addslotdefault 5 "Ballesta"
+addslotdefault 5 "DWeapClusterBomber"
 addslotdefault 5 "FlareGun"
 addslotdefault 5 "FragmentLauncher"
 addslotdefault 5 "Multigun"
@@ -70,6 +77,7 @@ addslotdefault 5 "Rocket Launcher"
 addslotdefault 6 "Disintegrator"
 addslotdefault 6 "DKFreezethrower"
 addslotdefault 6 "DualPlasmaRifles"
+addslotdefault 6 "DWeapPlasmaBeam"
 addslotdefault 6 "P-200"
 addslotdefault 6 "PlasmaDriver"
 addslotdefault 6 "Plasma Rifle"
@@ -92,6 +100,7 @@ addslotdefault 7 "RailRepeater"
 
 addslotdefault 8 "BFG7000"
 addslotdefault 8 "D-1000"
+addslotdefault 8 "DWeapIonstrike"
 addslotdefault 8 "Powerful"
 addslotdefault 8 "SuperShotNuke"
 

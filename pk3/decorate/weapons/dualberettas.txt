@@ -31,7 +31,7 @@ actor DualBerettas: Weapon
         BRT2 A 1 A_Lower
         loop
 
-      Flash:     // NOT ACTUALLY A GUN FLASH
+        Flash:     // NOT ACTUALLY A GUN FLASH
         BR2U A 2
         BR2U B 2
         BR2U C 2

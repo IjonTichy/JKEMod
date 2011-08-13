@@ -1,7 +1,7 @@
 #library "jkemod"
 #include "zcommon.acs"
 
-script 900 (int trigger)
+script 900 (int trigger)  // freeze the player
 {
     SetPlayerproperty(0, trigger, 0);
 }

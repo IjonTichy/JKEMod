@@ -1,0 +1,113 @@
+pointlight BulletPuffLight1
+{
+ color 1.0 0.7 0.0
+ size 16
+}
+
+pointlight BulletPuffLight2
+{
+ color 0.71 0.5 0.0
+ size 8
+}
+
+pointlight BulletPuffLight3
+{
+ color 0.28 0.2 0.0
+ size 8
+}
+
+pointlight tinyGrenadeExplosion1
+{
+ color 1.0 0.7 0.0
+ size 64
+}
+
+pointlight tinyGrenadeExplosion2
+{
+ color 0.71 0.5 0.0
+ size 48
+}
+
+pointlight tinyGrenadeExplosion3
+{
+ color 0.28 0.2 0.0
+ size 32
+}
+
+flickerlight2 PulseProj
+{
+ color 0.3 1.0 0.0
+ size 24
+ secondarySize 32
+ interval 0.05
+}
+
+flickerlight2 PulseProjSmall
+{
+ color 0.3 1.0 0.0
+ size 12
+ secondarySize 16
+ interval 0.05
+}
+
+pulselight IonBeamCharge
+{
+ color 0.8 0.0 1.0
+ size 32
+ secondarySize 256
+ interval 1.296
+}
+
+pointlight IonBlast
+{
+ color 0.8 0.0 1.0
+ size 128
+}
+
+pointlight IonBlastSmall
+{
+ color 0.8 0.0 1.0
+ size 64
+}
+
+object BulletPuff
+{
+ frame PUFFA {light BulletPuffLight1}
+ frame PUFFB {light BulletPuffLight2}
+ frame PUFFC {light BulletPuffLight3}
+}
+
+object TinyGrenade
+{
+ frame MISLB {light tinyGrenadeExplosion1}
+ frame MISLC {light tinyGrenadeExplosion2}
+ frame MISLD {light tinyGrenadeExplosion3}
+}
+
+object ClusterBombGrenade
+{
+ frame MISLB {light tinyGrenadeExplosion1}
+ frame MISLC {light tinyGrenadeExplosion2}
+ frame MISLD {light tinyGrenadeExplosion3}
+}
+
+object BeamShot
+{
+ frame PLSP {light PulseProj}
+}
+
+object PlasmaBeamProj
+{
+ frame PLSP {light PulseProj}
+}
+
+object PlasmaBeamProj
+{
+ frame PLSP {light PulseProjSmall}
+}
+
+object IonBeam
+{
+ frame INBM {light IonBeamCharge}
+}
+

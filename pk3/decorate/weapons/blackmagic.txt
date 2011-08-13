@@ -1,0 +1,285 @@
+actor BlackMagic: Weapon
+{
+    +INVENTORY.UNDROPPABLE
+
+    Weapon.AmmoType1 "JKEMana"
+    Weapon.AmmoType2 "JKEMana"
+    Weapon.AmmoUse1 25
+    Weapon.AmmoUse2 1
+    Weapon.AmmoGive1 300
+
+    Weapon.SelectionOrder 910
+
+    Inventory.PickupMessage "$JKE_PK_BLACKMAGIC"
+    Obituary "$JKE_MP_BLACKMAGIC"
+
+    States
+    {
+      Ready:
+        FIR1 A 1 A_WeaponReady
+        Loop
+      Select:
+        FIR1 A 0 A_TakeInventory("Wsorcpic1", 1)
+        FIR1 A 0 A_TakeInventory("Wsorcpic2", 1)
+        FIR1 A 0 A_Raise
+        FIR1 A 1
+        loop
+      Deselect:
+        FIR1 A 0 Acs_execute(901, 0, 0, 0, 0)
+        FIR1 A 0 A_TakeInventory("Wsorcpic1", 1)
+        FIR1 A 0 A_TakeInventory("Wsorcpic2", 1)
+        FIR1 A 1 A_Lower
+        loop
+      Fire:
+        FIR1 H 0 A_PlaySound("weapons/staffready", CHAN_WEAPON)
+        FIR1 H 4 bright
+        FIR1 I 3 bright
+        FIR1 J 3 bright
+        FIR1 I 3 bright
+        FIR1 J 3 bright
+        FIR1 I 3 bright
+        FIR1 J 3 bright
+        FIR1 I 3 bright
+        FIR1 J 3 bright
+        FIR1 I 3 bright
+        FIR1 J 3 bright
+        FIR1 K 5 bright
+        FIR1 L 5 bright
+        FIR1 M 0 A_PlaySound("weapons/staffready", CHAN_WEAPON)
+        FIR1 M 3 bright
+        FIR1 N 3 bright
+        FIR1 M 3 bright
+        FIR1 N 3 bright
+        FIR1 M 3 bright
+        FIR1 N 3 bright
+        FIR1 N 0 A_PlaySound("weapons/spellhold", CHAN_WEAPON)
+        FIR1 O 2 bright
+        FIR1 P 2 bright
+        FIR1 Q 2 bright
+        FIR1 R 2 bright
+        FIR1 R 0 A_ReFire
+        FIR1 S 3 bright
+        FIR1 T 3 bright
+        FIR1 U 3 bright
+        FIR1 V 3 bright A_FireCustomMissile("Diskripper", 0, 1, 0, 0)
+        FIR1 H 3 bright
+        FIR1 I 3 bright
+        FIR1 A 5
+        goto Ready
+      Hold:
+        FIR1 H 0 A_JumpIfInventory("Wsorcpic2", 1, 14)
+        FIR1 N 0 A_PlaySound("weapons/spellhold", CHAN_WEAPON)
+        FIR1 O 2 bright A_CustomPunch(3, 0, 0, "Bulletpuff", 0)
+        FIR1 P 2 bright A_CustomPunch(3, 0, 0, "Bulletpuff", 0)
+        FIR1 Q 2 bright A_CustomPunch(3, 0, 0, "Bulletpuff", 0)
+        FIR1 R 2 bright A_CustomPunch(3, 0, 0, "Bulletpuff", 0)
+        FIR1 R 0 A_ReFire
+        FIR1 S 3 bright
+        FIR1 T 3 bright
+        FIR1 U 3 bright
+        FIR1 V 3 bright A_FireCustomMissile("Diskripper", 0, 1, 0, 0)
+        FIR1 H 3 bright
+        FIR1 I 3 bright
+        FIR1 A 5
+        goto Ready
+        FIR1 A 0
+        FIR1 D 4 bright
+        FIR1 E 4 bright
+        FIR1 F 3 bright
+        FIR1 G 3 bright A_FireBullets(0, 0, 1, 40, "Sorcpuffexplode", 1)
+        FIR1 F 3 bright
+        FIR1 E 3 bright
+        FIR1 E 0
+        goto Fireagain
+      AltFire:
+        FIR1 B 0 A_JumpIfInventory("Wsorcpic1", 1, 12)
+        FIR1 B 0 A_PlaySound("weapons/startflame", CHAN_WEAPON)
+        FIR1 B 3 bright Acs_execute(900, 0, 0, 0, 0)
+        FIR1 C 3 bright
+        FIR1 B 3 bright
+        FIR1 C 3 bright
+        FIR1 B 3 bright
+        FIR1 C 3 bright
+        FIR1 B 3 bright
+        FIR1 C 3 bright
+        FIR1 B 3 bright
+        FIR1 C 3 bright
+        FIR1 C 0
+        FIR1 C 0
+        FIR1 C 0 A_GiveInventory("Wsorcpic1", 1)
+        FIR1 C 0 A_GiveInventory("Wsorcpic2", 1)
+        FIR1 C 0
+        FIR1 C 0 A_FireCustomMissile("PentSpawner", 0, 0, 0, -10)
+        FIR1 C 0 A_ReFire
+        FIR1 C 0
+        FIR1 B 3 bright A_TakeInventory("Wsorcpic1", 1)
+        FIR1 C 3 bright A_TakeInventory("Wsorcpic2", 1)
+        FIR1 B 3 bright Acs_execute(901, 0, 0, 0, 0)
+        FIR1 C 3
+        FIR1 A 15
+        goto Ready
+      AltHold:
+        FIR1 B 3 bright A_WeaponReady
+        FIR1 C 3 bright A_WeaponReady
+        FIR1 C 0 A_ReFire
+        FIR1 B 3 bright
+        FIR1 B 0 A_TakeInventory("Wsorcpic1", 1)
+        FIR1 C 0 A_TakeInventory("Wsorcpic2", 1)
+        FIR1 C 3 bright Acs_execute(901, 0, 0, 0, 0)
+        FIR1 B 3 bright
+        FIR1 C 3 bright
+        FIR1 A 15
+        goto Ready
+      Fireagain:
+        FIR1 B 3 bright A_WeaponReady
+        FIR1 C 3 bright A_WeaponReady
+        FIR1 A 0
+        goto AltHold+1
+      Spawn:
+        TNT1 A 1
+        stop
+    }
+}
+
+actor Pentfire
+{
+    Radius 4
+    Height 4
+
+    Projectile
+    +FLOORHUGGER
+    +DONTSPLASH
+    +RIPPER
+    +BRIGHT
+
+    States
+    {
+      Spawn:
+        FTRA CDE 3 A_Explode(1, 5, 0)
+        FTRA DCDEDC 3
+        FTRA DEDCDE 3
+        FTRA DCD 3 A_Explode(1, 5, 0)
+        FTRA EDC 3
+        FTRA DED 3 A_Explode(1, 5, 0)
+        FTRA CDEDCDEDCDED 3
+        stop
+    }
+}
+
+actor Pentspawner
+{
+    Radius 6
+    Height 8
+    Speed 1
+
+    Projectile
+    -NOGRAVITY
+    Gravity 0.25
+
+    Scale 0.01
+    RenderStyle Add
+    Alpha 0.1
+
+    States
+    {
+      Spawn:
+        BAL1 AB 6
+        loop
+      Death:
+        BAL1 CDE 6
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 0, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 10, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 20, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 30, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, -10, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, -20, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, -30, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", 20, 35, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 10, 40, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 0, 45, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -10, 50, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -20, 55, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", 20, -35, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 10, -40, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 0, -45, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -10, -50, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -20, -55, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", -25, -45, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -30, -35, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -35, -25, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -40, -15, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -45, -5, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", -25, 45, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -30, 35, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -35, 25, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -40, 15, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -45, 5, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", 40, -30, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 50, -25, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 60, -20, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 70, -15, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 80, -10, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 90, -5, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", 40, 30, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 50, 25, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 60, 20, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 70, 15, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 80, 10, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 90, 5, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, -40, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, -50, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, -60, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, -70, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, -80, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, -90, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 40, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 50, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 60, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 70, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 80, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 30, 90, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", 25, 100, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 15, 90, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 5, 80, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -5, 70, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", 25, -100, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 15, -90, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", 5, -80, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -5, -70, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", -30, 60, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -40, 65, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -50, 70, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -60, 75, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -70, 80, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", -30, -60, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -40, -65, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -50, -70, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -60, -75, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -70, -80, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", -55, -10, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -65, -28, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -75, -46, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -85, -64, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -90, -82, 0, 0, 0, 0, 0, 0, 0)
+
+        BAL1 E 0 A_SpawnItemEx("PentFire", -55, 10, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -65, 28, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -75, 46, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -85, 64, 0, 0, 0, 0, 0, 0, 0)
+        BAL1 E 0 A_SpawnItemEx("PentFire", -90, 82, 0, 0, 0, 0, 0, 0, 0)
+        stop
+    }
+}

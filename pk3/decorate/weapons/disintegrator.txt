@@ -46,6 +46,7 @@ actor DisintegratorPuff: BulletPuff
     RenderStyle Add
     Alpha 1.0
     Scale 0.5
+    VSpeed 0
 
     DamageType Disintegrate
 

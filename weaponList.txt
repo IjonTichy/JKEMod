@@ -1,27 +1,27 @@
 Berserker
- Chainsaw 
- Fists 
+Chainsaw
+Fists
 HellFist
 MightyFist
 ZenFist
 DualBerettas
 DualPistols
 JPistol
- Pistol 
+Pistol
 DoubleBarrelSG
 FireSSG
 HandShotgun
 JShotgun
- Shotgun 
+Shotgun
 Striker
 Super Shotgun
- Chaingun 
+Chaingun
 FModMinigun
 HeavyChaingun
 M16
 M249 Machine Gun
 SpitFirer
- Uzi 
+Uzi
 Ballesta
 FlareGun
 FragmentLauncher
@@ -31,7 +31,7 @@ DualPlasmaRifles
 P-200
 Plasma Rifle
 VoltGun
- BFG9000 
+BFG9000
 DKDevastator
 MoleculeShooter
 RailRepeater

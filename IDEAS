@@ -1,7 +1,68 @@
-Start off the Sorcerer with the Tristaff and FireGloves (no Pistol4)
-
+---
 Have the Sorcerer regenerate mana
+---
 
+---
 Have the Medic get double healing, and be able to pick up medkits that wouldn't
 heal him and add them to his inventory to dispense later (same with berserk
 packs if he's already gone berserk)
+---
+
+---
+Have each class start with only its pistol and fist, and have it pick their
+weapons up through generic weapon replacements, which check your class and give
+you the appropriate weapon
+
+Any weapons not associated to a class will be effectively removed (and may be
+actually removed, if I decide to)
+
+    Sorcerer lineup:
+1: HellFist
+2: A version of MWeapWand
+3: A version of MWeapFrost
+4: A version of FrostFang
+5: SorcHands
+6: A version of SkullRod/SkullStaff
+7: FireGloves
+8: A version of FireWand
+
+    Leandro lineup:
+1: Berserker and JRipper
+2: ???
+3: Shotty
+4: ??? and FModMinigun
+5: Multigun
+6: PlasmaDriver
+7: MoleculeShooter
+8: Powerful
+
+    Duke Nukem lineup:
+1: ZenFist
+2: ??? (Duke's pistol)
+3: JShotgun and ???
+4: ??? (Duke's chaingun cannon)
+5: ??? (Duke's RPG)
+6: DKFreezethrower
+7: DKDevastator
+8: ??? (maybe a shrinker?)
+
+    Doomguy lineup:
+1: Fists and Chainsaw
+2: Pistol
+3: Shotgun and Super Shotgun
+4: Chaingun
+5: Rocket Launcher
+6: Plasma Rifle
+7: BFG9000
+8: SuperShotNuke (okay, probably not)
+
+    Strife Marine lineup:
+1: DWeapKnife
+2: DWeapEnforcer
+3: DWeapShotgun
+4: DWeapChaingun
+5: DWeapClusterBomber
+6: DWeapPlasmaBeam
+7: ???
+8: DWeapIonstrike
+---

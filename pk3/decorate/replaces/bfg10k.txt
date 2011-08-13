@@ -2,6 +2,7 @@ actor JKEBFG10k: RandomSpawner replaces BFG10k
 {
     dropitem "BFG7000"
     dropitem "D-1000"
+    dropitem "DWeapIonstrike"
     dropitem "Powerful"
     dropitem "SuperShotNuke"
 }
