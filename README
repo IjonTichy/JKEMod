@@ -1,8 +1,7 @@
 This is a repository for JKEMod - a Skulltag weapon compilation thingy. No, I'm
-not making it from scratch - right now, I'm restructuring it so that JKEMod is
-easy to work with and manipulate. That is all I am doing right now (along with
-some edits as I see them necessary/useful), so don't expect anything more (maybe
-slight weapon behaviour changes?).
+not making it from scratch - although my aims are fairly ambitious, I'm still
+working from an original copy. See the IDEAS file for a few of the things I plan
+on doing.
 
 That being said, if you want to, you can ask to have your weapons included in
 the next version of JKEMod. If you're interested in this, contact me
@@ -13,7 +12,7 @@ either works, really).
 I have already done this with my own "Better Doom Weapons" mod - see the Doomguy
 class for all his weapons, save the BFG9000.
 
-More will be added as more comes - whaddya expect, this just opened up!
+More will be added as more comes - after all, isn't that how it always is?
 
 
-Current amount of weapons: 47
+Current amount of weapons: 61

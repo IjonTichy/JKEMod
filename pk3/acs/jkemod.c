@@ -6,7 +6,7 @@ int multigunStrings[3] = {
     "Ice shards",
     "Flame grenades"};
 
-script 900 (int trigger)  // freeze the player
+script 900 (int trigger)  // (un)freeze the player
 {
     SetPlayerProperty(0, trigger, 0);
 }

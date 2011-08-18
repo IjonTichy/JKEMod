@@ -6,7 +6,7 @@ Actor DWeapClusterBomber: Weapon
     Weapon.AmmoType1 "RocketAmmo"
     Weapon.AmmoType2 "RocketAmmo"
     Weapon.AmmoUse1 2
-    Weapon.AmmoUse2 1
+    Weapon.AmmoUse2 4
     Weapon.AmmoGive 8
 
     +NOAUTOFIRE
@@ -21,6 +21,7 @@ Actor DWeapClusterBomber: Weapon
         GRSP B 1 A_WeaponReady
         Loop
       Deselect:
+        GRSP B 0 A_StopSound(CHAN_WEAPON)
         GRSP B 1 A_Lower
         Loop
       Select:
@@ -34,20 +35,20 @@ Actor DWeapClusterBomber: Weapon
         GRSP E 3 Bright
         GRSP F 4 Bright
         GRSP B 0 A_PlaySound("hexenmarine/gspammerreload", CHAN_WEAPON)
-        GRSP BBBBBBBBBBBBBBBBBBBBBBBB 1
+        GRSP B 35
         GRSP B 0 A_StopSound(CHAN_WEAPON)
         GRSP A 0 A_ReFire
         Goto Ready
       AltFire:
         GRSP C 2 Bright A_GunFlash
         GRSP D 0 Bright A_PlaySound("hexenmarine/gspammerfire", CHAN_WEAPON)
-        GRSP DDDD 0 Bright A_FireCustomMissile("TinyGrenade", random(-6,6)/2.0, 1, 0, 0, 0, random(-6,6)/2.0)
-        GRSP DDDD 0 Bright A_FireCustomMissile("TinyGrenade", random(-6,6)/2.0, 0, 0, 0, 0, random(-6,6)/2.0)
+        GRSP D 0 Bright A_FireCustomMissile("TinyGrenade", random(-6,6)/2.0, 1, 0, 0, 0, random(-6,6)/2.0)
+        GRSP DDDDDDDD 0 Bright A_FireCustomMissile("TinyGrenade", random(-6,6)/2.0, 0, 0, 0, 0, random(-6,6)/2.0)
         GRSP D 2 Bright
         GRSP E 3 Bright
         GRSP F 4 Bright
         GRSP B 0 A_PlaySound("hexenmarine/gspammerreload", CHAN_WEAPON)
-        GRSP BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB 1
+        GRSP B 50
         Goto Ready
       Spawn:
         GRSP Z -1
@@ -62,7 +63,7 @@ Actor TinyGrenade
     Speed 40
 
     Projectile
-    Damage (15*(random(10,30)/10))
+    Damage (15*(random(10,30)/10.0))
 
     -NOGRAVITY
     Gravity 0.3
@@ -98,7 +99,7 @@ Actor ClusterBombGrenade
     Speed 40
 
     Projectile
-    Damage (15*(random(10,30)/10))
+    Damage (15*(random(10,30)/10.0))
 
     -NOGRAVITY
     Gravity 0.3

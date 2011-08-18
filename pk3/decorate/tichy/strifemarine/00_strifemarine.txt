@@ -18,7 +18,11 @@ ACTOR StrifeMarine: PlayerPawn
     Player.InvulnerabilityMode "Reflective"
 
     Player.StartItem "IAmTheBetterPlayer"
-    Player.StartItem "BetterAmmoGiver"
+
+    Player.StartItem "Clip",  200
+    Player.StartItem "Shell", 50
+    Player.StartItem "RocketAmmo", 50
+    Player.StartItem "Cell", 300
 
     Player.StartItem "DWeapChaingun"
     Player.StartItem "DWeapPlasmaBeam"

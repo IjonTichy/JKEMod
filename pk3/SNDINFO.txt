@@ -84,6 +84,22 @@ $alias jkemod/beamgun/load3             jkemod/dualplasmarifles/load3
 
 jkemod/berserker/hit                    sounds/weapons/berserker/hit.wav
 
+
+////
+//   BLACK MAGIC
+////
+
+$alias jkemod/blackmagic/charge         jkemod/tristaff/up
+$alias jkemod/blackmagic/hold           jkemod/voltgun/fire
+
+jkemod/blackmagic/fire                  sounds/weapons/blackmagic/fire.wav
+jkemod/blackmagic/hit                   sounds/weapons/blackmagic/hit.wav
+
+$alias jkemod/blackmagic/altfire        jkemod/firegloves/fire1
+
+$alias jkemod/blackmagic/explode        betterdoomweapons/rocketexplode
+
+
 ////
 //   BFG7000
 ////
@@ -191,6 +207,7 @@ $limit jkemod/firegloves/fire1 0
 $limit jkemod/firegloves/fire2 0
 $limit jkemod/firegloves/explode1 0
 
+
 ////
 //   FIRE SSG
 ////
@@ -200,6 +217,7 @@ $alias jkemod/firessg/fire              jkemod/doublebarrelsg/fire
 $alias jkemod/firessg/open              jkemod/doublebarrelsg/open
 $alias jkemod/firessg/load              jkemod/doublebarrelsg/load
 $alias jkemod/firessg/close             jkemod/doublebarrelsg/close
+
 
 ////
 //   FLARE GUN

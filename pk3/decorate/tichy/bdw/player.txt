@@ -2,26 +2,6 @@
 
 actor IAmTheBetterPlayer: Inventory { +UNDROPPABLE inventory.maxamount 1 }
 
-actor BetterAmmoGiver: CustomInventory
-{
-    +AUTOACTIVATE
-    States
-    {
-      Spawn:
-        TNT1 A 0
-        stop
-
-      Pickup:
-      Use:
-        TNT1 A 0 A_GiveInventory("Clip",        10000)
-        TNT1 A 0 A_GiveInventory("Shell",       10000)
-        TNT1 A 0 A_GiveInventory("RocketAmmo",  10000)
-        TNT1 A 0 A_GiveInventory("Cell",        10000)
-        stop
-    }
-}
-
-
 
 actor BetterPlayer: PlayerPawn
 {
@@ -43,7 +23,11 @@ actor BetterPlayer: PlayerPawn
     Player.InvulnerabilityMode "Ghost"
 
     Player.StartItem "IAmTheBetterPlayer"
-    Player.StartItem "BetterAmmoGiver"
+
+    Player.StartItem "Clip",  200
+    Player.StartItem "Shell", 50
+    Player.StartItem "RocketAmmo", 50
+    Player.StartItem "Cell", 300
 
     // ordered by each weapon's usefulness for me
 

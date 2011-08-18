@@ -1,5 +1,6 @@
 actor JKEChainsaw: RandomSpawner replaces Chainsaw
 {
+    dropitem "BlackMagic"
     dropitem "FireGloves"
     dropitem "TriStaff"
 }

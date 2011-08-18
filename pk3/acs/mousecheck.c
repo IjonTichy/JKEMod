@@ -41,6 +41,7 @@ script 761 ENTER
     inGame[PlayerNumber()] = 1;
     dead[PlayerNumber()] = 0;
     ACS_ExecuteAlways(760, 0, 0,0,0);
+    ACS_ExecuteAlways(730, 0, 0,0,0);
 }
 
 script 762 DEATH
@@ -62,4 +63,38 @@ script 764 RESPAWN
     inGame[PlayerNumber()] = 1;
     dead[PlayerNumber()] = 0;
     ACS_ExecuteAlways(760, 0, 0,0,0);
+    ACS_ExecuteAlways(730, 0, 0,0,0);
+}
+
+
+script 730 (void)
+{
+    int pln = PlayerNumber();
+    int check;
+
+    while (!dead[pln] && inGame[pln])
+    {
+        if (!CheckInventory("IAmAMage") )
+        {
+            terminate;
+        }
+        Delay(2);
+        check += 1;
+
+        if (check % 3 == 0)
+        {
+            GiveInventory("JKEMana", 1);
+        }
+
+        if (check % 5 == 0)
+        {
+            GiveInventory("FireAmmo", 1);
+            GiveInventory("HellFistCounter", 1);
+        }
+
+        if (check % 15 == 0)
+        {
+            check = 0;
+        }
+    }
 }

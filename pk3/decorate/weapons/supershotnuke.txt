@@ -100,7 +100,7 @@ actor SuperShotNukePuff: BulletPuff
     RenderStyle Add
     +PUFFGETSOWNER
     +FORCERADIUSDMG
-    //+NODAMAGETHRUST
+    +NODAMAGETHRUST
     +PUFFONACTORS
     +ALWAYSPUFF
 

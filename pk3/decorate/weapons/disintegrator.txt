@@ -34,8 +34,9 @@ actor Disintegrator: Weapon
         PLPF F 27
         PLPF E 2
         goto Ready
+
       Spawn:
-        PLP1 A -1
+        PLPF Z -1
         stop
     }
 }

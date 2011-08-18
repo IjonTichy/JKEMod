@@ -2,6 +2,7 @@
 #include "decorate/weapons/beamgun.txt"
 #include "decorate/weapons/berserker.txt"
 #include "decorate/weapons/bfg7000.txt"
+#include "decorate/weapons/blackmagic.txt"
 #include "decorate/weapons/d1000.txt"
 #include "decorate/weapons/disintegrator.txt"
 #include "decorate/weapons/dkdevastator.txt"
