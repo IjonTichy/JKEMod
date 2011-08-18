@@ -1,6 +1,5 @@
 actor JKEGrenadeLauncher: RandomSpawner replaces GrenadeLauncher
 {
-    dropitem "DWeapClusterBomber"
     dropitem "FlareGun"
     dropitem "FragmentLauncher"
 }

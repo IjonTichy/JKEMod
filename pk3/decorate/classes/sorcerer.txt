@@ -28,6 +28,8 @@ actor SorcPlayer: PlayerPawn
     Player.StartItem "HellFist"
 
     Player.StartItem "JKEMana", 150
+    Player.StartItem "FireAmmo", 100
+    Player.StartItem "HellFistCounter", 100
 
     Player.StartItem "IAmAMage"
 
