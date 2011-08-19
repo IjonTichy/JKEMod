@@ -248,7 +248,7 @@ actor BetterRipperPlasmaTrail4: BetterRipperPlasmaTrailBase
     States
     {
       Spawn:
-        YPLS DEFG 3 bright A_FadeOut(0.05)
+        YPLS DEFG 2 bright A_FadeOut(0.05)
         stop
     }
 }

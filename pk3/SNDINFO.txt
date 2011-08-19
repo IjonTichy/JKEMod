@@ -451,6 +451,13 @@ $alias jkemod/plasmadriver/explode      weapons/plasmax
 
 
 ////
+//   QUADSHOT
+////
+
+$alias jkemod/quadshot/fire             jkemod/jsupershotgun/fire
+$alias jkemod/quadshot/load             jkemod/doublebarrelsg/load
+
+////
 //   SPITFIRER
 ////
 
@@ -504,6 +511,16 @@ jkemod/uzi/cock                         sounds/weapons/uzi/cock.wav
 
 jkemod/voltgun/fire                     sounds/weapons/voltgun/fire.lmp
 jkemod/voltgun/altfire                  sounds/weapons/voltgun/altfire.wav
+
+
+////
+//   Y23H
+////
+
+jkemod/y23h/fire                        sounds/weapons/y23h/fire.wav
+$alias jkemod/y23h/explode              weapons/plasmax
+
+$limit jkemod/y23h/fire                 0
 
 ////
 //   ZEN FISTS

@@ -23,8 +23,10 @@ actor BlackMagic: Weapon
         BLMG A 0 A_Raise
         BLMG A 1
         loop
+
       Deselect:
-        BLMG A 0 ACS_ExecuteAlways(900, 0, 0, 0, 0)
+        BLMG B 0 A_TakeInventory("InAltFire")
+        BLMG A 0 ACS_ExecuteAlways(874, 0, 0, 0, 0)
         BLMG A 1 A_Lower
         loop
 
@@ -70,7 +72,7 @@ actor BlackMagic: Weapon
         BLMG B 0 A_GiveInventory("InAltFire")
         BMLG B 0 A_GunFlash
         BLMG B 0 A_PlaySound("weapons/startflame", CHAN_WEAPON)
-        BLMG B 0 bright ACS_ExecuteAlways(900, 0, 1, 0, 0)
+        BLMG B 0 bright ACS_ExecuteAlways(874, 0, 1, 0, 0)
         BLMG BCBCBC 3 bright
         goto AltLoop
 
@@ -100,7 +102,7 @@ actor BlackMagic: Weapon
         goto AltEnd
 
       AltEnd:
-        BLMG A 0 ACS_ExecuteAlways(900, 0, 0, 0, 0)
+        BLMG A 0 ACS_ExecuteAlways(874, 0, 0, 0, 0)
         BLMG B 3 bright
         BLMG B 0 A_TakeInventory("InAltFire")
         BLMG A 12
@@ -121,6 +123,9 @@ actor BlackMagic: Weapon
         goto AltLoop
 
       AltFlash:
+        TNT1 A 0 A_SpawnItemEx("BlackMagicFlameExplosion")
+
+
         TNT1 A 0 A_SpawnItemEx("BlackMagicFlame", 96, 0, 0, 0,0,0, 0)
         TNT1 A 0 A_SpawnItemEx("BlackMagicFlame", 96, 0, 0, 0,0,0, 5)
         TNT1 A 0 A_SpawnItemEx("BlackMagicFlame", 96, 0, 0, 0,0,0, 10)
@@ -349,22 +354,48 @@ actor BlackMagicFlame
     Projectile
 
     +FLOORHUGGER
-    +DONTSPLASH
     +NOINTERACTION
-    +RIPPER
-
-    +PUFFGETSOWNER
-    +NODAMAGETHRUST
+    +CLIENTSIDEONLY
 
     RenderStyle Add
     +BRIGHT
+
+    States
+    {
+      Spawn:
+        FTRA CCCCDDD 1
+        stop
+    }
+}
+
+
+actor BlackMagicFlameExplosion
+{
+    Projectile
+
+    +FLOORHUGGER
+    +NOINTERACTION
+
+    +PUFFGETSOWNER
+    +NODAMAGETHRUST
 
     Obituary "$JKE_MP_BLACKMAGIC_PENTAGRAM"
 
     States
     {
       Spawn:
-        FTRA CCCCDDD 1 bright A_Explode(1, 16, 0)
+        TNT1 A 0
+        TNT1 AAAAAAAA 0 A_Explode(4, 96, 0)
+        TNT1 A 1
+        TNT1 AAAAAAAA 0 A_Explode(4, 96, 0)
+        TNT1 A 1
+        TNT1 AAAAAAAA 0 A_Explode(4, 96, 0)
+        TNT1 A 1
+        TNT1 AAAAAAAA 0 A_Explode(4, 96, 0)
+        TNT1 A 1
+        TNT1 AAAAAAAA 0 A_Explode(4, 96, 0)
+        TNT1 A 1
+        TNT1 AAAAAAAA 0 A_Explode(4, 96, 0)
         stop
     }
 }

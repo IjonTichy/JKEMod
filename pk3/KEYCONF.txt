@@ -39,6 +39,7 @@ addslotdefault 3 "FireSSG"
 addslotdefault 3 "HandShotgun"
 addslotdefault 3 "JShotgun"
 addslotdefault 3 "JSuperShotgun"
+addslotdefault 3 "Quadshot"
 addslotdefault 3 " Shotgun "
 addslotdefault 3 "Striker"
 addslotdefault 3 "Super Shotgun"
@@ -93,6 +94,7 @@ addslotdefault 7 " BFG9000 "
 addslotdefault 7 "DKDevastator"
 addslotdefault 7 "MoleculeShooter"
 addslotdefault 7 "RailRepeater"
+addslotdefault 7 "Y23H"
 
 
 ////
