@@ -192,6 +192,16 @@ $limit jkemod/dualplasmarifles/explode 0
 
 
 ////
+//   EXPLOSION-FU
+////
+
+jkemod/explosionfu/melee                DSPUNCH
+$alias jkemod/explosionfu/trail         imp/attack
+$alias jkemod/explosionfu/kick          betterdoomweapons/rocketexplode
+$alias jkemod/explosionfu/fire          jkemod/firegloves/fire2
+
+
+////
 //   FIRE GLOVES
 ////
 
@@ -202,6 +212,7 @@ $alias jkemod/firegloves/explode        jkemod/assorted/explode4
 jkemod/firegloves/fire1                 sounds/weapons/firegloves/fire1.wav
 jkemod/firegloves/fire2                 sounds/weapons/firegloves/fire2.wav
 jkemod/firegloves/explode1              sounds/weapons/firegloves/explode.wav
+$alias jkemod/firegloves/explode2       betterdoomweapons/rocketexplode
 
 $limit jkemod/firegloves/fire1 0
 $limit jkemod/firegloves/fire2 0
@@ -274,6 +285,13 @@ $volume jkemod/fragmentlauncher/chunkexplode 0.4
 jkemod/dkfreezethrower/fire             sounds/weapons/dkfreezethrower/fire.lmp
 jkemod/dkfreezethrower/explode          sounds/weapons/dkfreezethrower/explode.lmp
 
+
+////
+//   GHETTO BLASTER
+////
+
+jkemod/ghettoblaster/rickroll           sounds/weapons/ghettoblaster/rickroll.ogg
+$alias jkemod/ghettoblaster/explode     jkemod/supershotnuke/fire
 
 ////
 //   HAND SHOTGUN

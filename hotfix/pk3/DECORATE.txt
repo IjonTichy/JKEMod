@@ -1,7 +1,4 @@
-actor JKEBFG10k: RandomSpawner replaces BFG10k
+actor RemoveNuke: RandomSpawner replaces NuclearMissileLauncher
 {
-    dropitem "BFG7000"
-    dropitem "D-1000"
     dropitem "DWeapIonstrike"
-    dropitem "Powerful"
 }

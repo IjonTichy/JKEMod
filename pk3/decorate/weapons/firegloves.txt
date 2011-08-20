@@ -267,32 +267,47 @@ actor FireGloveMeteor
 
 actor FireGloveGroundFireball
 {
-    Radius 18
-    Height 15
-    Speed 15
+    Radius 10
+    Height 10
+    Speed 35
 
     Projectile
-    Damage 13
+    Damage 35
 
     +FLOORHUGGER
-    +EXPLODEONWATER
-    +NOEXTREMEDEATH
-    +BLOODLESSIMPACT
     +RIPPER
+    +BRIGHT
 
     RenderStyle Add
 
     SeeSound "jkemod/firegloves/fire2"
-    DeathSound "jkemod/firegloves/explode1"
+    DeathSound "jkemod/firegloves/explode2"
 
     States
     {
       Spawn:
-        HBFR ABC 3 bright
+        HBFR ABC 3 A_SpawnItemEx("FireGloveGroundFireballTrail")
         loop
       Death:
-        TRGF ABCDABCD 3 bright
+        MISL BBBBCCCDD 2
         stop
+    }
+}
+
+actor FireGloveGroundFireballTrail
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+
+    RenderStyle Add
+
+    Scale 0.7
+
+    States
+    {
+      Spawn:
+        TRGF ABCD 4 A_FadeOut(0.1)
+        loop
     }
 }
 

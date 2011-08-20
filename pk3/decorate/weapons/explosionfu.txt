@@ -1,0 +1,180 @@
+actor SplodyCounter: Inventory
+{
+    Inventory.MaxAmount 11
+    +UNDROPPABLE
+}
+
+actor "Explosion-Fu": Weapon
+{
+    +UNDROPPABLE
+    +MELEEWEAPON
+
+    Weapon.SelectionOrder 400
+
+    AttackSound "jkemod/explosionfu/melee"
+
+    Inventory.PickupMessage "$JKE_PK_EXPLOSIONFU"
+    Obituary "$JKE_MP_EXPLOSIONFU_MELEE"
+
+    States
+    {
+      Select:
+        FIST A 1 A_Raise
+        loop
+
+      Deselect:
+        FIST A 1 A_Lower
+        loop
+
+      Ready:
+        FIST A 1 A_WeaponReady
+        Loop
+
+      Fire:
+        FIST B 0 A_Recoil(-3)
+        FIST B 2
+        FIST B 0 A_Recoil(-4)
+
+      SplodyLoop:
+        FIST C 0 A_GiveInventory("SplodyCounter")
+        FIST C 0 A_Recoil(-4)
+        FIST C 0 A_FireCustomMissile("ExpFuTrail", 0, 0, 0, 0)
+        FIST C 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
+
+        FIST C 0 A_JumpIfInventory("SplodyCounter", 0, "Fire2")
+        goto SplodyLoop
+
+      Fire2:
+        FIST C 0 A_TakeInventory("SplodyCounter")
+        FIST B 0 A_Recoil(-4)
+        FIST C 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
+        FIST B 0 A_Recoil(-4)
+        FIST C 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
+        FIST B 0 A_Recoil(-4)
+        FIST C 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
+
+
+        FIST BA 2
+        KICK AB 2
+
+
+        KICK C 2 ThrustThingZ(0, 40, 0, 0)
+        KICK DDDDD 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
+        KICK D 0 A_FireCustomMissile("ExpFuKick", 0, 0, 0, 0)
+        KICK DDDDD 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
+        KICK CBA 2
+        FIST D 2
+
+
+        FIST E 0 ThrustThingZ(angle*256/360, 50, 0, 0)
+        FIST EEE 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
+        FIST E 0 A_FireCustomMissile("ExpFuFire", 0, 0, 0, 5, 0)
+        FIST EEEEEEEEEEEEE 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
+
+
+        FIST DA 2
+        goto Ready
+
+
+      Spawn:
+        BLMG WXYZ 8 bright
+        loop
+    }
+}
+
+actor ExpFuTrail
+{
+    Radius 1
+    Height 1
+
+    Projectile
+    Damage 1
+
+    +FORCERADIUSDMG
+    +RIPPER
+
+    RenderStyle Add
+
+    SeeSound "jkemod/explosionfu/trail"
+
+    Obituary "$JKE_MP_EXPLOSIONFU_TRAIL"
+
+    States
+    {
+      Spawn:
+        BAL7 C 0 A_Explode(30, 40, 0)
+        BAL7 CDE 5 bright
+        stop
+    }
+}
+
+
+actor ExpFuKick
+{
+    Radius 1
+    Height 1
+    Speed 14
+
+    Projectile
+    +FORCERADIUSDMG
+
+    RenderStyle Add
+
+    Obituary "$JKE_MP_EXPLOSIONFU_KICK"
+
+    States
+    {
+      Spawn:
+        MISL B 0
+        MISL B 0 A_PlaySound("jkemod/explosionfu/kick")
+        MISL B 0 A_Explode(192, 128, 0)
+        MISL BBBBCCCDD 2 bright
+        Stop
+    }
+}
+
+actor ExpFuFire
+{
+    Radius 10
+    Height 10
+    Speed 35
+
+    Projectile
+    Damage 35
+
+    +FLOORHUGGER
+    +RIPPER
+
+    RenderStyle Add
+
+    SeeSound "jkemod/explosionfu/fire"
+
+    Obituary "$JKE_MP_EXPLOSIONFU_FIRE"
+
+    States
+    {
+      Spawn:
+        HBFR ABC 3 bright A_SpawnItemEx("ExpFuFireTrail")
+        loop
+      Death:
+        MISL BBBBCCCDD 2 bright
+        stop
+    }
+}
+
+actor ExpFuFireTrail
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+
+    RenderStyle Add
+
+    Scale 0.7
+
+    States
+    {
+      Spawn:
+        TRGF ABCD 4 bright A_FadeOut(0.1)
+        loop
+    }
+}
