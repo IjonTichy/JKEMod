@@ -1,4 +1,5 @@
-actor Berserker: Weapon
+
+actor " Berserker ": Weapon
 {
     +NOALERT
     +INVENTORY.UNDROPPABLE

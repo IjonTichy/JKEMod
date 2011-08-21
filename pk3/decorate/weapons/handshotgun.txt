@@ -1,4 +1,5 @@
-actor HandShotgun: Weapon
+
+actor " Hand Shotgun ": Weapon
 {
     Weapon.AmmoType "Shell"
     Weapon.AmmoUse 1

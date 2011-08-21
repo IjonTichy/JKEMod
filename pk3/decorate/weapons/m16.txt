@@ -1,4 +1,5 @@
-actor M16: Weapon
+
+actor " M16 ": Weapon
 {
     Scale 0.2
     +AMMO_OPTIONAL

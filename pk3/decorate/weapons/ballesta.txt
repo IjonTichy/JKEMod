@@ -1,4 +1,5 @@
-Actor Ballesta: Weapon
+
+actor " Ballesta ": Weapon
 {
     Weapon.SelectionOrder 560
     Weapon.AmmoUse 1

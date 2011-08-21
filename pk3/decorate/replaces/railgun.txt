@@ -1,7 +1,8 @@
+
 actor JKERailgun: RandomSpawner replaces Railgun
 {
-    dropitem "BeamGun"
-    dropitem "DualPlasmaRifles"
-    dropitem "JSniperRifle"
-    dropitem "MagnumSniper"
+    dropitem " Beam Gun "
+    dropitem " Dual Plasma Rifles "
+    dropitem " J-Sniper Rifle "
+    dropitem " Magnum Sniper "
 }

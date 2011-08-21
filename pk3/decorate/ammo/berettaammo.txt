@@ -1,3 +1,4 @@
+
 actor BerettaAmmo: Ammo
 {
     Inventory.Amount 15

@@ -1,3 +1,4 @@
+
 actor DevastatorAmmo: Ammo
 {
     Inventory.Amount 5

@@ -1,3 +1,4 @@
+
 actor Pumpshotgun : Weapon
 {
     +AMMO_OPTIONAL

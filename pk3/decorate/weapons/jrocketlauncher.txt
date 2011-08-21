@@ -1,4 +1,5 @@
-actor JRocketLauncher: Weapon
+
+actor " J-Rocket Launcher ": Weapon
 {
     Weapon.AmmoType "RocketAmmo"
     Weapon.AmmoUse 1

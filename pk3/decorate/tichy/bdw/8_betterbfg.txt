@@ -1,3 +1,4 @@
+
 actor BFGCounter: Inventory
 {
     inventory.maxamount 0x7FFFFFFF
@@ -5,7 +6,7 @@ actor BFGCounter: Inventory
     +UNDROPPABLE
 }
 
-actor " BFG9000 ": DoomWeapon
+actor " B-BFG9000 ": DoomWeapon
 {
     Weapon.SelectionOrder 2800
     Weapon.AmmoUse1  40
@@ -98,7 +99,7 @@ actor "Power BFG9000": DoomWeapon   // oh dear god
     Weapon.AmmoType1       "Cell"
     Weapon.AmmoType2       "Cell"
 
-    Weapon.SisterWeapon " BFG9000 "
+    Weapon.SisterWeapon " B-BFG9000 "
 
     +NOAUTOFIRE
     +NOAUTOAIM

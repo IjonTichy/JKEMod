@@ -1,10 +1,11 @@
+
 actor SplodyCounter: Inventory
 {
     Inventory.MaxAmount 11
     +UNDROPPABLE
 }
 
-actor "Explosion-Fu": Weapon
+actor " Explosion-Fu ": Weapon
 {
     +UNDROPPABLE
     +MELEEWEAPON
@@ -66,9 +67,9 @@ actor "Explosion-Fu": Weapon
         FIST D 2
 
 
-        FIST E 0 ThrustThingZ(angle*256/360, 50, 0, 0)
+        FIST E 0 ThrustThing(angle*256/360, 50, 1, 0)
         FIST EEE 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
-        FIST E 0 A_FireCustomMissile("ExpFuFire", 0, 0, 0, 5, 0)
+        FIST E 0 A_FireCustomMissile("FireGloveGroundFireball", 0, 0, 0, 5, 0) // see firegloves.txt
         FIST EEEEEEEEEEEEE 1 A_CustomPunch(6, 0, 0, "Bulletpuff", 0)
 
 
@@ -130,51 +131,5 @@ actor ExpFuKick
         MISL B 0 A_Explode(192, 128, 0)
         MISL BBBBCCCDD 2 bright
         Stop
-    }
-}
-
-actor ExpFuFire
-{
-    Radius 10
-    Height 10
-    Speed 35
-
-    Projectile
-    Damage 35
-
-    +FLOORHUGGER
-    +RIPPER
-
-    RenderStyle Add
-
-    SeeSound "jkemod/explosionfu/fire"
-
-    Obituary "$JKE_MP_EXPLOSIONFU_FIRE"
-
-    States
-    {
-      Spawn:
-        HBFR ABC 3 bright A_SpawnItemEx("ExpFuFireTrail")
-        loop
-      Death:
-        MISL BBBBCCCDD 2 bright
-        stop
-    }
-}
-
-actor ExpFuFireTrail
-{
-    +NOINTERACTION
-    +CLIENTSIDEONLY
-
-    RenderStyle Add
-
-    Scale 0.7
-
-    States
-    {
-      Spawn:
-        TRGF ABCD 4 bright A_FadeOut(0.1)
-        loop
     }
 }

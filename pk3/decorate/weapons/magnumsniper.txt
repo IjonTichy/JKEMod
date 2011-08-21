@@ -1,10 +1,11 @@
+
 actor MagnumSniperCounter: Ammo
 {
     +IGNORESKILL
     Inventory.MaxAmount 10
 }
 
-actor MagnumSniper: Weapon
+actor " Magnum Sniper ": Weapon
 {
     +WEAPON.NOAUTOAIM
     +AMMO_OPTIONAL

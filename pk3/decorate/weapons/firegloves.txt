@@ -1,4 +1,5 @@
-actor Firegloves : Weapon
+
+actor " Fire Gloves " : Weapon
 {
     +WEAPON.NOAUTOAIM
     Weapon.SelectionOrder 560
@@ -274,6 +275,7 @@ actor FireGloveGroundFireball
     Projectile
     Damage 35
 
+    +NODAMAGETHRUST
     +FLOORHUGGER
     +RIPPER
     +BRIGHT

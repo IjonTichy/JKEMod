@@ -1,3 +1,4 @@
+
 actor Dukepistol : Weapon
 {
     +AMMO_OPTIONAL

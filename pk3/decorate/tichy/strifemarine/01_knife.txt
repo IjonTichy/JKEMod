@@ -1,4 +1,5 @@
-actor DWeapKnife: Weapon
+
+actor " S-Knife ": Weapon
 {
     Weapon.SlotNumber 1
     +WEAPON.WIMPY_WEAPON

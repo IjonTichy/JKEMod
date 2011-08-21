@@ -1,4 +1,5 @@
-Actor "Rocket Launcher": DoomWeapon
+
+Actor " B-Rocket Launcher ": DoomWeapon
 {
     Weapon.SelectionOrder 800
     Weapon.AmmoType1 "RocketAmmo"
@@ -85,7 +86,7 @@ Actor "Power Rocket Launcher": DoomWeapon
     Weapon.AmmoUse2  5
     Weapon.AmmoGive1 2
 
-    Weapon.SisterWeapon "Rocket Launcher"
+    Weapon.SisterWeapon " B-Rocket Launcher "
 
     +NOAUTOAIM
     +NOAUTOFIRE

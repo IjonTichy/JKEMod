@@ -1,3 +1,4 @@
+
 Actor FragmentChunk
 {
     Projectile
@@ -161,7 +162,7 @@ actor FragmentShard
     }
 }
 
-actor Fragmentlauncher: Weapon
+actor " Fragment Launcher ": Weapon
 {
     weapon.AmmoGive 10
     weapon.AmmoType1 "ExplosiveAmmo"

@@ -1,4 +1,5 @@
-actor QuadShot: Weapon
+
+actor " Quadshot ": Weapon
 {
     Weapon.AmmoType1 "QuadShotCounter"
     Weapon.AmmoType2 "Shell"

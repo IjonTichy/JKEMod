@@ -1,3 +1,4 @@
+
 actor GravityAmmo : Ammo
 {
     Inventory.Amount 1

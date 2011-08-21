@@ -1,6 +1,7 @@
+
 actor JKERocketLauncher: RandomSpawner replaces RocketLauncher
 {
-    dropitem "Ballesta"
-    dropitem "JRocketLauncher"
-    dropitem "Multigun"
+    dropitem " Ballesta "
+    dropitem " J-Rocket Launcher "
+    dropitem " Multigun "
 }

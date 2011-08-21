@@ -1,3 +1,4 @@
+
 Actor NukeShell: Ammo
 {
     Inventory.Amount 2

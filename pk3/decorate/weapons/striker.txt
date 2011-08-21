@@ -1,4 +1,5 @@
-actor Striker: Weapon
+
+actor " Striker ": Weapon
 {
     +AMMO_OPTIONAL
     Weapon.AmmoGive1 16

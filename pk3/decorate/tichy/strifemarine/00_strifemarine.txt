@@ -1,3 +1,4 @@
+
 ACTOR StrifeMarine: PlayerPawn
 {
     Speed 1
@@ -11,6 +12,8 @@ ACTOR StrifeMarine: PlayerPawn
 
     Player.DisplayName "Strife Marine"
     Player.JumpZ 9
+    
+    Player.SoundClass "StrifeMarine"
 
     Player.SpawnClass "Mage"
     Player.HexenArmor 10, 25, 15, 20, 10
@@ -24,12 +27,12 @@ ACTOR StrifeMarine: PlayerPawn
     Player.StartItem "RocketAmmo", 50
     Player.StartItem "Cell", 300
 
-    Player.StartItem "DWeapChaingun"
-    Player.StartItem "DWeapPlasmaBeam"
-    Player.StartItem "DWeapShotgun"
-    Player.StartItem "DWeapClusterBomber"
-    Player.StartItem "DWeapEnforcer"
-    Player.StartItem "DWeapKnife"
+    Player.StartItem " S-Chaingun "
+    Player.StartItem " S-Plasma Beam "
+    Player.StartItem " S-Shotgun "
+    Player.StartItem " S-Cluster Bomber "
+    Player.StartItem " S-Enforcer "
+    Player.StartItem " S-Knife "
 
     States
     {
@@ -71,11 +74,11 @@ actor HBulletPuff: BulletPuff
     States
     {
       Spawn:
-        HXPF A 4 bright
-        HXPF B 4
+        PUFF A 4 bright
+        PUFF B 4
         // Intentional fall-through
       Melee:
-        HXPF CD 4
+        PUFF CD 4
         Stop
     }
 }

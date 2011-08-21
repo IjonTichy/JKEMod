@@ -1,3 +1,4 @@
+
 actor JKECellPack: CustomInventory replaces CellPack
 {
     Inventory.PickupMessage "$JKE_PK_JKECELLPACK"
@@ -11,6 +12,7 @@ actor JKECellPack: CustomInventory replaces CellPack
       Pickup:
         TNT1 A 0 A_GiveInventory("Cell", 100)
         TNT1 A 0 A_GiveInventory("BeamAmmo", 14)
+        TNT1 A 0 A_GiveInventory("JKEGas", 100)
         stop
     }
 }

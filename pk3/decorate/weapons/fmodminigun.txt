@@ -1,4 +1,5 @@
-actor FModMinigun: Weapon
+
+actor " FMod Minigun ": Weapon
 {
     Weapon.AmmoType2 "MinigunAmmo"
     Weapon.AmmoUse2 1

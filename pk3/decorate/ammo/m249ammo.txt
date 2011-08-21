@@ -1,3 +1,4 @@
+
 actor M249Ammo: Ammo
 {
     Inventory.Amount 100

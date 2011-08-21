@@ -1,3 +1,4 @@
+
 actor JKEClipBox: CustomInventory replaces ClipBox
 {
     Inventory.PickupMessage "$JKE_PK_JKECLIPBOX"

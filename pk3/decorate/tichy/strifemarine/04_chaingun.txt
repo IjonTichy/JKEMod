@@ -1,4 +1,5 @@
-actor DWeapChaingun: Weapon
+
+actor " S-Chaingun ": Weapon
 {
     Weapon.AmmoType1 "Clip"
     Weapon.AmmoType2 "Clip"

@@ -1,6 +1,7 @@
+
 actor JKEShotgun: RandomSpawner replaces Shotgun
 {
-    dropitem "HandShotgun"
-    dropitem "JShotgun"
-    dropitem "Striker"
+    dropitem " Hand Shotgun "
+    dropitem " J-Shotgun "
+    dropitem " Striker "
 }

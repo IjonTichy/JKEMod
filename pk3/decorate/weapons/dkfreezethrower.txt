@@ -1,4 +1,5 @@
-actor DKFreezethrower: Weapon
+
+actor " Freezethrower ": Weapon
 {
     weapon.AmmoGive1 50
     weapon.AmmoType1 "Cell"

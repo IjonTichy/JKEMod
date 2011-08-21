@@ -75,8 +75,7 @@ try:
 
         out = "".join(newString)
 
-        if " " not in out:
-            out = " {0} ".format(out)
+        out = "\" {0} \"".format(out)
 
         print(out)
 except Done:

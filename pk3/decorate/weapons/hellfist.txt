@@ -1,10 +1,11 @@
+
 actor HellFistCounter: Ammo
 {
     +IGNORESKILL
     Inventory.MaxAmount 100
 }
 
-actor HellFist: Weapon
+actor " Hellfist ": Weapon
 {
     +INVENTORY.UNDROPPABLE
     Weapon.SelectionOrder 1600

@@ -1,4 +1,5 @@
-actor Spitfirer: Weapon
+
+actor " Spitfirer ": Weapon
 {
     Weapon.AmmoType1 "Clip"
     Weapon.AmmoType2 "ExplosiveAmmo"
@@ -83,7 +84,7 @@ actor SpitfirerGrenade
     States
     {
       Spawn:
-        SPGR A 35 A_Countdown
+        GRPP A 35 A_Countdown
         loop
 
       Death:

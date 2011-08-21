@@ -1,4 +1,5 @@
-actor DoubleBarrelSG : Weapon
+
+actor " Double Shotgun " : Weapon
 {
     SpawnID 199
     Weapon.SelectionOrder 300

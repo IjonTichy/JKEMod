@@ -1,3 +1,4 @@
+
 Actor FireAmmo: Ammo
 {
     Inventory.Amount 100

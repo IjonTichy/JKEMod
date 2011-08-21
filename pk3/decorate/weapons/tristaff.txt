@@ -1,4 +1,5 @@
-Actor Tristaff: Weapon
+
+actor " Tri-Staff ": Weapon
 {
     weapon.AmmoType1 "JKEMana"
     weapon.AmmoType2 "JKEMana"

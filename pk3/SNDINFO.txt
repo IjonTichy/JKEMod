@@ -1,3 +1,4 @@
+
 // NOTE:
 //
 // Please keep this in alphabetical order
@@ -94,6 +95,8 @@ $alias jkemod/blackmagic/hold           jkemod/voltgun/fire
 
 jkemod/blackmagic/fire                  sounds/weapons/blackmagic/fire.wav
 jkemod/blackmagic/hit                   sounds/weapons/blackmagic/hit.wav
+
+jkemod/blackmagic/altstart              sounds/weapons/blackmagic/altstart.wav
 
 $alias jkemod/blackmagic/altfire        jkemod/firegloves/fire1
 
@@ -320,12 +323,25 @@ jkemod/heavychaingun/altfire            sounds/weapons/heavychaingun/altfire.lmp
 $alias jkemod/hellfist/fire             baron/attack
 $alias jkemod/hellfist/explode          baron/shotx
 
+
+////
+//   J-FLAMETHROWER
+////
+
+jkemod/jflamethrower/fire               sounds/weapons/jflamethrower/fire.ogg
+jkemod/jflamethrower/down               sounds/weapons/jflamethrower/down.ogg
+jkemod/jflamethrower/flame              sounds/weapons/jflamethrower/flame.wav
+
+$limit jkemod/jflamethrower/flame       0
+
+
 ////
 //   J-PISTOL
 ////
 
 jkemod/jpistol/fire                     sounds/weapons/jpistol/fire.lmp
 $alias jkemod/jpistol/load              jkemod/doublebarrelsg/load
+
 
 ////
 //   J-RIPPER
@@ -450,6 +466,8 @@ $alias jkemod/multigun/flamefire        jkemod/fragmentlauncher/fire
 $alias jkemod/multigun/flameexplode     jkemod/assorted/explode
 $alias jkemod/multigun/flame            vile/firecrkl
 
+$limit jkemod/multigun/flame            0
+
 ////
 //   P-200
 ////
@@ -466,6 +484,16 @@ $alias jkemod/p200/explode              weapons/plasmax
 
 jkemod/plasmadriver/fire                sounds/weapons/plasmadriver/fire.wav
 $alias jkemod/plasmadriver/explode      weapons/plasmax
+
+
+////
+//   PYRO CANNON
+////
+
+$alias jkemod/pyrocannon/up             jkemod/heavychaingun/up
+jkemod/pyrocannon/fire                  sounds/weapons/pyrocannon/fire.wav
+
+$alias jkemod/pyrocannon/flame          jkemod/multigun/flame
 
 
 ////

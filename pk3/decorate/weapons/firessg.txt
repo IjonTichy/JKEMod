@@ -1,4 +1,6 @@
-actor FireSSG: Weapon
+
+
+actor " Fire SSG ": Weapon
 {
     +WEAPON.NOAUTOAIM
     Weapon.SelectionOrder 390

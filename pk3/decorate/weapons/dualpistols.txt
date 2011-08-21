@@ -1,10 +1,11 @@
+
 actor PistolSide: Inventory
 {
     inventory.maxamount 1
     +UNDROPPABLE
 }
 
-actor DualPistols: Weapon
+actor " Dual Pistols ": Weapon
 {
     Weapon.SelectionOrder 920
     Weapon.AmmoUse 1

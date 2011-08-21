@@ -1,8 +1,10 @@
+
 actor JKEPlasmaRifle: RandomSpawner replaces PlasmaRifle
 {
-    dropitem "Disintegrator"
-    dropitem "DKFreezeThrower"
-    dropitem "P-200"
-    dropitem "PlasmaDriver"
-    dropitem "VoltGun"
+    dropitem " Disintegrator "
+    dropitem " Flamethrower "
+    dropitem " Freezethrower "
+    dropitem " P-200 "
+    dropitem " Plasma Driver "
+    dropitem " Volt Gun "
 }

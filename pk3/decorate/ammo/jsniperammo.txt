@@ -1,3 +1,4 @@
+
 actor JSniperAmmo: Ammo
 {
     Inventory.Amount 4

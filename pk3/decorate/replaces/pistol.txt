@@ -1,5 +1,6 @@
+
 actor JKEPistol: RandomSpawner replaces Pistol
 {
-    dropitem "DualBerettas"
-    dropitem "DualPistols"
+    dropitem " Dual Berettas "
+    dropitem " Dual Pistols "
 }

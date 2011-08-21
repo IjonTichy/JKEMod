@@ -1,4 +1,5 @@
-Actor DualPlasmaRifles: Weapon
+
+actor " Dual Plasma Rifles ": Weapon
 {
     +DONTBOB
     Weapon.SelectionOrder 400

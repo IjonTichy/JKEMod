@@ -1,18 +1,18 @@
 // DA HEXEN MARINE SOUNDS
 
-$playersound    player  male    *death      sounds/tichy/strifemarine/skin/probablydead.lmp
-$playersound    player  male    *xdeath     sounds/tichy/strifemarine/skin/definitelydead.flac
-$playersound    player  male    *gibbed     sounds/tichy/strifemarine/skin/saucy.lmp
-$playersound    player  male    *pain100    sounds/tichy/strifemarine/skin/ouchthathurts.flac
-$playersounddup player  male    *pain75     *pain100
-$playersounddup player  male    *pain50     *pain100
-$playersounddup player  male    *pain25     *pain100
-$playersound    player  male    *grunt      sounds/tichy/strifemarine/skin/stupidwall.flac
-$playersounddup player  male    *land       *grunt
-$playeralias    player  male    *jump       hexenmarine/emptysound
-$playersound    player  male    *fist       sounds/tichy/strifemarine/skin/ipunchyoo.flac
-$playersound    player  male    *usefail    sounds/tichy/strifemarine/skin/stupidwall.flac
-$playersound    player  male    *taunt      dstaunt
+$playersound    StrifeMarine  male    *death      sounds/tichy/strifemarine/skin/probablydead.lmp
+$playersound    StrifeMarine  male    *xdeath     sounds/tichy/strifemarine/skin/definitelydead.flac
+$playersound    StrifeMarine  male    *gibbed     sounds/tichy/strifemarine/skin/saucy.lmp
+$playersound    StrifeMarine  male    *pain100    sounds/tichy/strifemarine/skin/ouchthathurts.flac
+$playersounddup StrifeMarine  male    *pain75     *pain100
+$playersounddup StrifeMarine  male    *pain50     *pain100
+$playersounddup StrifeMarine  male    *pain25     *pain100
+$playersound    StrifeMarine  male    *grunt      sounds/tichy/strifemarine/skin/stupidwall.flac
+$playersounddup StrifeMarine  male    *land       *grunt
+$playeralias    StrifeMarine  male    *jump       hexenmarine/emptysound
+$playersound    StrifeMarine  male    *fist       sounds/tichy/strifemarine/skin/ipunchyoo.flac
+$playersound    StrifeMarine  male    *usefail    sounds/tichy/strifemarine/skin/stupidwall.flac
+$playersound    StrifeMarine  male    *taunt      dstaunt
 
 // okay yeah done
 

@@ -1,3 +1,4 @@
+
 actor MoleculeDebris
 {
     Radius 8
@@ -122,7 +123,7 @@ actor MoleculeShot
     }
 }
 
-actor MoleculeShooter: Weapon
+actor " Molecule Shooter ": Weapon
 {
     Weapon.AmmoType1 "Cell"
     Weapon.AmmoUse1  40

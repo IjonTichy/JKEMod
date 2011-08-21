@@ -1,4 +1,5 @@
-actor Medispenser: Weapon
+
+actor " Medispenser ": Weapon
 {
     +UNDROPPABLE
     +NOALERT

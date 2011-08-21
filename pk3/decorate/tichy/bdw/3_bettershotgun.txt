@@ -1,3 +1,4 @@
+
 actor ShotgunCounter: Ammo
 {
     Inventory.Amount       1
@@ -9,7 +10,7 @@ actor ShotgunCounter: Ammo
     Inventory.Icon "SHELA0"
 }
 
-actor " Shotgun ": DoomWeapon
+actor " B-Shotgun ": DoomWeapon
 {
     Weapon.SelectionOrder 1300
 
@@ -103,7 +104,7 @@ actor "Power Shotgun": DoomWeapon
     +NOALERT
     +POWERED_UP
 
-    Weapon.SisterWeapon " Shotgun "
+    Weapon.SisterWeapon " B-Shotgun "
 
     Inventory.PickupMessage "$BDW_PK_SHOTGUN"
     Obituary "$BDW_MP_SHOTGUN_POWER"

@@ -1,3 +1,4 @@
+
 #include "decorate/weapons/ballesta.txt"
 #include "decorate/weapons/beamgun.txt"
 #include "decorate/weapons/berserker.txt"
@@ -21,6 +22,7 @@
 #include "decorate/weapons/handshotgun.txt"
 #include "decorate/weapons/heavychaingun.txt"
 #include "decorate/weapons/hellfist.txt"
+#include "decorate/weapons/jflamethrower.txt"
 #include "decorate/weapons/jpistol.txt"
 #include "decorate/weapons/jripper.txt"
 #include "decorate/weapons/jrocketlauncher.txt"
@@ -37,6 +39,7 @@
 #include "decorate/weapons/p200.txt"
 #include "decorate/weapons/plasmadriver.txt"
 #include "decorate/weapons/powerful.txt"
+#include "decorate/weapons/pyrocannon.txt"
 #include "decorate/weapons/quadshot.txt"
 #include "decorate/weapons/spitfirer.txt"
 #include "decorate/weapons/striker.txt"

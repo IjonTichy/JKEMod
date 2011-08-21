@@ -1,4 +1,5 @@
-ACTOR RailRepeater: Weapon
+
+actor " Rail Repeater ": Weapon
 {
     Weapon.SelectionOrder 400
 

@@ -1,4 +1,5 @@
-actor JRipper: Weapon replaces Chainsaw
+
+actor " Ripper ": Weapon replaces Chainsaw
 {
     +WEAPON.MELEEWEAPON
 

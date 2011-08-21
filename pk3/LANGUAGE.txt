@@ -1,3 +1,4 @@
+
 // NOTE:
 //
 // Please keep this in alphabetical order
@@ -10,8 +11,8 @@
 // PK means "pickup"
 
 // Replacements
-JKE_PK_JKECELL                  = "You picked up a battery.";
-JKE_PK_JKECELLPACK              = "You picked up a large battery.";
+JKE_PK_JKECELL                  = "You picked up a battery and gasoline.";
+JKE_PK_JKECELLPACK              = "You picked up a large battery and gasoline.";
 JKE_PK_JKECLIP                  = "You picked up various bullets.";
 JKE_PK_JKECLIPBOX               = "You picked up a pack of various bullets.";
 JKE_PK_JKEROCKETAMMO            = "You picked up a few explosives.";
@@ -29,6 +30,8 @@ JKE_PK_DEVASTATORBOX            = "LOTS OF AMMO FOR DEVASTATOR";
 JKE_PK_EXPLOSIVEAMMO            = "You found polymorphic explosive ammo.";
 JKE_PK_FIREAMMO                 = "You found Pyro mana.";
 JKE_PK_GRAVITYAMMO              = "You pluck some gravity ammo out of the air.";
+JKE_PK_JKEGAS                   = "You found a gasoline canister.";
+JKE_PK_JKEGAS_BIG               = "You found a gasoline tank.";
 JKE_PK_JKEMANA                  = "You found some mana.";
 JKE_PK_JSNIPERRIFLE             = "You found bolt-action sniper rounds.";
 JKE_PK_M249AMMO                 = "You picked up some .55cal bullets.";
@@ -56,6 +59,7 @@ JKE_PK_DKFREEZETHROWER          = "FREEZETHROWER!";
 JKE_PK_HANDSHOTGUN              = "You got a concealable shotgun!";
 JKE_PK_HEAVYCHAINGUN            = "\ck*chk-chink*\c- Hehvy masheen gun!";
 JKE_PK_HELLFIST                 = "You found a hell knight's disembodied arm.";
+JKE_PK_JFLAMETHROWER            = "You got a flamethrower!";
 JKE_PK_JPISTOL                  = "You picked up a pistol.";
 JKE_PK_JSHOTGUN                 = "You picked up a shotgun.";
 JKE_PK_JRIPPER                  = "You got a ripper!";
@@ -72,6 +76,7 @@ JKE_PK_MULTIGUN                 = "You got the multigun!";
 JKE_PK_P200                     = "You got the P-200!";
 JKE_PK_PLASMADRIVER             = "You got the plasma driver!";
 JKE_PK_POWERFUL                 = "You got the gravitational disintegration pistol!";
+JKE_PK_PYROCANNON               = "You got the pyro cannon!";
 JKE_PK_QUADSHOT                 = "You got the quadshot!";
 JKE_PK_SPITFIRER                = "You got the spitfirer!";
 JKE_PK_STRIKER                  = "You got the striker!";
@@ -125,6 +130,8 @@ JKE_MP_HANDSHOTGUN              = "%o found %k was hiding a shotgun.";
 JKE_MP_HEAVYCHAINGUN            = "%k filled %o full of lead.";
 JKE_MP_HELLFIST_ACID            = "%k flung some acid onto %o.";
 JKE_MP_HELLFIST_MELEE           = "%k ripped %o up.";
+JKE_MP_JFLAMETHROWER_SHOT       = "%k toasted %o.";
+JKE_MP_JFLAMETHROWER_FLAME      = "%k toasted %o.";
 JKE_MP_JPISTOL                  = "%k picked off %o.";
 JKE_MP_JRIPPER                  = "%k sliced up %o.";
 JKE_MP_JROCKETLAUNCHER          = "%k blew up %o.";
@@ -145,6 +152,9 @@ JKE_MP_P200                     = "%k blasted %o.";
 JKE_MP_PLASMADRIVER             = "%k drove a few rail slugs into %o.";
 JKE_MP_PLASMADRIVER_PLASMA      = "%k drove %o into %p painful death.";
 JKE_MP_POWERFUL                 = "%k broke the bonds of %o's atoms.";
+JKE_MP_PYROCANNON_ROCKET        = "%k fire-blasted %o.";
+JKE_MP_PYROCANNON_SHRAPNEL      = "%k melted %o as a mere side-effect.";
+JKE_MP_PYROCANNON_FLAME         = "%o wandered into %k's firebomb.";
 JKE_MP_QUADSHOT                 = "%k jammed four shells into %o.";
 JKE_MP_SPITFIRER                = "%k hosed %o.";
 JKE_MP_SPITFIRER_GRENADE        = "%k bounced a grenade right to %o.";

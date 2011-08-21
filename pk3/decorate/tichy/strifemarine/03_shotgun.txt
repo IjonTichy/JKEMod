@@ -1,4 +1,5 @@
-actor DWeapShotgun: Weapon
+
+actor " S-Shotgun ": Weapon
 {
     Weapon.SelectionOrder 1500
     Weapon.SlotNumber 3

@@ -1,3 +1,4 @@
+
 actor ExplosiveAmmo: Ammo
 {
     Inventory.Amount 8

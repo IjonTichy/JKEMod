@@ -1,5 +1,6 @@
 
 
+
 actor IAmTheBetterPlayer: Inventory { +UNDROPPABLE inventory.maxamount 1 }
 
 
@@ -31,14 +32,14 @@ actor BetterPlayer: PlayerPawn
 
     // ordered by each weapon's usefulness for me
 
-    Player.StartItem "Super Shotgun"
-    Player.StartItem "Plasma Rifle"
-    Player.StartItem " Chaingun "
-    Player.StartItem "Rocket Launcher"
-    Player.StartItem " Pistol "
-    Player.StartItem " Shotgun "
-    Player.StartItem " Chainsaw "
-    Player.StartItem " Fists "
+    Player.StartItem " B-Super Shotgun "
+    Player.StartItem " B-Plasma Rifle "
+    Player.StartItem " B-Chaingun "
+    Player.StartItem " B-Rocket Launcher "
+    Player.StartItem " B-Pistol "
+    Player.StartItem " B-Shotgun "
+    Player.StartItem " B-Chainsaw "
+    Player.StartItem " B-Fists "
 
     Player.CrouchSprite "BPLC"
 

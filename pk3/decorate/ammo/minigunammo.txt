@@ -1,3 +1,4 @@
+
 actor MinigunAmmo: Ammo
 {
     Inventory.Amount 50

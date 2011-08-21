@@ -1,3 +1,4 @@
+
 actor " Uzi ": Weapon
 {
     +AMMO_OPTIONAL

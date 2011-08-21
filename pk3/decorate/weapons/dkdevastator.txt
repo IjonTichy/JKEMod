@@ -1,10 +1,11 @@
+
 actor DevastatorSide: Inventory
 {
     Inventory.MaxAmount 1
     +UNDROPPABLE
 }
 
-actor DKDevastator: Weapon
+actor " Devastator Weapon ": Weapon
 {
     Inventory.PickupMessage "$JKE_PK_DKDEVASTATOR"
     weapon.AmmoGive 20

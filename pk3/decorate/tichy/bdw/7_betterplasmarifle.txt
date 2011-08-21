@@ -1,3 +1,4 @@
+
 actor PlasmaCounter: Ammo
 {
     +IGNORESKILL
@@ -10,7 +11,7 @@ actor PlasmaCounter: Ammo
     Inventory.Icon "CELLA0"
 }
 
-ACTOR "Plasma Rifle": DoomWeapon
+ACTOR " B-Plasma Rifle ": DoomWeapon
 {
     Weapon.SelectionOrder 100
     Weapon.AmmoUse1  1
@@ -96,7 +97,7 @@ ACTOR "Power Plasma Rifle": DoomWeapon
     +NOAUTOFIRE
     +POWERED_UP
 
-    Weapon.SisterWeapon "Plasma Rifle"
+    Weapon.SisterWeapon " B-Plasma Rifle "
 
     Inventory.PickupMessage "$BDW_PK_PLASMARIFLE"
 

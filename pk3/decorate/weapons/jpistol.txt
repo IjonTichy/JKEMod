@@ -1,9 +1,10 @@
+
 Actor JPistolCounter: Ammo
 {
     Inventory.MaxAmount 14
 }
 
-actor JPistol: Weapon
+actor " J-Pistol ": Weapon
 {
     +AMMO_OPTIONAL
     +NOALERT

@@ -1,4 +1,5 @@
-ACTOR DWeapEnforcer: Weapon
+
+actor " S-Enforcer ": Weapon
 {
     Weapon.SlotNumber 2
 

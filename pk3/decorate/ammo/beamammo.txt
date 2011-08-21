@@ -1,3 +1,4 @@
+
 actor BeamAmmo: Ammo
 {
     Inventory.Amount 7

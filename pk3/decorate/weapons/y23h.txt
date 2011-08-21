@@ -1,4 +1,5 @@
-actor Y23H : Weapon
+
+actor " Y23H " : Weapon
 {
     Weapon.AmmoType1 "Cell"
     Weapon.AmmoUse1 3

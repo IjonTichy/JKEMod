@@ -1,4 +1,5 @@
-actor " Chaingun ": DoomWeapon
+
+actor " B-Chaingun ": DoomWeapon
 {
     Weapon.SelectionOrder 700
     Weapon.AmmoUse1 1
@@ -491,7 +492,7 @@ actor "Power Chaingun": DoomWeapon
     +ALT_AMMO_OPTIONAL
     +NOALERT
 
-    Weapon.SisterWeapon " Chaingun "
+    Weapon.SisterWeapon " B-Chaingun "
 
     AttackSound "betterdoomweapons/chaingunfire"
 

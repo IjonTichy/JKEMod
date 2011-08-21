@@ -1,4 +1,5 @@
-actor JSuperShotgun: Weapon
+
+actor " J-Super Shotgun ": Weapon
 {
     Scale 0.3
 

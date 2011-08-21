@@ -1,3 +1,4 @@
+
 actor FlareGunTrail
 {
     +NOINTERACTION
@@ -41,7 +42,7 @@ actor FlareGunShot
     }
 }
 
-Actor Flaregun: Weapon
+actor " Flare Gun ": Weapon
 {
     weapon.AmmoGive 10
     weapon.AmmoType "ExplosiveAmmo"

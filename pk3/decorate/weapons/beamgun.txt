@@ -1,10 +1,11 @@
+
 actor BeamGunCounter: Ammo
 {
     +IGNORESKILL
     Inventory.MaxAmount 8
 }
 
-actor BeamGun: Weapon
+actor " Beam Gun ": Weapon
 {
     +AMMO_OPTIONAL
     +NOALERT

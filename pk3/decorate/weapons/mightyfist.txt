@@ -1,9 +1,10 @@
+
 actor FistCounter: Inventory
 {
     Inventory.MaxAmount 7
 }
 
-actor MightyFist: Weapon
+actor " Mighty Fist ": Weapon
 {
     +UNDROPPABLE
     +NOALERT

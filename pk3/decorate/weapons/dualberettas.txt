@@ -1,4 +1,5 @@
-actor DualBerettas: Weapon
+
+actor " Dual Berettas ": Weapon
 {
     Scale 0.2
 

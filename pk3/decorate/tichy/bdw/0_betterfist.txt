@@ -1,5 +1,6 @@
 
-actor " Fists ": DoomWeapon
+
+actor " B-Fists ": DoomWeapon
 {
     Weapon.SelectionOrder 3700
     +WEAPON.MELEEWEAPON
@@ -134,7 +135,7 @@ actor "Power Fists": DoomWeapon
     +NOAUTOFIRE
     +POWERED_UP
 
-    Weapon.SisterWeapon " Fists "
+    Weapon.SisterWeapon " B-Fists "
 
     Obituary "$BDW_MP_FISTS_POWER"
 
@@ -345,4 +346,3 @@ ACTOR BerserkNew: CustomInventory replaces Berserk
         Stop
     }
 }
-

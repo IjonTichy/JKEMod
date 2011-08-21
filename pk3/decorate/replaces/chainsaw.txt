@@ -1,4 +1,5 @@
+
 actor JKEChainsaw: RandomSpawner replaces Chainsaw
 {
-    dropitem "JRipper"
+    dropitem " Ripper "
 }

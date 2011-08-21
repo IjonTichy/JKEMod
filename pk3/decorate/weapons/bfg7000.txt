@@ -1,4 +1,5 @@
-actor BFG7000: Weapon
+
+actor " BFG7000 ": Weapon
 {
     Weapon.AmmoType1 "Cell"
     Weapon.AmmoUse1 150

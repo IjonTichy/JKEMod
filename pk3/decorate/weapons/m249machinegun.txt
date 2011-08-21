@@ -1,10 +1,11 @@
+
 actor M249Counter: Ammo
 {
     +IGNORESKILL
     Inventory.MaxAmount 100
 }
 
-actor "M249 Machine Gun": Weapon
+actor " M249 Machine Gun ": Weapon
 {
     +AMMO_OPTIONAL
     +NOALERT

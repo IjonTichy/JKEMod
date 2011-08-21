@@ -1,4 +1,5 @@
-actor VoltGun: Weapon
+
+actor " Volt Gun ": Weapon
 {
     Weapon.AmmoGive1 100
     Weapon.AmmoType1 "Cell"

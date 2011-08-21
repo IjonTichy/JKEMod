@@ -1,4 +1,5 @@
-actor JSniperRifle : Weapon
+
+actor " J-Sniper Rifle " : Weapon
 {
     +WEAPON.NOAUTOAIM
     Weapon.SelectionOrder 500

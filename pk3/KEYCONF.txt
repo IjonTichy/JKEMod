@@ -1,3 +1,4 @@
+
 addplayerclass BetterPlayer
 addplayerclass StrifeMarine
 addplayerclass SorcPlayer
@@ -8,54 +9,54 @@ addplayerclass SorcPlayer
 ////
 
 addslotdefault 1 "Sigil"          // lolstrife
-addslotdefault 1 "Berserker"
-addslotdefault 1 " Chainsaw "
-addslotdefault 1 "DWeapKnife"
-addslotdefault 1 " Fists "
-addslotdefault 1 "HellFist"
-addslotdefault 1 "JRipper"
-addslotdefault 1 "Medispenser"  // yeah, it really doesn't fall into any of them
-addslotdefault 1 "MightyFist"
-addslotdefault 1 "ZenFist"
+addslotdefault 1 " Berserker "
+addslotdefault 1 " B-Chainsaw "
+addslotdefault 1 " S-Knife "
+addslotdefault 1 " B-Fists "
+addslotdefault 1 " Hellfist "
+addslotdefault 1 " Ripper "
+addslotdefault 1 " Medispenser "  // yeah, it really doesn't fall into any of them
+addslotdefault 1 " Mighty Fist "
+addslotdefault 1 " Zen Fist "
 
 ////
 //   SLOT 2 - PISTOL CLASS
 ////
 
-addslotdefault 2 "DualBerettas"
-addslotdefault 2 "DualPistols"
-addslotdefault 2 "DWeapEnforcer"
-addslotdefault 2 "JPistol"
-addslotdefault 2 " Pistol "
+addslotdefault 2 " Dual Berettas "
+addslotdefault 2 " Dual Pistols "
+addslotdefault 2 " S-Enforcer "
+addslotdefault 2 " J-Pistol "
+addslotdefault 2 " B-Pistol "
 
 
 ////
 //   SLOT 3 - SHOTGUN CLASS
 ////
 
-addslotdefault 3 "DoubleBarrelSG"
-addslotdefault 3 "DWeapShotgun"
-addslotdefault 3 "FireSSG"
-addslotdefault 3 "HandShotgun"
-addslotdefault 3 "JShotgun"
-addslotdefault 3 "JSuperShotgun"
-addslotdefault 3 "Quadshot"
-addslotdefault 3 " Shotgun "
-addslotdefault 3 "Striker"
-addslotdefault 3 "Super Shotgun"
+addslotdefault 3 " Double Shotgun "
+addslotdefault 3 " S-Shotgun "
+addslotdefault 3 " Fire SSG "
+addslotdefault 3 " Hand Shotgun "
+addslotdefault 3 " J-Shotgun "
+addslotdefault 3 " J-Super Shotgun "
+addslotdefault 3 " Quadshot "
+addslotdefault 3 " B-Shotgun "
+addslotdefault 3 " Striker "
+addslotdefault 3 " B-Super Shotgun "
 
 
 ////
 //   SLOT 4 - RAPID-FIRE CLASS
 ////
 
-addslotdefault 4 " Chaingun "
-addslotdefault 4 "DWeapChaingun"
-addslotdefault 4 "FModMinigun"
-addslotdefault 4 "HeavyChaingun"
-addslotdefault 4 "M16"
-addslotdefault 4 "M249 Machine Gun"
-addslotdefault 4 "SpitFirer"
+addslotdefault 4 " B-Chaingun "
+addslotdefault 4 " S-Chaingun "
+addslotdefault 4 " FMod Minigun "
+addslotdefault 4 " Heavy Chaingun "
+addslotdefault 4 " M16 "
+addslotdefault 4 " M249 Machine Gun "
+addslotdefault 4 " Spitfirer "
 addslotdefault 4 " Uzi "
 
 
@@ -63,64 +64,66 @@ addslotdefault 4 " Uzi "
 //   SLOT 5 - EXPLOSIVE CLASS
 ////
 
-addslotdefault 5 "Ballesta"
-addslotdefault 5 "DWeapClusterBomber"
-addslotdefault 5 "FlareGun"
-addslotdefault 5 "FragmentLauncher"
-addslotdefault 5 "Multigun"
-addslotdefault 5 "JRocketLauncher"
-addslotdefault 5 "Rocket Launcher"
+addslotdefault 5 " Ballesta "
+addslotdefault 5 " S-Cluster Bomber "
+addslotdefault 5 " Flare Gun "
+addslotdefault 5 " Fragment Launcher "
+addslotdefault 5 " Multigun "
+addslotdefault 5 " B-Rocket Launcher "
+addslotdefault 5 " J-Rocket Launcher "
 
 
 ////
 //   SLOT 6 - PLASMA/RAIL CLASS
 ////
 
-addslotdefault 6 "Disintegrator"
-addslotdefault 6 "DKFreezethrower"
-addslotdefault 6 "DualPlasmaRifles"
-addslotdefault 6 "DWeapPlasmaBeam"
-addslotdefault 6 "P-200"
-addslotdefault 6 "PlasmaDriver"
-addslotdefault 6 "Plasma Rifle"
-addslotdefault 6 "VoltGun"
+addslotdefault 6 " Disintegrator "
+addslotdefault 6 " Dual Plasma Rifles "
+addslotdefault 6 " Freezethrower "
+addslotdefault 6 " Flamethrower "
+addslotdefault 6 " P-200 "
+addslotdefault 6 " S-Plasma Beam "
+addslotdefault 6 " Plasma Driver "
+addslotdefault 6 " B-Plasma Rifle "
+addslotdefault 6 " Volt Gun "
 
 
 ////
 //   SLOT 7 - BFG CLASS
 ////
 
-addslotdefault 7 " BFG9000 "
-addslotdefault 7 "DKDevastator"
-addslotdefault 7 "Explosion-Fu"
-addslotdefault 7 "MoleculeShooter"
-addslotdefault 7 "RailRepeater"
-addslotdefault 7 "Y23H"
+addslotdefault 7 " B-BFG9000 "
+addslotdefault 7 " Devastator Weapon "
+addslotdefault 7 " Explosion-Fu "
+addslotdefault 7 " Molecule Shooter "
+addslotdefault 7 " Pyro Cannon "
+addslotdefault 7 " Rail Repeater "
+addslotdefault 7 " Y23H "
 
 
 ////
 //   SLOT 8 - OVERPOWERED CLASS
 ////
 
-addslotdefault 8 "BFG7000"
-addslotdefault 8 "D-1000"
-addslotdefault 8 "DWeapIonstrike"
-addslotdefault 8 "Ghetto Blaster"
-addslotdefault 8 "Powerful"
-addslotdefault 8 "SuperShotNuke"
+addslotdefault 8 " BFG7000 "
+addslotdefault 8 " D-1000 "
+addslotdefault 8 " S-Ionstrike "
+addslotdefault 8 " Ghetto Blaster "
+addslotdefault 8 " Powerful "
+addslotdefault 8 " Super Shotnuke "
 
 ////
 //   SLOT 9 - MAGIC CLASS
 ////
 
-addslotdefault 9 "BlackMagic"
-addslotdefault 9 "FireGloves"
-addslotdefault 9 "TriStaff"
+addslotdefault 9 " Black Magic "
+addslotdefault 9 " Fire Gloves "
+addslotdefault 9 " Tri-Staff "
 
 ////
 //   SLOT 0 - SNIPER CLASS
 ////
 
-addslotdefault 0 "BeamGun"
-addslotdefault 0 "JSniperRifle"
-addslotdefault 0 "MagnumSniper"
+addslotdefault 0 " Beam Gun "
+addslotdefault 0 " J-Sniper Rifle "
+addslotdefault 0 " Magnum Sniper "

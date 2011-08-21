@@ -1,4 +1,5 @@
-actor SuperShotNuke: Weapon
+
+actor " Super Shotnuke ": Weapon
 {
     Weapon.AmmoType1 "NukeShell"
     Weapon.AmmoType2 "SuperShotNukeCounter"

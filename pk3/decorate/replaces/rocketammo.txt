@@ -1,3 +1,4 @@
+
 actor JKERocketAmmo: CustomInventory replaces RocketAmmo
 {
     Inventory.PickupMessage "$JKE_PK_JKEROCKETAMMO"

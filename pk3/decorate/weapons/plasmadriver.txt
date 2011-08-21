@@ -1,4 +1,5 @@
-actor PlasmaDriver: Weapon
+
+actor " Plasma Driver ": Weapon
 {
     Weapon.AmmoType1 "Cell"
     Weapon.AmmoType2 "Cell"

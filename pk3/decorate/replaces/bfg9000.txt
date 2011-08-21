@@ -1,9 +1,11 @@
+
 actor JKEBFG9000: RandomSpawner replaces BFG9000
 {
-    dropitem " BFG9000 "
-    dropitem "DKDevastator"
-    dropitem "Explosion-Fu"
-    dropitem "RailRepeater"
-    dropitem "MoleculeShooter"
-    dropitem "Y23H"
+    dropitem " B-BFG9000 "
+    dropitem " Devastator Weapon "
+    dropitem " Explosion-Fu "
+    dropitem " Molecule Shooter "
+    dropitem " Pyro Cannon "
+    dropitem " Rail Repeater "
+    dropitem " Y23H "
 }

@@ -1,3 +1,4 @@
+
 #include "decorate/ammo/ballestaammo.txt"
 #include "decorate/ammo/beamammo.txt"
 #include "decorate/ammo/berettaammo.txt"
@@ -5,6 +6,7 @@
 #include "decorate/ammo/explosiveammo.txt"
 #include "decorate/ammo/fireammo.txt"
 #include "decorate/ammo/gravityammo.txt"
+#include "decorate/ammo/jkegas.txt"
 #include "decorate/ammo/jkemana.txt"
 #include "decorate/ammo/jsniperammo.txt"
 #include "decorate/ammo/m249ammo.txt"

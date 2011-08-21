@@ -1,3 +1,4 @@
+
 Actor JKEMana: Ammo
 {
     Inventory.Amount 180

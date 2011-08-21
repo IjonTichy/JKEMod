@@ -1,4 +1,5 @@
-Model DWeapIonstrike
+
+model " S-Ionstrike "
 {
     Path "models"
     Model 0 "gold8.md3"

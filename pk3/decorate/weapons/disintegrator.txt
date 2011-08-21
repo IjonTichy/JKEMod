@@ -1,4 +1,5 @@
-actor Disintegrator: Weapon
+
+actor " Disintegrator ": Weapon
 {
     Scale 0.3
 

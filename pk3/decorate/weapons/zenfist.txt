@@ -1,10 +1,11 @@
+
 actor PunchSide: Inventory
 {
     Inventory.MaxAmount 1
     +UNDROPPABLE
 }
 
-actor ZenFist: Weapon
+actor " Zen Fist ": Weapon
 {
     +UNDROPPABLE
     +NOALERT

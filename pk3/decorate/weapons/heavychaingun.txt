@@ -1,4 +1,5 @@
-actor HeavyChaingun: Weapon
+
+actor " Heavy Chaingun ": Weapon
 {
     Game Doom
     Weapon.SelectionOrder 360

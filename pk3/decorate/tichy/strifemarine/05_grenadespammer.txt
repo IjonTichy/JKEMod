@@ -1,4 +1,5 @@
-Actor DWeapClusterBomber: Weapon
+
+actor " S-Cluster Bomber ": Weapon
 {
     Weapon.SelectionOrder 800
     Weapon.SlotNumber 5

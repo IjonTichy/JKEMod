@@ -1,4 +1,5 @@
-actor "Super Shotgun": DoomWeapon
+
+actor " B-Super Shotgun ": DoomWeapon
 {
     Weapon.SelectionOrder 400
 
@@ -93,7 +94,7 @@ actor "Power Super Shotgun": DoomWeapon
 
     +POWERED_UP
 
-    Weapon.SisterWeapon "Super Shotgun"
+    Weapon.SisterWeapon " B-Super Shotgun "
 
     Inventory.PickupMessage "$BDW_PK_SUPERSHOTGUN"
     Obituary "$BDW_MP_SUPERSHOTGUN_POWER"

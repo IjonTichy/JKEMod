@@ -1,4 +1,5 @@
-actor D-1000: Weapon
+
+actor " D-1000 ": Weapon
 {
     +WEAPON.NOAUTOAIM
 

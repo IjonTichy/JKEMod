@@ -1,4 +1,5 @@
 
+
 actor Weapon2Power: PowerupGiver
 {
     Powerup.Type "WeaponLevel2"

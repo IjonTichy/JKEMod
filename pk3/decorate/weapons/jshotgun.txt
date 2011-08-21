@@ -1,4 +1,5 @@
-actor JShotgun : Weapon
+
+actor " J-Shotgun " : Weapon
 {
     +AMMO_OPTIONAL
     +NOALERT

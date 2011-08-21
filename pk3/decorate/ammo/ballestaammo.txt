@@ -1,3 +1,4 @@
+
 Actor BallestaAmmo: Ammo
 {
     Inventory.Amount 10
