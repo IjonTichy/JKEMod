@@ -36,7 +36,7 @@ actor " S-Cluster Bomber ": Weapon
         GRSP E 3 Bright
         GRSP F 4 Bright
         GRSP B 0 A_PlaySound("hexenmarine/gspammerreload", CHAN_WEAPON)
-        GRSP B 35
+        GRSP B 25
         GRSP B 0 A_StopSound(CHAN_WEAPON)
         GRSP A 0 A_ReFire
         Goto Ready

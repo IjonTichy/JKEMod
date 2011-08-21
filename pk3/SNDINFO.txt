@@ -159,6 +159,14 @@ jkemod/doublebarrelsg/close             sounds/weapons/doublebarrelsg/close.wav
 
 
 ////
+//   DRAGUNOV
+////
+
+jkemod/dragunov/fire                    sounds/weapons/dragunov/fire.wav
+jkemod/dragunov/load                    sounds/weapons/dragunov/load.wav
+
+
+////
 //   DUAL BERETTAS
 ////
 
@@ -361,6 +369,13 @@ $alias jkemod/jrocketlauncher/explode   betterdoomweapons/rocketexplode
 
 
 ////
+//   J-PLASMA RIFLE
+////
+
+jkemod/jplasmarifle/fire                sounds/weapons/jplasmarifle/fire.wav
+jkemod/jplasmarifle/hit                 sounds/weapons/jplasmarifle/hit.wav
+
+////
 //   J-SHOTGUN
 ////
 
@@ -388,11 +403,14 @@ jkemod/jsupershotgun/close              sounds/weapons/jsupershotgun/close.lmp
 
 
 ////
-//   POWERFUL
+//   KARASAWA
 ////
 
-jkemod/powerful/fire                    sounds/weapons/powerful/fire.wav
-$alias jkemod/powerful/explode          jkemod/assorted/explosion4
+jkemod/karasawa/ready                   sounds/weapons/karasawa/ready.wav
+jkemod/karasawa/fire                    sounds/weapons/karasawa/fire.wav
+jkemod/karasawa/charge                  sounds/weapons/karasawa/charge.wav
+jkemod/karasawa/hit                     sounds/weapons/karasawa/hit.wav
+
 
 
 ////
@@ -484,6 +502,22 @@ $alias jkemod/p200/explode              weapons/plasmax
 
 jkemod/plasmadriver/fire                sounds/weapons/plasmadriver/fire.wav
 $alias jkemod/plasmadriver/explode      weapons/plasmax
+
+
+////
+//   PROTOSS-PLODER
+////
+
+jkemod/protossploder/fire               sounds/weapons/protossploder/fire.wav
+jkemod/protossploder/explode            sounds/weapons/protossploder/explode.wav
+
+
+////
+//   POWERFUL
+////
+
+jkemod/powerful/fire                    sounds/weapons/powerful/fire.wav
+$alias jkemod/powerful/explode          jkemod/assorted/explosion4
 
 
 ////

@@ -5,6 +5,7 @@ actor JKEBFG9000: RandomSpawner replaces BFG9000
     dropitem " Devastator Weapon "
     dropitem " Explosion-Fu "
     dropitem " Molecule Shooter "
+    dropitem " Protoss-Ploder "
     dropitem " Pyro Cannon "
     dropitem " Rail Repeater "
     dropitem " Y23H "

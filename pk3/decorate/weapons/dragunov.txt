@@ -1,0 +1,78 @@
+actor " Dragunov ": Weapon
+{
+    Weapon.AmmoType1 "DragunovCounter"
+    Weapon.AmmoType2 "JSniperAmmo"
+    Weapon.AmmoUse1 1
+    Weapon.AmmoGive1 20
+    Weapon.AmmoGive2 20
+
+    Weapon.SelectionOrder 400
+
+    +WEAPON.NOAUTOFIRE
+    +AMMO_OPTIONAL
+
+    Scale 0.7
+
+    Inventory.PickupMessage "$JKE_PK_DRAGUNOV"
+    Obituary "$JKE_MP_DRAGUNOV"
+
+    States
+    {
+      Ready:
+        TKGN D 1 A_WeaponReady
+        Loop
+      Select:
+        TKGN D 1 A_Raise
+        loop
+      Deselect:
+        TKGN D 1 A_Lower
+        loop
+      Fire:
+        TKGN D 0 A_JumpIfNoAmmo("AltFire")
+
+        TKGN C 0 bright A_PlaySound("jkemod/dragunov/fire", CHAN_WEAPON)
+        TKGN C 2 bright A_FireBullets(1, 1, -1, 60, "BulletPuff")
+        TKGN B 2 bright
+        TKGN D 5
+        goto Ready
+
+      AltFire:
+        TKGN A 0 A_JumpIfInventory("DragunovCounter", 0, "NoReload")
+        TKGN A 0 A_JumpIfInventory("JSniperAmmo", 1, "Reload")
+        goto NoReload
+
+      Reload:
+        TKGN EFGHI 3
+        TKGN I 0 bright A_PlaySound("jkemod/dragunov/load", CHAN_WEAPON)
+        TKGN KLML 3
+        goto ReloadLoop
+
+      ReloadLoop:
+        TKGN A 0 A_GiveInventory("DragunovCounter")
+        TKGN A 0 A_TakeInventory("JSniperAmmo", 1)
+
+        TKGN A 0 A_JumpIfInventory("DragunovCounter", 0, "ReloadEnd")
+        TKGN A 0 A_JumpIfInventory("JSniperAmmo", 1, "ReloadLoop")
+        goto ReloadEnd
+
+      ReloadEnd:
+        TKGN MNOPQRD 3
+        goto Ready
+
+      NoReload:
+        TKGN D 1
+        TKGN D 0 A_Refire
+        goto Ready
+
+      Spawn:
+        TKGN Z -1
+        stop
+    }
+}
+
+
+actor DragunovCounter: Ammo
+{
+    +IGNORESKILL
+    Inventory.MaxAmount 20
+}
