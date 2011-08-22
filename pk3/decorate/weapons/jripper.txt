@@ -1,5 +1,5 @@
 
-actor " Ripper ": Weapon replaces Chainsaw
+actor " L-Ripper ": Weapon replaces Chainsaw
 {
     +WEAPON.MELEEWEAPON
 

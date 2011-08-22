@@ -1,0 +1,77 @@
+actor SorcPlayer: PlayerPawn
+{
+    Health 100
+    ReactionTime 0
+
+    PainChance 255
+
+    Radius 16
+    Height 56
+
+    Scale 0.75
+
+    Speed 1.1
+
+    Player.ColorRange 112, 127
+
+    Player.JumpZ 9.75
+
+    Player.SpawnClass "Mage"
+    Player.DisplayName "Sorcerer"
+    Player.InvulnerabilityMode "Reflective"
+    Player.HealRadiusType "Mana"
+    Player.HexenArmor 5, 5, 15, 10, 25
+
+    Player.StartItem " Tri-Staff "
+    Player.StartItem " Black Magic "
+    Player.StartItem " Fire Gloves "
+    Player.StartItem " Hellfist "
+
+    Player.StartItem "JKEMana", 150
+    Player.StartItem "FireAmmo", 100
+    Player.StartItem "HellFistCounter", 100
+
+    Player.StartItem "IAmAMage"
+
+
+    States
+    {
+      Spawn:
+        SCPL A -1
+        stop
+
+      See:
+        SCPL ABCD 4
+        loop
+
+      Missile:
+      Melee:
+        SCPL EF 8
+        goto Spawn
+
+      Pain:
+        SCPL G 4
+        SCPL G 4 A_Pain
+        goto Spawn
+
+      Death:
+        SCPL H 6
+        SCPL I 6 A_PlayerScream
+        SCPL JK 6
+        SCPL L 6 A_NoBlocking
+        SCPL M 6
+        SCPL N -1
+        stop
+
+      XDeath:
+        SCPL O 5 A_PlayerScream
+        SCPL P 5
+        SCPL R 5 A_NoBlocking
+        SCPL STUVW 5
+        SCPL X -1
+        stop
+    }
+}
+
+
+actor IAmAMage: Inventory { +UNDROPPABLE }

@@ -5,7 +5,7 @@ actor PunchSide: Inventory
     +UNDROPPABLE
 }
 
-actor " Zen Fist ": Weapon
+actor " J-Fists ": Weapon
 {
     +UNDROPPABLE
     +NOALERT

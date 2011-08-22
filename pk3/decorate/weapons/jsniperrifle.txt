@@ -1,5 +1,5 @@
 
-actor " J-Sniper Rifle " : Weapon
+actor " Sniper Rifle " : Weapon
 {
 
     Weapon.AmmoType1 "JSniperAmmo"

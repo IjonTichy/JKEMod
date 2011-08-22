@@ -2,8 +2,8 @@
 
 import shutil, os
 
-oldStart = 'JAC'
-newStart = 'STK'
+oldStart = 'HEVY'
+newStart = 'LNDR'
 
 ls = os.listdir('.')
 playersprites = []

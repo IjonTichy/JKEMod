@@ -3,6 +3,4 @@ actor JKESuperShotgun: RandomSpawner replaces SuperShotgun
 {
     dropitem " Double Shotgun "
     dropitem " Fire SSG "
-    dropitem " J-Super Shotgun "
-    dropitem " Quadshot "
 }

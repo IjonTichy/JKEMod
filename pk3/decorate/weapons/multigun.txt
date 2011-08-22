@@ -1,5 +1,5 @@
 
-actor " Multigun ": Weapon
+actor " L-Multigun ": Weapon
 {
 
     Weapon.AmmoType1 "ExplosiveAmmo"

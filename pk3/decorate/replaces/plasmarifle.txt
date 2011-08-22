@@ -6,7 +6,5 @@ actor JKEPlasmaRifle: RandomSpawner replaces PlasmaRifle
     dropitem " Freezethrower "
     dropitem " Karasawa "
     dropitem " P-200 "
-    dropitem " Plasma Driver "
-    dropitem " J-Plasma Rifle "
     dropitem " Volt Gun "
 }

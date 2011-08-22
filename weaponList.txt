@@ -1,66 +1,8 @@
-Berserker
- Chainsaw 
-DWeapKnife
- Fists 
-HellFist
-JRipper
-Medispenser
-MightyFist
-ZenFist
-DualBerettas
-DualPistols
-DWeapEnforcer
-JPistol
- Pistol 
-DoubleBarrelSG
-DWeapShotgun
-FireSSG
-HandShotgun
-JShotgun
-JSuperShotgun
-Quadshot
- Shotgun 
-Striker
-Super Shotgun
- Chaingun 
-DWeapChaingun
-FModMinigun
-HeavyChaingun
-M16
-M249 Machine Gun
-SpitFirer
- Uzi 
-Ballesta
-DWeapClusterBomber
-FlareGun
-FragmentLauncher
-Multigun
-JRocketLauncher
-Rocket Launcher
-Disintegrator
-DKFreezethrower
-DualPlasmaRifles
-DWeapPlasmaBeam
-P-200
-PlasmaDriver
-Plasma Rifle
-VoltGun
- BFG9000 
-DKDevastator
-Explosion-Fu
-MoleculeShooter
-RailRepeater
-Y23H
-BFG7000
-D-1000
-DWeapIonstrike
-Ghetto Blaster
-Powerful
-SuperShotNuke
-BlackMagic
-FireGloves
-TriStaff
-BeamGun
-JSniperRifle
-MagnumSniper
-JFlamethrower
+" Ripper "
+" Dual Pistols "
+" Striker "
+" Quadshot "
+" Spitfirer "
+" FMod Minigun "
+" Multigun "
+" Plasma Driver "

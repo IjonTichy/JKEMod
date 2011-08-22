@@ -2,8 +2,10 @@
 
 import sys
 import os
+import shutil
 import collections
 
+from pad import pad
 from pathwalker.classes import pathwalker
 
 PROGNAME = os.path.basename(sys.argv[0])
@@ -17,6 +19,16 @@ def isText(x):
 
 def main(onFile, nnFile, wDir):
 
+    bDir = wDir + "~"
+
+    if os.path.exists(bDir):
+        if input("delete {0} (y/n)? ".format(bDir) ).lower() in ["1", "y"]:
+            shutil.rmtree(bDir)
+        else:
+            errorAndExit("{0} already exists".format(bDir) )
+
+    shutil.copytree(wDir, bDir)
+
     on = open(onFile)
     nn = open(nnFile)
 
@@ -25,7 +37,7 @@ def main(onFile, nnFile, wDir):
     oldNamesL = []
     newNamesL = []
 
-    fileDict = collections.defaultdict(str)
+    fileDict = collections.defaultdict(lambda: [False, ""])
 
     try:
         walker = pathwalker.PathWalker(wDir)
@@ -35,18 +47,23 @@ def main(onFile, nnFile, wDir):
     for old, new in zip(on, nn):
 
         if old:
-            oldNames.append(old[:-1].strip('"').lower())
-            oldNamesL.append(old[:-1].strip('"').lower())
+            oldNames.append(old.rstrip("\n").strip('"').lower())
+            oldNamesL.append(old.rstrip("\n").strip('"').lower())
 
         if new:
-            newNames.append(new[:-1].strip('"'))
-            newNamesL.append(new[:-1].strip('"').lower())
+            newNames.append(new.rstrip("\n").strip('"'))
+            newNamesL.append(new.rstrip("\n").strip('"').lower())
 
     if len(oldNames) != len(newNames):
         raise ValueError("old name count and new name count MUST be the same")
 
     nameTrans  = dict(zip(oldNames,  newNames)  )
     nameTransL = dict(zip(oldNamesL, newNamesL) )
+
+    for name in nameTrans:
+        pName  = pad(name, padChar='"')
+        pName2 = pad(nameTrans[name], padChar='"')
+        print("{0:<20} -> {1}".format(pName, pName2) )
 
     txtFiles = walker.walk(isText, abs=True)
 
@@ -58,8 +75,8 @@ def main(onFile, nnFile, wDir):
 
         for line in cFile:
 
-            testLine = line[:-1].lower()
-            line = line[:-1]
+            testLine = line.rstrip("\n").lower()
+            line = line.rstrip("\n")
 
             for n in nameTransL:
 
@@ -80,6 +97,7 @@ def main(onFile, nnFile, wDir):
                         line = line[:p] + s3 + line[p+l:]
 
                         print(line)
+                        fileDict[txt][0] = True
                         break
 
                 for s in checkStrs2:
@@ -97,14 +115,20 @@ def main(onFile, nnFile, wDir):
                         line = line[:p] + s3 + line[p+l:]
 
                         print(line)
+                        fileDict[txt][0] = True
                         break
 
-            fileDict[txt] = "\n".join([fileDict[txt], line])
+            fileDict[txt][1] = "".join([fileDict[txt][1], line + "\n"])
+
+    fileDict[txt][1] += "\n"
 
     for txt in sorted(fileDict):
-        cFile = open(txt, "w")
-        cFile.write(fileDict[txt])
-        cFile.close()
+
+        if fileDict[txt][0]:
+            cFile = open(txt, "w")
+            cFile.write(fileDict[txt][1])
+            cFile.flush()
+            cFile.close()
 
 
 
@@ -116,6 +140,10 @@ def usageAndExit(reason):
     print("{0}: {1}".format(PROGNAME, reason) )
     print(USAGE)
     sys.exit()
+
+def errorAndExit(reason):
+    print("ERROR: {1}".format(PROGNAME, reason) )
+    sys.exit(1)
 
 
 if __name__ == "__main__":

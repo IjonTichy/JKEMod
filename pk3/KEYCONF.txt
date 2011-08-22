@@ -1,6 +1,8 @@
 
 addplayerclass BetterPlayer
 addplayerclass StrifeMarine
+addplayerclass JKEPlayer
+addplayerclass LeandroPlayer
 addplayerclass SorcPlayer
 
 
@@ -14,17 +16,17 @@ addslotdefault 1 " B-Chainsaw "
 addslotdefault 1 " S-Knife "
 addslotdefault 1 " B-Fists "
 addslotdefault 1 " Hellfist "
-addslotdefault 1 " Ripper "
+addslotdefault 1 " L-Ripper "
 addslotdefault 1 " Medispenser "  // yeah, it really doesn't fall into any of them
 addslotdefault 1 " Mighty Fist "
-addslotdefault 1 " Zen Fist "
+addslotdefault 1 " J-Fists "
 
 ////
 //   SLOT 2 - PISTOL CLASS
 ////
 
 addslotdefault 2 " Dual Berettas "
-addslotdefault 2 " Dual Pistols "
+addslotdefault 2 " L-Dual Pistols "
 addslotdefault 2 " S-Enforcer "
 addslotdefault 2 " J-Pistol "
 addslotdefault 2 " B-Pistol "
@@ -40,9 +42,9 @@ addslotdefault 3 " Fire SSG "
 addslotdefault 3 " Hand Shotgun "
 addslotdefault 3 " J-Shotgun "
 addslotdefault 3 " J-Super Shotgun "
-addslotdefault 3 " Quadshot "
+addslotdefault 3 " L-Quadshot "
 addslotdefault 3 " B-Shotgun "
-addslotdefault 3 " Striker "
+addslotdefault 3 " L-Striker "
 addslotdefault 3 " B-Super Shotgun "
 
 
@@ -52,12 +54,12 @@ addslotdefault 3 " B-Super Shotgun "
 
 addslotdefault 4 " B-Chaingun "
 addslotdefault 4 " S-Chaingun "
-addslotdefault 4 " FMod Minigun "
+addslotdefault 4 " L-Minigun "
 addslotdefault 4 " Heavy Chaingun "
 addslotdefault 4 " M16 "
 addslotdefault 4 " M249 Machine Gun "
-addslotdefault 4 " Spitfirer "
-addslotdefault 4 " Uzi "
+addslotdefault 4 " L-Spitfirer "
+addslotdefault 4 " J-Uzi "
 
 
 ////
@@ -68,7 +70,7 @@ addslotdefault 5 " Ballesta "
 addslotdefault 5 " S-Cluster Bomber "
 addslotdefault 5 " Flare Gun "
 addslotdefault 5 " Fragment Launcher "
-addslotdefault 5 " Multigun "
+addslotdefault 5 " L-Multigun "
 addslotdefault 5 " B-Rocket Launcher "
 addslotdefault 5 " J-Rocket Launcher "
 
@@ -84,7 +86,7 @@ addslotdefault 6 " Flamethrower "
 addslotdefault 6 " Karasawa "
 addslotdefault 6 " P-200 "
 addslotdefault 6 " S-Plasma Beam "
-addslotdefault 6 " Plasma Driver "
+addslotdefault 6 " L-Plasma Driver "
 addslotdefault 6 " B-Plasma Rifle "
 addslotdefault 6 " J-Plasma Rifle "
 addslotdefault 6 " Volt Gun "
@@ -129,5 +131,5 @@ addslotdefault 9 " Tri-Staff "
 
 addslotdefault 0 " Beam Gun "
 addslotdefault 0 " Dragunov "
-addslotdefault 0 " J-Sniper Rifle "
+addslotdefault 0 " Sniper Rifle "
 addslotdefault 0 " Magnum Sniper "

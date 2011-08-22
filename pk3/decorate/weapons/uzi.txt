@@ -1,13 +1,11 @@
 
-actor " Uzi ": Weapon
+actor " J-Uzi ": Weapon
 {
-    +AMMO_OPTIONAL
-    Weapon.AmmoType1 "UziCounter"
+    Weapon.AmmoType1 "Clip"
     Weapon.AmmoType2 "Clip"
     Weapon.AmmoUse1 1
-    Weapon.AmmoUse2 0
+    Weapon.AmmoUse2 1
     Weapon.AmmoGive1 50
-    Weapon.AmmoGive2 50
 
     Weapon.SelectionOrder 1000
     AttackSound "jkemod/uzi/fire"
@@ -35,48 +33,23 @@ actor " Uzi ": Weapon
 
 
       Fire:
-        UZIG A 0 A_JumpIfNoAmmo("AltFire")
-
         UZIG B 1 bright A_Light1
         UZIG C 0 A_FireCustomMissile("PistolCasing", -40, 0, 2, 6)
-        UZIG C 1 bright A_FireBullets(2, 2, 1, 6, "BulletPuff")
+        UZIG C 1 bright A_FireBullets(1, 1, 1, 8, "BulletPuff")
         UZIG D 1 bright A_Light0
         UZIG A 3 A_ReFire
         goto Ready
 
 
       AltFire:
-        UZIG A 0 A_JumpIfInventory("UziCounter", 0, "NoReload")
-        UZIG A 0 A_JumpIfInventory("Clip", 1, "ReloadStart")
-        goto NoReload
+        UZIG B 1 bright A_Light1
+        goto AltHold
 
-      ReloadStart:
-        UZIR A 4
-        UZIR B 0 A_PlaySound("jkemod/uzi/open", CHAN_WEAPON)
-        UZIR BCD 3
-        UZIR E 25
-        UZIR F 3
-        goto ReloadLoop
-
-      ReloadLoop:
-        UZIC A 0 A_TakeInventory("Clip", 1)
-        UZIC A 0 A_GiveInventory("UziCounter", 1)
-        UZIC A 0 A_JumpIfInventory("UziCounter", 0, "ReloadEnd")
-        UZIC A 0 A_JumpIfInventory("Clip", 1, "ReloadLoop")
-        goto ReloadEnd
-
-      ReloadEnd:
-        UZIR G 0 A_PlaySound("jkemod/uzi/load", CHAN_WEAPON)
-        UZIR GH 3
-        UZIG A 3
-        UZIC BC 3
-        UZIC D 0 A_PlaySound("jkemod/uzi/cock", CHAN_WEAPON)
-        UZIC DEFB 3
-        UZIC A 2
-        goto Ready
-
-      NoReload:
-        UZIG A 1
+      AltHold:
+        UZIG B 0 bright A_Light1
+        UZIG C 0 A_FireCustomMissile("PistolCasing", -40, 0, 2, 6)
+        UZIG C 1 bright A_FireBullets(8, 8, 1, 8, "BulletPuff")
+        UZIG D 1 bright A_Light0
         UZIG A 0 A_ReFire
         goto Ready
 
@@ -84,10 +57,4 @@ actor " Uzi ": Weapon
         UZIP A -1
         stop
     }
-}
-
-actor UziCounter: Ammo
-{
-    +IGNORESKILL
-    Inventory.MaxAmount 50
 }

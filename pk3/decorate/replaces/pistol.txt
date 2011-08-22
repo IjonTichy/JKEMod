@@ -2,5 +2,4 @@
 actor JKEPistol: RandomSpawner replaces Pistol
 {
     dropitem " Dual Berettas "
-    dropitem " Dual Pistols "
 }

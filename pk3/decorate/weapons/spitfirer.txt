@@ -1,5 +1,5 @@
 
-actor " Spitfirer ": Weapon
+actor " L-Spitfirer ": Weapon
 {
     Weapon.AmmoType1 "Clip"
     Weapon.AmmoType2 "ExplosiveAmmo"

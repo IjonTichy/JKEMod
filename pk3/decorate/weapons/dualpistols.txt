@@ -5,7 +5,7 @@ actor PistolSide: Inventory
     +UNDROPPABLE
 }
 
-actor " Dual Pistols ": Weapon
+actor " L-Dual Pistols ": Weapon
 {
     Weapon.SelectionOrder 920
     Weapon.AmmoUse 1

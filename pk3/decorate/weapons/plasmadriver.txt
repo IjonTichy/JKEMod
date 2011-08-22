@@ -1,5 +1,5 @@
 
-actor " Plasma Driver ": Weapon
+actor " L-Plasma Driver ": Weapon
 {
     Weapon.AmmoType1 "Cell"
     Weapon.AmmoType2 "Cell"
@@ -31,7 +31,7 @@ actor " Plasma Driver ": Weapon
         goto GenericFire
 
       AltFire:
-        PRFG D 2 bright A_RailAttack(50, 5, 1, "90 30 30", "FF 00 00")
+        PRFG D 2 bright A_RailAttack(75, 5, 1, "90 30 30", "FF 00 00")
         goto GenericFire
 
       GenericFire:
@@ -54,7 +54,7 @@ actor PlasmaDriverShot
     Speed 40
 
     Projectile
-    Damage 8
+    Damage (60+random(0, 10) )
 
     RenderStyle Add
     Alpha 0.9
@@ -88,7 +88,7 @@ actor PlasmaDriverShotSmall: PlasmaDriverShot
     Radius 5
     Height 5
 
-    Damage 2
+    Damage (12+random(0,10) )
 
     Alpha 0.7
     Scale 0.4
