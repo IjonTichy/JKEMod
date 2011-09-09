@@ -2,5 +2,6 @@
 # these end up taking way too much space
 ####
 
+pk3~*
 jkemod*.pk3
 jkemod*.zip
