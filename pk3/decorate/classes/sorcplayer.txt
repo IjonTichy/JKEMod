@@ -22,16 +22,14 @@ actor SorcPlayer: PlayerPawn
     Player.HealRadiusType "Mana"
     Player.HexenArmor 5, 5, 15, 10, 25
 
-    Player.StartItem " Tri-Staff "
-    Player.StartItem " Black Magic "
-    Player.StartItem " Fire Gloves "
-    Player.StartItem " Hellfist "
-
-    Player.StartItem "JKEMana", 150
-    Player.StartItem "FireAmmo", 100
-    Player.StartItem "HellFistCounter", 100
-
     Player.StartItem "IAmAMage"
+    Player.StartItem "SorcererClassItem"
+
+    Player.StartItem " Hellfist "
+    Player.StartItem " Tri-Staff "
+
+    Player.StartItem "JKEMana", 10
+    Player.StartItem "HellFistCounter", 100
 
 
     States

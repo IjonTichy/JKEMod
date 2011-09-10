@@ -22,8 +22,9 @@ script 683 (int slot)
     int pln = PlayerNumber();
     int found;
     int ret;
-    int wep; int ammo;
-    int check; int check2;
+    int wep;
+    int ammo1; int ammo2; int ammo3;
+    int check1; int check2; int check3; int check4; int check5;
     int x; int y; int z;
     int i;
 
@@ -54,22 +55,49 @@ script 683 (int slot)
 
     for (i = 0; i < WEPCOUNT; i++)
     {
-        wep  = classWeps[found][slot][i];
-        ammo = classWeps[found][slot][WEPCOUNT+1];
+        wep  =  classWeps[found][slot][i];
+        ammo1 = classWeps[found][slot][WEPCOUNT+1];
+        ammo2 = classWeps[found][slot][WEPCOUNT+2];
+        ammo3 = classWeps[found][slot][WEPCOUNT+3];
 
-        check = !CheckInventory(wep);
-        check2 = !(ret & WEAPONSTAYON) && (CheckInventory(ammo) < GetAmmoCapacity(ammo) );
+        if (wep == "None")
+        {
+            continue;
+        }
 
-        if (check || check2)
+        check1 = CheckInventory(wep);
+        check2 = ret & WEAPONSTAYON;
+
+        if (ammo1 == "None")
+        { check3 = 1; }
+        else { check3 = CheckInventory(ammo1) < GetAmmoCapacity(ammo1); }
+
+        if (ammo2 == "None")
+        { check4 = 0; }
+        else { check4 = CheckInventory(ammo2) < GetAmmoCapacity(ammo2); }
+
+        if (ammo3 == "None")
+        { check5 = 0; }
+        else { check5 = CheckInventory(ammo3) < GetAmmoCapacity(ammo3); }
+
+        if (!check1)
         {
             GiveInventory(wep, 1);
             ret |= GAVEWEAPON;
         }
+        else if (!check2)
+        {
+            if (check3 || check4 || check5)
+            {
+                GiveInventory(wep, 1);
+                ret |= GAVEWEAPON;
+            }
+        }
     }
 
-    check = GAVEWEAPON;
+    check1 = GAVEWEAPON;
 
-    if (ret & check == check)
+    if (ret & check1 == check1)
     {
         wep = classWeps[found][slot][2];
 

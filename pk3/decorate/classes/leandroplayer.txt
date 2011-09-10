@@ -20,21 +20,12 @@ actor LeandroPlayer: PlayerPawn
     Player.HealRadiusType "Mana"
     Player.HexenArmor 5, 5, 15, 10, 25
 
+    Player.StartItem "LeandroClassItem"
+
     Player.StartItem " L-Ripper "
     Player.StartItem " L-Dual Pistols "
-    Player.StartItem " L-Striker "
-    Player.StartItem " L-Quadshot "
-    Player.StartItem " L-Spitfirer "
-    Player.StartItem " L-Minigun "
-    Player.StartItem " L-Multigun "
-    Player.StartItem " L-Plasma Driver "
 
-    Player.StartItem "Clip",  200
-    Player.StartItem "Shell", 50
-    Player.StartItem "StrikerCounter", 16
-    Player.StartItem "QuadshotCounter", 1
-    Player.StartItem "ExplosiveAmmo", 60
-    Player.StartItem "Cell", 300
+    Player.StartItem "Clip",  50
 
 
     States

@@ -5,6 +5,54 @@
 
 [ enu default ]
 
+//// Class pickup messages
+//
+JKE_PK_BDW_CLASS1               = "\crBLOOD! \cgBLOOD FOR THE BLOOD GOD!";
+JKE_PK_BDW_CLASS2               = "A pistol. Maybe it's worth something.";
+JKE_PK_BDW_CLASS3               = "Name's Doomguy. Cle\ca*BAM*\cr*KRLTCH*\c-";
+JKE_PK_BDW_CLASS4               = "Hey, chaingun! To hell with respect!";
+JKE_PK_BDW_CLASS5               = "\cbROCKET LAUNCHER FOUND. COMMENCE FLYING.\c-";
+JKE_PK_BDW_CLASS6               = "The sugar-sweet kiss of heavy ordinance!";
+JKE_PK_BDW_CLASS7               = "... and my gun is very, very large.";
+JKE_PK_BDW_CLASS8               = "Hail to the chief!";
+
+JKE_PK_SM_CLASS1                = "Let's cut shit up.";
+JKE_PK_SM_CLASS2                = "You picked up another enforcer";
+JKE_PK_SM_CLASS3                = "Those alien bastards are gonna \caPAY\c-.";
+JKE_PK_SM_CLASS4                = "Because who needs breathable air?";
+JKE_PK_SM_CLASS5                = "Accuracy? Never heard of it.";
+JKE_PK_SM_CLASS6                = "I coulda sworn this was a pulse gun...";
+JKE_PK_SM_CLASS7                = "\caPRETTY RED LIGHTS\c-";
+JKE_PK_SM_CLASS8                = "Stay far away from the giant purple donuts.";
+
+JKE_PK_JKEGUY_CLASS1            = "You learned how to punch things again!";
+JKE_PK_JKEGUY_CLASS2            = "You got a pistol.";
+JKE_PK_JKEGUY_CLASS3            = "Now who put a hunting shotgun with this bigass one?";
+JKE_PK_JKEGUY_CLASS4            = "Bullets gotta litter the air somehow.";
+JKE_PK_JKEGUY_CLASS5            = "Explosions for everyone!";
+JKE_PK_JKEGUY_CLASS6            = "Why does plasma have to be so blue?";
+JKE_PK_JKEGUY_CLASS7            = "You can now fire giant-ass molecules!";
+JKE_PK_JKEGUY_CLASS8            = "This really \cais\c- a BFG.";
+
+JKE_PK_LEANDRO_CLASS1           = "\cgRIP AND TEAR\c-";
+JKE_PK_LEANDRO_CLASS2           = "You got two pistols.";
+JKE_PK_LEANDRO_CLASS3           = "Why must your shotguns kick so much ass?";
+JKE_PK_LEANDRO_CLASS4           = "We're spitting bullets like a pro!";
+JKE_PK_LEANDRO_CLASS5           = "It's not quite a rocket launcher...";
+JKE_PK_LEANDRO_CLASS6           = "Plasma-sniper-thingy goooo!";
+JKE_PK_LEANDRO_CLASS7           = "Rail-minigun? Are they just smashing ideas together now?";
+JKE_PK_LEANDRO_CLASS8           = "My other pistol destroys worlds.";
+
+JKE_PK_SORCERER_CLASS1          = "Green fireballs for everyone!";
+JKE_PK_SORCERER_CLASS2          = "\caPITCHFORKS AREN'T MADE OF WANDS!\c-";
+JKE_PK_SORCERER_CLASS3          = "Nothing!";
+JKE_PK_SORCERER_CLASS4          = "Nothing!";
+JKE_PK_SORCERER_CLASS5          = "Green magic and red magic and pentagrams, oh my!";
+JKE_PK_SORCERER_CLASS6          = "Make things explode. You know you want to.";
+JKE_PK_SORCERER_CLASS7          = "You get no BFG... yet.";
+JKE_PK_SORCERER_CLASS8          = "Your magic isn't good enough to be overpowered.";
+
+
 
 //// Pickups
 //

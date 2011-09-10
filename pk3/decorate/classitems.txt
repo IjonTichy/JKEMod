@@ -6,3 +6,5 @@
 #include "decorate/classitems/bdwmessages.txt"
 #include "decorate/classitems/smmessages.txt"
 #include "decorate/classitems/jkeguymessages.txt"
+#include "decorate/classitems/leandromessages.txt"
+#include "decorate/classitems/sorcerermessages.txt"
