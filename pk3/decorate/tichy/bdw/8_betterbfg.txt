@@ -11,8 +11,7 @@ actor " B-BFG9000 ": DoomWeapon
     Weapon.SelectionOrder 2800
     Weapon.AmmoUse1  40
     Weapon.AmmoUse2  1
-    Weapon.AmmoGive1    40
-    Weapon.AmmoGive2    40
+    Weapon.AmmoGive1    80
     Weapon.AmmoType1       "Cell"
     Weapon.AmmoType2       "Cell"
 
@@ -94,8 +93,7 @@ actor "Power BFG9000": DoomWeapon   // oh dear god
     Weapon.SelectionOrder 2800
     Weapon.AmmoUse1  100
     Weapon.AmmoUse2  4
-    Weapon.AmmoGive1    40
-    Weapon.AmmoGive2    40
+    Weapon.AmmoGive1    80
     Weapon.AmmoType1       "Cell"
     Weapon.AmmoType2       "Cell"
 

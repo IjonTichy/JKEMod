@@ -22,6 +22,15 @@ actor JKEClassPickup: CustomInventory
 actor JKEClassMessage: CustomInventory
 {
     Inventory.PickupSound "misc/w_pkup"
+    Inventory.MaxAmount 0x7FFFFFFF // just in case
     +AUTOACTIVATE
     +ALWAYSPICKUP
+    +NOCLIP
+
+    States
+    {
+      Spawn:
+        TNT1 A -1
+        stop
+    }
 }

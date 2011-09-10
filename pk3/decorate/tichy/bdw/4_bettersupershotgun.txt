@@ -87,7 +87,7 @@ actor "Power Super Shotgun": DoomWeapon
 
     Weapon.AmmoUse1 2
     Weapon.AmmoUse2 5
-    Weapon.AmmoGive1 16
+    Weapon.AmmoGive1 0
     Weapon.AmmoGive2 0
     Weapon.AmmoType1 "Shell"
     Weapon.AmmoType2 "Shell"

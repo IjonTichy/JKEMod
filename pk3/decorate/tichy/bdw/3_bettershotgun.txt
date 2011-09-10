@@ -95,7 +95,7 @@ actor "Power Shotgun": DoomWeapon
 
     Weapon.AmmoUse1 1
     Weapon.AmmoUse2 2
-    Weapon.AmmoGive1  8
+    Weapon.AmmoGive1  0
     Weapon.AmmoGive2  0
     Weapon.AmmoType1    "Shell"
     Weapon.AmmoType2    "Shell"

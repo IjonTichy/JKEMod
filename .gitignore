@@ -3,5 +3,6 @@
 ####
 
 pk3~*
+*.o
 jkemod*.pk3
 jkemod*.zip

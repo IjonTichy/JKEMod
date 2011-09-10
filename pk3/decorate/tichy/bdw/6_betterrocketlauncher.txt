@@ -84,7 +84,7 @@ Actor "Power Rocket Launcher": DoomWeapon
     Weapon.AmmoType2 "RocketAmmo"
     Weapon.AmmoUse1  1
     Weapon.AmmoUse2  5
-    Weapon.AmmoGive1 2
+    Weapon.AmmoGive1 0
 
     Weapon.SisterWeapon " B-Rocket Launcher "
 

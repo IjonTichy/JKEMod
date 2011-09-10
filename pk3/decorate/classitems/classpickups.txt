@@ -13,6 +13,21 @@ actor JKEClass1Pickup: JKEClassPickup replaces Chainsaw
 }
 
 
+actor JKEClass1Drop: JKEClassPickup
+{
+    States
+    {
+      Spawn:
+        CSAW A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 1, 1,0) & 1) == 1, "Gone")
+        goto NoGone
+    }
+}
+
+
 actor JKEClass2Pickup: JKEClassPickup replaces Pistol
 {
     States
@@ -23,6 +38,21 @@ actor JKEClass2Pickup: JKEClassPickup replaces Pistol
 
       Pickup:
         TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 2, 0,0) & 3) == 1, "Gone")
+        goto NoGone
+    }
+}
+
+
+actor JKEClass2Drop: JKEClassPickup
+{
+    States
+    {
+      Spawn:
+        PIST A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 2, 1,0) & 1) == 1, "Gone")
         goto NoGone
     }
 }
@@ -41,9 +71,31 @@ actor JKEClass3Pickup: JKEClassPickup replaces Shotgun
         goto NoGone
     }
 }
-
-
 actor JKEClass3Pickup2: JKEClass3Pickup replaces SuperShotgun
+{
+    States
+    {
+      Spawn:
+        SGN2 A -1
+        stop
+    }
+}
+
+
+actor JKEClass3Drop: JKEClassPickup
+{
+    States
+    {
+      Spawn:
+        SHOT A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 3, 1,0) & 1) == 1, "Gone")
+        goto NoGone
+    }
+}
+actor JKEClass3Drop2: JKEClass3Drop
 {
     States
     {
@@ -67,9 +119,31 @@ actor JKEClass4Pickup: JKEClassPickup replaces Chaingun
         goto NoGone
     }
 }
-
-
 actor JKEClass4Pickup2: JKEClass4Pickup replaces Minigun
+{
+    States
+    {
+      Spawn:
+        MNGN A -1
+        stop
+    }
+}
+
+
+actor JKEClass4Drop: JKEClassPickup
+{
+    States
+    {
+      Spawn:
+        MGUN A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 4, 1,0) & 1) == 1, "Gone")
+        goto NoGone
+    }
+}
+actor JKEClass4Drop2: JKEClass4Pickup
 {
     States
     {
@@ -93,9 +167,31 @@ actor JKEClass5Pickup: JKEClassPickup replaces RocketLauncher
         goto NoGone
     }
 }
-
-
 actor JKEClass5Pickup2: JKEClass5Pickup replaces GrenadeLauncher
+{
+    States
+    {
+      Spawn:
+        GLAU A -1
+        stop
+    }
+}
+
+
+actor JKEClass5Drop: JKEClassPickup
+{
+    States
+    {
+      Spawn:
+        LAUN A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 5, 1,0) & 1) == 1, "Gone")
+        goto NoGone
+    }
+}
+actor JKEClass5Drop2: JKEClass5Pickup
 {
     States
     {
@@ -119,9 +215,31 @@ actor JKEClass6Pickup: JKEClassPickup replaces PlasmaRifle
         goto NoGone
     }
 }
-
-
 actor JKEClass6Pickup2: JKEClass6Pickup replaces Railgun
+{
+    States
+    {
+      Spawn:
+        RAIL A -1
+        stop
+    }
+}
+
+
+actor JKEClass6Drop: JKEClassPickup
+{
+    States
+    {
+      Spawn:
+        PLAS A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 6, 1,0) & 1) == 1, "Gone")
+        goto NoGone
+    }
+}
+actor JKEClass6Drop2: JKEClass6Pickup
 {
     States
     {
@@ -147,6 +265,21 @@ actor JKEClass7Pickup: JKEClassPickup replaces BFG9000
 }
 
 
+actor JKEClass7Drop: JKEClassPickup
+{
+    States
+    {
+      Spawn:
+        BFUG A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 7, 1,0) & 1) == 1, "Gone")
+        goto NoGone
+    }
+}
+
+
 actor JKEClass8Pickup: JKEClassPickup
 {
     States
@@ -157,6 +290,21 @@ actor JKEClass8Pickup: JKEClassPickup
 
       Pickup:
         TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 8, 0,0) & 3) == 1, "Gone")
+        goto NoGone
+    }
+}
+
+
+actor JKEClass8Drop: JKEClassPickup
+{
+    States
+    {
+      Spawn:
+        BFG2 A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_JumpIf((ACS_ExecuteWithResult(683, 8, 1,0) & 1) == 1, "Gone")
         goto NoGone
     }
 }

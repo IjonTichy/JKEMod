@@ -62,7 +62,7 @@ actor "Power Pistol": DoomWeapon
     Weapon.SelectionOrder 1900
     Weapon.AmmoUse1 1
     Weapon.AmmoUse2 4
-    Weapon.AmmoGive 20
+    Weapon.AmmoGive 0
     Weapon.AmmoType1 "Clip"
     Weapon.AmmoType2 "Clip"
 
