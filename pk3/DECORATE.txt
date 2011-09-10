@@ -2,6 +2,7 @@
 #include "decorate/general.txt"
 #include "decorate/casings.txt"
 #include "decorate/classes.txt"
+#include "decorate/classitems.txt"
 #include "decorate/ammo.txt"
 #include "decorate/weapons.txt"
 #include "decorate/replaces.txt"

@@ -20,18 +20,12 @@ actor JKEPlayer: PlayerPawn
     Player.HealRadiusType "Mana"
     Player.HexenArmor 5, 5, 15, 10, 25
 
+    Player.StartItem "JKEGuyClassItem"
+
     Player.StartItem " J-Fists "
     Player.StartItem " J-Pistol "
-    Player.StartItem " J-Shotgun "
-    Player.StartItem " J-Super Shotgun "
-    Player.StartItem " J-Uzi "
-    Player.StartItem " J-Rocket Launcher "
-    Player.StartItem " J-Plasma Rifle "
 
-    Player.StartItem "Clip",  200
-    Player.StartItem "Shell", 50
-    Player.StartItem "RocketAmmo", 50
-    Player.StartItem "Cell", 300
+    Player.StartItem "Clip",  50
 
 
     States

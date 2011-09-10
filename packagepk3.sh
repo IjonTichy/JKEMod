@@ -49,6 +49,11 @@ function makepk3
             (cd $ACCDIR && ./acc ${cpwd}/pk3/acs/${fileBase})
             EXITCODE=$(( EXITCODE + $? ))
 
+            if ((EXITCODE != 0))
+            then
+                break
+            fi
+
         done
     fi
 

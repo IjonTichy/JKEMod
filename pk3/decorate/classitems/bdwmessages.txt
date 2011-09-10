@@ -1,0 +1,39 @@
+actor BDWClass1Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_BDW_CLASS1"
+}
+
+actor BDWClass2Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_BDW_CLASS2"
+}
+
+actor BDWClass3Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_BDW_CLASS3"
+}
+
+actor BDWClass4Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_BDW_CLASS4"
+}
+
+actor BDWClass5Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_BDW_CLASS5"
+}
+
+actor BDWClass6Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_BDW_CLASS6"
+}
+
+actor BDWClass7Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_BDW_CLASS7"
+}
+
+actor BDWClass8Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_BDW_CLASS8"
+}

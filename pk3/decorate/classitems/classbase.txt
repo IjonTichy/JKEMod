@@ -1,0 +1,27 @@
+actor JKEClassPickup: CustomInventory
+{
+    +QUIET
+    Inventory.PickupMessage ""
+
+    States
+    {
+      Spawn:
+        TNT1 A -1
+        stop
+
+      NoGone:
+        TNT1 A 1 A_FadeIn(0.0)
+        fail
+
+      Gone:
+        TNT1 A 1 A_FadeIn(0.0)
+        stop
+    }
+}
+
+actor JKEClassMessage: CustomInventory
+{
+    Inventory.PickupSound "misc/w_pkup"
+    +AUTOACTIVATE
+    +ALWAYSPICKUP
+}

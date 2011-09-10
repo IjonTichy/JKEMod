@@ -1,9 +1,3 @@
-
-
-
-actor IAmTheBetterPlayer: Inventory { +UNDROPPABLE inventory.maxamount 1 }
-
-
 actor BetterPlayer: PlayerPawn
 {
     Speed 1
@@ -23,22 +17,10 @@ actor BetterPlayer: PlayerPawn
     Player.HealRadiusType "Health"
     Player.InvulnerabilityMode "Ghost"
 
-    Player.StartItem "IAmTheBetterPlayer"
+    Player.StartItem "BDWClassItem"
 
-    Player.StartItem "Clip",  200
-    Player.StartItem "Shell", 50
-    Player.StartItem "RocketAmmo", 50
-    Player.StartItem "Cell", 300
-
-    // ordered by each weapon's usefulness for me
-
-    Player.StartItem " B-Super Shotgun "
-    Player.StartItem " B-Plasma Rifle "
-    Player.StartItem " B-Chaingun "
-    Player.StartItem " B-Rocket Launcher "
+    Player.StartItem "Clip", 50
     Player.StartItem " B-Pistol "
-    Player.StartItem " B-Shotgun "
-    Player.StartItem " B-Chainsaw "
     Player.StartItem " B-Fists "
 
     Player.CrouchSprite "BPLC"

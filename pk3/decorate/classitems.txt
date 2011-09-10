@@ -1,0 +1,8 @@
+#include "decorate/classitems/classbase.txt"
+#include "decorate/classitems/classsetters.txt"
+#include "decorate/classitems/classpickups.txt"
+
+
+#include "decorate/classitems/bdwmessages.txt"
+#include "decorate/classitems/smmessages.txt"
+#include "decorate/classitems/jkeguymessages.txt"

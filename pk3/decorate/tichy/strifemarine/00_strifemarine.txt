@@ -1,5 +1,4 @@
-
-ACTOR StrifeMarine: PlayerPawn
+actor StrifeMarine: PlayerPawn
 {
     Speed 1
     Health 100
@@ -12,7 +11,7 @@ ACTOR StrifeMarine: PlayerPawn
 
     Player.DisplayName "Strife Marine"
     Player.JumpZ 9
-    
+
     Player.SoundClass "StrifeMarine"
 
     Player.SpawnClass "Mage"
@@ -20,17 +19,9 @@ ACTOR StrifeMarine: PlayerPawn
     Player.HealRadiusType "Health"
     Player.InvulnerabilityMode "Reflective"
 
-    Player.StartItem "IAmTheBetterPlayer"
+    Player.StartItem "SMClassItem"
 
-    Player.StartItem "Clip",  200
-    Player.StartItem "Shell", 50
-    Player.StartItem "RocketAmmo", 50
-    Player.StartItem "Cell", 300
-
-    Player.StartItem " S-Chaingun "
-    Player.StartItem " S-Plasma Beam "
-    Player.StartItem " S-Shotgun "
-    Player.StartItem " S-Cluster Bomber "
+    Player.StartItem "Clip", 50
     Player.StartItem " S-Enforcer "
     Player.StartItem " S-Knife "
 

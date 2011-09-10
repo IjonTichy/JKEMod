@@ -13,9 +13,14 @@ USAGE = "usage: {0} <oldnames> <newnames> <dir>".format(PROGNAME)
 
 checkStrs = ["\"{0}\""]
 checkStrs2 = ["actor {0}:", "model {0}", "actor {0} :"]
+extensions = (".txt", ".c", ".h")
 
 def isText(x):
-    return x.endswith(".txt")
+    for ext in extensions:
+        if x.endswith(ext):
+            return True
+
+    return False
 
 def main(onFile, nnFile, wDir):
 
