@@ -509,6 +509,7 @@ actor " Power Black Magic ": " Black Magic "
         BLMG BB 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
         BLMG A 0 A_GiveInventory("JKEMana", 2)
         BLMG A 0 A_GiveInventory("FireAmmo", 2)
+        BLMG C 0 HealThing(1)
         BLMG BC 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
         BLMG A 0 A_GiveInventory("JKEMana", 2)
         BLMG CC 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
@@ -522,6 +523,7 @@ actor " Power Black Magic ": " Black Magic "
         BLMG BB 1 bright
         BLMG A 0 A_GiveInventory("JKEMana", 2)
         BLMG A 0 A_GiveInventory("FireAmmo", 2)
+        BLMG C 0 HealThing(1)
         BLMG BC 1 bright
         BLMG A 0 A_GiveInventory("JKEMana", 2)
         BLMG CC 1 bright
