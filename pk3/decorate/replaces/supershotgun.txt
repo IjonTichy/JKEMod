@@ -1,6 +1,0 @@
-
-actor JKESuperShotgun: RandomSpawner replaces SuperShotgun
-{
-    dropitem " Double Shotgun "
-    dropitem " Fire SSG "
-}

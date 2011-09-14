@@ -203,6 +203,14 @@ $limit jkemod/dualplasmarifles/explode 0
 
 
 ////
+//   ETHEREAL CROSSBOW
+////
+
+jkemod/etherealcrossbow/fire            sounds/weapons/etherealcrossbow/fire.wav
+jkemod/etherealcrossbow/hit             sounds/weapons/etherealcrossbow/hit.wav
+
+
+////
 //   EXPLOSION-FU
 ////
 
@@ -537,6 +545,14 @@ $alias jkemod/pyrocannon/flame          jkemod/multigun/flame
 $alias jkemod/quadshot/fire             jkemod/jsupershotgun/fire
 $alias jkemod/quadshot/load             jkemod/doublebarrelsg/load
 
+
+////
+//   SAPPHIRE WAND
+////
+
+$alias jkemod/sapphirewand/fire         jkemod/tristaff/fire
+
+
 ////
 //   SPITFIRER
 ////
@@ -544,6 +560,7 @@ $alias jkemod/quadshot/load             jkemod/doublebarrelsg/load
 jkemod/spitfirer/fire                   sounds/weapons/spitfirer/fire.wav
 $alias jkemod/spitfirer/altfire         jkemod/fragmentlauncher/fire
 $alias jkemod/spitfirer/open            jkemod/fragmentlauncher/open
+
 
 ////
 //   STRIKER

@@ -1,0 +1,374 @@
+actor " Ethereal Crossbow ": Weapon
+{
+    Weapon.AmmoType1 "EtherealAmmo"
+    Weapon.AmmoType2 "EtherealAmmo"
+    Weapon.AmmoUse1 1
+    Weapon.AmmoUse2 2
+    Weapon.AmmoGive1 5
+
+    Weapon.SisterWeapon " Power Ethereal Crossbow "
+
+    Weapon.SelectionOrder 800
+    Weapon.YAdjust 15
+
+    Inventory.PickupMessage "$JKE_PK_ETHEREALCROSSBOW"
+
+    States
+    {
+      Select:
+        MCRB A 1 bright A_Raise
+        loop
+
+      Deselect:
+        MCRB A 1 bright A_Lower
+        loop
+
+      Ready:
+        MCRB AAAAAABBBBBBCCCCCC 1 bright A_WeaponReady
+        loop
+
+      Fire:
+        MCRB D 0 A_PlaySound("jkemod/etherealcrossbow/fire", CHAN_WEAPON)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShot", 0, 1)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShotSide2", -15, 0)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShotSide1",  -3, 0)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShotSide1",   3, 0)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShotSide2",  15, 0)
+        MCRB D 6 bright
+        MCRB EFGH 3 bright
+        MCRB AB 4 bright
+        MCRB C 5 bright A_ReFire
+        goto Ready
+
+      AltFire:
+        MCRB D 0 A_PlaySound("jkemod/etherealcrossbow/fire", CHAN_WEAPON)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot", 0, 1)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot", -15, 0)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot2", -8, 0)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot2", 8, 0)
+        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot", 15, 0)
+        MCRB D 8 bright
+        MCRB EFGH 4 bright
+        MCRB AB 4 bright
+        MCRB C 5 bright A_ReFire
+        goto Ready
+
+      Spawn:
+        MCRB Z -1
+        stop
+    }
+}
+
+actor EtherealCrossbowShot
+{
+    Radius 11
+    Height 8
+    Speed 40
+
+    Projectile
+    Damage (17+random(0,6))
+
+    RenderStyle Add
+
+    DeathSound "jkemod/etherealcrossbow/hit"
+
+    Obituary "$JKE_MP_ETHEREALCROSSBOW_PRIMARY"
+
+    States
+    {
+      Spawn:
+        MCBS B -1 bright
+        loop
+
+      Death:
+        MCBS H 0 A_Explode(32, 96, 0)
+        MCBS HIJ 8 bright
+        stop
+    }
+}
+
+actor EtherealCrossbowTrail
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+
+    RenderStyle Add
+
+    States
+    {
+      Spawn:
+        MCBS FG 8 bright
+        stop
+    }
+}
+
+actor EtherealCrossbowShotSide1: EtherealCrossbowShot
+{
+    Speed 35
+    Damage (7+random(0,6))
+
+    +WINDTHRUST
+
+    States
+    {
+      Spawn:
+        MCBS A -1 bright
+        loop
+
+      Death:
+        MCBS CDE 8 bright
+        Stop
+    }
+}
+
+actor EtherealCrossbowShotSide2: EtherealCrossbowShotSide1
+{
+    Scale 0.7
+    Damage (3+random(0,4))
+
+    States
+    {
+      Spawn:
+        MCBS A -1 bright
+        loop
+
+      Death:
+        MCBS CDE 8 bright
+        Stop
+    }
+}
+
+actor EtherealCrossbowAltShot
+{
+    Radius 11
+    Height 8
+    Speed 40
+
+    Projectile
+    Damage (17+random(0,6))
+
+    RenderStyle Add
+
+    DeathSound "jkemod/etherealcrossbow/hit"
+    Obituary "$JKE_MP_ETHEREALCROSSBOW_ALT"
+
+    States
+    {
+      Spawn:
+        MCBS B 4 bright
+        goto Death
+
+      Death:
+        MCBS H 0 A_Stop
+        MCBS H 0 A_Explode(32, 96, 0)
+        MCBS HIJ 8 bright
+        stop
+    }
+}
+
+actor EtherealCrossbowAltShot2: EtherealCrossbowAltShot
+{
+    Speed 35
+    Damage (7+random(0,6))
+
+    +WINDTHRUST
+
+    States
+    {
+      Spawn:
+        MCBS B 6 bright
+        goto Death
+
+      Death:
+        MCBS H 0 A_Stop
+        MCBS H 0 A_Explode(16, 96, 0)
+        MCBS CDE 8 bright
+        Stop
+    }
+}
+
+
+actor " Power Ethereal Crossbow ": Weapon
+{
+    Weapon.AmmoType1 "EtherealAmmo"
+    Weapon.AmmoType2 "EtherealAmmo"
+    Weapon.AmmoUse1 2
+    Weapon.AmmoUse2 4
+
+    Weapon.SisterWeapon " Ethereal Crossbow "
+    +POWERED_UP
+
+    Weapon.SelectionOrder 800
+    Weapon.YAdjust 15
+
+    Inventory.PickupMessage "$JKE_PK_ETHEREALCROSSBOW"
+
+    States
+    {
+      Select:
+        MCRB A 1 bright A_Raise
+        loop
+
+      Deselect:
+        MCRB A 1 bright A_Lower
+        loop
+
+      Ready:
+        MCRB AAAAAABBBBBBCCCCCC 1 bright A_WeaponReady
+        loop
+
+      Fire:
+        MCRB D 0 A_PlaySound("jkemod/etherealcrossbow/fire", CHAN_WEAPON)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShot", 0, 1)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide2", -15, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide1",  -6, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide1",  -3, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide1",   3, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide1",   6, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide2",  15, 0)
+        MCRB D 6 bright
+        MCRB EFGH 3 bright
+        MCRB AB 4 bright
+        MCRB C 5 bright A_ReFire
+        goto Ready
+
+      AltFire:
+        MCRB D 0 A_PlaySound("jkemod/etherealcrossbow/fire", CHAN_WEAPON)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot", 0, 1)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot2", -15, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot", -12, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot2", -6, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot2", 6, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot", 12, 0)
+        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot2", 15, 0)
+        MCRB D 8 bright
+        MCRB EFGH 4 bright
+        MCRB AB 4 bright
+        MCRB C 5 bright A_ReFire
+        goto Ready
+
+      Spawn:
+        MCRB Z -1
+        stop
+    }
+}
+
+
+
+actor PowerEtherealCrossbowShot
+{
+    Radius 11
+    Height 8
+    Speed 40
+
+    Projectile
+    Damage (17+random(0,6))
+
+    RenderStyle Add
+
+    DeathSound "jkemod/etherealcrossbow/hit"
+    Obituary "$JKE_MP_ETHEREALCROSSBOW_POWER_P"
+
+    States
+    {
+      Spawn:
+        MCBS B 1 bright A_SpawnItemEx("EtherealCrossbowTrail")
+        loop
+
+      Death:
+        MCBS HHHH 0 A_SpawnItemEx("EtherealCrossbowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
+        MCBS H 0 A_Explode(96, 96, 0)
+        MCBS HIJ 8 bright
+        stop
+    }
+}
+
+actor PowerEtherealCrossbowShotSide1: EtherealCrossbowShot
+{
+    Speed 35
+    Damage (12+random(0,6))
+
+    +WINDTHRUST
+
+    States
+    {
+      Spawn:
+        MCBS A -1 bright
+        loop
+
+      Death:
+        MCBS HH 0 A_SpawnItemEx("EtherealCrossbowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
+        MCBS A 0 A_Explode(8, 96, 0)
+        MCBS CDE 8 bright
+        Stop
+    }
+}
+
+actor PowerEtherealCrossbowShotSide2: EtherealCrossbowShotSide1
+{
+    Scale 0.7
+    Damage (6+random(0,4))
+
+    States
+    {
+      Spawn:
+        MCBS A -1 bright
+        loop
+
+      Death:
+        MCBS HH 0 A_SpawnItemEx("EtherealCrossbowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
+        MCBS A 0 A_Explode(4, 96, 0)
+        MCBS CDE 8 bright
+        Stop
+    }
+}
+
+actor PowerEtherealCrossbowAltShot
+{
+    Radius 11
+    Height 8
+    Speed 40
+
+    Projectile
+    Damage (17+random(0,6))
+
+    RenderStyle Add
+
+    DeathSound "jkemod/etherealcrossbow/hit"
+    Obituary "$JKE_MP_ETHEREALCROSSBOW_POWER_A"
+
+    States
+    {
+      Spawn:
+        MCBS B 4 bright
+        goto Death
+
+      Death:
+        MCBS H 0 A_Stop
+        MCBS HHHHHHHH 0 A_SpawnItemEx("EtherealCrossbowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
+        MCBS H 0 A_Explode(64, 96, 0)
+        MCBS HIJ 8 bright
+        stop
+    }
+}
+
+actor PowerEtherealCrossbowAltShot2: PowerEtherealCrossbowAltShot
+{
+    Speed 35
+    Damage (7+random(0,6))
+
+    +WINDTHRUST
+
+    States
+    {
+      Spawn:
+        MCBS B 6 bright
+        goto Death
+
+      Death:
+        MCBS H 0 A_Stop
+        MCBS H 0 A_Explode(24, 96, 0)
+        MCBS CDE 8 bright
+        Stop
+    }
+}

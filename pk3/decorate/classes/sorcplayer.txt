@@ -25,8 +25,8 @@ actor SorcPlayer: PlayerPawn
     Player.StartItem "IAmAMage"
     Player.StartItem "SorcererClassItem"
 
+    Player.StartItem " Sapphire Wand "
     Player.StartItem " Hellfist "
-    Player.StartItem " Tri-Staff "
 
     Player.StartItem "JKEMana", 10
     Player.StartItem "HellFistCounter", 100

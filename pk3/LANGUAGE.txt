@@ -10,7 +10,7 @@
 JKE_PK_BDW_CLASS1               = "\crBLOOD! \cgBLOOD FOR THE BLOOD GOD!";
 JKE_PK_BDW_CLASS2               = "A pistol. Maybe it's worth something.";
 JKE_PK_BDW_CLASS3               = "Name's Doomguy. Cle\ca*BAM*\cr*KRLTCH*\c-";
-JKE_PK_BDW_CLASS4               = "Hey, chaingun! To hell with respect!";
+JKE_PK_BDW_CLASS4               = "Hey, chaingun! The hell with respect!";
 JKE_PK_BDW_CLASS5               = "\cbROCKET LAUNCHER FOUND. COMMENCE FLYING.\c-";
 JKE_PK_BDW_CLASS6               = "The sugar-sweet kiss of heavy ordinance!";
 JKE_PK_BDW_CLASS7               = "... and my gun is very, very large.";
@@ -31,7 +31,7 @@ JKE_PK_JKEGUY_CLASS3            = "Now who put a hunting shotgun with this bigas
 JKE_PK_JKEGUY_CLASS4            = "Bullets gotta litter the air somehow.";
 JKE_PK_JKEGUY_CLASS5            = "Explosions for everyone!";
 JKE_PK_JKEGUY_CLASS6            = "Why does plasma have to be so blue?";
-JKE_PK_JKEGUY_CLASS7            = "You can now fire giant-ass molecules!";
+JKE_PK_JKEGUY_CLASS7            = "Now \caYOU\c- fire giant-ass molecules!";
 JKE_PK_JKEGUY_CLASS8            = "This really \cais\c- a BFG.";
 
 JKE_PK_LEANDRO_CLASS1           = "\cgRIP AND TEAR\c-";
@@ -44,9 +44,9 @@ JKE_PK_LEANDRO_CLASS7           = "Rail-minigun? Are they just smashing ideas to
 JKE_PK_LEANDRO_CLASS8           = "My other pistol destroys worlds.";
 
 JKE_PK_SORCERER_CLASS1          = "Green fireballs for everyone!";
-JKE_PK_SORCERER_CLASS2          = "\caPITCHFORKS AREN'T MADE OF WANDS!\c-";
-JKE_PK_SORCERER_CLASS3          = "Nothing!";
-JKE_PK_SORCERER_CLASS4          = "Nothing!";
+JKE_PK_SORCERER_CLASS2          = "I wonder what happens if I find three of these...";
+JKE_PK_SORCERER_CLASS3          = "It's \camagical\c- green exploding shit!";
+JKE_PK_SORCERER_CLASS4          = "\caPITCHFORKS AREN'T MADE OF WANDS DAMMIT\c-";
 JKE_PK_SORCERER_CLASS5          = "Green magic and red magic and pentagrams, oh my!";
 JKE_PK_SORCERER_CLASS6          = "Make things explode. You know you want to.";
 JKE_PK_SORCERER_CLASS7          = "You get no BFG... yet.";
@@ -59,12 +59,14 @@ JKE_PK_SORCERER_CLASS8          = "Your magic isn't good enough to be overpowere
 // PK means "pickup"
 
 // Replacements
-JKE_PK_JKECELL                  = "You picked up a battery and gasoline.";
-JKE_PK_JKECELLPACK              = "You picked up a large battery and gasoline.";
+JKE_PK_JKESHELL                 = "You picked up shellstuff.";
+JKE_PK_JKESHELLBOX              = "You picked up a bunch of shellstuff.";
 JKE_PK_JKECLIP                  = "You picked up various bullets.";
 JKE_PK_JKECLIPBOX               = "You picked up a pack of various bullets.";
 JKE_PK_JKEROCKETAMMO            = "You picked up a few explosives.";
 JKE_PK_JKEROCKETBOX             = "You picked up a pack of explosives.";
+JKE_PK_JKECELL                  = "You picked up a battery and gasoline.";
+JKE_PK_JKECELLPACK              = "You picked up a large battery and gasoline.";
 
 
 // Ammo
@@ -98,6 +100,7 @@ JKE_PK_DRAGUNOV                 = "You got the Dragunov!";
 JKE_PK_DUALBERETTAS             = "You picked up two berettas.";
 JKE_PK_DUALPISTOLS              = "You picked up two pistols.";
 JKE_PK_DUALPLASMARIFLES         = "You got dual plasma rifles!";
+JKE_PK_ETHEREALCROSSBOW         = "You got the ethereal crossbow!";
 JKE_PK_EXPLOSIONFU              = "Now you can kick explosions and punch fireballs!";
 JKE_PK_FIREGLOVES               = "You got the fire gloves!";
 JKE_PK_FIRESSG                  = "You got the incendiary super shotgun!";
@@ -154,8 +157,9 @@ JKE_MP_BERSERKER                = "%k gutted %o.";
 JKE_MP_BFG7000                  = "%k showed %o the power of the BFG7000.";
 JKE_MP_BLACKMAGIC_MELEE         = "%k tore up %o with a devastating spell.";
 JKE_MP_BLACKMAGIC_RIPPER        = "%k rended %o with terrible secrets.";
-JKE_MP_BLACKMAGIC_PENTAGRAM     = "%o could not stand the fires of %k's hell.";
-JKE_MP_BLACKMAGIC_EXPLOSION     = "%k unleashed hell's fury upon %o.";
+JKE_MP_BLACKMAGIC_MELEE         = "%k tore up %o with Hell itself.";
+JKE_MP_BLACKMAGIC_RIPPER        = "%k rended %o with Hell itself.";
+JKE_MP_BLACKMAGIC_EXPLOSION     = "%k unleashed Hell upon %o.";
 JKE_MP_D1000                    = "%k vaporised %o.";
 JKE_MP_DKDEVASTATOR             = "%k devastated %o.";
 JKE_MP_DKFREEZETHROWER          = "%k froze %o.";
@@ -165,6 +169,10 @@ JKE_MP_DRAGUNOV                 = "%k punched a few holes into %o.";
 JKE_MP_DUALPISTOLS              = "%k capped %o.";
 JKE_MP_DUALPLASMARIFLES_PLASMA  = "%k melted %o's face.";
 JKE_MP_DUALPLASMARIFLES_RAIL    = "%k blasted two gaping holes in %o.";
+JKE_MP_ETHEREALCROSSBOW_PRIMARY = "%k etherealised %o.";
+JKE_MP_ETHEREALCROSSBOW_ALT     = "%o got too close to %k's ethereal crossbow.";
+JKE_MP_ETHEREALCROSSBOW_POWER_P = "%k made %o a ghost.";
+JKE_MP_ETHEREALCROSSBOW_POWER_A = "%o couldn't stand %k's powered ethereal crossbow.";
 JKE_MP_EXPLOSIONFU_MELEE        = "%k slammed into %o's face.";
 JKE_MP_EXPLOSIONFU_TRAIL        = "%o stood behind %k.";
 JKE_MP_EXPLOSIONFU_KICK         = "%k explosion-kicked %o's face in.";
@@ -180,8 +188,10 @@ JKE_MP_GHETTOBLASTER_RICKROLL   = "%k never gave %o up, never let %o down, never
 JKE_MP_GHETTOBLASTER_EXPLOSION  = "%o found %k's radio went to 11.";
 JKE_MP_HANDSHOTGUN              = "%o found %k was hiding a shotgun.";
 JKE_MP_HEAVYCHAINGUN            = "%k filled %o full of lead.";
-JKE_MP_HELLFIST_ACID            = "%k flung some acid onto %o.";
+JKE_MP_HELLFIST_ACID            = "%k flung some weak acid onto %o.";
 JKE_MP_HELLFIST_MELEE           = "%k ripped %o up.";
+JKE_MP_HELLFIST_POWER_ACID      = "%k flung some sulfuric acid onto %o.";
+JKE_MP_HELLFIST_POWER_MELEE     = "%k ripped apart %o with his \cgBARE DAMN HANDS.\c-";
 JKE_MP_JFLAMETHROWER_SHOT       = "%k toasted %o.";
 JKE_MP_JFLAMETHROWER_FLAME      = "%k toasted %o.";
 JKE_MP_JPISTOL                  = "%k picked off %o.";

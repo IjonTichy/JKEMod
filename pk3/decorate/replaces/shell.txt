@@ -1,0 +1,27 @@
+actor JKEShell: CustomInventory replaces Shell
+{
+    Inventory.PickupMessage "$JKE_PK_JKESHELL"
+
+    States
+    {
+      Spawn:
+        SHEL A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_GiveInventory("Shell", 4)
+        TNT1 A 0 A_GiveInventory("EtherealAmmo", 5)
+        stop
+    }
+}
+
+actor JKECrossbowAmmo: JKEShell replaces CrossbowAmmo
+{
+    States
+    {
+      Spawn:
+        AMC1 A -1
+        loop
+    }
+}
+

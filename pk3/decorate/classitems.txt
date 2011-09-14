@@ -2,6 +2,8 @@
 #include "decorate/classitems/classsetters.txt"
 #include "decorate/classitems/classpickups.txt"
 
+#include "decorate/classitems/classheretic.txt"
+
 
 #include "decorate/classitems/bdwmessages.txt"
 #include "decorate/classitems/smmessages.txt"

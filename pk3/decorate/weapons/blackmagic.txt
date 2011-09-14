@@ -1,4 +1,3 @@
-
 actor " Black Magic ": Weapon
 {
     +UNDROPPABLE
@@ -11,11 +10,13 @@ actor " Black Magic ": Weapon
     Weapon.AmmoUse2 125
     Weapon.AmmoGive1 300
 
+    Weapon.SisterWeapon " Power Black Magic "
+
     Weapon.SelectionOrder 910
 
     Inventory.PickupMessage "$JKE_PK_BLACKMAGIC"
 
-    Obituary "$JKE_MP_BLACKMAGIC_MELEEc"
+    Obituary "$JKE_MP_BLACKMAGIC_MELEE"
 
     States
     {
@@ -442,6 +443,173 @@ actor BlackMagicAltTrail
     {
       Spawn:
         FX12 CDEFGH 3 bright
+        stop
+    }
+}
+
+
+actor " Power Black Magic ": " Black Magic "
+{
+    Weapon.AmmoType1 "JKEMana"
+    Weapon.AmmoType2 "JKEMana"
+    Weapon.AmmoUse1 40
+    Weapon.AmmoUse2 200
+    Weapon.AmmoGive1 0
+
+    Weapon.SisterWeapon " Black Magic "
+    +POWERED_UP
+
+    Weapon.SelectionOrder 910
+
+    Inventory.PickupMessage "$JKE_PK_BLACKMAGIC"
+
+    Obituary "$JKE_MP_BLACKMAGIC_POWER_MELEE"
+
+    States
+    {
+
+      Fire:
+        BLMG H 0 A_AlertMonsters
+        BLMG H 0 A_PlaySound("jkemod/blackmagic/charge", CHAN_WEAPON)
+        BLMG HIJIJ 3 bright
+        BLMG KL 5 bright
+        BLMG H 0 A_AlertMonsters
+        BLMG M 0 A_PlaySound("jkemod/blackmagic/charge", CHAN_WEAPON)
+        BLMG MNMN 3 bright
+        BLMG H 0 A_AlertMonsters
+        BLMG N 0 A_PlaySound("jkemod/blackmagic/hold", CHAN_WEAPON)
+        BLMG OP 2 bright
+        BLMG R 0 A_ReFire
+        goto FireEnd
+
+      Hold:
+        BLMG H 0 A_AlertMonsters
+        BLMG N 0 A_PlaySound("jkemod/blackmagic/hold", CHAN_WEAPON)
+        BLMG OOPPQQRR 1 bright A_CustomPunch(13+random(0, 6), 1, 0, "Bulletpuff", 0)
+        BLMG A 0 A_JumpIfInventory("AltFired", 1, "NeverMind")
+        BLMG R 0 A_ReFire
+        goto FireEnd
+
+      FireEnd:
+        BLMG STU 3 bright
+        BLMG U 0 bright A_FireCustomMissile("PowerBlackMagicShot")
+        BLMG VHI 3 bright
+        goto Ready
+
+      AltFire:
+        BLMG B 0 A_GiveInventory("InAltFire")
+        BMLG B 0 A_GunFlash
+        BLMG B 0 A_PlaySound("jkemod/blackmagic/altstart", CHAN_WEAPON)
+        BLMG B 0 bright ACS_ExecuteAlways(874, 0, 1, 0, 0)
+        BLMG BCBC 3 bright
+        goto AltLoop
+
+      AltLoop:
+        BLMG A 0 A_GiveInventory("JKEMana", 2)
+        BLMG BB 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
+        BLMG A 0 A_GiveInventory("JKEMana", 2)
+        BLMG A 0 A_GiveInventory("FireAmmo", 2)
+        BLMG BC 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
+        BLMG A 0 A_GiveInventory("JKEMana", 2)
+        BLMG CC 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
+        BLMG C 0 HealThing(1)
+        BLMG C 0 A_JumpIfInventory("AltFired", 1, "AltLoop")
+        goto AltEnd
+
+
+      NoBlast:
+        BLMG A 0 A_GiveInventory("JKEMana", 2)
+        BLMG BB 1 bright
+        BLMG A 0 A_GiveInventory("JKEMana", 2)
+        BLMG A 0 A_GiveInventory("FireAmmo", 2)
+        BLMG BC 1 bright
+        BLMG A 0 A_GiveInventory("JKEMana", 2)
+        BLMG CC 1 bright
+        BLMG C 0 HealThing(1)
+        BLMG C 0 A_JumpIfInventory("AltFired", 1, "AltLoop")
+        goto AltEnd
+
+      AltEnd:
+        BLMG A 0 ACS_ExecuteAlways(874, 0, 0, 0, 0)
+        BLMG B 3 bright
+        BLMG B 0 A_TakeInventory("InAltFire")
+        BLMG A 12
+        goto Ready
+
+      Blast:
+        BLMG A 0 A_JumpIfNoAmmo("NoBlast")
+
+        BLMG H 0 A_AlertMonsters
+        BLMG DE 3 bright
+        BLMG F 3 bright
+        BLMG G 0 A_PlaySound("jkemod/blackmagic/altfire", CHAN_WEAPON)
+        BLMG G 0 A_PlaySound("jkemod/blackmagic/altfire", CHAN_BODY)
+        BLMG G 0 A_FireCustomMissile("PowerBlackMagicAltShot", 0, 1, -6)
+        BLMG G 0 A_FireCustomMissile("PowerBlackMagicAltShot", 0, 0, 6)
+        BLMG G 3 bright
+        BLMG FE 3 bright
+        goto AltLoop
+    }
+}
+
+
+actor PowerBlackMagicShot
+{
+    Radius 15
+    Height 3
+    Speed 30
+
+    Projectile
+    +RIPPER
+    Damage (75)
+
+    RenderStyle Add
+    Alpha 0.9
+
+    SeeSound "jkemod/blackmagic/fire"
+    DeathSound "jkemod/blackmagic/hit"
+
+    Obituary "$JKE_MP_BLACKMAGIC_POWER_RIPPER"
+
+    Projectile
+    states
+    {
+      Spawn:
+        BLSH ABCDEFGH 3 bright
+        loop
+
+      Death:
+        BFE1 D 0 A_Explode(224, 192)
+        BFE1 DEF 6 bright
+        stop
+    }
+}
+
+actor PowerBlackMagicAltShot: FastProjectile
+{
+    Radius 5
+    Height 5
+    Speed 128
+
+    Damage (150 + random(0, 100) )
+
+    RenderStyle Add
+
+    +FORCERADIUSDMG
+
+    DeathSound "jkemod/blackmagic/explode"
+
+    Obituary "$JKE_MP_BLACKMAGIC_EXPLOSION"
+
+    States
+    {
+      Spawn:
+        FX12 AAAABBBB 1 bright A_SpawnItemEx("BlackMagicAltTrail")
+        loop
+      Death:
+        MISL B 8 bright A_Explode(256, 192, 0)
+        MISL C 6 bright
+        MISL D 4 bright
         stop
     }
 }

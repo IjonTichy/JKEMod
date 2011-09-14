@@ -1,5 +1,0 @@
-
-actor JKEShotgun: RandomSpawner replaces Shotgun
-{
-    dropitem " Hand Shotgun "
-}

@@ -69,11 +69,10 @@ Actor TinyGrenade
     -NOGRAVITY
     Gravity 0.3
 
-    +DOOMBOUNCE
-    +EXPLODEONDEATH
+    //+DOOMBOUNCE
     +DEHEXPLOSION
 
-    Scale 0.5
+    Scale 0.7
 
     DeathSound "hexenmarine/gspammerexplode"
     Decal RevenantScorch
@@ -105,7 +104,6 @@ Actor ClusterBombGrenade
     -NOGRAVITY
     Gravity 0.3
 
-    +EXPLODEONDEATH
     +DEHEXPLOSION
 
     Scale 0.5

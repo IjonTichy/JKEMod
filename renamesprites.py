@@ -1,11 +1,20 @@
 #!/usr/bin/python3
 
-import shutil, os
+import sys
+import os
+import shutil
 
-oldStart = 'HEVY'
-newStart = 'LNDR'
+assert len(sys.argv) > 2, "not enough arguments"
 
-ls = os.listdir('.')
+oldStart = sys.argv[1]
+newStart = sys.argv[2]
+
+if len(sys.argv) > 3:
+    wDir = sys.argv[3]
+else:
+    wDir = "."
+
+ls = os.listdir(wDir)
 playersprites = []
 
 for image in ls:

@@ -1,0 +1,33 @@
+actor EtherealAmmo: Ammo
+{
+    Inventory.Amount 5
+    Inventory.MaxAmount 50
+    Ammo.BackpackAmount 4
+    Ammo.BackpackMaxAmount 100
+
+    Inventory.PickupMessage "$JKE_PK_ETHEREALAMMO"
+    Inventory.Icon "MCABA0"
+
+    States
+    {
+      Spawn:
+        MCAM A 6
+        MCAM A 6 bright
+        loop
+    }
+}
+
+actor EtherealQuiver: EtherealAmmo
+{
+    Inventory.PickupMessage "$JKE_PK_ETHEREALBIG"
+    Inventory.Amount 20
+
+    States
+    {
+      Spawn:
+        MCAB AB 4
+        MCAB C  4 bright
+        MCAB B  4
+        loop
+    }
+}

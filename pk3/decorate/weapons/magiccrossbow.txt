@@ -1,0 +1,37 @@
+actor " Ethereal Crossbow ": Weapon
+{
+  Game Heretic
+  SpawnID 27
+  Weapon.SelectionOrder 800
+  Weapon.AmmoUse 1
+  Weapon.AmmoGive 10
+  Weapon.AmmoType "CrossbowAmmo"
+  Weapon.SisterWeapon "CrossbowPowered"
+  Weapon.YAdjust 15
+  Inventory.PickupMessage "$JKE_PK_ETHEREALCROSSBOW"
+
+  action native A_FireCrossbowPL1();
+
+  States
+  {
+  Spawn:
+    WBOW A -1
+    Stop
+  Ready:
+    CRBW AAAAAABBBBBBCCCCCC 1 A_WeaponReady
+    Loop
+  Deselect:
+    CRBW A 1 A_Lower
+    Loop
+  Select:
+    CRBW A 1 A_Raise
+    Loop
+  Fire:
+    CRBW D 6 A_FireCrossbowPL1
+    CRBW EFGH 3
+    CRBW AB 4
+    CRBW C 5 A_ReFire
+    Goto Ready
+  }
+}
+-

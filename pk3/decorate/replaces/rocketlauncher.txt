@@ -1,5 +1,0 @@
-
-actor JKERocketLauncher: RandomSpawner replaces RocketLauncher
-{
-    dropitem " Ballesta "
-}
