@@ -1,5 +1,5 @@
 #include "zcommon.acs"
-#library "mousecheck"
+#library "loopstuff"
 
 
 int dead[32];
@@ -78,23 +78,29 @@ script 730 (void)
         {
             terminate;
         }
-        Delay(2);
+        Delay(1);
         check += 1;
 
-        if (check % 3 == 0)
+        if (check % 10 == 0)
+        {
+            GiveInventory("HellFistCounter", 1);
+        }
+
+        if ((check % 10) == 0 && CheckInventory("PowerWeaponLevel2"))
         {
             GiveInventory("JKEMana", 1);
         }
 
-        if (check % 5 == 0)
+
+        if (check % 20 == 0 && !CheckInventory("PowerWeaponLevel2"))
         {
-            GiveInventory("FireAmmo", 1);
-            GiveInventory("HellFistCounter", 1);
+            GiveInventory("JKEMana", 1);
         }
 
-        if (check % 15 == 0)
+        if (check % 20 == 0)
         {
             check = 0;
         }
+
     }
 }

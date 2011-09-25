@@ -79,27 +79,27 @@ actor " Black Magic ": Weapon
         goto AltLoop
 
       AltLoop:
+        BLMG BBB 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
         BLMG A 0 A_GiveInventory("JKEMana", 1)
-        BLMG BB 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
+        BLMG A 0 HealThing(1)
+
+        BLMG CCC  1 bright A_JumpIfInventory("MainFired", 1, "Blast")
         BLMG A 0 A_GiveInventory("JKEMana", 1)
         BLMG A 0 A_GiveInventory("FireAmmo", 1)
-        BLMG BC 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
-        BLMG A 0 A_GiveInventory("JKEMana", 1)
-        BLMG CC 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
-        BLMG C 0 HealThing(1)
+
         BLMG C 0 A_JumpIfInventory("AltFired", 1, "AltLoop")
         goto AltEnd
 
 
       NoBlast:
+        BLMG BBB 1 bright
         BLMG A 0 A_GiveInventory("JKEMana", 1)
-        BLMG BB 1 bright
+        BLMG A 0 HealThing(1)
+
+        BLMG CCC  1 bright
         BLMG A 0 A_GiveInventory("JKEMana", 1)
         BLMG A 0 A_GiveInventory("FireAmmo", 1)
-        BLMG BC 1 bright
-        BLMG A 0 A_GiveInventory("JKEMana", 1)
-        BLMG CC 1 bright
-        BLMG C 0 HealThing(1)
+
         BLMG C 0 A_JumpIfInventory("AltFired", 1, "AltLoop")
         goto AltEnd
 
@@ -505,29 +505,31 @@ actor " Power Black Magic ": " Black Magic "
         goto AltLoop
 
       AltLoop:
-        BLMG A 0 A_GiveInventory("JKEMana", 2)
-        BLMG BB 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
-        BLMG A 0 A_GiveInventory("JKEMana", 2)
-        BLMG A 0 A_GiveInventory("FireAmmo", 2)
-        BLMG C 0 HealThing(1)
-        BLMG BC 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
-        BLMG A 0 A_GiveInventory("JKEMana", 2)
-        BLMG CC 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
-        BLMG C 0 HealThing(1)
+        BLMG BBB 1 bright A_JumpIfInventory("MainFired", 1, "Blast")
+        BLMG A 0 A_GiveInventory("JKEMana", 3)
+        BLMG A 0 A_GiveInventory("FireAmmo", 1)
+        BLMG A 0 HealThing(1)
+
+        BLMG CCC  1 bright A_JumpIfInventory("MainFired", 1, "Blast")
+        BLMG A 0 A_GiveInventory("JKEMana", 3)
+        BLMG A 0 A_GiveInventory("FireAmmo", 1)
+        BLMG A 0 HealThing(1)
+
         BLMG C 0 A_JumpIfInventory("AltFired", 1, "AltLoop")
         goto AltEnd
 
 
       NoBlast:
-        BLMG A 0 A_GiveInventory("JKEMana", 2)
-        BLMG BB 1 bright
-        BLMG A 0 A_GiveInventory("JKEMana", 2)
-        BLMG A 0 A_GiveInventory("FireAmmo", 2)
-        BLMG C 0 HealThing(1)
-        BLMG BC 1 bright
-        BLMG A 0 A_GiveInventory("JKEMana", 2)
-        BLMG CC 1 bright
-        BLMG C 0 HealThing(1)
+        BLMG BBB 1 bright
+        BLMG A 0 A_GiveInventory("JKEMana", 3)
+        BLMG A 0 A_GiveInventory("FireAmmo", 1)
+        BLMG A 0 HealThing(1)
+
+        BLMG CCC  1 bright
+        BLMG A 0 A_GiveInventory("JKEMana", 3)
+        BLMG A 0 A_GiveInventory("FireAmmo", 1)
+        BLMG A 0 HealThing(1)
+
         BLMG C 0 A_JumpIfInventory("AltFired", 1, "AltLoop")
         goto AltEnd
 

@@ -23,17 +23,15 @@ script 683 (int slot, int dropped)
     int found;
     int ret;
     int wep;
-    int ammo1; int ammo2; int ammo3;
+    int ammo1; int ammo2;
 
-    int oAmo1; int oAmo2; int oAmo3;
-    int cAmo1; int cAmo2; int cAmo3;
-    int dAmo1; int dAmo2; int dAmo3;
+    int oAmo1; int oAmo2;
+    int cAmo1; int cAmo2;
+    int dAmo1; int dAmo2;
+    int sAmo1; int sAmo2;
+    int oMax1; int oMax2;
 
-    int sAmo1; int sAmo2; int sAmo3;
-
-    int oMax1; int oMax2; int oMax3;
-
-    int check1; int check2; int check3; int check4; int check5;
+    int check1; int check2; int check3; int check4;
     int x; int y; int z;
     int i;
 
@@ -51,6 +49,12 @@ script 683 (int slot, int dropped)
         ret |= NOCLASS;
     }
 
+    if (classWeps[found][slot][0] == "None")
+    {
+        SetResultValue(ret);
+        terminate;
+    }
+
     /*if (found & MULTIPLECLASSES)
     {
         Print(s:"something broke - classes ", d:found, s:" and ", d:i, " found");
@@ -58,13 +62,12 @@ script 683 (int slot, int dropped)
     }*/
     if (ret & NOCLASS)
     {
-        Print(s:"something broke - no classes found");
+        Print(s:"something broke - no classes found\nReport the weapon you picked up and the class you're using to Ijon Tichy (gztichy@lavabit.com)");
         terminate;
     }
 
     ammo1 = classWeps[found][slot][WEPCOUNT+1];
     ammo2 = classWeps[found][slot][WEPCOUNT+2];
-    ammo3 = classWeps[found][slot][WEPCOUNT+3];
 
     if (dropped)
     {
@@ -91,18 +94,6 @@ script 683 (int slot, int dropped)
                 sAmo2 = 2;
             }
         }
-
-        if (ammo3 != "None")
-        {
-            oMax3 = GetAmmoCapacity(ammo3);
-            oAmo3 = CheckInventory(ammo3);
-            SetAmmoCapacity(ammo3, oMax3*4);
-
-            if (oAmo3 == oMax3)
-            {
-                sAmo3 = 3;
-            }
-        }
     }
 
     for (i = 0; i < WEPCOUNT; i++)
@@ -125,9 +116,6 @@ script 683 (int slot, int dropped)
         { check4 = 0; }
         else { check4 = CheckInventory(ammo2) < GetAmmoCapacity(ammo2); }
 
-        if (ammo3 == "None" || sAmo3)
-        { check5 = 0; }
-        else { check5 = CheckInventory(ammo3) < GetAmmoCapacity(ammo3); }
 
         if (!check1)
         {
@@ -136,7 +124,7 @@ script 683 (int slot, int dropped)
         }
         else if (!check2 || dropped)
         {
-            if (check3 || check4 || check5)
+            if (check3 || check4)
             {
                 GiveInventory(wep, 1);
                 ret |= GAVEWEAPON;
@@ -148,7 +136,7 @@ script 683 (int slot, int dropped)
 
     if (ret & check1 == check1)
     {
-        wep = classWeps[found][slot][2];
+        wep = classWeps[found][slot][WEPCOUNT];
 
         x = GetActorX(0);
         y = GetActorY(0);
@@ -184,20 +172,6 @@ script 683 (int slot, int dropped)
             if (cAmo2 > oMax2)
             {
                 TakeInventory(ammo2, cAmo2 - oMax2);
-            }
-        }
-
-        if (ammo3 != "None")
-        {
-            cAmo3 = CheckInventory(ammo3);
-            dAmo3 = cAmo3 - oAmo3;
-            TakeInventory(ammo3, dAmo3 / 2);
-            SetAmmoCapacity(ammo3, oMax3);
-            cAmo1 = CheckInventory(ammo1);
-
-            if (cAmo3 > oMax3)
-            {
-                TakeInventory(ammo3, cAmo3 - oMax3);
             }
         }
     }

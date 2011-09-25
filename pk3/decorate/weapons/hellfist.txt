@@ -13,6 +13,8 @@ actor " Hellfist ": Weapon
 
     Weapon.SelectionOrder 1600
 
+    Weapon.SisterWeapon " Power Hellfist "
+
     +INVENTORY.UNDROPPABLE
 
     Inventory.PickupMessage "$JKE_PK_HELLFIST"
@@ -63,6 +65,9 @@ actor " Power Hellfist ": Weapon
     Weapon.SelectionOrder 1600
 
     +INVENTORY.UNDROPPABLE
+
+    Weapon.SisterWeapon " Hellfist "
+    +POWERED_UP
 
     Inventory.PickupMessage "$JKE_PK_HELLFIST"
     Obituary "$JKE_MP_HELLFIST_POWER_MELEE"

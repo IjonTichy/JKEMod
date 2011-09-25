@@ -13,6 +13,7 @@ actor JKERocketAmmo: CustomInventory replaces RocketAmmo
         TNT1 A 0 A_GiveInventory("ExplosiveAmmo", 1)
         TNT1 A 0 A_GiveInventory("BallestaAmmo", 3)
         TNT1 A 0 A_GiveInventory("DevastatorAmmo", 5)
+        TNT1 A 0 A_GiveInventory("FireAmmo", 10)
         TNT1 A 0 A_Jump(12, "Gravity")
         stop
 
@@ -28,6 +29,26 @@ actor JKEPhoenixRodAmmo: JKERocketAmmo replaces PhoenixRodAmmo
     {
       Spawn:
         AMP1 ABC 4
+        loop
+    }
+}
+
+actor JKEMiniMissiles: JKERocketAmmo replaces MiniMissiles
+{
+    States
+    {
+      Spawn:
+        MSSL A -1
+        loop
+    }
+}
+
+actor JKEHEGrenadeRounds: JKERocketAmmo replaces HEGrenadeRounds
+{
+    States
+    {
+      Spawn:
+        GRN1 A -1
         loop
     }
 }

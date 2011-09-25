@@ -13,9 +13,19 @@ actor LeandroClass3Message: JKEClassMessage
     Inventory.PickupMessage "$JKE_PK_LEANDRO_CLASS3"
 }
 
+actor LeandroClass3Message2: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_LEANDRO_CLASS3_2"
+}
+
 actor LeandroClass4Message: JKEClassMessage
 {
     Inventory.PickupMessage "$JKE_PK_LEANDRO_CLASS4"
+}
+
+actor LeandroClass4Message2: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_LEANDRO_CLASS4_2"
 }
 
 actor LeandroClass5Message: JKEClassMessage

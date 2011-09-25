@@ -5,6 +5,7 @@
 #include "decorate/ammo/etherealammo.txt"
 #include "decorate/ammo/explosiveammo.txt"
 #include "decorate/ammo/fireammo.txt"
+#include "decorate/ammo/flameammo.txt"
 #include "decorate/ammo/gravityammo.txt"
 #include "decorate/ammo/jkegas.txt"
 #include "decorate/ammo/jkemana.txt"

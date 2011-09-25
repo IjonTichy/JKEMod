@@ -2,7 +2,7 @@ actor EtherealAmmo: Ammo
 {
     Inventory.Amount 5
     Inventory.MaxAmount 50
-    Ammo.BackpackAmount 4
+    Ammo.BackpackAmount 5
     Ammo.BackpackMaxAmount 100
 
     Inventory.PickupMessage "$JKE_PK_ETHEREALAMMO"
@@ -20,7 +20,7 @@ actor EtherealAmmo: Ammo
 actor EtherealQuiver: EtherealAmmo
 {
     Inventory.PickupMessage "$JKE_PK_ETHEREALBIG"
-    Inventory.Amount 20
+    Inventory.Amount 25
 
     States
     {

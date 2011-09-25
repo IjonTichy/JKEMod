@@ -1,0 +1,41 @@
+actor AmmoIndicator: PowerProtection
+{
+    Powerup.Duration -46
+    DamageFactor "Normal", 1.0
+}
+
+actor AmmosphereLock: Inventory
+{
+    +UNDROPPABLE
+}
+
+
+actor AmmoSphere: CustomInventory replaces Blursphere
+{
+    +ALWAYSPICKUP
+    +FANCYPICKUPSOUND
+
+    Inventory.PickupMessage "$BDW_PK_AMMOSPHERE"
+    Inventory.PickupSound "misc/p_pkup"
+
+    States
+    {
+      Spawn:
+        AMSP A 8 bright
+        AMSP B 6 bright
+        AMSP C 4 bright
+        AMSP D 2 bright
+        AMSP ABCDABCDABCDABCD 1 bright
+        AMSP A 2 bright
+        AMSP B 4 bright
+        AMSP C 6 bright
+        AMSP D 8 bright
+        loop
+
+      Pickup:
+        TNT1 A 0 A_GiveInventory("AmmoIndicator")
+        TNT1 A 0 ACS_ExecuteAlways(648, 0, 0,0,0)
+        TNT1 A 0 ACS_ExecuteAlways(649, 0, 1,0,0)  // see powerfade.c
+        stop
+    }
+}

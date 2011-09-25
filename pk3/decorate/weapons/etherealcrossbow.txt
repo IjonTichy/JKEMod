@@ -4,7 +4,7 @@ actor " Ethereal Crossbow ": Weapon
     Weapon.AmmoType2 "EtherealAmmo"
     Weapon.AmmoUse1 1
     Weapon.AmmoUse2 2
-    Weapon.AmmoGive1 5
+    Weapon.AmmoGive1 10
 
     Weapon.SisterWeapon " Power Ethereal Crossbow "
 
@@ -66,7 +66,7 @@ actor EtherealCrossbowShot
     Speed 40
 
     Projectile
-    Damage (17+random(0,6))
+    Damage (30+random(0,12))
 
     RenderStyle Add
 
@@ -81,7 +81,7 @@ actor EtherealCrossbowShot
         loop
 
       Death:
-        MCBS H 0 A_Explode(32, 96, 0)
+        MCBS H 0
         MCBS HIJ 8 bright
         stop
     }
@@ -105,7 +105,7 @@ actor EtherealCrossbowTrail
 actor EtherealCrossbowShotSide1: EtherealCrossbowShot
 {
     Speed 35
-    Damage (7+random(0,6))
+    Damage (15+random(0,10))
 
     +WINDTHRUST
 
@@ -124,7 +124,7 @@ actor EtherealCrossbowShotSide1: EtherealCrossbowShot
 actor EtherealCrossbowShotSide2: EtherealCrossbowShotSide1
 {
     Scale 0.7
-    Damage (3+random(0,4))
+    Damage (10+random(0,7))
 
     States
     {
@@ -160,7 +160,7 @@ actor EtherealCrossbowAltShot
 
       Death:
         MCBS H 0 A_Stop
-        MCBS H 0 A_Explode(32, 96, 0)
+        MCBS H 0 A_Explode(40, 96, 0)
         MCBS HIJ 8 bright
         stop
     }
@@ -289,6 +289,7 @@ actor PowerEtherealCrossbowShotSide1: EtherealCrossbowShot
     Damage (12+random(0,6))
 
     +WINDTHRUST
+    +FORCERADIUSDMG
 
     States
     {
@@ -308,6 +309,7 @@ actor PowerEtherealCrossbowShotSide2: EtherealCrossbowShotSide1
 {
     Scale 0.7
     Damage (6+random(0,4))
+    +FORCERADIUSDMG
 
     States
     {
@@ -333,6 +335,7 @@ actor PowerEtherealCrossbowAltShot
     Damage (17+random(0,6))
 
     RenderStyle Add
+    +FORCERADIUSDMG
 
     DeathSound "jkemod/etherealcrossbow/hit"
     Obituary "$JKE_MP_ETHEREALCROSSBOW_POWER_A"

@@ -1,10 +1,10 @@
 
 Actor FireAmmo: Ammo
 {
-    Inventory.Amount 100
-    Inventory.MaxAmount 800
-    Ammo.BackpackAmount 500
-    Ammo.BackpackMaxAmount 1600
+    Inventory.Amount 50
+    Inventory.MaxAmount 400
+    Ammo.BackpackAmount 50
+    Ammo.BackpackMaxAmount 800
     Inventory.Icon "FMISA5"
     Inventory.PickupMessage "$JKE_PK_FIREAMMO"
     States

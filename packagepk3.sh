@@ -24,7 +24,7 @@ function makepk3
     then
         ACCDIR="."
     else
-        ACCDIR="${HOME}/.bin"
+        ACCDIR="${HOME}/bin"
     fi
 
     cd $BASEDIR

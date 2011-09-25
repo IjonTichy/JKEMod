@@ -85,7 +85,6 @@ addslotdefault 5 " J-Rocket Launcher "
 
 addslotdefault 6 " Disintegrator "
 addslotdefault 6 " Dual Plasma Rifles "
-addslotdefault 6 " Fire Gloves "
 addslotdefault 6 " Freezethrower "
 addslotdefault 6 " Flamethrower "
 addslotdefault 6 " Karasawa "
@@ -95,6 +94,7 @@ addslotdefault 6 " L-Plasma Driver "
 addslotdefault 6 " B-Plasma Rifle "
 addslotdefault 6 " J-Plasma Rifle "
 addslotdefault 6 " Volt Gun "
+addslotdefault 6 " Wand of Flames "
 
 
 ////
@@ -104,6 +104,7 @@ addslotdefault 6 " Volt Gun "
 addslotdefault 7 " B-BFG9000 "
 addslotdefault 7 " Devastator Weapon "
 addslotdefault 7 " Explosion-Fu "
+addslotdefault 7 " Fire Gloves "
 addslotdefault 7 " Molecule Shooter "
 addslotdefault 7 " Protoss-Ploder "
 addslotdefault 7 " Pyro Cannon "
@@ -120,6 +121,7 @@ addslotdefault 8 " D-1000 "
 addslotdefault 8 " S-Ionstrike "
 addslotdefault 8 " Ghetto Blaster "
 addslotdefault 8 " Powerful "
+addslotdefault 8 " Skeleton Orb "
 addslotdefault 8 " Super Shotnuke "
 
 ////

@@ -24,3 +24,13 @@ actor JKECrossbowHefty: JKEShellBox replaces CrossbowHefty
         loop
     }
 }
+
+actor JKEPoisonBolts: JKEShellBox replaces PoisonBolts
+{
+    States
+    {
+      Spawn:
+        PQRL A -1
+        loop
+    }
+}

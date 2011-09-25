@@ -27,7 +27,6 @@ actor JKEPlayer: PlayerPawn
 
     Player.StartItem "Clip",  50
 
-
     States
     {
       Spawn:

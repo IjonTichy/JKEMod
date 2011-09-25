@@ -1,0 +1,470 @@
+actor " Wand of Flames ": Weapon
+{
+    Weapon.AmmoType  "FlameAmmo"
+    Weapon.AmmoType2 "FlameAmmo"
+    Weapon.AmmoUse 2
+    Weapon.AmmoUse2 1
+    Weapon.AmmoGive 40
+
+    Weapon.SisterWeapon " Power Wand of Flames "
+
+    Inventory.PickupMessage "$JKE_PK_WANDOFFLAMES"
+
+    States
+    {
+      Select:
+        WEMB B 1 A_Raise
+        Loop
+
+      Deselect:
+        WEMB B 0 A_StopSoundEx("Weapon")
+        WEMB B 1 A_Lower
+        Loop
+
+      Ready:
+        WEMB B 1 A_WeaponReady
+        Loop
+
+      Fire:
+        WEMB C 0 A_PlaySound("jkemod/wandofflames/open", 6)
+        WEMB E 2 Bright
+
+      Hold:
+        WEMB E 0 A_PlaySound("jkemod/wandofflames/fire", CHAN_WEAPON)
+        WEMB F 0 A_FireCustomMissile("WOFShot1", 0, 1)
+        WEMB FG 2 Bright
+        WEMB F 0 A_ReFire
+        WEMB D 6
+        WEMB C 5
+        WEMB B 6
+        Goto Ready
+
+      AltFire:
+        WEMB C 0 A_PlaySound("jkemod/wandofflames/open", 6)
+        WEMB E 2 Bright
+        goto AltHold
+
+      AltHold:
+        WEMB E 0 A_PlaySoundEx("jkemod/wandofflames/altfire", "Weapon", 1)
+        goto AltHoldFire
+
+      AltHoldFire:
+        TNT1 A 0 A_Jump(255, 1, 2, 3)
+
+        WEMB F 0 A_FireCustomMissile("WOFFire1", random(-3, 3), 1)
+        goto AltHoldSecond
+
+        WEMB F 0 A_FireCustomMissile("WOFFire2", random(-3, 3), 1)
+        goto AltHoldSecond
+
+        WEMB F 0 A_FireCustomMissile("WOFFire3", random(-3, 3), 1)
+        goto AltHoldSecond
+
+      AltHoldSecond:
+        WEMB A 0 A_Jump(32, "AltHold1")
+        goto AltHold2
+
+      AltHold1:
+        WEMB F 1 bright
+        goto AltHoldEnd
+
+      AltHold2:
+        WEMB G 1 bright
+        goto AltHoldEnd
+
+      AltHoldEnd:
+        WEMB F 0 A_ReFire
+        WEMB D 6
+        WEMB C 5
+        WEMB C 0 A_StopSoundEx("Weapon")
+        WEMB B 6
+        Goto Ready
+
+      Spawn:
+        WEMB A -1
+        Loop
+
+    }
+}
+
+actor " Power Wand of Flames ": " Wand of Flames "
+{
+    Weapon.AmmoUse1 8
+    Weapon.AmmoUse2 1
+    Weapon.AmmoGive 0
+
+    Weapon.SisterWeapon " Wand of Flames "
+    +POWERED_UP
+
+    Obituary "$JKE_MP_WANDOFFLAMES_POWER"
+
+    States
+    {
+      Select:
+        WEMB B 1 A_Raise
+        Loop
+
+      Deselect:
+        WEMB B 0 A_StopSoundEx("Weapon")
+        WEMB B 1 A_Lower
+        Loop
+
+      Ready:
+        WEMB B 1 A_WeaponReady
+        Loop
+
+      Fire:
+        WEMB C 0 A_PlaySound("jkemod/wandofflames/open", 6)
+        WEMB E 2 Bright
+
+      Hold:
+        WEMB E 0 A_PlaySound("jkemod/wandofflames/fire", CHAN_WEAPON)
+        WEMB F 0 A_FireCustomMissile("PowerWOFShot1", 0, 1)
+        WEMB F 0 A_FireCustomMissile("PowerWOFShot2", random(10, -10)/10.0, 0, 0, 0, 0, random(10,-10)/10.0)
+        WEMB F 0 A_FireCustomMissile("PowerWOFShot3", random(30, -30)/10.0, 0, 0, 0, 0, random(30,-30)/10.0)
+        WEMB FG 4 Bright
+        WEMB F 0 A_ReFire
+        WEMB D 6
+        WEMB C 5
+        WEMB B 6
+        Goto Ready
+
+      AltFire:
+        WEMB C 0 A_PlaySound("jkemod/wandofflames/open", 6)
+        WEMB E 2 Bright
+        goto AltHold
+
+      AltHold:
+        WEMB E 0 A_PlaySoundEx("jkemod/wandofflames/altfire", "Weapon", 1)
+        goto AltHoldFire
+
+      AltHoldFire:
+        TNT1 A 0 A_Jump(255, 1, 2, 3)
+
+        WEMB F 0 A_FireCustomMissile("PowerWOFFire1", random(-7, 7), 1)
+        goto AltHoldSecond
+
+        WEMB F 0 A_FireCustomMissile("PowerWOFFire2", random(-7, 7), 1)
+        goto AltHoldSecond
+
+        WEMB F 0 A_FireCustomMissile("PowerWOFFire3", random(-7, 7), 1)
+        goto AltHoldSecond
+
+      AltHoldSecond:
+        TNT1 A 0 A_Jump(255, 1, 2, 3)
+
+        WEMB F 0 A_FireCustomMissile("PowerWOFFire1", random(-7, 7), 1)
+        goto AltHoldThird
+
+        WEMB F 0 A_FireCustomMissile("PowerWOFFire2", random(-7, 7), 1)
+        goto AltHoldThird
+
+        WEMB F 0 A_FireCustomMissile("PowerWOFFire3", random(-7, 7), 1)
+        goto AltHoldThird
+
+      AltHoldThird:
+        WEMB A 0 A_Jump(32, "AltHold1")
+        goto AltHold2
+
+      AltHold1:
+        WEMB F 1 bright
+        goto AltHoldEnd
+
+      AltHold2:
+        WEMB G 1 bright
+        goto AltHoldEnd
+
+      AltHoldEnd:
+        WEMB F 0 A_ReFire
+        WEMB D 6
+        WEMB C 5
+        WEMB C 0 A_StopSoundEx("Weapon")
+        WEMB B 6
+        Goto Ready
+
+      Spawn:
+        WEMB A -1
+        Loop
+    }
+}
+
+actor WOFShotBase
+{
+    Radius 4
+    Height 4
+
+    Projectile
+    -BLOODSPLATTER
+    +BLOODLESSIMPACT
+
+    DamageType Fire
+
+    RenderStyle Add
+    Alpha 0.75
+    Scale 0.75
+
+    DeathSound "jkemod/wandofflames/explode"
+    Obituary "$JKE_MP_WANDOFFLAMES_FIREBALL"
+
+    states
+    {
+      Spawn:
+        WEMP AABBB 1 bright A_SpawnItemEx("WOFTrail")
+        loop
+      Death:
+        WEMP A 0 A_Explode(32, 96, 0)
+        WEMP A 0 A_SpawnItemEx("WOFFlame")
+        FREX ABC 3 bright
+        stop
+    }
+
+}
+
+actor WOFShot1: WOFShotBase
+{
+    Speed 60
+    Damage (2*random(3, 5))
+}
+
+actor WOFShot2: WOFShotBase
+{
+    Speed 56
+    Damage (2*random(2, 4))
+}
+
+actor WOFShot3: WOFShotBase
+{
+    Speed 52
+    Damage (random(3, 5))
+}
+
+actor WOFTrail
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+    RenderStyle Add
+    Alpha 0.5
+
+    States
+    {
+      Spawn:
+        TNT1 A 2
+        WEMP HIJ 3 Bright
+        Stop
+    }
+}
+
+actor WOFFlame
+{
+    Radius 4
+    Height 4
+
+    Projectile
+    +BLOODLESSIMPACT
+    +PUFFGETSOWNER
+    +NODAMAGETHRUST
+    +RIPPER
+
+    DamageType Fire
+
+    RenderStyle Add
+    Alpha 0.75
+    Scale 0.75
+
+    Obituary "$JKE_MP_WANDOFFLAMES_FIREBALL"
+
+    states
+    {
+      Spawn:
+        WEMF ABCDEFGHIJKLMNOP 3 bright A_Explode(1, 24, 0)
+        stop
+    }
+
+}
+
+
+
+actor PowerWOFShotBase
+{
+    Radius 4
+    Height 4
+
+    Projectile
+    -BLOODSPLATTER
+    +BLOODLESSIMPACT
+    +FORCERADIUSDMG
+
+    DamageType Fire
+
+    RenderStyle Add
+    Alpha 0.75
+    Scale 0.75
+
+    DeathSound "jkemod/wandofflames/explode"
+    Obituary "$JKE_MP_WANDOFFLAMES_P_FIREBALL"
+
+    states
+    {
+      Spawn:
+        WEMP AABBB 1 bright A_SpawnItemEx("WOFTrail")
+        loop
+      Death:
+        WEMP A 0 A_Explode(64, 96, 0)
+        WEMP A 0 A_SpawnItemEx("PowerWOFFlame")
+        FREX ABC 3 bright
+        stop
+    }
+}
+
+actor PowerWOFShot1: PowerWOFShotBase
+{
+    Speed 60
+    Damage (4*random(3, 5))
+}
+
+actor PowerWOFShot2: PowerWOFShotBase
+{
+    Speed 56
+    Damage (4*random(2, 4))
+}
+
+actor PowerWOFShot3: PowerWOFShotBase
+{
+    Speed 52
+    Damage (3*random(3, 5))
+}
+
+actor PowerWOFFlame
+{
+    Radius 4
+    Height 4
+
+    Projectile
+    +BLOODLESSIMPACT
+    +PUFFGETSOWNER
+    +NODAMAGETHRUST
+    +FORCERADIUSDMG
+    +RIPPER
+
+    DamageType Fire
+
+    RenderStyle Add
+    Alpha 0.75
+    Scale 0.75
+
+    Obituary "$JKE_MP_WANDOFFLAMES_P_FIREBALL"
+
+    states
+    {
+      Spawn:
+        WEMF ABCDEFGHIJKLMNOP 3 bright A_Explode(3, 24, 0)
+        stop
+    }
+
+}
+
+
+actor WOFFireBase
+{
+    Radius 16
+    Height 16
+    Speed 30
+
+    Projectile
+    -BLOODSPLATTER
+    +BLOODLESSIMPACT
+    +RIPPER
+
+    Damage (5)
+    DamageType Fire
+
+    RenderStyle Add
+    Alpha 0.75
+    Scale 0.75
+
+    Obituary "$JKE_MP_WANDOFFLAMES_FIRE"
+
+    states
+    {
+      Spawn:
+        WEM2 AB 2 bright
+        WEM2 A 0 ThrustThingZ(0, 4, 0, 1)
+        WEM2 A 0 A_Countdown
+        loop
+
+      Death:
+        WEMP A 0 A_Jump(224, 2)
+        WEMP A 0 A_SpawnItemEx("WOFFlame")
+        WEM2 CDE 4 bright
+        stop
+    }
+}
+
+actor WOFFire1: WOFFireBase
+{
+    ReactionTime 9
+}
+
+actor WOFFire2: WOFFireBase
+{
+    ReactionTime 8
+}
+
+actor WOFFire3: WOFFireBase
+{
+    ReactionTime 7
+}
+
+
+actor PowerWOFFireBase
+{
+    Radius 16
+    Height 16
+    Speed 30
+
+    Projectile
+    -BLOODSPLATTER
+    +BLOODLESSIMPACT
+    +NODAMAGETHRUST
+    +FORCERADIUSDMG
+    +RIPPER
+
+    Damage (5)
+    DamageType Fire
+
+    RenderStyle Add
+    Alpha 0.75
+    Scale 0.75
+
+    Obituary "$JKE_MP_WANDOFFLAMES_P_FIRE"
+
+    states
+    {
+      Spawn:
+        WEM2 AABB 1 bright A_Explode(4, 32, 0)
+        WEM2 A 0 ThrustThingZ(0, 4, 0, 1)
+        WEM2 A 0 A_Countdown
+        loop
+
+      Death:
+        WEMP A 0 A_Jump(224, 2)
+        WEMP A 0 A_SpawnItemEx("WOFFlame")
+        WEM2 CDE 4 bright
+        stop
+    }
+}
+
+actor PowerWOFFire1: PowerWOFFireBase
+{
+    ReactionTime 9
+}
+
+actor PowerWOFFire2: PowerWOFFireBase
+{
+    ReactionTime 8
+}
+
+actor PowerWOFFire3: PowerWOFFireBase
+{
+    ReactionTime 7
+}
