@@ -31,13 +31,13 @@ actor " Tri-Staff ": Weapon
         ST3F B 0 A_Light1
 
         ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_WEAPON)
-        ST3F B 3 bright A_RailAttack(10, -7, 1, none, "00 FF 00", 1, 0)
+        ST3F B 3 bright A_RailAttack(15, -7, 1, none, "00 FF 00", 1, 0)
 
         ST3F C 0 A_PlaySound("jkemod/tristaff/fire", CHAN_WEAPON)
-        ST3F C 3 bright A_RailAttack(10,  0, 1, none, "00 00 FF", 1, 0)
+        ST3F C 3 bright A_RailAttack(15,  0, 1, none, "00 00 FF", 1, 0)
 
         ST3F C 0 A_PlaySound("jkemod/tristaff/fire", CHAN_WEAPON)
-        ST3F D 3 bright A_RailAttack(10,  7, 1, none, "FF 00 00", 1, 0)
+        ST3F D 3 bright A_RailAttack(15,  7, 1, none, "FF 00 00", 1, 0)
 
         ST3F A 4 A_Light0
         Goto Ready
@@ -48,9 +48,9 @@ actor " Tri-Staff ": Weapon
         ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_WEAPON)
         ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_BODY)
         ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_AUTO)
-        ST3F B 0 A_RailAttack(10, -7, 1, none, "00 FF 00", 1, 0)
-        ST3F B 0 A_RailAttack(10,  0, 1, none, "00 00 FF", 1, 0)
-        ST3F E 8 bright offset(0, 40) A_RailAttack(10,  7, 1, none, "FF 00 00", 1, 0)
+        ST3F B 0 A_RailAttack(15, -7, 1, none, "00 FF 00", 1, 0)
+        ST3F B 0 A_RailAttack(15,  0, 1, none, "00 00 FF", 1, 0)
+        ST3F E 8 bright offset(0, 40) A_RailAttack(15,  7, 1, none, "FF 00 00", 1, 0)
         ST3F E 3 bright offset(0, 38)
         ST3F A 3 bright offset(0, 34) A_Light0
         goto Ready
@@ -96,13 +96,13 @@ actor " Power Tri-Staff ": Weapon
         ST3F B 0 A_Light1
 
         ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_WEAPON)
-        ST3F B 3 bright A_RailAttack(25, -7, 1, none, "00 FF 00", 1, 0)
+        ST3F B 3 bright A_RailAttack(30, -7, 1, none, "00 FF 00", 1, 0)
 
         ST3F C 0 A_PlaySound("jkemod/tristaff/fire", CHAN_WEAPON)
-        ST3F C 3 bright A_RailAttack(25,  0, 1, none, "00 00 FF", 1, 0)
+        ST3F C 3 bright A_RailAttack(30,  0, 1, none, "00 00 FF", 1, 0)
 
         ST3F C 0 A_PlaySound("jkemod/tristaff/fire", CHAN_WEAPON)
-        ST3F D 3 bright A_RailAttack(25,  7, 1, none, "FF 00 00", 1, 0)
+        ST3F D 3 bright A_RailAttack(30,  7, 1, none, "FF 00 00", 1, 0)
 
         ST3F A 0 A_Light0
         Goto Ready
@@ -113,9 +113,9 @@ actor " Power Tri-Staff ": Weapon
         ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_WEAPON)
         ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_BODY)
         ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_AUTO)
-        ST3F B 0 A_RailAttack(25, -7, 1, none, "00 FF 00", 1, 0)
-        ST3F B 0 A_RailAttack(25,  0, 1, none, "00 00 FF", 1, 0)
-        ST3F B 0 A_RailAttack(25,  7, 1, none, "FF 00 00", 1, 0)
+        ST3F B 0 A_RailAttack(30, -7, 1, none, "00 FF 00", 1, 0)
+        ST3F B 0 A_RailAttack(30,  0, 1, none, "00 00 FF", 1, 0)
+        ST3F B 0 A_RailAttack(30,  7, 1, none, "FF 00 00", 1, 0)
         ST3F E 6 bright offset(0, 40)
         ST3F E 2 bright offset(0, 38)
         ST3F A 2 bright offset(0, 34) A_Light0

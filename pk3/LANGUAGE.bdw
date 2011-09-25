@@ -9,8 +9,6 @@ BDW_PK_ROCKETLAUNCHER       = "\cbROCKET LAUNCHER FOUND. COMMENCE FLYING.\c-";
 BDW_PK_PLASMARIFLE          = "You got the plasma rifle!";
 BDW_PK_BFG9000              = "... and my gun is very, very large.";
 
-BDW_PK_POWERSPHERE          = "The fires of Hell course through your veins...";
-
 BDW_MP_FISTS                = "%k pummeled %o.";
 BDW_MP_FISTS_POWER          = "%k broke %o.";
 BDW_MP_CHAINSAW             = "%k sacrificed %o to Khorne.";

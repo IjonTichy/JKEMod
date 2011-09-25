@@ -64,6 +64,11 @@ JKE_PK_SORCERER_CLASS8          = "This must be the powersphere's skull's arm.";
 //
 // PK means "pickup"
 
+// Items
+JKE_PK_POWERSPHERE              = "The fires of Hell course through your veins...";
+JKE_PK_AMMOSPHERE               = "Restocking feels less necessary.";
+JKE_PK_SUPERAMMOSPHERE          = "Restocking seems unnecessary now.";
+
 // Replacements
 JKE_PK_JKESHELL                 = "You picked up shellstuff.";
 JKE_PK_JKESHELLBOX              = "You picked up a bunch of shellstuff.";

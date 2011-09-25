@@ -71,6 +71,70 @@ script 648 (int mode)
         }
         TakeInventory("AmmosphereLock", 1);
         break;
+
+    case 1:
+        if (CheckInventory("AmmosphereLock2"))
+        {
+            break;
+        }
+
+        GiveInventory("AmmosphereLock2", 1);
+
+        while (1)
+        {
+            check += 1;
+            delay(6);
+
+            if (!CheckInventory("AmmoIndicator2"))
+            {
+                break;
+            }
+
+
+            GiveInventory("Clip", 1);
+            GiveInventory("Cell", 1);
+
+            GiveInventory("BerettaAmmo", 1);
+            GiveInventory("M249Ammo", 1);
+            GiveInventory("MinigunAmmo", 1);
+
+
+            GiveInventory("JKEMana", 1);
+            GiveInventory("FlameAmmo", 1);
+
+            if (check % 2 == 0)
+            {
+                GiveInventory("FireAmmo", 1);
+                GiveInventory("BallestaAmmo", 1);
+                GiveInventory("DevastatorAmmo", 1);
+
+                GiveInventory("JKEGas", 1);
+            }
+
+            if (check % 6 == 0)
+            {
+                GiveInventory("Shell", 1);
+                GiveInventory("EtherealAmmo", 1);
+
+                GiveInventory("RocketAmmo", 1);
+                GiveInventory("ExplosiveAmmo", 1);
+
+                GiveInventory("BeamAmmo", 1);
+                GiveInventory("JSniperAmmo", 1);
+            }
+
+            if (check % 35 == 0)
+            {
+                GiveInventory("MedikitAmmo", 1);
+            }
+
+            if (check % 210 == 0)
+            {
+                check = 0;
+            }
+        }
+        TakeInventory("AmmosphereLock2", 1);
+        break;
     }
 }
 

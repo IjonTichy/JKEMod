@@ -24,7 +24,7 @@ actor PowerSphere: CustomInventory replaces Doomsphere
     +ALWAYSPICKUP
     +FANCYPICKUPSOUND
 
-    Inventory.PickupMessage "$BDW_PK_POWERSPHERE"
+    Inventory.PickupMessage "$JKE_PK_POWERSPHERE"
     Inventory.PickupSound "misc/p_pkup"
 
     States
