@@ -1,0 +1,37 @@
+=== JKEMod2: _The Sorcerer Update_ ===
+
+Yes, I actually made a release of JKEMod2! Amazing, isn't it.
+So what's new?
+
+ * New weapon system! Now, instead of starting with all your non-BFG weapons, you will start with your class' fist/chainsaw and pistol weapon. You now have to find your weapons again - they look like the normal pickups, but when you run over them, you get your own class' weapon. For example, if the Doomguy runs over a chaingun, he'll get the B-Chaingun, but if the JKEGuy runs over the chaingun, he'll get the J-Uzi. In other words, maps actually play the way they're supposed to again... to an extent.
+ * The sorcerer has gotten a major revamp! In addition to being applied to the above weapon system, he also got three new weapons, powered-up versions to all his weapons, and the old ones were tweaked. For the sake of everyone too lazy to open up the old sorcerer, here's the weapons:
+ *** The Hellfist
+ ** It's your generic melee weapon, except that primary fire throws weak acid balls. Secondary fire is your generic punch.
+ ** Powered mode: Stronger punches and fireballs.
+ *** Sapphire Wand
+ ** If you've used the Sapphire Wand from Hexen, the idea is similar. Primary fire fires rails at a medium speed, while alt-fire fires a 3-burst of rails with a longer recharge rate.
+ ** Powered mode: He fires faster, and the rails do more damage. Pretty standard fare.
+ *** Ethereal Crossbow
+ ** Primary fire of this thing is very much like the one from Heretic, while alt-fire will fire a swath of projectiles that don't go very far before exploding.
+ ** Powered mode: Both fire modes have more projectiles that do more damage with them. Also, particle effects come out of nowhere, and bosses can't resist the explosions.
+ *** Tri-Staff
+ ** It's like the Sapphire Wand, except you get three of them. Primary fire fires them in sequence, alt-fire fires them at once.
+ ** Powered mode: Primary fire is continuous, and alt-fire is faster. Both modes do more damage.
+ *** Black Magic
+ ** This is rather interesting. Primary fire will create a green ripper disc which can be used for melee, and when fired, acts as a rocket that does more damage and rips through things. Alt-fire will create a pentagram around you, recharge your mana, and slowly recharge your Fire Glove ammo and health. When recharging, you can use primary fire to fire two very damaging explosive projectiles, then go back to recharging.
+ ** Powered mode: Primary fire is a good bit faster and more damaging, the regeneration works faster, and the alt-fire projectiles do more damage.
+ *** Wand of Flames
+ ** Primary fire fires fireballs that explode on contact and create tiny fires (that do very little damage). Alt-fire is a Phoenix Rod-style flamethrower.
+ ** Powered mode: Primary fire fires three projectiles in a shotgun style, alt-fire is a more powerful, wider-angle flamethrower.
+ *** Fire Gloves
+ ** Primary fire is very reminiscent of the Arch Vile's attack - first, it spawns a red flame at whatever you're pointing, and at the end of the attack, a devastating explosion erupts at the flame. Alt-fire summons a swarm of projectiles to batter your enemy, including a floor-hugging ripper projectile.
+ ** Powered mode: Both fire modes become continuous (the explosion happens about every second) and more damaging.
+ *** Skeleton Orb
+ ** Primary fire will power you up at the cost of 400 mana, while alt-fire will give you a super ammosphere at the cost of 500 mana (they don't stack).
+ ** Powered mode: Exactly the same thing, except without the primary fire. Seriously, what did you expect?
+ * Speaking of the ammosphere, they've been added to the game! The normal ammosphere replaces the blursphere, and has a clip rotating at variable speeds. The super ammosphere has a clip constantly rotating at a high speed. When you pick it up, your ammo will start regenerating - the ammosphere regenerates it at a moderate rate, while the super ammosphere regenerates it at a rate that makes it so that firing the Uzi's alt-fire results in your ammo supply becoming steady. The ammosphere replaces the blursphere, while the super ammosphere replaces the time freeze sphere.
+ * The powersphere's been moved to the doomsphere. Don't worry, support for it will be added to all classes - eventually.
+ * Some other crap I probably forgot about!
+
+
+Get it at *[url=URL]URL[/url]* (if you don't I'll kill you).

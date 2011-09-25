@@ -1,4 +1,4 @@
-
+clearplayerclasses
 addplayerclass BetterPlayer
 addplayerclass StrifeMarine
 addplayerclass JKEPlayer

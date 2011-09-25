@@ -7,7 +7,8 @@
 
 //// Class pickup messages
 //
-JKE_PK_BDW_CLASS1               = "\crBLOOD! \cgBLOOD FOR THE BLOOD GOD!";
+JKE_PK_BDW_CLASS1               = "How do i punched monstr";
+JKE_PK_BDW_CLASS1_2             = "\crBLOOD! \cgBLOOD FOR THE BLOOD GOD!";
 JKE_PK_BDW_CLASS2               = "A pistol. Maybe it's worth something.";
 JKE_PK_BDW_CLASS3               = "Name's Doomguy. Cleanup.";
 JKE_PK_BDW_CLASS3_2             = "Why doesn't this come with a noseguard?";
@@ -98,6 +99,7 @@ JKE_PK_JKEGAS_BIG               = "You found a gasoline tank.";
 JKE_PK_JKEMANA                  = "You found some mana.";
 JKE_PK_JSNIPERRIFLE             = "You found bolt-action sniper rounds.";
 JKE_PK_M249AMMO                 = "You picked up some .55cal bullets.";
+JKE_PK_NUKESHELL                = "You found a nuclear bomb-sorry, shell.";
 
 // Weapons
 JKE_PK_BALLESTA                 = "You found the Ballesta!";
@@ -121,6 +123,7 @@ JKE_PK_FLAREGUN                 = "You found a flare gun.";
 JKE_PK_FMODMINIGUN              = "You got the Doom 3 chaingun... only better.";
 JKE_PK_FRAGMENTLAUNCHER         = "You got the fragment launcher!";
 JKE_PK_DKFREEZETHROWER          = "FREEZETHROWER!";
+JKE_PK_GHETTOBLASTER            = "Holy crap, this thing accepts 8-tracks!";
 JKE_PK_HANDSHOTGUN              = "You got a concealable shotgun!";
 JKE_PK_HEAVYCHAINGUN            = "\ck*chk-chink*\c- Hehvy masheen gun!";
 JKE_PK_HELLFIST                 = "You found a hell knight's disembodied arm.";
@@ -132,6 +135,7 @@ JKE_PK_JROCKETLAUNCHER          = "You picked up a rocket launcher!";
 JKE_PK_JSHOTGUN                 = "You picked up a shotgun.";
 JKE_PK_JSNIPERRIFLE             = "You got a sniper rifle!";
 JKE_PK_JSUPERSHOTGUN            = "You got the Doom 3 super shotgun!";
+JKE_PK_KARASAWA                 = "You got the karasawa!";
 JKE_PK_M16                      = "You got an M16!";
 JKE_PK_M249MACHINEGUN           = "You picked up the M249 machine gun!";
 JKE_PK_MAGNUMSNIPER             = "You got the magnum sniper!";
@@ -200,7 +204,7 @@ JKE_MP_FLAREGUN                 = "%k lit up %o.";
 JKE_MP_FMODMINIGUN              = "%k poked a million holes into %o.";
 JKE_MP_FRAGMENTLAUNCHER1        = "%k tore and blew up %o.";
 JKE_MP_FRAGMENTLAUNCHER2        = "%k gave %o some shrapnel for %p troubles.";
-JKE_MP_GHETTOBLASTER_RICKROLL   = "%k never gave %o up, never let %o down, never turned around and deserted %h.";
+JKE_MP_GHETTOBLASTER_RICKROLL   = "%k never gave %o up, never let %h down, never turned around and deserted %h.";
 JKE_MP_GHETTOBLASTER_EXPLOSION  = "%o found %k's radio went to 11.";
 JKE_MP_HANDSHOTGUN              = "%o found %k was hiding a shotgun.";
 JKE_MP_HEAVYCHAINGUN            = "%k filled %o full of lead.";
@@ -218,6 +222,7 @@ JKE_MP_JROCKETLAUNCHER          = "%k blew up %o.";
 JKE_MP_JSHOTGUN                 = "%k hunted down %o like a deer.";
 JKE_MP_JSNIPERRIFLE             = "%o never saw %k or the bullet.";
 JKE_MP_JSUPERSHOTGUN            = "%k blew %o's head off.";
+JKE_MP_KARASAWA                 = "%k destabilised %o.";
 JKE_MP_M16                      = "%k eliminated %o.";
 JKE_MP_M249MACHINEGUN           = "%k littered %o with lead.";
 JKE_MP_MAGNUMSNIPER             = "%k took out %o from the shadows.";

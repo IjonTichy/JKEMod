@@ -55,14 +55,11 @@ script 683 (int slot, int dropped)
         terminate;
     }
 
-    /*if (found & MULTIPLECLASSES)
-    {
-        Print(s:"something broke - classes ", d:found, s:" and ", d:i, " found");
-        terminate;
-    }*/
     if (ret & NOCLASS)
     {
-        Print(s:"something broke - no classes found\nReport the weapon you picked up and the class you're using to Ijon Tichy (gztichy@lavabit.com)");
+        // Tichy: for some reason, without sv_weaponstay on, this always prints
+        //Print(s:"something broke - no classes found\nReport the weapon you picked up and the class you're using to Ijon Tichy (gztichy@lavabit.com)");
+        SetResultValue(ret);
         terminate;
     }
 

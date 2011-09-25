@@ -3,6 +3,11 @@ actor BDWClass1Message: JKEClassMessage
     Inventory.PickupMessage "$JKE_PK_BDW_CLASS1"
 }
 
+actor BDWClass1Message2: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_BDW_CLASS1_2"
+}
+
 actor BDWClass2Message: JKEClassMessage
 {
     Inventory.PickupMessage "$JKE_PK_BDW_CLASS2"

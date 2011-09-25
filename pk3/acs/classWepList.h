@@ -13,7 +13,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
 {
     {
         {" B-Fists ",           "BDWClass1Message",      "None", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" B-Chainsaw ",        "BDWClass1Message2",     "None", "None"},
 
         {" B-Pistol ",          "BDWClass2Message",      "Clip", "None"},
         {"None",                "None",                  "None", "None"},

@@ -1,6 +1,8 @@
 actor LeandroPlayer: PlayerPawn
 {
-    Health 100
+    Health 120
+    Player.MaxHealth 120
+
     ReactionTime 0
 
     PainChance 255

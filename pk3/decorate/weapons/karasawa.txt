@@ -7,6 +7,7 @@ actor " Karasawa ": Weapon
     Weapon.SelectionOrder 1500
 
     Inventory.PickupMessage "$JKE_PK_KARASAWA"
+    Obituary "$JKE_MP_KARASAWA"
 
     States
     {
