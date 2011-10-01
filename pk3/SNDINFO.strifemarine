@@ -33,7 +33,7 @@ hexenmarine/shotfire2       sounds/tichy/strifemarine/shotgun_fire2.ogg
 hexenmarine/shotfire3       sounds/tichy/strifemarine/shotgun_fire3.ogg
 $random hexenmarine/shotfire    { hexenmarine/shotfire1 hexenmarine/shotfire2 hexenmarine/shotfire3 }
 hexenmarine/shotreload      sounds/tichy/strifemarine/shotgun_reload.ogg
-hexenmarine/shotdoublefire  sounds/tichy/strifemarine/shotgun_dfire.ogg
+hexenmarine/shotaltfire     sounds/tichy/strifemarine/shotgun_dfire.ogg
 
 hexenmarine/chaingunup      sounds/tichy/strifemarine/chaingun_windup.ogg
 hexenmarine/chaingunrev     sounds/tichy/strifemarine/chaingun_rev.ogg

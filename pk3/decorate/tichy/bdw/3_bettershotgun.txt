@@ -177,7 +177,8 @@ actor ExplosiveShotgunBulletPuff: BulletPuff
 {
     +PUFFONACTORS
     +PUFFGETSOWNER
-    Obituary "$OP_MPSHOTGUN_POWERED"
+    +FORCERADIUSDMG
+    Obituary "$BDW_MP_SHOTGUN_POWER"
     Vspeed 0
     Decal BulletScorch
     RenderStyle Add

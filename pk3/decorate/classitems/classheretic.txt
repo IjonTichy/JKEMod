@@ -123,7 +123,7 @@ actor JKEClass7HereticPickup: JKEClass7Pickup replaces Mace
     States
     {
       Spawn:
-        WMAC A -1
+        WMCE A -1
         stop
     }
 }
@@ -132,7 +132,7 @@ actor JKEClass7HereticDrop: JKEClass7Drop
     States
     {
       Spawn:
-        WMAC A -1
+        WMCE A -1
         stop
     }
 }

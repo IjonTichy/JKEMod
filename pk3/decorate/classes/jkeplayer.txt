@@ -25,7 +25,8 @@ actor JKEPlayer: PlayerPawn
     Player.StartItem " J-Fists "
     Player.StartItem " J-Pistol "
 
-    Player.StartItem "Clip",  50
+    Player.StartItem "Clip",  36
+    Player.StartItem "JPistolCounter", 14
 
     States
     {

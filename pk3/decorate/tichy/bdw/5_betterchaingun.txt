@@ -1011,7 +1011,8 @@ actor ExplosiveChaingunBulletPuff: BulletPuff
 {
     +PUFFONACTORS
     +PUFFGETSOWNER
-    Obituary "$OP_MPCHAINGUN_POWERED"
+    +FORCERADIUSDMG
+    Obituary "$BDW_MP_CHAINGUN_POWER"
     Vspeed 0
     Decal BulletScorch
     RenderStyle Add

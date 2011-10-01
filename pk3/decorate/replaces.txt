@@ -1,6 +1,7 @@
 
 #include "decorate/replaces/clip.txt"
 #include "decorate/replaces/clipbox.txt"
+#include "decorate/replaces/comboammo.txt"
 #include "decorate/replaces/shell.txt"
 #include "decorate/replaces/shellbox.txt"
 #include "decorate/replaces/rocketammo.txt"

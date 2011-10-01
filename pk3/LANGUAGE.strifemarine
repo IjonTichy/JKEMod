@@ -13,6 +13,7 @@ STRIFEMARINE_PK_DWEAPIONSTRIKE          = "\caWARNING: \cgDO NOT USE IN CLOSE RA
 STRIFEMARINE_MP_DWEAPKNIFE              = "%k murdered %o.";
 STRIFEMARINE_MP_DWEAPENFORCER           = "%k riddled %o full of holes with the enforcer.";
 STRIFEMARINE_MP_DWEAPSHOTGUN            = "%o learned why you don't shoot down %k's ride.";
+STRIFEMARINE_MP_DWEAPSHOTGUN_POWER      = "%k ripped %o's head off and shat down %p neck.";
 STRIFEMARINE_MP_DWEAPCHAINGUN           = "%k punched a few hundred holes into %o.";
 STRIFEMARINE_MP_DWEAPCLUSTERBOMBER      = "%o tripped over %k's grenades.";
 STRIFEMARINE_MP_DWEAPPLASMABEAM         = "%o was carved up by %k's green shaft.";

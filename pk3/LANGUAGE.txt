@@ -19,7 +19,7 @@ JKE_PK_BDW_CLASS7               = "... and my gun is very, very large.";
 JKE_PK_BDW_CLASS8               = "Hail to the chief!";
 
 JKE_PK_SM_CLASS1                = "Let's cut shit up.";
-JKE_PK_SM_CLASS2                = "You picked up another enforcer";
+JKE_PK_SM_CLASS2                = "You picked up another enforcer!";
 JKE_PK_SM_CLASS3                = "Those alien bastards are gonna \caPAY\c-.";
 JKE_PK_SM_CLASS4                = "Because who needs breathable air?";
 JKE_PK_SM_CLASS5                = "Accuracy? Never heard of it.";
@@ -43,6 +43,7 @@ JKE_PK_JKEGUY_CLASS8            = "This really \cais\c- a BFG.";
 JKE_PK_LEANDRO_CLASS1           = "\cgRIP AND TEAR\c-";
 JKE_PK_LEANDRO_CLASS2           = "You got two pistols.";
 JKE_PK_LEANDRO_CLASS3           = "Why must your shotguns kick so much ass?";
+JKE_PK_LEANDRO_CLASS3_2         = "For when it has to be splattered on the walls.";
 JKE_PK_LEANDRO_CLASS4           = "We're spitting bullets like a pro!";
 JKE_PK_LEANDRO_CLASS4_2         = "Who wants beef?";
 JKE_PK_LEANDRO_CLASS5           = "It's not quite a rocket launcher...";
@@ -71,14 +72,16 @@ JKE_PK_AMMOSPHERE               = "Restocking feels less necessary.";
 JKE_PK_SUPERAMMOSPHERE          = "Restocking seems unnecessary now.";
 
 // Replacements
-JKE_PK_JKESHELL                 = "You picked up shellstuff.";
-JKE_PK_JKESHELLBOX              = "You picked up a bunch of shellstuff.";
 JKE_PK_JKECLIP                  = "You picked up various bullets.";
 JKE_PK_JKECLIPBOX               = "You picked up a pack of various bullets.";
+JKE_PK_JKESHELL                 = "You picked up shellstuff.";
+JKE_PK_JKESHELLBOX              = "You picked up a bunch of shellstuff.";
 JKE_PK_JKEROCKETAMMO            = "You picked up a few explosives.";
 JKE_PK_JKEROCKETBOX             = "You picked up a pack of explosives.";
 JKE_PK_JKECELL                  = "You picked up a battery and gasoline.";
 JKE_PK_JKECELLPACK              = "You picked up a large battery and gasoline.";
+JKE_PK_JKECOMBOAMMO             = "You picked up some of every ammo.";
+JKE_PK_JKECOMBOHEFTY            = "You picked up a bunch of every ammo.";
 
 
 // Ammo
