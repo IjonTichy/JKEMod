@@ -23,6 +23,7 @@ actor " S-Shotgun ": Weapon
     {
       Ready:
         HMSG A 1 A_WeaponReady
+        HMSG A 0 A_JumpIfInventory("ReloadButton", 1, "Reload")
         Loop
       Deselect:
         HMSG A 1 A_Lower
@@ -30,6 +31,44 @@ actor " S-Shotgun ": Weapon
       Select:
         HMSG A 1 A_Raise
         Loop
+
+    ////
+    // RELOAD
+    ////
+
+      Reload:
+        HMSG A 0 A_JumpIfInventory("ShellsPumped", 0, "PNo")
+        HMSG A 0 A_JumpIfInventory("Shell", 1, "P")
+        goto PNo
+
+      P:
+        HMSG FGH 1
+        HMSG I 2
+        goto PHold
+
+      PHold:
+        HMSG I 0 A_PlaySoundEx("hexenmarine/shotreload", "SoundSlot5")
+        HMSG I 0 A_GiveInventory("ShellsPumped", 1)
+        HMSG I 0 A_TakeInventory("Shell", 1)
+        HMSG JKLKJ 2
+        HMSG J 0 A_JumpIfInventory("ReloadButton", 1, "PCheck")
+        HMSG J 0 A_JumpIfInventory("MainFired",    1, "FPCheck")
+        HMSG J 0 A_JumpIfInventory("AltFired",     1, "APCheck")
+        goto PEnd
+
+      PCheck:
+        HMSG A 0 A_JumpIfInventory("ShellsPumped", 0, "PEnd")
+        HMSG A 0 A_JumpIfInventory("Shell", 1, "PHold")
+        goto PEnd
+
+      PEnd:
+        HMSG I 2
+        HMSG HGF 1
+        goto Ready
+
+      PNo:
+        HMSG A 1
+        goto Ready
 
     ////
     // PRIMARY FIRE
@@ -52,6 +91,7 @@ actor " S-Shotgun ": Weapon
         HMSG JKLKJ 2
         HMSG J 0 A_JumpIfInventory("MainFired", 1, "FPCheck")
         HMSG J 0 A_JumpIfInventory("AltFired",  1, "APCheck")
+        HMSG J 0 A_JumpIfInventory("ReloadButton", 1, "PCheck")
         goto FPEnd
 
       FPCheck:
@@ -95,7 +135,8 @@ actor " S-Shotgun ": Weapon
         HMSG I 0 A_TakeInventory("Shell", 1)
         HMSG JKLKJ 2
         HMSG J 0 A_JumpIfInventory("AltFired",  1, "APCheck")
-        HMSG J 0 A_JumpIfInventory("MainFired", 1, "APCheck")
+        HMSG J 0 A_JumpIfInventory("MainFired", 1, "FPCheck")
+        HMSG J 0 A_JumpIfInventory("ReloadButton", 1, "PCheck")
         goto FPEnd
 
       APCheck:
@@ -158,6 +199,7 @@ actor " Power S-Shotgun ": Weapon
     {
       Ready:
         HMSG A 1 A_WeaponReady
+        HMSG A 0 A_JumpIfInventory("ReloadButton", 1, "Reload")
         Loop
       Deselect:
         HMSG A 1 A_Lower
@@ -165,6 +207,44 @@ actor " Power S-Shotgun ": Weapon
       Select:
         HMSG A 1 A_Raise
         Loop
+
+    ////
+    // RELOAD
+    ////
+
+      Reload:
+        HMSG A 0 A_JumpIfInventory("ShellsPumped", 0, "PNo")
+        HMSG A 0 A_JumpIfInventory("Shell", 1, "P")
+        goto PNo
+
+      P:
+        HMSG FGH 1
+        HMSG I 2
+        goto PHold
+
+      PHold:
+        HMSG I 0 A_PlaySoundEx("hexenmarine/shotreload", "SoundSlot5")
+        HMSG I 0 A_GiveInventory("ShellsPumped", 1)
+        HMSG I 0 A_TakeInventory("Shell", 1)
+        HMSG JKLKJ 2
+        HMSG J 0 A_JumpIfInventory("ReloadButton", 1, "PCheck")
+        HMSG J 0 A_JumpIfInventory("MainFired",    1, "FPCheck")
+        HMSG J 0 A_JumpIfInventory("AltFired",     1, "APCheck")
+        goto PEnd
+
+      PCheck:
+        HMSG A 0 A_JumpIfInventory("ShellsPumped", 0, "PEnd")
+        HMSG A 0 A_JumpIfInventory("Shell", 1, "PHold")
+        goto PEnd
+
+      PEnd:
+        HMSG I 2
+        HMSG HGF 1
+        goto Ready
+
+      PNo:
+        HMSG A 1
+        goto Ready
 
     ////
     // PRIMARY FIRE
@@ -275,7 +355,7 @@ actor " Power S-Shotgun ": Weapon
 actor ShellsPumped: Ammo
 {
     Inventory.Icon "HMSGZ0"
-    Inventory.MaxAmount 5
+    Inventory.MaxAmount 10
     +UNDROPPABLE
 }
 

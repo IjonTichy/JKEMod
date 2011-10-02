@@ -1,15 +1,15 @@
-
 actor " S-Knife ": Weapon
 {
+    Weapon.SelectionOrder 2500
     Weapon.SlotNumber 1
+
     +WEAPON.WIMPY_WEAPON
     +WEAPON.MELEEWEAPON
     +NOEXTREMEDEATH
     +NOALERT
     +NOAUTOFIRE
 
-    DamageType HexenMarine
-    Weapon.SelectionOrder 2500
+    Weapon.SisterWeapon " Power S-Knife "
 
     Inventory.PickupMessage "$STRIFEMARINE_PK_DWEAPKNIFE"
     Obituary "$STRIFEMARINE_MP_DWEAPKNIFE"
@@ -65,7 +65,74 @@ actor " S-Knife ": Weapon
     }
 }
 
-ACTOR HKnifePuff: HBulletPuff
+actor " Power S-Knife ": Weapon
+{
+    Weapon.SelectionOrder 2500
+
+    +WEAPON.WIMPY_WEAPON
+    +WEAPON.MELEEWEAPON
+    +NOEXTREMEDEATH
+    +NOALERT
+    +NOAUTOFIRE
+
+    Weapon.SisterWeapon " S-Knife "
+    +POWERED_UP
+
+    Inventory.PickupMessage "$STRIFEMARINE_PK_DWEAPKNIFE"
+    Obituary "$STRIFEMARINE_MP_DWEAPKNIFE"
+
+    States
+    {
+      Spawn:
+        HXNF A -1
+        loop
+      Ready:
+        HXKN A 1 A_WeaponReady
+        loop
+      Deselect:
+        HXKN AA 0 A_Lower
+        HXKN A 1 A_Lower
+        loop
+      Select:
+        HXKN AA 0 A_Raise
+        HXKN A 1 A_Raise
+        loop
+      Fire:
+        HXKN B 1
+        HXKN C 1 A_CustomPunch(50+random(0,30), 1, 0, "HKnifePuff")
+        HXKN DEF 1
+        HXKN ED 2
+        HXKN A 2 A_ReFire
+        goto Ready
+
+
+      AltFire:
+        HXKN A 4 Offset(-11, 50)
+        HXKN C 2 Offset(6, 70)
+        HXKN D 3 Offset(38, 35)
+        HXKN D 7 Offset(35, 41)
+        HXKN D 1 Offset(33, 27)
+        HXKN D 1 Offset(29, 7)
+        HXKN D 0 A_CustomPunch(1, 1, 0, "HKnifePuff", 96)
+        HXKN DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD 0 A_CustomPunch(random(1,5), 1, 0, "HInvisibleKnifePuff", 96)
+        HXKN D 6 Offset(25, -13)
+        HXKN D 4 Offset(26, -6)
+        HXKN D 1 Offset(29, 7)
+        HXKN D 1 Offset(33, 27)
+        HXMN D 0 A_Refire
+        HXKN D 7 Offset(35, 41)
+        HXKN D 4 Offset(38, 35)
+        HXKN C 3 Offset(6, 70)
+        HXKN A 2 Offset(-11, 50)
+        goto Ready
+
+      AltHold:
+        HXKN D 2 Offset(33, 27)
+        goto AltFire+4
+    }
+}
+
+actor HKnifePuff: HBulletPuff
 {
     +NOBLOCKMAP
     +NOGRAVITY

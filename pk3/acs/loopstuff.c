@@ -14,7 +14,7 @@ script 759 OPEN
     }
 }
 
-script 760 (void)   /* generic attack/alt attack handler */
+script 760 (void)   /* generic button signaler */
 {
     int pln = PlayerNumber();
     int buttons;
@@ -22,18 +22,27 @@ script 760 (void)   /* generic attack/alt attack handler */
     {
         buttons = GetPlayerInput(-1, MODINPUT_BUTTONS);
         if (buttons & BT_ATTACK)
-        { GiveInventory("MainFired", 1); }
+        {
+            GiveInventory("MainFired", 1);
+        }
         else
-        { TakeInventory("MainFired", 16); }
+        {
+            TakeInventory("MainFired", 16);
+        }
 
         if (buttons & BT_ALTATTACK)
-        { GiveInventory("AltFired", 1); }
+        {
+            GiveInventory("AltFired", 1);
+        }
         else
-        { TakeInventory("AltFired", 16); }
+        {
+            TakeInventory("AltFired", 16);
+        }
 
         Delay(1);
     }
 }
+
 
 script 761 ENTER
 {
@@ -42,6 +51,10 @@ script 761 ENTER
     dead[PlayerNumber()] = 0;
     ACS_ExecuteAlways(760, 0, 0,0,0);
     ACS_ExecuteAlways(730, 0, 0,0,0);
+
+    // best to assume we don't have it than assume we do
+    GiveInventory("ReloadButtonOn", 1);
+    GiveInventory("ReloadButtonOff", 1);
 }
 
 script 762 DEATH
