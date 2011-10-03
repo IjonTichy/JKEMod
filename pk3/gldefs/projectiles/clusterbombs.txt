@@ -1,0 +1,72 @@
+pointlight ClusterBombExplosion0
+{
+    color 1.0 0.9 0.0
+    size 128
+}
+
+pointlight ClusterBombExplosion1
+{
+    color 1.0 0.7 0.0
+    size 96
+}
+
+pointlight ClusterBombExplosion2
+{
+    color 0.71 0.5 0.0
+    size 64
+}
+
+pointlight ClusterBombExplosion3
+{
+    color 0.28 0.2 0.0
+    size 32
+}
+
+pointlight ClusterBombExplosion3
+{
+    color 0.28 0.2 0.0
+    size 24
+}
+
+object TinyGrenade
+{
+    frame MISLB {light ClusterBombExplosion2}
+    frame MISLC {light ClusterBombExplosion3}
+    frame MISLD {light ClusterBombExplosion4}
+}
+
+object PowerTinyGrenade
+{
+    frame MISLB {light ClusterBombExplosion2}
+    frame MISLC {light ClusterBombExplosion3}
+    frame MISLD {light ClusterBombExplosion4}
+}
+
+object ClusterBomberGrenade
+{
+    frame MISLB {light ClusterBombExplosion2}
+    frame MISLC {light ClusterBombExplosion3}
+    frame MISLD {light ClusterBombExplosion4}
+}
+
+object PowerClusterBomberGrenade
+{
+    frame MISLB {light ClusterBombExplosion1}
+    frame MISLC {light ClusterBombExplosion2}
+    frame MISLD {light ClusterBombExplosion3}
+}
+
+object PowerClusterBomberGrenade2
+{
+    frame MISLB {light ClusterBombExplosion1}
+    frame MISLC {light ClusterBombExplosion2}
+    frame MISLD {light ClusterBombExplosion3}
+}
+
+
+object SChaingunGrenade
+{
+    frame MISLB {light ClusterBombExplosion0}
+    frame MISLC {light ClusterBombExplosion1}
+    frame MISLD {light ClusterBombExplosion2}
+}

@@ -1,0 +1,3 @@
+#include "gldefs/projectiles/clusterbombs.txt"
+#include "gldefs/projectiles/plasmabeam.txt"
+#include "gldefs/projectiles/y23h.txt"

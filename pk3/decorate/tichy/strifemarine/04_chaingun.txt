@@ -362,10 +362,10 @@ actor ExplosiveSChaingunBulletPuff: BulletPuff
     {
       Spawn:
         TNT1 A 0
-        TNT1 A 0
-        MISL B 3 bright A_Explode(48,96, 0)
+        goto Death
 
       Death:
+        MISL B 3 bright A_Explode(48,96, 0)
         MISL C 6 bright
         MISL D 4 bright
         stop

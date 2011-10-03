@@ -1,0 +1,3 @@
+#include "gldefs/players.txt"
+#include "gldefs/projectiles.txt"
+#include "gldefs/puffs.txt"
