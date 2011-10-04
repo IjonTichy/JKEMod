@@ -131,7 +131,7 @@ actor MultigunRocket
         loop
       Death:
         BNG4 A 2 A_Explode(160, 128)
-        BNG4 BCDEFGHIJKLM 3
+        BNG4 BCDEFGHIJKLM 3 bright
         Stop
     }
 }
@@ -215,7 +215,7 @@ actor MultigunFire
     +PUFFGETSOWNER
 
     Renderstyle Add
-    
+
     Obituary "$JKE_MP_MULTIGUN_FLAME"
 
     States

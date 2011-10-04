@@ -1,42 +1,126 @@
 
-pointlight YellowPlasmaGlow0
+pointlight FGFireballGlow0
 {
-    color 1.0 1.0 0.0
-    size 12
+    color 1.0 0.7 0.2
+    size 8
 }
 
-pointlight YellowPlasmaGlow1
+pointlight FGFireballGlow1
 {
-    color 1.0 1.0 0.0
+    color 1.0 0.7 0.2
+    size 16
+}
+
+pointlight FGFireballGlow2
+{
+    color 1.0 0.7 0.2
     size 24
 }
 
-pointlight YellowPlasmaGlow2
+pointlight FGFireballGlow3
 {
-    color 1.0 1.0 0.0
-    size 36
+    color 1.0 0.7 0.2
+    size 32
 }
 
-pointlight YellowPlasmaGlow3
+pointlight FGFireballGlow4
 {
-    color 1.0 1.0 0.0
+    color 1.0 0.7 0.2
+    size 40
+}
+
+pointlight FGFireballGlow5
+{
+    color 1.0 0.7 0.2
     size 48
 }
 
-pointlight YellowPlasmaGlow4
+pointlight FGFireballGlow6
 {
-    color 1.0 1.0 0.0
-    size 60
+    color 1.0 0.7 0.2
+    size 56
 }
 
-pointlight YellowPlasmaGlow5
+pointlight FGFireballGlow7
 {
-    color 1.0 1.0 0.0
+    color 1.0 0.7 0.2
+    size 64
+}
+
+pointlight FGFireballGlow8
+{
+    color 1.0 0.7 0.2
     size 72
 }
 
-pointlight YellowPlasmaGlow6
+pointlight FGFireballGlow9
 {
-    color 1.0 1.0 0.0
-    size 84
+    color 1.0 0.7 0.2
+    size 80
+}
+
+pointlight FGFireballGlow10
+{
+    color 1.0 0.7 0.2
+    size 88
+}
+
+pointlight FGFireballGlow11
+{
+    color 1.0 0.7 0.2
+    size 96
+}
+
+pointlight FGFireballGlow12
+{
+    color 1.0 0.7 0.2
+    size 104
+}
+
+pointlight FGFireballGlow13
+{
+    color 1.0 0.7 0.2
+    size 112
+}
+
+pointlight FGFireballGlow14
+{
+    color 1.0 0.7 0.2
+    size 120
+}
+
+pointlight FGFireballGlow15
+{
+    color 1.0 0.7 0.2
+    size 128
+}
+
+pointlight FGFireballGlow16
+{
+    color 1.0 0.7 0.2
+    size 136
+}
+
+pointlight FGFireballGlow17
+{
+    color 1.0 0.7 0.2
+    size 144
+}
+
+pointlight FGFireballGlow18
+{
+    color 1.0 0.7 0.2
+    size 152
+}
+
+pointlight FGFireballGlow19
+{
+    color 1.0 0.7 0.2
+    size 160
+}
+
+pointlight FGFireballGlow20
+{
+    color 1.0 0.7 0.2
+    size 168
 }

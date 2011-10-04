@@ -38,7 +38,7 @@ actor " Hellfist ": Weapon
 
       Fire:
         BHND DE 3 bright
-        BHND F 6 bright A_FireCustomMissile("HellFistShot", 0, 1, 4, 0)
+        BHND F 6 bright A_FireCustomMissile("HellfistBall", 0, 1, 4, 0)
         BHND ED 3 bright
         goto Ready
 
@@ -90,7 +90,7 @@ actor " Power Hellfist ": Weapon
 
       Fire:
         BHND DE 3 bright
-        BHND F 6 bright A_FireCustomMissile("PowerHellFistShot", 0, 1, 4, 0)
+        BHND F 6 bright A_FireCustomMissile("PowerHellfistBall", 0, 1, 4, 0)
         BHND ED 3 bright
         goto Ready
 
@@ -108,7 +108,7 @@ actor " Power Hellfist ": Weapon
     }
 }
 
-actor HellFistShot
+actor HellfistBall
 {
     Radius 8
     Height 8
@@ -134,7 +134,7 @@ actor HellFistShot
     }
 }
 
-actor PowerHellFistShot
+actor PowerHellfistBall
 {
     Radius 8
     Height 8

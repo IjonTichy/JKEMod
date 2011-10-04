@@ -13,7 +13,12 @@ global int 6:classes[];
 script 682 (int which)
 {
     int pln = PlayerNumber();
-    classes[pln] = which;
+    classes[pln] = which - 1;
+
+    if (GetCVar("sv_cheats") == 1)
+    {
+        Print(s:"Use \"puke -877\" to get all your class' weapons\n(only when sv_cheats is 1)");
+    }
 }
 
 
@@ -42,7 +47,7 @@ script 683 (int slot, int dropped)
 
     slot -= 1;
 
-    found = classes[pln] - 1;
+    found = classes[pln];
 
     if (found == -1)
     {
@@ -174,4 +179,43 @@ script 683 (int slot, int dropped)
     }
 
     SetResultValue(ret);
+}
+
+
+script 877 (void)
+{
+    int i; int w;
+    int plc = classes[PlayerNumber()];
+
+    if (GetCVar("sv_cheats") != 0 || GameType() == 0)
+    {
+        for (i = 0; i < SLOTCOUNT; i++)
+        {
+            w = classWeps[plc][i][0];
+
+            if (w != "None")
+            {
+                GiveInventory(w, 1);
+            }
+        }
+
+        if (GameType() == 0)
+        {
+            terminate;
+        }
+    }
+
+    PrintBold(n:0, s:"\c- is being a cheater by calling script 877!");
+
+    if (GetCVar("sv_cheats") == 0)
+    {
+        ClearInventory();
+        Delay(105);
+        PrintBold(s:"As such, ", n:0, s:"\c- has lost his/her/its entire inventory.");
+    }
+    else
+    {
+        Delay(105);
+        PrintBold(s:"But sv_cheats is true, so who cares?");
+    }
 }

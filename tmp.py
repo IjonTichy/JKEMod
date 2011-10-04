@@ -8,17 +8,17 @@ pointlight [name]{0}
 }}
 """
 
-MAX = 6
-LIGHTMULT = 12
+MAX = 20
+LIGHTMULT = 8
 
-NAME = "YellowPlasmaGlow"
+NAME = "FGFireballGlow"
 
-RED   = 255
-GREEN = 255
-BLUE  = 0
+RED   = 1.0
+GREEN = 0.7
+BLUE  = 0.2
 
 MAXA = MAX + 1
-REDA, GREENA, BLUEA = (i/255.0 for i in (RED, GREEN, BLUE) )
+REDA, GREENA, BLUEA = (i/255.0 if (i > 1) else i for i in (RED, GREEN, BLUE) )
 
 lol = open("tmp.txt", "w")
 

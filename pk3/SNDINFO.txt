@@ -231,7 +231,10 @@ $alias jkemod/firegloves/explode        jkemod/assorted/explode4
 jkemod/firegloves/fire1                 sounds/weapons/firegloves/fire1.wav
 jkemod/firegloves/fire2                 sounds/weapons/firegloves/fire2.wav
 jkemod/firegloves/explode1              sounds/weapons/firegloves/explode.wav
+$alias jkemod/firegloves/explode1       betterdoomweapons/rocketexplode
 $alias jkemod/firegloves/explode2       betterdoomweapons/rocketexplode
+
+$volume jkemod/firegloves/explode1      0.5
 
 $limit jkemod/firegloves/fire1 0
 $limit jkemod/firegloves/fire2 0

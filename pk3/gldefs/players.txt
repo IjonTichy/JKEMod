@@ -22,5 +22,5 @@ object LeandroPlayer
 
 object SorcPlayer
 {
-    frame SCPLE { light JKEClassAttack2 }
+    frame SCPLE { light JKEClassAttack }
 }

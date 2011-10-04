@@ -1,5 +1,7 @@
 actor Weapon2Power: PowerupGiver
 {
+    Inventory.MaxAmount 0
+
     Powerup.Type "WeaponLevel2"
     Powerup.Duration -46
     Inventory.Icon "TNT1A0"
@@ -26,6 +28,8 @@ actor PowerSphere: CustomInventory replaces Doomsphere
 
     Inventory.PickupMessage "$JKE_PK_POWERSPHERE"
     Inventory.PickupSound "misc/p_pkup"
+
+    Inventory.MaxAmount 0
 
     States
     {

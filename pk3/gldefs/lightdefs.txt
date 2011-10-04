@@ -29,3 +29,13 @@ flickerlight2 JKEClassAttack2
 #include "gldefs/lightdefs/clusterbombglows.txt"
 #include "gldefs/lightdefs/pulseglows.txt"
 #include "gldefs/lightdefs/y23hglows.txt"
+
+////
+// Sorcerer
+
+#include "gldefs/lightdefs/hellfistglows.txt"
+#include "gldefs/lightdefs/etherealglows.txt"
+#include "gldefs/lightdefs/blackmagicglows.txt"
+#include "gldefs/lightdefs/ripperdiscglows.txt"
+#include "gldefs/lightdefs/wandofflamesglows.txt"
+#include "gldefs/lightdefs/firegloveglows.txt"

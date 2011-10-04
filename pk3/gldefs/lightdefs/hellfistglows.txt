@@ -1,0 +1,42 @@
+
+pointlight HellfistGlow0
+{
+    color 0.4 1.0 0.4
+    size 12
+}
+
+pointlight HellfistGlow1
+{
+    color 0.4 1.0 0.4
+    size 24
+}
+
+pointlight HellfistGlow2
+{
+    color 0.4 1.0 0.4
+    size 36
+}
+
+pointlight HellfistGlow3
+{
+    color 0.4 1.0 0.4
+    size 48
+}
+
+pointlight HellfistGlow4
+{
+    color 0.4 1.0 0.4
+    size 60
+}
+
+pointlight HellfistGlow5
+{
+    color 0.4 1.0 0.4
+    size 72
+}
+
+pointlight HellfistGlow6
+{
+    color 0.4 1.0 0.4
+    size 84
+}

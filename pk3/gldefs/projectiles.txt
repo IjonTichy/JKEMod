@@ -1,5 +1,5 @@
 ////
-// Doomguy
+// Doomguy/General
 
 #include "gldefs/projectiles/rockets.txt"
 #include "gldefs/projectiles/bplasmaballs.txt"
@@ -14,3 +14,13 @@
 #include "gldefs/projectiles/clusterbombs.txt"
 #include "gldefs/projectiles/plasmabeam.txt"
 #include "gldefs/projectiles/y23h.txt"
+
+
+////
+// Sorcerer
+
+#include "gldefs/projectiles/hellfist.txt"
+#include "gldefs/projectiles/etherealarrows.txt"
+#include "gldefs/projectiles/blackmagic.txt"
+#include "gldefs/projectiles/wandofflames.txt"
+#include "gldefs/projectiles/firegloves.txt"
