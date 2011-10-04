@@ -1,0 +1,42 @@
+
+pointlight YellowPlasmaGlow0
+{
+    color 1.0 1.0 0.0
+    size 12
+}
+
+pointlight YellowPlasmaGlow1
+{
+    color 1.0 1.0 0.0
+    size 24
+}
+
+pointlight YellowPlasmaGlow2
+{
+    color 1.0 1.0 0.0
+    size 36
+}
+
+pointlight YellowPlasmaGlow3
+{
+    color 1.0 1.0 0.0
+    size 48
+}
+
+pointlight YellowPlasmaGlow4
+{
+    color 1.0 1.0 0.0
+    size 60
+}
+
+pointlight YellowPlasmaGlow5
+{
+    color 1.0 1.0 0.0
+    size 72
+}
+
+pointlight YellowPlasmaGlow6
+{
+    color 1.0 1.0 0.0
+    size 84
+}

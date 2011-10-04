@@ -1,3 +1,16 @@
+////
+// Doomguy
+
+#include "gldefs/projectiles/rockets.txt"
+#include "gldefs/projectiles/bplasmaballs.txt"
+#include "gldefs/projectiles/bfgplasmaballs.txt"
+#include "gldefs/projectiles/bfgballs.txt"
+#include "gldefs/projectiles/d1000.txt"
+
+
+////
+// Strife Marine
+
 #include "gldefs/projectiles/clusterbombs.txt"
 #include "gldefs/projectiles/plasmabeam.txt"
 #include "gldefs/projectiles/y23h.txt"

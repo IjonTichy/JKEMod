@@ -41,9 +41,12 @@ actor SorcPlayer: PlayerPawn
         SCPL ABCD 4
         loop
 
-      Missile:
       Melee:
-        SCPL EF 8
+        SCPL E 8 bright
+        goto Missile
+
+      Missile:
+        SCPL F 8
         goto Spawn
 
       Pain:

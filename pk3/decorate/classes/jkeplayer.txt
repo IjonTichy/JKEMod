@@ -38,9 +38,12 @@ actor JKEPlayer: PlayerPawn
         JKGY ABCD 4
         loop
 
-      Missile:
       Melee:
-        JKGY EF 8
+        JKGY E 8 bright
+        goto Missile
+
+      Missile:
+        JKGY F 8
         goto Spawn
 
       Pain:

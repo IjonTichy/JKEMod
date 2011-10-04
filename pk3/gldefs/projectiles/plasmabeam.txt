@@ -1,26 +1,4 @@
-flickerlight2 PulseProj
-{
-    color 0.3 1.0 0.0
-    size 24
-    secondarySize 32
-    interval 0.05
-}
-
-flickerlight2 PulseProjSmall
-{
-    color 0.3 1.0 0.0
-    size 12
-    secondarySize 16
-    interval 0.05
-}
-
-flickerlight2 PulseProjLarge
-{
-    color 0.3 1.0 0.0
-    size 32
-    secondarySize 48
-    interval 0.05
-}
+// Light definitions in pulseglows.txt
 
 object PlasmaBeamBeam
 {

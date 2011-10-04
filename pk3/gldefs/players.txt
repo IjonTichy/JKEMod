@@ -1,10 +1,26 @@
-flickerlight2 JKEClassAttack
+// Fire light defined in /gldefs/lightdefs.txt
+
+object BetterPlayer
 {
-    color 1.0 0.8 0.2
-    size 48
-    secondarySize 56
-    interval 1
-    offset 0 40 0
+    frame BPLYF { light JKEClassAttack }
 }
 
-#include "gldefs/players/strifemarine.txt"
+object StrifeMarine
+{
+    frame HXMNF { light JKEClassAttack }
+}
+
+object JKEPlayer
+{
+    frame JKGYE { light JKEClassAttack }
+}
+
+object LeandroPlayer
+{
+    frame LNDRE { light JKEClassAttack }
+}
+
+object SorcPlayer
+{
+    frame SCPLE { light JKEClassAttack2 }
+}

@@ -1,0 +1,227 @@
+////
+// Normal Plasma
+
+pointlight PlasmaGlow0
+{
+    color 0.2 0.2 1.0
+    size 12
+}
+
+pointlight PlasmaGlow1
+{
+    color 0.2 0.2 1.0
+    size 24
+}
+
+pointlight PlasmaGlow2
+{
+    color 0.2 0.2 1.0
+    size 36
+}
+
+pointlight PlasmaGlow3
+{
+    color 0.2 0.2 1.0
+    size 48
+}
+
+pointlight PlasmaGlow4
+{
+    color 0.2 0.2 1.0
+    size 60
+}
+
+pointlight PlasmaGlow5
+{
+    color 0.2 0.2 1.0
+    size 72
+}
+
+pointlight PlasmaGlow6
+{
+    color 0.2 0.2 1.0
+    size 84
+}
+
+
+////
+// Blue Plasma
+
+pointlight BluePlasmaGlow0
+{
+    color 0.0 0.0 1.0
+    size 12
+}
+
+pointlight BluePlasmaGlow1
+{
+    color 0.0 0.0 1.0
+    size 24
+}
+
+pointlight BluePlasmaGlow2
+{
+    color 0.0 0.0 1.0
+    size 36
+}
+
+pointlight BluePlasmaGlow3
+{
+    color 0.0 0.0 1.0
+    size 48
+}
+
+pointlight BluePlasmaGlow4
+{
+    color 0.0 0.0 1.0
+    size 60
+}
+
+pointlight BluePlasmaGlow5
+{
+    color 0.0 0.0 1.0
+    size 72
+}
+
+pointlight BluePlasmaGlow6
+{
+    color 0.0 0.0 1.0
+    size 84
+}
+
+////
+// Red Plasma
+
+pointlight RedPlasmaGlow0
+{
+    color 1.0 0.2 0.2
+    size 12
+}
+
+pointlight RedPlasmaGlow1
+{
+    color 1.0 0.2 0.2
+    size 24
+}
+
+pointlight RedPlasmaGlow2
+{
+    color 1.0 0.2 0.2
+    size 36
+}
+
+pointlight RedPlasmaGlow3
+{
+    color 1.0 0.2 0.2
+    size 48
+}
+
+pointlight RedPlasmaGlow4
+{
+    color 1.0 0.2 0.2
+    size 60
+}
+
+pointlight RedPlasmaGlow5
+{
+    color 1.0 0.2 0.2
+    size 72
+}
+
+pointlight RedPlasmaGlow6
+{
+    color 1.0 0.2 0.2
+    size 84
+}
+
+
+////
+// Green Plasma
+
+pointlight GreenPlasmaGlow0
+{
+    color 0.0 1.0 0.0
+    size 12
+}
+
+pointlight GreenPlasmaGlow1
+{
+    color 0.0 1.0 0.0
+    size 24
+}
+
+pointlight GreenPlasmaGlow2
+{
+    color 0.0 1.0 0.0
+    size 36
+}
+
+pointlight GreenPlasmaGlow3
+{
+    color 0.0 1.0 0.0
+    size 48
+}
+
+pointlight GreenPlasmaGlow4
+{
+    color 0.0 1.0 0.0
+    size 60
+}
+
+pointlight GreenPlasmaGlow5
+{
+    color 0.0 1.0 0.0
+    size 72
+}
+
+pointlight GreenPlasmaGlow6
+{
+    color 0.0 1.0 0.0
+    size 84
+}
+
+
+////
+// Yellow Plasma
+
+pointlight YellowPlasmaGlow0
+{
+    color 1.0 1.0 0.0
+    size 12
+}
+
+pointlight YellowPlasmaGlow1
+{
+    color 1.0 1.0 0.0
+    size 24
+}
+
+pointlight YellowPlasmaGlow2
+{
+    color 1.0 1.0 0.0
+    size 36
+}
+
+pointlight YellowPlasmaGlow3
+{
+    color 1.0 1.0 0.0
+    size 48
+}
+
+pointlight YellowPlasmaGlow4
+{
+    color 1.0 1.0 0.0
+    size 60
+}
+
+pointlight YellowPlasmaGlow5
+{
+    color 1.0 1.0 0.0
+    size 72
+}
+
+pointlight YellowPlasmaGlow6
+{
+    color 1.0 1.0 0.0
+    size 84
+}

@@ -1,4 +1,1 @@
-object StrifeMarine
-{
-    frame HXMNF { light JKEClassAttack }
-}
+

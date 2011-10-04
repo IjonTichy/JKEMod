@@ -40,9 +40,12 @@ actor LeandroPlayer: PlayerPawn
         LNDR ABCD 4
         loop
 
-      Missile:
       Melee:
-        LNDR EF 8
+        LNDR E 8 bright
+        goto Missile
+
+      Missile:
+        LNDR F 8
         goto Spawn
 
       Pain:

@@ -1,0 +1,23 @@
+// Light definitions in plasmaglows.txt
+
+object BetterBFGPlasma1
+{
+    frame RPLSA { light RedPlasmaGlow2 }
+    frame RPLSB { light RedPlasmaGlow2 }
+    frame RPLSC { light RedPlasmaGlow3 }
+    frame RPLSD { light RedPlasmaGlow3 }
+    frame RPLSE { light RedPlasmaGlow2 }
+    frame RPLSF { light RedPlasmaGlow1 }
+    frame RPLSG { light RedPlasmaGlow0 }
+}
+
+object BetterBFGPlasma2
+{
+    frame GPLSA { light GreenPlasmaGlow2 }
+    frame GPLSB { light GreenPlasmaGlow2 }
+    frame GPLSC { light GreenPlasmaGlow3 }
+    frame GPLSD { light GreenPlasmaGlow3 }
+    frame GPLSE { light GreenPlasmaGlow2 }
+    frame GPLSF { light GreenPlasmaGlow1 }
+    frame GPLSG { light GreenPlasmaGlow0 }
+}

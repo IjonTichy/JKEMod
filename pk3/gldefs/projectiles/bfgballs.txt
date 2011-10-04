@@ -1,0 +1,36 @@
+// Light definitions in bfgglows.txt
+
+object BetterBFGBall
+{
+    frame BBFPA { light BBFGGlow4 }
+    frame BBFPB { light BBFGGlow4 }
+    frame BBFPC { light BBFGGlow5 }
+    frame BBFPD { light BBFGGlow7 }
+    frame BBFPE { light BBFGGlow9 }
+    frame BBFPF { light BBFGGlow7 }
+    frame BBFPG { light BBFGGlow4 }
+    frame BBFPH { light BBFGGlow1 }
+}
+
+
+object BetterPowerBFGBall
+{
+    frame BBFPA { light BBFGGlow5 }
+    frame BBFPB { light BBFGGlow5 }
+    frame BBFPC { light BBFGGlow6 }
+    frame BBFPD { light BBFGGlow8 }
+    frame BBFPE { light BBFGGlow10 }
+    frame BBFPF { light BBFGGlow8 }
+    frame BBFPG { light BBFGGlow5 }
+    frame BBFPH { light BBFGGlow2 }
+}
+
+
+object BetterBFGSplash
+{
+    frame BBFEA { light BBFGGlow4 }
+    frame BBFEB { light BBFGGlow3 }
+    frame BBFEC { light BBFGGlow2 }
+    frame BBFED { light BBFGGlow1 }
+    frame BBFEE { light BBFGGlow0 }
+}

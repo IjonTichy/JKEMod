@@ -1,0 +1,31 @@
+flickerlight2 JKEClassAttack
+{
+    color 1.0 0.8 0.2
+    size 48
+    secondarySize 56
+    interval 1
+    offset 0 40 0
+}
+
+flickerlight2 JKEClassAttack2
+{
+    color 0.4 0.4 1.0
+    size 48
+    secondarySize 56
+    interval 1
+    offset 0 40 0
+}
+
+////
+// Doomguy/General
+
+#include "gldefs/lightdefs/rocketglows.txt"
+#include "gldefs/lightdefs/plasmaglows.txt"
+#include "gldefs/lightdefs/bfgglows.txt"
+
+////
+// Strife Marine
+
+#include "gldefs/lightdefs/clusterbombglows.txt"
+#include "gldefs/lightdefs/pulseglows.txt"
+#include "gldefs/lightdefs/y23hglows.txt"
