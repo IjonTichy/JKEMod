@@ -223,19 +223,19 @@ actor WOFShotBase
 actor WOFShot1: WOFShotBase
 {
     Speed 60
-    Damage (2*random(3, 5))
+    Damage (5*random(3, 5))
 }
 
 actor WOFShot2: WOFShotBase
 {
     Speed 56
-    Damage (2*random(2, 4))
+    Damage (5*random(2, 4))
 }
 
 actor WOFShot3: WOFShotBase
 {
     Speed 52
-    Damage (random(3, 5))
+    Damage (4*random(3, 5))
 }
 
 actor WOFTrail
@@ -276,7 +276,7 @@ actor WOFFlame
     states
     {
       Spawn:
-        WEMF ABCDEFGHIJKLMNOP 3 bright A_Explode(1, 24, 0)
+        WEMF ABCDEFGHIJKLMNOP 3 bright A_Explode(2, 24, 0)
         stop
     }
 
@@ -319,19 +319,19 @@ actor PowerWOFShotBase
 actor PowerWOFShot1: PowerWOFShotBase
 {
     Speed 60
-    Damage (4*random(3, 5))
+    Damage (8*random(3, 5))
 }
 
 actor PowerWOFShot2: PowerWOFShotBase
 {
     Speed 56
-    Damage (4*random(2, 4))
+    Damage (8*random(2, 4))
 }
 
 actor PowerWOFShot3: PowerWOFShotBase
 {
     Speed 52
-    Damage (3*random(3, 5))
+    Damage (7*random(3, 5))
 }
 
 actor PowerWOFFlame
@@ -357,7 +357,7 @@ actor PowerWOFFlame
     states
     {
       Spawn:
-        WEMF ABCDEFGHIJKLMNOP 3 bright A_Explode(3, 24, 0)
+        WEMF ABCDEFGHIJKLMNOP 3 bright A_Explode(4, 24, 0)
         stop
     }
 
@@ -387,7 +387,7 @@ actor WOFFireBase
     states
     {
       Spawn:
-        WEM2 AB 2 bright
+        WEM2 AABB 1 bright A_Explode(2, 32, 0)
         WEM2 A 0 ThrustThingZ(0, 4, 0, 1)
         WEM2 A 0 A_Countdown
         loop
@@ -441,7 +441,7 @@ actor PowerWOFFireBase
     states
     {
       Spawn:
-        WEM2 AABB 1 bright A_Explode(4, 32, 0)
+        WEM2 AABB 1 bright A_Explode(5, 32, 0)
         WEM2 A 0 ThrustThingZ(0, 4, 0, 1)
         WEM2 A 0 A_Countdown
         loop

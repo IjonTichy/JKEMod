@@ -4,6 +4,7 @@ object BetterBFGPlasma1
 {
     frame RPLSA { light RedPlasmaGlow2 }
     frame RPLSB { light RedPlasmaGlow2 }
+
     frame RPLSC { light RedPlasmaGlow3 }
     frame RPLSD { light RedPlasmaGlow3 }
     frame RPLSE { light RedPlasmaGlow2 }
@@ -15,9 +16,146 @@ object BetterBFGPlasma2
 {
     frame GPLSA { light GreenPlasmaGlow2 }
     frame GPLSB { light GreenPlasmaGlow2 }
+
     frame GPLSC { light GreenPlasmaGlow3 }
     frame GPLSD { light GreenPlasmaGlow3 }
     frame GPLSE { light GreenPlasmaGlow2 }
     frame GPLSF { light GreenPlasmaGlow1 }
     frame GPLSG { light GreenPlasmaGlow0 }
+}
+
+
+object BetterPowerBFGPlasma1
+{
+    frame RPLSA { light RedPlasmaGlow3 }
+    frame RPLSB { light RedPlasmaGlow3 }
+
+    frame RPLSC { light RedPlasmaGlow4 }
+    frame RPLSD { light RedPlasmaGlow4 }
+    frame RPLSE { light RedPlasmaGlow3 }
+    frame RPLSF { light RedPlasmaGlow2 }
+    frame RPLSG { light RedPlasmaGlow1 }
+}
+
+object BetterPowerBFGPlasma2
+{
+    frame GPLSA { light GreenPlasmaGlow3 }
+    frame GPLSB { light GreenPlasmaGlow3 }
+
+    frame GPLSC { light GreenPlasmaGlow4 }
+    frame GPLSD { light GreenPlasmaGlow4 }
+    frame GPLSE { light GreenPlasmaGlow3 }
+    frame GPLSF { light GreenPlasmaGlow2 }
+    frame GPLSG { light GreenPlasmaGlow1 }
+}
+
+object BetterPlasma
+{
+    frame PLSS  { light PlasmaGlow2 }
+    frame PLSEA { light PlasmaGlow3 }
+    frame PLSEB { light PlasmaGlow3 }
+    frame PLSEC { light PlasmaGlow2 }
+    frame PLSED { light PlasmaGlow1 }
+    frame PLSEE { light PlasmaGlow0 }
+}
+
+object BetterRipperPlasma
+{
+    frame YPLSA { light YellowPlasmaGlow2 }
+    frame YPLSB { light YellowPlasmaGlow2 }
+    frame YPLSC { light YellowPlasmaGlow3 }
+    frame YPLSD { light YellowPlasmaGlow3 }
+    frame YPLSE { light YellowPlasmaGlow2 }
+    frame YPLSF { light YellowPlasmaGlow1 }
+    frame YPLSG { light YellowPlasmaGlow0 }
+}
+
+object BetterRipperPlasmaTrail1
+{
+    frame YPLSC { light YellowPlasmaGlow2 }
+    frame YPLSD { light YellowPlasmaGlow2 }
+    frame YPLSE { light YellowPlasmaGlow1 }
+    frame YPLSF { light YellowPlasmaGlow0 }
+}
+
+object BetterRipperPlasmaTrail2
+{
+    frame YPLSC { light YellowPlasmaGlow2 }
+    frame YPLSD { light YellowPlasmaGlow2 }
+    frame YPLSE { light YellowPlasmaGlow1 }
+    frame YPLSF { light YellowPlasmaGlow0 }
+}
+
+object BetterRipperPlasmaTrail3
+{
+    frame YPLSC { light YellowPlasmaGlow2 }
+    frame YPLSD { light YellowPlasmaGlow2 }
+    frame YPLSE { light YellowPlasmaGlow1 }
+    frame YPLSF { light YellowPlasmaGlow0 }
+}
+
+object BetterRipperPlasmaTrail4
+{
+    frame YPLSC { light YellowPlasmaGlow2 }
+    frame YPLSD { light YellowPlasmaGlow2 }
+    frame YPLSE { light YellowPlasmaGlow1 }
+    frame YPLSF { light YellowPlasmaGlow0 }
+}
+
+object BetterPowerPlasma
+{
+    frame RPLSA { light RedPlasmaGlow3 }
+    frame RPLSB { light RedPlasmaGlow3 }
+
+    frame RPLSC { light RedPlasmaGlow4 }
+    frame RPLSD { light RedPlasmaGlow4 }
+    frame RPLSE { light RedPlasmaGlow3 }
+    frame RPLSF { light RedPlasmaGlow2 }
+    frame RPLSG { light RedPlasmaGlow1 }
+}
+
+object BetterPowerRipperPlasma
+{
+    frame GPLSA { light GreenPlasmaGlow3 }
+    frame GPLSB { light GreenPlasmaGlow3 }
+
+    frame GPLSC { light GreenPlasmaGlow4 }
+    frame GPLSD { light GreenPlasmaGlow4 }
+    frame GPLSE { light GreenPlasmaGlow3 }
+    frame GPLSF { light GreenPlasmaGlow2 }
+    frame GPLSG { light GreenPlasmaGlow1 }
+}
+
+object TinyPlasma
+{
+    frame GPLSA { light GreenPlasmaGlow0 }
+    frame GPLSB { light GreenPlasmaGlow0 }
+
+    frame GPLSC { light GreenPlasmaGlow1 }
+    frame GPLSD { light GreenPlasmaGlow1 }
+    frame GPLSE { light GreenPlasmaGlow0 }
+}
+
+
+object PlasmaDriverShot
+{
+    frame RPLSA { light RedPlasmaGlow3 }
+    frame RPLSB { light RedPlasmaGlow3 }
+
+    frame RPLSC { light RedPlasmaGlow4 }
+    frame RPLSD { light RedPlasmaGlow4 }
+    frame RPLSE { light RedPlasmaGlow3 }
+    frame RPLSF { light RedPlasmaGlow2 }
+    frame RPLSG { light RedPlasmaGlow1 }
+}
+
+
+object PlasmaDriverShotSmall
+{
+    frame RPLSA { light RedPlasmaGlow0 }
+    frame RPLSB { light RedPlasmaGlow0 }
+
+    frame RPLSC { light RedPlasmaGlow1 }
+    frame RPLSD { light RedPlasmaGlow1 }
+    frame RPLSE { light RedPlasmaGlow0 }
 }

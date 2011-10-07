@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-tmp = """
+tmp1 = """
 pointlight [name]{0}
 {{
     color [r] [g] [b]
@@ -8,26 +8,54 @@ pointlight [name]{0}
 }}
 """
 
-MAX = 20
+tmp2 = """
+pointlight [name]{0}
+{{
+    color {1} {2} {3}
+    size [s]
+}}
+"""
+
+MAX = 30
 LIGHTMULT = 8
 
-NAME = "FGFireballGlow"
+STEPS = 13
 
-RED   = 1.0
-GREEN = 0.7
-BLUE  = 0.2
+NAME = "MultigunRocketGlow"
+
+RED   = 255
+GREEN = 231
+BLUE  = 201
+
+SIZE = 144
 
 MAXA = MAX + 1
-REDA, GREENA, BLUEA = (i/255.0 if (i > 1) else i for i in (RED, GREEN, BLUE) )
+REDA, GREENA, BLUEA = (round(i/255.0, 2) if (i > 1) else i for i in (RED, GREEN, BLUE) )
+
+TAGS = (("name", NAME),
+        ("s", SIZE),
+        #("r", REDA),
+        #("g", GREENA),
+        #("b", BLUEA)
+       )
 
 lol = open("tmp.txt", "w")
 
-for i in (("name", NAME), ("r", REDA), ("g", GREENA), ("b", BLUEA)):
+tmp = tmp2
+
+for i in TAGS:
     tag = "[{0}]".format(i[0])
     var = i[1]
     tmp = tmp.replace(tag, str(var) )
 
 
 
-for i in range(0, MAXA):
-    lol.write(tmp.format(i, LIGHTMULT*(i+1) ) )
+for i in range(STEPS, 0, -1):
+
+    j = i / float(STEPS)
+
+    newR = round(REDA   * j, 2)
+    newG = round(GREENA * j, 2)
+    newB = round(BLUEA  * j, 2)
+
+    lol.write(tmp.format(i, newR, newG, newB) )

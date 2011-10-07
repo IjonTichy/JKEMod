@@ -1,0 +1,144 @@
+pointlight PowerfulGlow1
+{
+    color 1.0 1.0 1.0
+    size 1024
+    offset 0.0 0.0 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow2
+{
+    color 1.0 0.98 0.96
+    size 1024
+    offset 0.0 12.8 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow3
+{
+    color 1.0 0.97 0.91
+    size 1024
+    offset 0.0 25.6 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow4
+{
+    color 1.0 0.95 0.87
+    size 1024
+    offset 0.0 38.4 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow5
+{
+    color 1.0 0.94 0.83
+    size 1024
+    offset 0.0 51.2 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow6
+{
+    color 1.0 0.92 0.79
+    size 1024
+    offset 0.0 64.0 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow7
+{
+    color 1.0 0.91 0.74
+    size 1024
+    offset 0.0 76.8 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow8
+{
+    color 1.0 0.89 0.7
+    size 1024
+    offset 0.0 89.6 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow9
+{
+    color 0.93 0.82 0.63
+    size 990
+    offset 0.0 98.13 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow10
+{
+    color 0.8 0.71 0.54
+    size 922
+    offset 0.0 102.4 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow11
+{
+    color 0.67 0.59 0.45
+    size 853
+    offset 0.0 106.67 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow12
+{
+    color 0.54 0.48 0.36
+    size 785
+    offset 0.0 110.93 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow13
+{
+    color 0.41 0.36 0.27
+    size 717
+    offset 0.0 115.2 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow14
+{
+    color 0.28 0.24 0.18
+    size 649
+    offset 0.0 119.47 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow15
+{
+    color 0.15 0.13 0.09
+    size 580
+    offset 0.0 123.73 0.0
+    subtractive 0
+    dontlightself 0
+}
+
+pointlight PowerfulGlow16
+{
+    color 0.02 0.01 0.0
+    size 512
+    offset 0.0 128.0 0.0
+    subtractive 0
+    dontlightself 0
+}
+

@@ -58,7 +58,6 @@ actor " L-Multigun ": Weapon
         SBRG A 0 A_GiveInventory("MultigunFired")
         SBRG BC 3 bright
         SBRG D 3
-        SBRG A 2
         goto Ready
 
       GenericLoad:
@@ -130,7 +129,7 @@ actor MultigunRocket
         MGMS A 1 bright
         loop
       Death:
-        BNG4 A 2 A_Explode(160, 128)
+        BNG4 A 3 A_Explode(160, 128)
         BNG4 BCDEFGHIJKLM 3 bright
         Stop
     }
@@ -155,7 +154,7 @@ actor MultigunIce
         SHRD ABC 3
         loop
       Death:
-        SHEX ABCDE 3
+        SHEX ABCDE 3 bright
         stop
     }
 }
@@ -194,7 +193,7 @@ actor MultigunFlameGrenade
         TNT1 A 0 A_Explode(96, 96)
 
         BNG4 A 0 A_ChangeFlag("NOGRAVITY", 0)
-        BNG4 A 2 bright A_Stop
+        BNG4 A 3 bright A_Stop
         BNG4 BCDEFGHIJKLM 3 bright
         stop
     }

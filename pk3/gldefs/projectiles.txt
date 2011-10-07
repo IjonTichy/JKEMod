@@ -1,9 +1,13 @@
 ////
+// General
+
+#include "gldefs/projectiles/explosives.txt"
+#include "gldefs/projectiles/plasmaballs.txt"
+
+////
 // Doomguy/General
 
 #include "gldefs/projectiles/rockets.txt"
-#include "gldefs/projectiles/bplasmaballs.txt"
-#include "gldefs/projectiles/bfgplasmaballs.txt"
 #include "gldefs/projectiles/bfgballs.txt"
 #include "gldefs/projectiles/d1000.txt"
 
@@ -14,6 +18,13 @@
 #include "gldefs/projectiles/clusterbombs.txt"
 #include "gldefs/projectiles/plasmabeam.txt"
 #include "gldefs/projectiles/y23h.txt"
+
+
+////
+// Leandro
+
+#include "gldefs/projectiles/multigun.txt"
+#include "gldefs/projectiles/powerful.txt"
 
 
 ////

@@ -404,7 +404,7 @@ Actor SChaingunGrenade
         stop
       Death:
         MISL B 0 Bright A_ChangeFlag("NoGravity", 1)
-        MISL B 6 Bright A_Explode(128, 96)
+        MISL B 6 Bright A_Explode(128, 96, 0)
         MISL CD 6 Bright
         Stop
     }

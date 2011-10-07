@@ -17,11 +17,19 @@ flickerlight2 JKEClassAttack2
 }
 
 ////
+// General
+
+#include "gldefs/lightdefs/explosiveglows.txt"
+#include "gldefs/lightdefs/flameglows.txt"
+
+
+////
 // Doomguy/General
 
 #include "gldefs/lightdefs/rocketglows.txt"
 #include "gldefs/lightdefs/plasmaglows.txt"
 #include "gldefs/lightdefs/bfgglows.txt"
+
 
 ////
 // Strife Marine
@@ -29,6 +37,14 @@ flickerlight2 JKEClassAttack2
 #include "gldefs/lightdefs/clusterbombglows.txt"
 #include "gldefs/lightdefs/pulseglows.txt"
 #include "gldefs/lightdefs/y23hglows.txt"
+
+
+////
+// Leandro
+
+#include "gldefs/lightdefs/multigunglows.txt"
+#include "gldefs/lightdefs/powerfulglows.txt"
+
 
 ////
 // Sorcerer
