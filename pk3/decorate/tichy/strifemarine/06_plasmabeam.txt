@@ -2,7 +2,6 @@
 actor " S-Plasma Beam ": Weapon
 {
     Weapon.SelectionOrder 500
-    Weapon.SlotNumber 6
 
     Weapon.AmmoType1 "Cell"
     Weapon.AmmoType2 "Cell"

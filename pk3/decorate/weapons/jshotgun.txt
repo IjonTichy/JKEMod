@@ -11,6 +11,8 @@ actor " J-Shotgun " : Weapon
     Weapon.AmmoType1 "JShellCounter"
     Weapon.AmmoType2 "Shell"
 
+    Decal BulletChip
+
     Inventory.PickupMessage "$JKE_PK_JSHOTGUN"
     Obituary "$JKE_MP_JSHOTGUN"
     States

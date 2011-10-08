@@ -9,6 +9,7 @@ actor " J-Super Shotgun ": Weapon
 
     Weapon.SelectionOrder 900
 
+    Decal BulletChip
 
     Inventory.PickupMessage "$JKE_PK_JSUPERSHOTGUN"
     Obituary "$JKE_MP_JSUPERSHOTGUN"

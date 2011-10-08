@@ -1,16 +1,12 @@
-
-actor PistolSide: Inventory
-{
-    inventory.maxamount 1
-    +UNDROPPABLE
-}
-
 actor " L-Dual Pistols ": Weapon
 {
     Weapon.SelectionOrder 920
+
+    Weapon.AmmoType "Clip"
     Weapon.AmmoUse 1
     Weapon.AmmoGive 80
-    Weapon.AmmoType "Clip"
+
+    Decal BulletChip
     Inventory.PickupMessage "$JKE_PK_DUALPISTOLS"
     Obituary "$JKE_MP_DUALPISTOLS"
     States
@@ -55,4 +51,10 @@ actor " L-Dual Pistols ": Weapon
         PISS A -1
         Stop
     }
+}
+
+actor PistolSide: Inventory
+{
+    inventory.maxamount 1
+    +UNDROPPABLE
 }

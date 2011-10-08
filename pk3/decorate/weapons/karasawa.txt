@@ -6,6 +6,8 @@ actor " Karasawa ": Weapon
 
     Weapon.SelectionOrder 1500
 
+    Decal PlasmaScorch
+
     Inventory.PickupMessage "$JKE_PK_KARASAWA"
     Obituary "$JKE_MP_KARASAWA"
 
@@ -68,8 +70,8 @@ actor KarasawaShot
     States
     {
       Spawn:
+        KWBB AAABBBCCCDDD 1 bright A_SpawnItemEx("KarasawaTrail")
         KWBB A 0 A_Countdown
-        KWBB ABCD 3 bright A_SpawnItemEx("KarasawaTrail")
         loop
       Death:
         KWBD ABCDEF 3 bright

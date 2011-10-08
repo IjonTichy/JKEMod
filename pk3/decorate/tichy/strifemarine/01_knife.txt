@@ -1,7 +1,6 @@
 actor " S-Knife ": Weapon
 {
     Weapon.SelectionOrder 2500
-    Weapon.SlotNumber 1
 
     +WEAPON.WIMPY_WEAPON
     +WEAPON.MELEEWEAPON

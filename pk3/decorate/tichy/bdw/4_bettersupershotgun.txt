@@ -10,7 +10,6 @@ actor " B-Super Shotgun ": DoomWeapon
     Weapon.AmmoType1 "Shell"
     Weapon.AmmoType2 "Shell"
 
-    Weapon.SlotNumber 3
     Weapon.SisterWeapon "Power Super Shotgun"
 
     Inventory.PickupMessage "$BDW_PK_SUPERSHOTGUN"

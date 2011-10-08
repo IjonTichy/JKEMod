@@ -7,7 +7,6 @@ actor " B-Fists ": DoomWeapon
     +NOALERT
     +NOAUTOFIRE
 
-    Weapon.SlotNumber 1
     Weapon.SisterWeapon "Power Fists"
 
     Inventory.PickupMessage "$BDW_PK_FISTS"

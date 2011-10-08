@@ -132,6 +132,8 @@ actor JRocketLauncherShot
     +ROCKETTRAIL
     +DEHEXPLOSION
 
+    Decal Scorch
+
     States
     {
       Spawn:
@@ -159,13 +161,15 @@ actor JRocketLauncherShotSmall
     +ROCKETTRAIL
     +DEHEXPLOSION
 
+    Decal RevenantScorch
+
     States
     {
       Spawn:
         RMMS A 1 bright
         loop
       Death:
-        MISL B 0 A_PlaySound("jkemod/jrocketlauncher/explode")
+        MISL B 0 A_PlaySound("jkemod/jrocketlauncher/explodequiet")
         MISL B 0 A_Explode(60, 128)
         MISL BBBBCCCDD 2 bright
         stop

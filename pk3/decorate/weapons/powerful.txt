@@ -47,8 +47,9 @@ actor PowerfulShot
     +FORCERADIUSDMG
     +RIPPER
     +DEHEXPLOSION
+    +SKYEXPLODE
     Radius 7
-    Height 1
+    Height 2
     Damage 999
     Speed 100
 

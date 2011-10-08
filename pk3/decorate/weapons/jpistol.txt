@@ -15,6 +15,8 @@ actor " J-Pistol ": Weapon
     weapon.AmmoUse1 1
     weapon.selectionorder 1200
 
+    Decal BulletChip
+
     Inventory.PickupMessage "$JKE_PK_JPISTOL"
     Obituary "$JKE_MP_JPISTOL"
     states

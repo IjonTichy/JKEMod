@@ -13,6 +13,8 @@ actor " L-Quadshot ": Weapon
     +AMMO_OPTIONAL
     +ALT_AMMO_OPTIONAL
 
+    Decal BulletChip
+
     Inventory.PickupMessage "$JKE_PK_QUADSHOT"
     Obituary "$JKE_MP_QUADSHOT"
 

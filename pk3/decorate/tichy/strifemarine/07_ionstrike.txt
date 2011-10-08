@@ -2,7 +2,6 @@
 actor " S-Ionstrike ": Weapon
 {
     Weapon.SelectionOrder 900
-    Weapon.SlotNumber 8
 
     Weapon.AmmoType1 "Cell"
     Weapon.AmmoType2 "Cell"

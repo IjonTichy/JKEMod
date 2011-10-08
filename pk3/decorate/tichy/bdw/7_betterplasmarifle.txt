@@ -20,7 +20,6 @@ ACTOR " B-Plasma Rifle ": DoomWeapon
     Weapon.AmmoType1     "Cell"
     Weapon.AmmoType2     "Cell"
 
-    Weapon.SlotNumber 6
     Weapon.SisterWeapon "Power Plasma Rifle"
 
     +NOAUTOFIRE

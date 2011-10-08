@@ -11,6 +11,8 @@ actor " Heavy Chaingun ": Weapon
 
     Weapon.UpSound "jkemod/heavychaingun/up"
 
+    Decal BulletChip
+
     Inventory.PickupMessage "$JKE_PK_HEAVYCHAINGUN"
     Obituary "$JKE_MP_HEAVYCHAINGUN"
     States

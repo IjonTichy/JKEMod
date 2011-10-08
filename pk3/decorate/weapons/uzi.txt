@@ -10,6 +10,8 @@ actor " J-Uzi ": Weapon
     Weapon.SelectionOrder 1000
     AttackSound "jkemod/uzi/fire"
 
+    Decal BulletChip
+
     Inventory.PickupMessage "$JKE_PK_UZI"
     Obituary "$JKE_MP_UZI"
 

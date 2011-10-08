@@ -10,7 +10,6 @@ Actor " B-Rocket Launcher ": DoomWeapon
     +NOAUTOAIM
     +NOAUTOFIRE
 
-    Weapon.SlotNumber 5
     Weapon.SisterWeapon "Power Rocket Launcher"
 
     Inventory.PickupMessage "$BDW_PK_ROCKETLAUNCHER"

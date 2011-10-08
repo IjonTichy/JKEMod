@@ -2,7 +2,6 @@
 actor " S-Cluster Bomber ": Weapon
 {
     Weapon.SelectionOrder 800
-    Weapon.SlotNumber 5
 
     Weapon.AmmoType1 "RocketAmmo"
     Weapon.AmmoType2 "RocketAmmo"

@@ -1,14 +1,14 @@
 ////
 // General
 
+#include "gldefs/projectiles/rockets.txt"
+#include "gldefs/projectiles/bfgballs.txt"
 #include "gldefs/projectiles/explosives.txt"
 #include "gldefs/projectiles/plasmaballs.txt"
 
 ////
-// Doomguy/General
+// Doomguy
 
-#include "gldefs/projectiles/rockets.txt"
-#include "gldefs/projectiles/bfgballs.txt"
 #include "gldefs/projectiles/d1000.txt"
 
 
@@ -18,6 +18,12 @@
 #include "gldefs/projectiles/clusterbombs.txt"
 #include "gldefs/projectiles/plasmabeam.txt"
 #include "gldefs/projectiles/y23h.txt"
+
+
+////
+// JKEGuy
+
+#include "gldefs/projectiles/fragmentlauncher.txt"
 
 
 ////

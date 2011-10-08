@@ -11,6 +11,8 @@ actor " J-Plasma Rifle ": Weapon
     Inventory.PickupMessage "$JKE_PK_JPLASMARIFLE"
     Obituary "$JKE_MP_JPLASMARIFLE_RAIL"
 
+    Decal RailScorch
+
     States
     {
       Select:
@@ -64,6 +66,8 @@ actor JPlasmaShot
 
     DeathSound "jkemod/jplasmarifle/hit"
 
+    Decal PlasmaScorch
+
     Obituary "$JKE_MP_JPLASMARIFLE_PLASMA"
 
     States
@@ -72,7 +76,7 @@ actor JPlasmaShot
         D3PP ABCDEFGHIJKLMNOPQRSTU 1 bright
         loop
       Death:
-        PLSE BCDE 4 bright
+        PLSE ABCDE 4 bright
         stop
     }
 }

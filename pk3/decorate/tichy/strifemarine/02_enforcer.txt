@@ -1,7 +1,5 @@
 actor " S-Enforcer ": Weapon
 {
-    Weapon.SlotNumber 2
-
     Weapon.AmmoType1 "Clip"
     Weapon.AmmoType2 "Clip"
     Weapon.AmmoUse1 1

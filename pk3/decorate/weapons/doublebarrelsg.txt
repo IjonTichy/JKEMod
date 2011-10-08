@@ -1,7 +1,6 @@
 
 actor " Double Shotgun " : Weapon
 {
-    SpawnID 199
     Weapon.SelectionOrder 300
     Weapon.AmmoType "Shell"
     Weapon.AmmoUse 2

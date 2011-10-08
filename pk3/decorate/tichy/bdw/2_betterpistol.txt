@@ -8,7 +8,6 @@ actor " B-Pistol ": DoomWeapon
     Weapon.AmmoType1 "Clip"
     Weapon.AmmoType2 "Clip"
 
-    Weapon.SlotNumber 2
     Weapon.SisterWeapon "Power Pistol"
 
     +WEAPON.WIMPY_WEAPON

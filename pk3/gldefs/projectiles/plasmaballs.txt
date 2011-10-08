@@ -159,3 +159,46 @@ object PlasmaDriverShotSmall
     frame RPLSD { light RedPlasmaGlow1 }
     frame RPLSE { light RedPlasmaGlow0 }
 }
+
+
+object JPlasmaShot
+{
+    frame D3PP  { light BluePlasmaGlow3 }
+
+    frame PLSEA { light PlasmaGlow4 }
+    frame PLSEB { light PlasmaGlow4 }
+    frame PLSEC { light PlasmaGlow3 }
+    frame PLSED { light PlasmaGlow2 }
+    frame PLSEE { light PlasmaGlow1 }
+}
+
+
+object KarasawaShot
+{
+    frame KWBB  { light BluePlasmaGlow3 }
+
+    frame KWBDA { light BluePlasmaGlow4 }
+    frame KWBDB { light BluePlasmaGlow5 }
+    frame KWBDC { light BluePlasmaGlow5 }
+    frame KWBDD { light BluePlasmaGlow4 }
+    frame KWBDE { light BluePlasmaGlow3 }
+    frame KWBDF { light BluePlasmaGlow2 }
+}
+
+
+object KarasawaTrail
+{
+    frame KWBR  { light BluePlasmaGlow3 }
+}
+
+object BFG7000Plasma
+{
+    frame GPLSA { light GreenPlasmaGlow3 }
+    frame GPLSB { light GreenPlasmaGlow3 }
+
+    frame GPLSC { light GreenPlasmaGlow4 }
+    frame GPLSD { light GreenPlasmaGlow4 }
+    frame GPLSE { light GreenPlasmaGlow3 }
+    frame GPLSF { light GreenPlasmaGlow2 }
+    frame GPLSG { light GreenPlasmaGlow1 }
+}

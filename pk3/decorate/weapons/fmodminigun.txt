@@ -10,6 +10,8 @@ actor " L-Minigun ": Weapon
 
     AttackSound "jkemod/fmodminigun/fire"
 
+    Decal BulletChip
+
     Inventory.PickupMessage "$JKE_PK_FMODMINIGUN"
     Obituary "$JKE_MP_FMODMINIGUN"
 

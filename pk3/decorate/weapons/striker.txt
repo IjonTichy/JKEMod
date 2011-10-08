@@ -10,6 +10,8 @@ actor " L-Striker ": Weapon
     Weapon.SelectionOrder 600
     Scale 0.6
 
+    Decal BulletChip
+
     Inventory.PickupMessage "$JKE_PK_STRIKER"
     Obituary "$JKE_MP_STRIKER"
     States

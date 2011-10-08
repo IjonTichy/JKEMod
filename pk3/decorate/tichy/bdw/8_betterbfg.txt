@@ -188,6 +188,8 @@ actor BetterBFGBall
     Projectile
     +RANDOMIZE
     +FORCERADIUSDMG
+
+    Decal BFGLightning
     Obituary "$BDW_MP_BFG9000"
     States
     {
@@ -216,6 +218,8 @@ actor BetterPowerBFGBall
     Projectile
     +RANDOMIZE
     +FORCERADIUSDMG
+
+    Decal BFGLightningBig
     Obituary "$BDW_MP_BFG9000_POWER"
     States
     {
