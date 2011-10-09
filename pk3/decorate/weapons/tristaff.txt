@@ -19,6 +19,7 @@ actor " Tri-Staff ": Weapon
     States
     {
       Select:
+        ST3F A 0 A_TakeInventory("TriStaffCharge")
         ST3F A 1 A_Raise
         Loop
 
@@ -53,14 +54,23 @@ actor " Tri-Staff ": Weapon
         Goto Ready
 
       AltFire:
-        ST3F B 0 A_Light1
+        ST3F A 3 A_GiveInventory("TriStaffCharge")
+        ST3F A 0 A_JumpIfInventory("TriStaffCharge", 0, "AltBlast")
+        ST3F A 0 A_JumpIfInventory("AltFired", 1, "AltFire")
+        goto AltBlast
 
-        ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_WEAPON)
-        ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_BODY)
-        ST3F B 0 A_PlaySound("jkemod/tristaff/fire", CHAN_AUTO)
-        ST3F B 0 A_RailAttack(25, -7, 1, none, "00 FF 00", 1, 0)
-        ST3F B 0 A_RailAttack(25,  0, 1, none, "00 00 FF", 1, 0)
-        ST3F E 8 bright offset(0, 40) A_RailAttack(25,  7, 1, none, "FF 00 00", 1, 0)
+      AltBlast:
+        ST3F A 0 A_Light2
+
+        ST3F A 0 A_PlaySound("jkemod/tristaff/fire", 5)
+        ST3F A 0 A_PlaySound("jkemod/tristaff/fire", 6)
+        ST3F A 0 A_PlaySound("jkemod/tristaff/fire", 7)
+
+        ST3F B 0 A_RailAttack(5*ACS_ExecuteWithResult(873, 0), -7, 1, none, "00 FF 00", 1, ACS_ExecuteWithResult(873, 0))
+        ST3F B 0 A_RailAttack(5*ACS_ExecuteWithResult(873, 0),  0, 1, none, "00 00 FF", 1, ACS_ExecuteWithResult(873, 0))
+        ST3F B 0 A_RailAttack(5*ACS_ExecuteWithResult(873, 0),  7, 1, none, "FF 00 00", 1, ACS_ExecuteWithResult(873, 0))
+
+        ST3F E 8 bright offset(0, 40) A_TakeInventory("TriStaffCharge")
         ST3F E 3 bright offset(0, 38)
         ST3F A 3 bright offset(0, 34) A_Light0
         goto Ready
@@ -70,7 +80,6 @@ actor " Tri-Staff ": Weapon
         Stop
     }
 }
-
 
 actor " Power Tri-Staff ": " Tri-Staff "
 {
@@ -120,4 +129,11 @@ actor " Power Tri-Staff ": " Tri-Staff "
         ST3F Z -1
         Stop
     }
+}
+
+
+actor TriStaffCharge: Inventory
+{
+    Inventory.MaxAmount 25
+    +UNDROPPABLE
 }

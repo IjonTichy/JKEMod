@@ -74,3 +74,28 @@ decal SmallScorch
     randomflipx
     randomflipy
 }
+
+decal SmallScorch
+{
+    pic SCORCH1
+    shade "00 00 00"
+    x-scale 0.4
+    y-scale 0.4
+    randomflipx
+    randomflipy
+}
+
+fader PowerfulFade
+{
+    DecayStart  10.0
+    DecayTime   15.0
+}
+
+decal PowerfulScorch
+{
+    pic POWERDEC
+    shade "00 00 00"
+    randomflipx
+
+    animator PowerfulFade
+}

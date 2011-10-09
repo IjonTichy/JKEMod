@@ -22,13 +22,13 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {" B-Super Shotgun ",   "BDWClass3Message2",     "Shell", "None"},
 
         {" B-Chaingun ",        "BDWClass4Message",      "Clip", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" B-Chaingun ",        "BDWClass4Message",      "Clip", "None"},
 
         {" B-Rocket Launcher ", "BDWClass5Message",      "RocketAmmo", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" B-Rocket Launcher ", "BDWClass5Message",      "RocketAmmo", "None"},
 
         {" B-Plasma Rifle ",    "BDWClass6Message",      "Cell", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" B-Plasma Rifle ",    "BDWClass6Message",      "Cell", "None"},
 
         {" B-BFG9000 ",         "BDWClass7Message",      "Cell", "None"},
         {"None",                "None",                  "None", "None"},
@@ -123,7 +123,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {" Ethereal Crossbow ", "SorcererClass3Message", "EtherealAmmo", "None"},
 
         {" Tri-Staff ",         "SorcererClass4Message", "JKEMana", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" Tri-Staff ",         "SorcererClass4Message", "JKEMana", "None"},
 
         {" Black Magic ",       "SorcererClass5Message", "JKEMana", "None"},
         {"None",                "None",                  "None", "None"},

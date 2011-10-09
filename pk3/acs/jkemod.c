@@ -6,6 +6,16 @@ int multigunStrings[3] = {
     "Ice shards",
     "Flame grenades"};
 
+script 873 (int which)  // get inventory
+{
+    switch (which)
+    {
+        case 0:
+            SetResultValue(CheckInventory("TristaffCharge"));
+            break;
+    }
+}
+
 script 874 (int trigger)  // (un)freeze the player
 {
     SetPlayerProperty(0, trigger, 0);

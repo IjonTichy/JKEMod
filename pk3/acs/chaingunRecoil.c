@@ -8,13 +8,14 @@ script 474 (int recoilInt, int recoilFrac)
 
     int angle = GetActorAngle(0);
     int pitch = GetActorPitch(0);
-    int bAngle = angle >> 8;
 
-    //Print(f:angle, s:" ", d:bAngle);
+    int dx = FixedMul(cos(angle), recoil);
+        dx = -FixedMul(dx, cos(pitch));
 
-    int hM = FixedMul(recoil, cos(pitch) ) >> 16;
-    int vM = (FixedMul(recoil, -sin(pitch) ) >> 16) * 4;
+    int dy = FixedMul(sin(angle), recoil);
+        dy = -FixedMul(dy, cos(pitch));
 
-    ThrustThing(bAngle, -hM, 1, 0);
-    ThrustThingZ(0, vM, 1, 1);
+    int dz = FixedMul(sin(pitch), recoil);
+
+    SetActorVelocity(0, dx, dy, dz, 1, 1);
 }

@@ -39,19 +39,26 @@ actor " Powerful " : Weapon
 
 actor PowerfulShot
 {
+
+    Radius 4
+    Height 8
+    Speed 100
+
     Projectile
-    +EXTREMEDEATH
-    +BLOODSPLATTER
+    Damage 1024
+
+    +RIPPER
     +FOILINVUL       // oh _christ_
     +PIERCEARMOR
+
     +FORCERADIUSDMG
-    +RIPPER
-    +DEHEXPLOSION
     +SKYEXPLODE
-    Radius 7
-    Height 2
-    Damage 999
-    Speed 100
+
+    +BLOODSPLATTER
+    +EXTREMEDEATH
+    +DEHEXPLOSION
+
+    Decal PowerfulScorch
 
     States
     {

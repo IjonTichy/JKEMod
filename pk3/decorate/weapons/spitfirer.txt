@@ -81,6 +81,8 @@ actor SpitfirerGrenade
     Damage 25
     ReactionTime 3
 
+    Decal Scorch
+
     Obituary "$JKE_MP_SPITFIRER_GRENADE"
 
     States

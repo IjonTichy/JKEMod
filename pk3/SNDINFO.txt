@@ -110,7 +110,7 @@ $alias jkemod/blackmagic/explode        betterdoomweapons/rocketexplode
 $alias jkemod/bfg7000/plasmaexplode     weapons/plasmax
 $alias jkemod/bfg7000/explode           weapons/bfgx
 
-jkemod/bfg7000/load                     sounds/weapons/bfg7000/load.lmp
+jkemod/bfg7000/load                     sounds/weapons/bfg7000/load.wav
 jkemod/bfg7000/fire                     sounds/weapons/bfg7000/fire.wav
 jkemod/bfg7000/plasmafire               sounds/weapons/bfg7000/plasma.wav
 
