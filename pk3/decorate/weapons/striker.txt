@@ -10,6 +10,8 @@ actor " L-Striker ": Weapon
     Weapon.SelectionOrder 600
     Scale 0.6
 
+    +NOALERT
+
     Decal BulletChip
 
     Inventory.PickupMessage "$JKE_PK_STRIKER"
@@ -26,10 +28,12 @@ actor " L-Striker ": Weapon
 
       Ready:
         STKK A 1 A_WeaponReady
-        Loop
+        STKK A 0 A_JumpIfInventory("ReloadButton", 1, "AltFire")
+        loop
 
       Fire:
         STKK A 0 A_JumpIfNoAmmo("AltFire")
+        STKK A 0 A_AlertMonsters
 
         STKK A 0 A_FireCustomMissile("ShellCasing", -48, 0, 3, 6)
         STKK A 0 A_PlaySound("jkemod/striker/fire", CHAN_WEAPON)
@@ -37,6 +41,7 @@ actor " L-Striker ": Weapon
         STKF AB 2 bright A_Light1
         STKK A 4 A_Light0
         goto Ready
+
 
       AltFire:
         STKK A 0 A_JumpIfInventory("StrikerCounter", 0, "NoReload")

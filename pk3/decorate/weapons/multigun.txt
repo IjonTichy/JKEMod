@@ -25,7 +25,8 @@ actor " L-Multigun ": Weapon
 
       Ready:
         SBRG A 1 A_WeaponReady
-        Loop
+        SBRG A 0 A_JumpIfInventory("ReloadButton", 1, "GenericLoad")
+        loop
 
       Fire:
         SBRG A 0 A_JumpIfInventory("MultigunFired", 1, "GenericLoad")
@@ -61,6 +62,9 @@ actor " L-Multigun ": Weapon
         goto Ready
 
       GenericLoad:
+        SBRG E 0 A_JumpIfInventory("MultigunFired", 1, 1)
+        goto Ready
+
         SBRG EF 2
         SBRG A 0 A_TakeInventory("MultigunFired")
         SBRG G 4 A_PlaySound("jkemod/multigun/load", CHAN_WEAPON)
@@ -121,6 +125,9 @@ actor MultigunRocket
 
     SeeSound "jkemod/multigun/rocketfire"
     DeathSound "jkemod/multigun/rocketexplode"
+
+    Decal Scorch
+
     Obituary "$JKE_MP_MULTIGUN_ROCKET"
 
     States
@@ -171,6 +178,8 @@ actor MultigunFlameGrenade
 
     -NOGRAVITY
     +DEHEXPLOSION
+
+    Decal Scorch
 
     SeeSound "jkemod/multigun/flamefire"
     DeathSound "jkemod/multigun/flameexplode"

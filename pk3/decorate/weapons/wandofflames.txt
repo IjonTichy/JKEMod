@@ -100,19 +100,6 @@ actor " Power Wand of Flames ": " Wand of Flames "
 
     States
     {
-      Select:
-        WEMB B 1 A_Raise
-        Loop
-
-      Deselect:
-        WEMB B 0 A_StopSoundEx("Weapon")
-        WEMB B 1 A_Lower
-        Loop
-
-      Ready:
-        WEMB B 1 A_WeaponReady
-        Loop
-
       Fire:
         WEMB C 0 A_PlaySound("jkemod/wandofflames/open", 6)
         WEMB E 2 Bright
@@ -181,10 +168,6 @@ actor " Power Wand of Flames ": " Wand of Flames "
         WEMB C 0 A_StopSoundEx("Weapon")
         WEMB B 6
         Goto Ready
-
-      Spawn:
-        WEMB A -1
-        Loop
     }
 }
 
@@ -202,6 +185,8 @@ actor WOFShotBase
     RenderStyle Add
     Alpha 0.75
     Scale 0.75
+
+    Decal DoomImpScorch
 
     DeathSound "jkemod/wandofflames/explode"
     Obituary "$JKE_MP_WANDOFFLAMES_FIREBALL"
@@ -282,88 +267,6 @@ actor WOFFlame
 
 }
 
-
-
-actor PowerWOFShotBase
-{
-    Radius 4
-    Height 4
-
-    Projectile
-    -BLOODSPLATTER
-    +BLOODLESSIMPACT
-    +FORCERADIUSDMG
-
-    DamageType Fire
-
-    RenderStyle Add
-    Alpha 0.75
-    Scale 0.75
-
-    DeathSound "jkemod/wandofflames/explode"
-    Obituary "$JKE_MP_WANDOFFLAMES_P_FIREBALL"
-
-    states
-    {
-      Spawn:
-        WEMP AABBB 1 bright A_SpawnItemEx("WOFTrail")
-        loop
-      Death:
-        WEMP A 0 A_Explode(64, 96, 0)
-        WEMP A 0 A_SpawnItemEx("PowerWOFFlame")
-        FREX ABC 3 bright
-        stop
-    }
-}
-
-actor PowerWOFShot1: PowerWOFShotBase
-{
-    Speed 60
-    Damage (8*random(3, 5))
-}
-
-actor PowerWOFShot2: PowerWOFShotBase
-{
-    Speed 56
-    Damage (8*random(2, 4))
-}
-
-actor PowerWOFShot3: PowerWOFShotBase
-{
-    Speed 52
-    Damage (7*random(3, 5))
-}
-
-actor PowerWOFFlame
-{
-    Radius 4
-    Height 4
-
-    Projectile
-    +BLOODLESSIMPACT
-    +PUFFGETSOWNER
-    +NODAMAGETHRUST
-    +FORCERADIUSDMG
-    +RIPPER
-
-    DamageType Fire
-
-    RenderStyle Add
-    Alpha 0.75
-    Scale 0.75
-
-    Obituary "$JKE_MP_WANDOFFLAMES_P_FIREBALL"
-
-    states
-    {
-      Spawn:
-        WEMF ABCDEFGHIJKLMNOP 3 bright A_Explode(4, 24, 0)
-        stop
-    }
-
-}
-
-
 actor WOFFireBase
 {
     Radius 16
@@ -381,6 +284,8 @@ actor WOFFireBase
     RenderStyle Add
     Alpha 0.75
     Scale 0.75
+
+    Decal DoomImpScorch
 
     Obituary "$JKE_MP_WANDOFFLAMES_FIRE"
 
@@ -416,25 +321,65 @@ actor WOFFire3: WOFFireBase
 }
 
 
-actor PowerWOFFireBase
+
+
+
+actor PowerWOFShotBase: WofShotBase
 {
-    Radius 16
-    Height 16
-    Speed 30
-
-    Projectile
-    -BLOODSPLATTER
-    +BLOODLESSIMPACT
-    +NODAMAGETHRUST
     +FORCERADIUSDMG
-    +RIPPER
 
-    Damage (5)
-    DamageType Fire
+    Obituary "$JKE_MP_WANDOFFLAMES_P_FIREBALL"
 
-    RenderStyle Add
-    Alpha 0.75
-    Scale 0.75
+    states
+    {
+      Spawn:
+        WEMP AABBB 1 bright A_SpawnItemEx("WOFTrail")
+        loop
+      Death:
+        WEMP A 0 A_Explode(64, 96, 0)
+        WEMP A 0 A_SpawnItemEx("PowerWOFFlame")
+        FREX ABC 3 bright
+        stop
+    }
+}
+
+actor PowerWOFShot1: PowerWOFShotBase
+{
+    Speed 60
+    Damage (8*random(3, 5))
+}
+
+actor PowerWOFShot2: PowerWOFShotBase
+{
+    Speed 56
+    Damage (8*random(2, 4))
+}
+
+actor PowerWOFShot3: PowerWOFShotBase
+{
+    Speed 52
+    Damage (7*random(3, 5))
+}
+
+actor PowerWOFFlame: WOFFlame
+{
+    +FORCERADIUSDMG
+
+    Obituary "$JKE_MP_WANDOFFLAMES_P_FIREBALL"
+
+    states
+    {
+      Spawn:
+        WEMF ABCDEFGHIJKLMNOP 3 bright A_Explode(4, 24, 0)
+        stop
+    }
+
+}
+
+
+actor PowerWOFFireBase: WOFFireBase
+{
+    +FORCERADIUSDMG
 
     Obituary "$JKE_MP_WANDOFFLAMES_P_FIRE"
 

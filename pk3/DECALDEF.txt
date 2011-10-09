@@ -53,3 +53,24 @@ decalgroup BFGLightningBig
     BFGLightning1Big   1
     BFGLightning2Big   1
 }
+
+decal CrossbowScorchBig
+{
+    pic CBOWMARK
+    shade "00 00 00"
+    x-scale 0.6
+    y-scale 0.6
+    randomflipx
+    randomflipy
+}
+
+
+decal SmallScorch
+{
+    pic SCORCH1
+    shade "00 00 00"
+    x-scale 0.4
+    y-scale 0.4
+    randomflipx
+    randomflipy
+}

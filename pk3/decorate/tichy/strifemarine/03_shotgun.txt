@@ -38,7 +38,7 @@ actor " S-Shotgun ": Weapon
       Reload:
         HMSG A 0 A_JumpIfInventory("ShellsPumped", 0, "PNo")
         HMSG A 0 A_JumpIfInventory("Shell", 1, "P")
-        goto PNo
+        goto Ready
 
       P:
         HMSG FGH 1
@@ -63,10 +63,6 @@ actor " S-Shotgun ": Weapon
       PEnd:
         HMSG I 2
         HMSG HGF 1
-        goto Ready
-
-      PNo:
-        HMSG A 1
         goto Ready
 
     ////

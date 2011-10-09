@@ -110,6 +110,8 @@ actor GloveFire: BulletPuff
 
     +FORCERADIUSDMG
 
+    Decal DoomImpScorch
+
     RenderStyle Add
     VSpeed 0
 }
@@ -215,8 +217,11 @@ actor GloveFireBig: BulletPuff
     +PUFFONACTORS
     +PUFFGETSOWNER
     +BLOODLESSIMPACT
+
     RenderStyle Add
     Scale 1.5
+
+    Decal BigScorch
 
     States
     {
@@ -257,6 +262,8 @@ actor FireGloveFireball
 
     +DEHEXPLOSION
 
+    Decal DoomImpScorch
+
     SeeSound "jkemod/firegloves/fire1"
     DeathSound "jkemod/firegloves/explode1"
 
@@ -282,6 +289,8 @@ actor FireGloveMeteor
 
     Projectile
     Damage 30
+
+    Decal SmallScorch
 
     SeeSound "jkemod/firegloves/fire2"
     DeathSound "jkemod/firegloves/explode1"
@@ -313,6 +322,8 @@ actor FireGloveGroundFireball
     +BRIGHT
 
     RenderStyle Add
+
+    Decal Scorch
 
     SeeSound "jkemod/firegloves/fire2"
     DeathSound "jkemod/firegloves/explode2"
@@ -358,6 +369,8 @@ actor FireGloveFireballSmall
 
     RenderStyle Add
 
+    Decal DoomImpScorch
+
     SeeSound "jkemod/firegloves/fire2"
     DeathSound "jkemod/firegloves/explode1"
 
@@ -374,39 +387,20 @@ actor FireGloveFireballSmall
 }
 
 
-actor " Power Fire Gloves " : Weapon
+actor " Power Fire Gloves ": " Fire Gloves "
 {
-    Weapon.AmmoType1 "FireAmmo"
-    Weapon.AmmoType2 "JKEMana"
     Weapon.AmmoUse1 5
     Weapon.AmmoUse2 10
     Weapon.AmmoGive1 0
     Weapon.AmmoGive2 0
 
-    +WEAPON.NOAUTOAIM
-
     Weapon.SisterWeapon " Fire Gloves "
     +POWERED_UP
 
-    Weapon.SelectionOrder 560
-    Weapon.YAdjust 10
-
-    Inventory.PickupMessage "$JKE_PK_FIREGLOVES"
     Obituary "$JKE_MP_FIREGLOVES_POWER"
 
     States
     {
-      Deselect:
-        JFLM AAABBBCCC 1 bright A_Lower
-        loop
-      Select:
-        JFLM AAABBBCCC 1 bright A_Raise
-        loop
-
-      Ready:
-        JFLM ABC 3 bright A_WeaponReady
-        loop
-
       Fire:
         JFLM D 7 bright A_PlaySound("jkemod/firegloves/fire", CHAN_WEAPON)
         JFLM D 0 A_PlaySound("jkemod/firegloves/crackle", CHAN_WEAPON)
@@ -476,9 +470,6 @@ actor " Power Fire Gloves " : Weapon
 
         JFLM G 20 bright A_Light0
         Goto Ready
-      Spawn:
-        JFLM Z -1 bright
-        stop
     }
 }
 
@@ -488,8 +479,11 @@ actor PowerGloveFireBig: BulletPuff
     +PUFFGETSOWNER
     +BLOODLESSIMPACT
     +FORCERADIUSDMG
+
     RenderStyle Add
     Scale 1.5
+
+    Decal BigScorch
 
     States
     {
@@ -514,6 +508,8 @@ actor PowerFireGloveFireball
 
     +DEHEXPLOSION
     +FORCERADIUSDMG
+
+    Decal DoomImpScorch
 
     SeeSound "jkemod/firegloves/fire1"
     DeathSound "jkemod/firegloves/explode1"
@@ -541,6 +537,8 @@ actor PowerFireGloveMeteor
 
     Projectile
     Damage 40
+
+    Decal SmallScorch
 
     SeeSound "jkemod/firegloves/fire2"
     DeathSound "jkemod/firegloves/explode1"
@@ -573,6 +571,8 @@ actor PowerFireGloveGroundFireball
     +BRIGHT
 
     RenderStyle Add
+
+    Decal Scorch
 
     SeeSound "jkemod/firegloves/fire2"
     DeathSound "jkemod/firegloves/explode2"
@@ -607,6 +607,8 @@ actor PowerFireGloveFireballSmall
     +FORCERADIUSDMG
 
     RenderStyle Add
+
+    Decal DoomImpScorch
 
     SeeSound "jkemod/firegloves/fire2"
     DeathSound "jkemod/firegloves/explode1"

@@ -46,6 +46,7 @@ script 760 (void)   /* generic button signaler */
 
 script 761 ENTER
 {
+    TakeInventory("ReloadButton", 1);
     TakeInventory("PlayerDead", 1); // y'know, assuming you have it
     inGame[PlayerNumber()] = 1;
     dead[PlayerNumber()] = 0;
@@ -60,6 +61,7 @@ script 761 ENTER
 script 762 DEATH
 {
     GiveInventory("PlayerDead", 1);
+    TakeInventory("ReloadButton", 1);
     inGame[PlayerNumber()] = 1;
     dead[PlayerNumber()] = 1;
 }
@@ -72,11 +74,7 @@ script 763 (int pln) DISCONNECT
 
 script 764 RESPAWN
 {
-    TakeInventory("PlayerDead", 1);
-    inGame[PlayerNumber()] = 1;
-    dead[PlayerNumber()] = 0;
-    ACS_ExecuteAlways(760, 0, 0,0,0);
-    ACS_ExecuteAlways(730, 0, 0,0,0);
+    ACS_ExecuteAlways(761, 0, 0,0,0);
 }
 
 
@@ -84,6 +82,7 @@ script 730 (void)
 {
     int pln = PlayerNumber();
     int check;
+    int powered;
 
     while (!dead[pln] && inGame[pln])
     {
@@ -94,18 +93,20 @@ script 730 (void)
         Delay(1);
         check += 1;
 
+        powered = CheckInventory("PowerWeaponLevel2");
+
         if (check % 10 == 0)
         {
             GiveInventory("HellFistCounter", 1);
         }
 
-        if ((check % 10) == 0 && CheckInventory("PowerWeaponLevel2"))
+        if ((check % 10) == 0 && powered)
         {
             GiveInventory("JKEMana", 1);
         }
 
 
-        if (check % 20 == 0 && !CheckInventory("PowerWeaponLevel2"))
+        if (check % 20 == 0 && !powered)
         {
             GiveInventory("JKEMana", 1);
         }

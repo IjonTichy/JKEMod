@@ -9,6 +9,8 @@ actor " L-Plasma Driver ": Weapon
 
     Weapon.SelectionOrder 500
 
+    Decal RailScorchLower
+
     Inventory.PickupMessage "$JKE_PK_PLASMADRIVER"
     Obituary "$JKE_MP_PLASMADRIVER"
 
@@ -61,6 +63,9 @@ actor PlasmaDriverShot
 
     SeeSound "jkemod/plasmadriver/fire"
     DeathSound "jkemod/plasmadriver/explode"
+
+    Decal PlasmaScorchLower
+
     Obituary "$JKE_MP_PLASMADRIVER_PLASMA"
 
     States
