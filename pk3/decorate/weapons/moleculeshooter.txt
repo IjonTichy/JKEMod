@@ -65,6 +65,7 @@ actor MoleculeDebris
     RenderStyle Add
     Scale 0.8
     Alpha 0.8
+    Decal Scorch
 
     States
     {

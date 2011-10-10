@@ -1,0 +1,15 @@
+JKE_MP_BFG7000_POWER            = "%o evaporated under %k's BFG7000.";
+JKE_MP_FRAGMENTLAUNCHER1_POWER  = "%o found himself in %k's wall of flak.";
+JKE_MP_FRAGMENTLAUNCHER2_POWER  = "%k got a clean split on %o.";
+JKE_MP_HEAVYCHAINGUN_POWER      = "%k made salsa dip out of %o.";
+JKE_MP_JPISTOL_POWER            = "%k seperated %o's head from %p body.";
+JKE_MP_JPLASMARIFLE_PLASMA_POWER= "%o ate %k's plasma.";
+JKE_MP_JPLASMARIFLE_RAIL_POWER  = "%k ripped searing blue holes into %o.";
+JKE_MP_JROCKETLAUNCHER_POWER    = "%o almost dodged %k's shrapnel rocket.";
+JKE_MP_JROCKETLAUNCHER_SHRAPNEL = "%o tripped over %k's shrapnel.";
+JKE_MP_JSHOTGUN_POWER           = "%k collected %o's smoking corpse.";
+JKE_MP_JSUPERSHOTGUN_POWER      = "%k totally blew %o's body off.";
+JKE_MP_KARASAWA_POWER           = "%k ripped %o apart.";
+JKE_MP_MOLECULESHOOTER_POWER    = "%k turned %o into his bare elements.";
+JKE_MP_UZI_POWER                = "%k sprayed %o with exploding death.";
+JKE_MP_ZENFIST_POWER            = "%o was no match for %k's fighting skills.";

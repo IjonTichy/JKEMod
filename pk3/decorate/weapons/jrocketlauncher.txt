@@ -9,6 +9,8 @@ actor " J-Rocket Launcher ": Weapon
 
     Weapon.SelectionOrder 500
 
+    Weapon.SisterWeapon " Power J-Rocket Launcher "
+
     Inventory.PickupMessage "$JKE_PK_JROCKETLAUNCHER"
     Obituary "$JKE_MP_JROCKETLAUNCHER"
 
@@ -30,8 +32,8 @@ actor " J-Rocket Launcher ": Weapon
         D3RL A 0 A_GunFlash
         D3RL A 0 A_Recoil(3)
         D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON)
-        D3RL A 0 A_FireCustomMissile("JRocketLauncherSmoke", 0, 0, 5, 0)
-        D3RL A 0 bright A_FireCustomMissile("JRocketLauncherShot", 0, 1, 5, 0)
+        D3RL A 0 A_FireCustomMissile("JRLSmoke", 0, 0, 5, 0)
+        D3RL A 0 bright A_FireCustomMissile("JRLShot", 0, 1, 5, 0)
         D3RL C 2 bright
         D3RL DE 1 bright
         D3RL F 20
@@ -44,8 +46,8 @@ actor " J-Rocket Launcher ": Weapon
         D3RL A 0 A_GunFlash
         D3RL A 0 A_Recoil(0.5)
         D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON, 0.5)
-        D3RL A 0 A_FireCustomMissile("JRocketLauncherSmokeClearer", 0, 0, 5, 0)
-        D3RL A 0 bright A_FireCustomMissile("JRocketLauncherShotSmall", 0, 0, 5, 0)
+        D3RL A 0 A_FireCustomMissile("JRLSmokeClearer", 0, 0, 5, 0)
+        D3RL A 0 bright A_FireCustomMissile("JRLShotSmall", 0, 0, 5, 0)
         D3RL C 1 bright
         D3RL DE 1 bright
         D3RL E 1
@@ -53,8 +55,8 @@ actor " J-Rocket Launcher ": Weapon
         D3RL A 0 A_GunFlash
         D3RL A 0 A_Recoil(0.5)
         D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON, 0.5)
-        D3RL A 0 A_FireCustomMissile("JRocketLauncherSmokeClearer", 0, 0, 5, 0)
-        D3RL A 0 bright A_FireCustomMissile("JRocketLauncherShotSmall", 0, 0, 5, 0)
+        D3RL A 0 A_FireCustomMissile("JRLSmokeClearer", 0, 0, 5, 0)
+        D3RL A 0 bright A_FireCustomMissile("JRLShotSmall", 0, 0, 5, 0)
         D3RL C 1 bright
         D3RL DE 1 bright
         D3RL E 1
@@ -62,8 +64,8 @@ actor " J-Rocket Launcher ": Weapon
         D3RL A 0 A_GunFlash
         D3RL A 0 A_Recoil(0.5)
         D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON, 0.5)
-        D3RL A 0 A_FireCustomMissile("JRocketLauncherSmokeClearer", 0, 0, 5, 0)
-        D3RL A 0 bright A_FireCustomMissile("JRocketLauncherShotSmall", 0, 1, 5, 0)
+        D3RL A 0 A_FireCustomMissile("JRLSmokeClearer", 0, 0, 5, 0)
+        D3RL A 0 bright A_FireCustomMissile("JRLShotSmall", 0, 1, 5, 0)
         D3RL C 1 bright
         D3RL DE 1 bright
         D3RL EDC 3
@@ -87,7 +89,70 @@ actor " J-Rocket Launcher ": Weapon
 }
 
 
-actor JRocketLauncherSmoke
+actor " Power J-Rocket Launcher ": " J-Rocket Launcher "
+{
+    Weapon.AmmoUse1  2
+    Weapon.AmmoGive1 0
+
+    Weapon.SisterWeapon " J-Rocket Launcher "
+    +POWERED_UP
+
+    Obituary "$JKE_MP_JROCKETLAUNCHER_POWER"
+
+    States
+    {
+      Fire:
+        D3RL A 0 A_GunFlash
+        D3RL A 0 A_Recoil(3)
+        D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON)
+        D3RL A 0 A_FireCustomMissile("JRLSmoke", 0, 0, 5, 0)
+        D3RL A 0 bright A_FireCustomMissile("JRLPowerShot", 0, 1, 5, 0)
+        D3RL C 2 bright
+        D3RL DE 1 bright
+        D3RL F 16
+        D3RL E 3
+        D3RL D 2
+        D3RL CB 1
+        goto Ready
+
+      AltFire:
+        D3RL A 0 A_GunFlash
+        D3RL A 0 A_Recoil(0.5)
+        D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON, 0.5)
+        D3RL A 0 A_FireCustomMissile("JRLSmokeClearer", 0, 0, 5, 0)
+        D3RL A 0 bright A_FireCustomMissile("JRLPowerShotSmall", 0, 0, 5, 0)
+        D3RL C 1 bright
+        D3RL D 1 bright
+        D3RL E 1
+        D3RL C 1
+        D3RL A 0 A_GunFlash
+        D3RL A 0 A_Recoil(0.5)
+        D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON, 0.5)
+        D3RL A 0 A_FireCustomMissile("JRLSmokeClearer", 0, 0, 5, 0)
+        D3RL A 0 bright A_FireCustomMissile("JRLPowerShotSmall", 0, 1, 5, 0)
+        D3RL C 1 bright
+        D3RL D 1 bright
+        D3RL E 1
+        D3RL C 1
+        D3RL A 0 A_GunFlash
+        D3RL A 0 A_Recoil(0.5)
+        D3RL A 0 A_PlaySound("jkemod/jrocketlauncher/fire", CHAN_WEAPON, 0.5)
+        D3RL A 0 A_FireCustomMissile("JRLSmokeClearer", 0, 0, 5, 0)
+        D3RL A 0 bright A_FireCustomMissile("JRLPowerShotSmall", 0, 1, 5, 0)
+        D3RL C 1 bright
+        D3RL D 1 bright
+        D3RL EDC 3
+        D3RL A 8
+        goto Ready
+
+      AltFlash:
+        D3RF C 1 bright
+        D3RF D 1 bright
+        goto LightDone
+    }
+}
+
+actor JRLSmoke
 {
     +NOINTERACTION
     +CLIENTSIDEONLY
@@ -104,7 +169,7 @@ actor JRocketLauncherSmoke
 }
 
 
-actor JRocketLauncherSmokeClearer
+actor JRLSmokeClearer
 {
     +NOINTERACTION
     +CLIENTSIDEONLY
@@ -120,7 +185,7 @@ actor JRocketLauncherSmokeClearer
     }
 }
 
-actor JRocketLauncherShot
+actor JRLShot
 {
     Radius 6
     Height 8
@@ -147,7 +212,7 @@ actor JRocketLauncherShot
     }
 }
 
-actor JRocketLauncherShotSmall
+actor JRLShotSmall
 {
     Radius 3
     Height 4
@@ -161,7 +226,7 @@ actor JRocketLauncherShotSmall
     +ROCKETTRAIL
     +DEHEXPLOSION
 
-    Decal RevenantScorch
+    Decal SmallScorch
 
     States
     {
@@ -170,7 +235,109 @@ actor JRocketLauncherShotSmall
         loop
       Death:
         MISL B 0 A_PlaySound("jkemod/jrocketlauncher/explodequiet")
-        MISL B 0 A_Explode(60, 128)
+        MISL B 0 A_Explode(64, 112)
+        MISL BBBBCCCDD 2 bright
+        stop
+    }
+}
+
+
+Actor PowerJRLChunk
+{
+    Speed 25
+    Radius 5
+    Height 5
+
+    Projectile
+
+    -NOGRAVITY
+    +DOOMBOUNCE
+    +DEHEXPLOSION
+    +PUFFGETSOWNER
+
+    Scale 0.5
+
+    DeathSound "jkemod/fragmentlauncher/chunkexplode"
+    Obituary "$JKE_MP_JROCKETLAUNCHER_SHRAPNEL"
+
+    States
+    {
+      Spawn:
+        FSHD ABC 3 bright
+        Loop
+      Death:
+        BAL1 C 0 A_Explode(64, 96, 0)
+        BAL1 CDE 6 bright
+        Stop
+    }
+}
+
+actor JRLPowerShot
+{
+    Radius 6
+    Height 8
+    Speed 40
+
+    Projectile
+    Damage 30
+
+    +ROCKETTRAIL
+    +DEHEXPLOSION
+
+    Obituary "$JKE_MP_JROCKETLAUNCHER_POWER"
+
+    States
+    {
+      Spawn:
+        RMMS A -1 bright
+        loop
+
+      Death:
+        MISL B 0 A_PlaySound("jkemod/jrocketlauncher/explode")
+        MISL B 0 A_Explode(192, 192, 0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL BBBBCCCDD 2 bright
+        stop
+    }
+}
+
+actor JRLPowerShotSmall
+{
+    Radius 6
+    Height 8
+    Speed 40
+
+    Projectile
+    Damage 30
+
+    Scale 0.5
+
+    +ROCKETTRAIL
+    +DEHEXPLOSION
+
+    Obituary "$JKE_MP_JROCKETLAUNCHER_POWER"
+
+    States
+    {
+      Spawn:
+        RMMS A -1 bright
+        loop
+
+      Death:
+        MISL B 0 A_PlaySound("jkemod/jrocketlauncher/explodequiet")
+        MISL B 0 A_Explode(96, 128, 0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
+        MISL B 0 A_SpawnItemEx("PowerJRLChunk", 0,0,0, random(5, 10), random(5, 10), random(5, 10), random(0, 255), 0,0)
         MISL BBBBCCCDD 2 bright
         stop
     }

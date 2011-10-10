@@ -2,28 +2,33 @@
 Actor " B-Rocket Launcher ": DoomWeapon
 {
     Weapon.SelectionOrder 800
+
     Weapon.AmmoType1 "RocketAmmo"
     Weapon.AmmoType2 "RocketAmmo"
     Weapon.AmmoUse1  1
     Weapon.AmmoUse2  5
     Weapon.AmmoGive1 2
+
     +NOAUTOAIM
     +NOAUTOFIRE
 
-    Weapon.SisterWeapon "Power Rocket Launcher"
+    Weapon.SisterWeapon " Power B-Rocket Launcher "
 
     Inventory.PickupMessage "$BDW_PK_ROCKETLAUNCHER"
     States
     {
-      Ready:
-        PKRL A 1 A_WeaponReady
-        Loop
-      Deselect:
-        PKRL A 1 A_Lower
-        Loop
       Select:
         PKRL A 1 A_Raise
-        Loop
+        loop
+
+      Deselect:
+        PKRL A 1 A_Lower
+        loop
+
+      Ready:
+        PKRL A 1 A_WeaponReady
+        loop
+
       Fire:
         PKRL A 2
         PKRL A 4 A_GunFlash
@@ -34,7 +39,7 @@ Actor " B-Rocket Launcher ": DoomWeapon
         PKRL BE 2
         PKRL FG 1
         PKRL A 0 A_ReFire
-        Goto Ready
+        goto Ready
       AltFire:
         PKRL A 2
         PKRL A 4 A_GunFlash
@@ -56,33 +61,28 @@ Actor " B-Rocket Launcher ": DoomWeapon
         PKRL E 2
         PKRL FG 1
         PKRL A 0 A_ReFire
-        Goto Ready
+        goto Ready
       Flash:
         PKRF A 3 Bright A_Light1
         PKRF B 2 Bright
         PKRF C 2 Bright A_Light2
         PKRF DE 3 Bright
-        Goto LightDone
+        goto LightDone
       Flash:
         PKRF A 3 Bright A_Light1
         PKRF B 2 Bright
         PKRF C 2 Bright A_Light2
         PKRF DE 3 Bright
-        Goto LightDone
+        goto LightDone
       Spawn:
         LAUN A -1
-        Stop
+        stop
     }
 }
 
 
-Actor "Power Rocket Launcher": DoomWeapon
+actor " Power B-Rocket Launcher ": " B-Rocket Launcher "
 {
-    Weapon.SelectionOrder 800
-    Weapon.AmmoType1 "RocketAmmo"
-    Weapon.AmmoType2 "RocketAmmo"
-    Weapon.AmmoUse1  1
-    Weapon.AmmoUse2  5
     Weapon.AmmoGive1 0
 
     Weapon.SisterWeapon " B-Rocket Launcher "
@@ -94,15 +94,6 @@ Actor "Power Rocket Launcher": DoomWeapon
     Inventory.PickupMessage "$BDW_PK_ROCKETLAUNCHER"
     States
     {
-      Ready:
-        PKRL A 1 A_WeaponReady
-        Loop
-      Deselect:
-        PKRL A 1 A_Lower
-        Loop
-      Select:
-        PKRL A 1 A_Raise
-        Loop
       Fire:
         PKRL B 0 A_GunFlash
         PKRL D 0 A_PlaySound("betterdoomweapons/rocketfire", CHAN_WEAPON)
@@ -112,7 +103,7 @@ Actor "Power Rocket Launcher": DoomWeapon
         PKRL E 2
         PKRL FG 1
         PKRL A 0 A_ReFire
-        Goto Ready
+        goto Ready
       AltFire:
         PKRL B 0 A_GunFlash
         PKRL D 0 A_PlaySound("betterdoomweapons/rocketaltfire", CHAN_WEAPON)
@@ -134,42 +125,47 @@ Actor "Power Rocket Launcher": DoomWeapon
         PKRL E 2
         PKRL FG 1
         PKRL A 0 A_ReFire
-        Goto Ready
+        goto Ready
       Flash:
         PKRF B 1 Bright A_Light1
         PKRF C 2 Bright A_Light2
         PKRF DE 3 Bright
-        Goto LightDone
+        goto LightDone
       AltFlash:
         PKRF B 1 Bright A_Light1
         PKRF C 1 Bright A_Light2
         PKRF DE 6 Bright
-        Goto LightDone
+        goto LightDone
       Spawn:
         LAUN A -1
-        Stop
+        stop
     }
 }
 
 actor BetterRocket
 {
-    Projectile
-
     Radius 11
     Height 8
     Speed 20
+
+    Projectile
     Damage ((random(1,8)*10)+80)
+
     +RANDOMIZE
     +DEHEXPLOSION
     +ROCKETTRAIL
+
+    Decal Scorch
+
     DeathSound "betterdoomweapons/rocketexplode"
     Obituary "$BDW_MP_ROCKETLAUNCHER"
-    Decal "Scorch"
+
     States
     {
       Spawn:
         MISL A 1 bright
         loop
+
       Death:
         MISL B 8 bright A_Explode(160, 160)
         MISL C 6 bright
@@ -180,23 +176,29 @@ actor BetterRocket
 
 actor BetterTinyRocket
 {
-    Projectile
-    Scale 0.75
     Radius 8
     Height 6
     Speed 40
+
+    Projectile
     Damage ((random(1,8)*5)+20)
+
     +RANDOMIZE
     +DEHEXPLOSION
     +ROCKETTRAIL
+
+    Scale 0.75
+    Decal SmallScorch
+
     DeathSound "betterdoomweapons/rocketexplode"
     Obituary "$BDW_MP_ROCKETLAUNCHER2"
-    Decal "Scorch"
+
     States
     {
       Spawn:
         MISL A 1 bright
         loop
+
       Death:
         MISL B 8 bright A_Explode(96, 96)
         MISL C 6 bright
@@ -207,19 +209,23 @@ actor BetterTinyRocket
 
 actor BetterPowerRocket
 {
-    Projectile
-
     Radius 11
     Height 8
     Speed 20
+
+    Projectile
     Damage ((random(1,8)*10)+80)
+
     +RANDOMIZE
     +DEHEXPLOSION
     +ROCKETTRAIL
     +FORCERADIUSDMG
+
+    Decal BigScorch
+
     DeathSound "betterdoomweapons/rocketexplode"
     Obituary "$BDW_MP_ROCKETLAUNCHER_POWER"
-    Decal "Scorch"
+
     States
     {
       Spawn:
@@ -235,19 +241,24 @@ actor BetterPowerRocket
 
 actor BetterPowerTinyRocket
 {
-    Projectile
-    Scale 0.75
     Radius 8
     Height 6
     Speed 40
+
+    Projectile
     Damage ((random(1,8)*5)+20)
+
     +RANDOMIZE
     +DEHEXPLOSION
     +ROCKETTRAIL
     +FORCERADIUSDMG
+
+    Scale 0.75
+    Decal Scorch
+
     DeathSound "betterdoomweapons/rocketexplode"
     Obituary "$BDW_MP_ROCKETLAUNCHER2_POWER"
-    Decal "Scorch"
+
     States
     {
       Spawn:

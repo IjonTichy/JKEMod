@@ -1,11 +1,3 @@
-clearplayerclasses
-addplayerclass BetterPlayer
-addplayerclass StrifeMarine
-addplayerclass JKEPlayer
-addplayerclass LeandroPlayer
-addplayerclass SorcPlayer
-
-
 ////
 //   SLOT 1 - MELEE CLASS
 ////
@@ -37,16 +29,21 @@ addslotdefault 2 " Sapphire Wand "
 //   SLOT 3 - SHOTGUN CLASS
 ////
 
-addslotdefault 3 " Double Shotgun "
 addslotdefault 3 " S-Shotgun "
 addslotdefault 3 " Ethereal Crossbow "
-addslotdefault 3 " Fire SSG "
 addslotdefault 3 " Hand Shotgun "
 addslotdefault 3 " J-Shotgun "
-addslotdefault 3 " J-Super Shotgun "
-addslotdefault 3 " L-Quadshot "
 addslotdefault 3 " B-Shotgun "
 addslotdefault 3 " L-Striker "
+
+////
+//   SLOT 3.5 - SSG  CLASS
+///
+
+addslotdefault 3 " Double Shotgun "
+addslotdefault 3 " Fire SSG "
+addslotdefault 3 " J-Super Shotgun "
+addslotdefault 3 " L-Quadshot "
 addslotdefault 3 " B-Super Shotgun "
 
 
@@ -54,16 +51,20 @@ addslotdefault 3 " B-Super Shotgun "
 //   SLOT 4 - RAPID-FIRE CLASS
 ////
 
-addslotdefault 4 " B-Chaingun "
-addslotdefault 4 " S-Chaingun "
-addslotdefault 4 " L-Minigun "
-addslotdefault 4 " Heavy Chaingun "
 addslotdefault 4 " M16 "
 addslotdefault 4 " M249 Machine Gun "
 addslotdefault 4 " L-Spitfirer "
 addslotdefault 4 " J-Uzi "
 addslotdefault 4 " Tri-Staff "
 
+////
+//   SLOT 4.5 - MINIGUN CLASS
+////
+
+addslotdefault 4 " B-Chaingun "
+addslotdefault 4 " S-Chaingun "
+addslotdefault 4 " L-Minigun "
+addslotdefault 4 " Heavy Chaingun "
 
 ////
 //   SLOT 5 - EXPLOSIVE CLASS

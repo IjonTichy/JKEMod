@@ -1,4 +1,5 @@
 #include "decorate/general/reloadbutton.txt"
+#include "decorate/general/explosivebulletpuff.txt"
 
 actor PlayerDead: Inventory {inventory.maxamount 1 +UNDROPPABLE}
 actor MainFired: Inventory {inventory.maxamount 1 +UNDROPPABLE}

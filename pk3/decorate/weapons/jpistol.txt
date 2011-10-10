@@ -1,24 +1,29 @@
-
-Actor JPistolCounter: Ammo
+actor JPistolCounter: Ammo
 {
     Inventory.MaxAmount 14
 }
 
 actor " J-Pistol ": Weapon
 {
+    weapon.SelectionOrder 1200
+
+    Weapon.AmmoType1 "JPistolCounter"
+    Weapon.AmmoType2 "Clip"
+    Weapon.AmmoUse1 1
+    Weapon.AmmoUse2 0
+    Weapon.AmmoGive1 28
+    Weapon.AmmoGive2 40
+
     +AMMO_OPTIONAL
     +NOALERT
-    weapon.AmmoGive1 28
-    weapon.AmmoType1 "JPistolCounter"
-    weapon.AmmoType2 "Clip"
-    weapon.AmmoGive2 40
-    weapon.AmmoUse1 1
-    weapon.selectionorder 1200
+
+    Weapon.SisterWeapon " Power J-Pistol "
 
     Decal BulletChip
 
     Inventory.PickupMessage "$JKE_PK_JPISTOL"
     Obituary "$JKE_MP_JPISTOL"
+
     states
     {
       Ready:
@@ -31,6 +36,7 @@ actor " J-Pistol ": Weapon
         PIS3 A 0 A_Lower
         PIS3 A 1 A_Lower
         loop
+
       Fire:
         PIS3 A 0 A_JumpIfNoAmmo("AltFire")
 
@@ -39,7 +45,7 @@ actor " J-Pistol ": Weapon
         PIS3 B 2 bright A_FireBullets(2, 2, 1, 6, "Bulletpuff", 1)
 
         PIS3 C 3 bright
-        PIS3 D 4 A_FireCustomMissile("PistolCasing", -45, 0, 6, 0)
+        PIS3 D 4 A_FireCustomMissile("PistolCasing", -45+random(-3, 3), 0, 6, 0)
         PIS3 A 0 A_ReFire
         goto Ready
 
@@ -55,12 +61,12 @@ actor " J-Pistol ": Weapon
         PIS3 C 30 offset(0, 70)
 
       ReloadLoop:
-        PIS3 A 0 A_JumpIfInventory("JPistolCounter", 0, "ReloadEnd")
-        PIS3 A 0 A_JumpIfInventory("Clip", 1, 1)
-        goto ReloadEnd
         PIS3 A 0 A_TakeInventory("Clip", 1)
         PIS3 A 0 A_GiveInventory("JPistolCounter", 1)
-        goto ReloadLoop
+
+        PIS3 A 0 A_JumpIfInventory("JPistolCounter", 0, "ReloadEnd")
+        PIS3 A 0 A_JumpIfInventory("Clip", 1, "ReloadLoop")
+        goto ReloadEnd
 
       ReloadEnd:
         PIS3 C 0 A_PlaySound("jkemod/jpistol3/load", CHAN_WEAPON)
@@ -77,7 +83,69 @@ actor " J-Pistol ": Weapon
         goto Ready
 
       Spawn:
-        PWFL A -1   // same as Powerful's sprite
+        PWFL A -1   // see sprites/weapons/powerful/
         stop
+    }
+}
+
+
+actor " Power J-Pistol ": " J-Pistol "
+{
+    Weapon.AmmoGive1 0
+    Weapon.AmmoGive2 0
+
+    Weapon.SisterWeapon " J-Pistol "
+    +POWERED_UP
+
+    Decal BulletScorch
+
+    Obituary "$JKE_MP_JPISTOL_POWER"
+
+    states
+    {
+      Fire:
+        PIS3 A 0 A_JumpIfNoAmmo("AltFire")
+
+        PIS3 B 0 A_AlertMonsters
+        PIS3 B 0 A_PlaySound("jkemod/jpistol/fire", CHAN_WEAPON)
+        PIS3 B 1 bright A_FireBullets(2, 2, 1, 8, "ExplosiveBulletPuff", 1)
+
+        PIS3 C 2 bright
+        PIS3 D 3 A_FireCustomMissile("PistolCasing", -45+random(-3, 3), 0, 6, 0)
+        PIS3 A 0 A_ReFire
+        goto Ready
+
+      AltFire:
+        PIS3 A 0 A_JumpIfInventory("JPistolCounter", 0, "NoReload")
+        PIS3 A 0 A_JumpIfInventory("Clip", 2, "ReloadStart")
+        goto NoReload
+
+      ReloadStart:
+        PIS3 C 2 offset(0, 40)
+        PIS3 C 2 offset(0, 50) A_PlaySound("jkemod/assorted/click", 6)
+        PIS3 C 2 offset(0, 60)
+        PIS3 C 8 offset(0, 70)
+
+      ReloadLoop:
+        PIS3 A 0 A_TakeInventory("Clip", 2)
+        PIS3 A 0 A_GiveInventory("JPistolCounter", 1)
+
+        PIS3 A 0 A_JumpIfInventory("JPistolCounter", 0, "ReloadEnd")
+        PIS3 A 0 A_JumpIfInventory("Clip", 2, "ReloadLoop")
+        goto ReloadEnd
+
+      ReloadEnd:
+        PIS3 C 0 A_PlaySound("jkemod/jpistol3/load", CHAN_WEAPON)
+        PIS3 C 12 offset(0, 70)
+        PIS3 C 2 offset(0, 60)
+        PIS3 C 2 offset(0, 50)
+        PIS3 C 2 offset(0, 40)
+        PIS3 A 2
+        goto Ready
+
+      NoReload:
+        PIS3 A 1
+        PIS3 A 0 A_ReFire
+        goto Ready
     }
 }

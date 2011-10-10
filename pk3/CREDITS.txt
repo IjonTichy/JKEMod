@@ -1,9 +1,10 @@
 
 All DECORATE was custom-made. Sprites and sound sources unknown as of right now.
 
-Made by Flame64mon
+Original creator:  Flame64mon
+Current developer: Ijon Tichy (also ijontichy@powernoob or ijontichy)
 
-ACS and DECORATE edits by Aiur850 and Ijon Tichy (also ijontichy@powernoob)
+ACS and DECORATE (edits) by Aiur850 and Ijon Tichy
 
 Better Doom Weapons by Ijon Tichy
 Sprites and sounds for the Better Doom Weapons by perkristian
@@ -12,6 +13,10 @@ Strife Marine by Ijon Tichy
 Sprites for the Strife Marine by many people
 Sounds for the Strife Marine by Epic Games, among other people
 
+Beanbag by Ijon Tichy
+
 Rail Repeater by Delta
 Rail Repeater Sprites by Croteam and TheDarkArchon
 Rail Repeater Flashes by Ijon Tichy
+
+JKEGuy Powered Weapons by tehvappy50

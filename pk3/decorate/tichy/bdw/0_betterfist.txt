@@ -7,14 +7,13 @@ actor " B-Fists ": DoomWeapon
     +NOALERT
     +NOAUTOFIRE
 
-    Weapon.SisterWeapon "Power Fists"
+    Weapon.SisterWeapon " Power B-Fists "
 
     Inventory.PickupMessage "$BDW_PK_FISTS"
     Obituary "$BDW_MP_FISTS"
 
     States
     {
-
       Select:
         RPUN A 0 A_TakeInventory("PunchIndicator")
         RPUN A 1 A_Raise
@@ -126,50 +125,15 @@ actor " B-Fists ": DoomWeapon
 }
 
 
-actor "Power Fists": DoomWeapon
+actor " Power B-Fists ": " B-Fists "
 {
-    Weapon.SelectionOrder 3700
-    +WEAPON.MELEEWEAPON
-    +NOALERT
-    +NOAUTOFIRE
-    +POWERED_UP
-
     Weapon.SisterWeapon " B-Fists "
+    +POWERED_UP
 
     Obituary "$BDW_MP_FISTS_POWER"
 
     States
     {
-
-      Select:
-        RPUN A 0 A_TakeInventory("PunchIndicator")
-        RPUN A 1 A_Raise
-        loop
-
-      Ready:
-        RPUN A 0 A_JumpIfInventory("PunchIndicator", 1, "LeftReady")
-        goto RightReady
-
-      LeftReady:
-        LPUN A 1 A_WeaponReady
-        loop
-
-      RightReady:
-        RPUN A 1 A_WeaponReady
-        loop
-
-      Deselect:
-        RPUN A 1 A_JumpIfInventory("PunchIndicator", 1, "LeftDeselect")
-        goto RightDeselect
-
-      LeftDeselect:
-        LPUN A 1 A_Lower
-        loop
-
-      RightDeselect:
-        RPUN A 1 A_Lower
-        loop
-
       Fire:
         LPUN A 0 A_JumpIfInventory("PowerBerserkStrength", 1, "BerserkFire")
         LPUN A 0 A_JumpIfInventory("PunchIndicator",  1, "RightJab")
@@ -180,8 +144,8 @@ actor "Power Fists": DoomWeapon
         LPUN B 1
         LPUN C 3
         LPUN D 3 A_CustomPunch(5*random(1,10), 1, 0, "FistPunchPuff")
-        LPUN EFG 1
-        LPUN B 0 A_Jump(12, "ZerkCheck")
+        LPUN F 1
+        LPUN B 0 A_Jump(24, "ZerkCheck")
         LPUN B 0 A_TakeInventory("TargetHit")
         LPUN B 0 A_ReFire
         goto Ready
@@ -191,8 +155,8 @@ actor "Power Fists": DoomWeapon
         RPUN B 1
         RPUN C 3
         RPUN D 3 A_CustomPunch(5*random(1,10), 1, 0, "FistPunchPuff")
-        RPUN EFG 1
-        RPUN B 0 A_Jump(12, "ZerkCheck")
+        RPUN F 1
+        RPUN B 0 A_Jump(24, "ZerkCheck")
         RPUN B 0 A_TakeInventory("TargetHit")
         RPUN B 0 A_ReFire
         goto Ready
@@ -206,10 +170,10 @@ actor "Power Fists": DoomWeapon
       BerserkLeftJab:
         LPUN A 0 A_GiveInventory("PunchIndicator")
         LPUN B 1
-        LPUN C 3
-        LPUN D 3 A_CustomPunch(20*random(1,10), 1, 0, "BerserkPunchPuff")
-        LPUN EFG 1
-        LPUN B 0 A_Jump(24, "ZerkCheck")
+        LPUN C 2
+        LPUN D 2 A_CustomPunch(20*random(1,10), 1, 0, "PowerBerserkPunchPuff")
+        LPUN F 1
+        LPUN B 0 A_Jump(48, "ZerkCheck")
         LPUN B 0 A_TakeInventory("TargetHit")
         LPUN B 0 A_ReFire
         goto Ready
@@ -217,10 +181,10 @@ actor "Power Fists": DoomWeapon
       BerserkRightJab:
         RPUN A 0 A_TakeInventory("PunchIndicator")
         RPUN B 1
-        RPUN C 3
-        RPUN D 3 A_CustomPunch(20*random(1,10), 1, 0, "BerserkPunchPuff")
-        RPUN EFG 1
-        RPUN B 0 A_Jump(24, "ZerkCheck")
+        RPUN C 2
+        RPUN D 2 A_CustomPunch(20*random(1,10), 1, 0, "PowerBerserkPunchPuff")
+        RPUN F 1
+        RPUN B 0 A_Jump(48, "ZerkCheck")
         RPUN B 0 A_TakeInventory("TargetHit")
         RPUN B 0 A_ReFire
         goto Ready
@@ -304,6 +268,31 @@ actor BerserkPunchPuff: BulletPuff
     }
 }
 
+actor PowerBerserkPunchPuff: BulletPuff
+{
+    +PUFFGETSOWNER
+    +PUFFONACTORS
+
+    SeeSound "betterdoomweapons/punch"
+    States
+    {
+      Spawn:
+        TNT1 A 1
+        TNT1 A 0 A_GiveToTarget("TargetHit")
+        TNT1 A 0 A_GiveToTarget("HealthBonus", random(4, 7))
+        stop
+
+      Melee:
+        TNT1 A 1
+        TNT1 A 0 A_GiveToTarget("TargetHit")
+        TNT1 A 0 A_GiveToTarget("HealthBonus", random(4, 7))
+        stop
+
+      Crash:
+        goto Super::Spawn
+    }
+}
+
 actor PowerBerserkStrength: PowerProtection
 {
     +INVENTORY.ADDITIVETIME
@@ -336,12 +325,12 @@ ACTOR BerserkNew: CustomInventory replaces Berserk
     {
       Spawn:
         PSTR A -1
-        Stop
+        stop
       Pickup:
         TNT1 A 0 A_GiveInventory("PowerBerserkStrength")
         TNT1 A 0 A_GiveInventory("PowerBerserkSpeed")
         TNT1 A 0 HealThing(100, 0)
         TNT1 A 0 A_SelectWeapon("Fist")
-        Stop
+        stop
     }
 }

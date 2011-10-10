@@ -12,7 +12,6 @@ actor " S-Ionstrike ": Weapon
     +NOAUTOFIRE
     +EXTREMEDEATH
     +NOALERT
-    +THRUGHOST
 
     Scale 0.2
 
@@ -56,44 +55,18 @@ actor " S-Ionstrike ": Weapon
     }
 }
 
-actor " Power S-Ionstrike ": Weapon
+actor " Power S-Ionstrike ": " S-Ionstrike "
 {
-    Weapon.SelectionOrder 900
-
-    Weapon.AmmoType1 "Cell"
-    Weapon.AmmoType2 "Cell"
-    Weapon.AmmoUse1 600
-    Weapon.AmmoUse2 150
-    Weapon.AmmoGive 150
-
-    +NOAUTOFIRE
-    +EXTREMEDEATH
-    +NOALERT
-    +THRUGHOST
-
-    Scale 0.2
+    Weapon.AmmoGive1 0
 
     Weapon.SisterWeapon " S-Ionstrike "
     +POWERED_UP
 
-    Inventory.PickupMessage "$STRIFEMARINE_PK_DWEAPIONSTRIKE"
     Obituary "$STRIFEMARINE_MP_DWEAPIONSTRIKE"
 
 
     States
     {
-      Select:
-        INGN A 1 A_Raise
-        loop
-
-      Deselect:
-        INGN A 1 A_Lower
-        loop
-
-      Ready:
-        INGN A 1 A_WeaponReady
-        loop
-
       Fire:
         INGN B 3
         INGN C 6 A_FireBullets(0,0, 1,0, "PowerIonBeacon")
@@ -107,10 +80,6 @@ actor " Power S-Ionstrike ": Weapon
         INGN B 5
         INGN A 25
         goto Ready
-
-      Spawn:
-        WEP8 ABCDEFGHIJKLMNOP 2 bright
-        loop
     }
 }
 

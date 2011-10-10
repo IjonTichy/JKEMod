@@ -59,34 +59,20 @@ actor " S-Cluster Bomber ": Weapon
 }
 
 
-actor " Power S-Cluster Bomber ": Weapon
+actor " Power S-Cluster Bomber ": " S-Cluster Bomber "
 {
-    Weapon.AmmoType1 "RocketAmmo"
-    Weapon.AmmoType2 "RocketAmmo"
     Weapon.AmmoUse1 2
     Weapon.AmmoUse2 8
-
-    +NOAUTOFIRE
-    +NOAUTOAIM
+    Weapon.AmmoGive1 0
+    Weapon.AmmoGive2 0
 
     Weapon.SisterWeapon " S-Cluster Bomber "
     +POWERED_UP
 
-    Inventory.PickupMessage "$STRIFEMARINE_PK_DWEAPCLUSTERBOMBER"
     Obituary "$STRIFEMARINE_MP_DWEAPCLUSTERBOMBER_POWER"
 
     States
     {
-      Ready:
-        GRSP B 1 A_WeaponReady
-        Loop
-      Deselect:
-        GRSP B 0 A_StopSound(CHAN_WEAPON)
-        GRSP B 1 A_Lower
-        Loop
-      Select:
-        GRSP B 1 A_Raise
-        Loop
       Fire:
         GRSP C 1 Bright
         GRSP D 0 Bright A_PlaySound("hexenmarine/gspammerfire", CHAN_WEAPON)
@@ -96,6 +82,7 @@ actor " Power S-Cluster Bomber ": Weapon
         GRSP F 4 Bright
         GRSP A 0 A_ReFire
         Goto Ready
+
       AltFire:
         GRSP C 2 Bright A_GunFlash
         GRSP D 0 Bright A_PlaySound("hexenmarine/gspammerfire", CHAN_WEAPON)
@@ -107,9 +94,6 @@ actor " Power S-Cluster Bomber ": Weapon
         GRSP B 0 A_PlaySound("hexenmarine/gspammerreload", CHAN_WEAPON)
         GRSP B 40
         Goto Ready
-      Spawn:
-        GRSP Z -1
-        Stop
     }
 }
 

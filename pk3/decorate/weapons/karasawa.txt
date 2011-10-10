@@ -51,14 +51,14 @@ actor KarasawaShot
     Speed 70
 
     Projectile
-    Damage 12
+    Damage (20)
 
     +HEXENBOUNCE
     +RIPPER
     +SPAWNSOUNDSOURCE
 
-    BounceFactor 0.975
-    WallBounceFactor 0.975
+    BounceFactor 0.97
+    WallBounceFactor 0.97
     ReactionTime 10
 
     RenderStyle Add

@@ -1,11 +1,15 @@
 actor BeanBag
 {
-    Health 2000000000
-    Mass 0x7FFFFFFF
     Radius 25
     Height 64
+    Mass 0x7FFFFFFF
+
     Monster
+    Health 2000000000
+
     +FLOORCLIP
+    +NOBLOOD
+
     Obituary "$JKE_MON_BEANBAG"
 
     States

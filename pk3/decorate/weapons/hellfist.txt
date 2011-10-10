@@ -7,11 +7,11 @@ actor HellFistCounter: Ammo
 
 actor " Hellfist ": Weapon
 {
+    Weapon.SelectionOrder 3200
+
     Weapon.AmmoType "HellFistCounter"
     Weapon.AmmoGive 100
     Weapon.AmmoUse 5
-
-    Weapon.SelectionOrder 1600
 
     Weapon.SisterWeapon " Power Hellfist "
 
@@ -45,7 +45,7 @@ actor " Hellfist ": Weapon
       AltFire:
         BHND D 3 bright
         BHND E 1 bright
-        BHND F 6 bright A_CustomPunch(random(10, 20), 1, 0, "Bulletpuff", 0)
+        BHND F 6 bright A_CustomPunch(random(10, 20), 1, 0, "BulletPuff", 0)
         BHND E 1 bright
         BHND D 3 bright
         goto Ready

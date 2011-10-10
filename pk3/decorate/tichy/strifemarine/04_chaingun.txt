@@ -284,15 +284,17 @@ actor " S-Chaingun ": Weapon
     }
 }
 
-actor " Power S-Chaingun ": Weapon
+actor " Power S-Chaingun ": " S-Chaingun "
 {
     Weapon.AmmoType1 "Clip"
     Weapon.AmmoType2 "RocketAmmo"
     Weapon.AmmoUse1 1
     Weapon.AmmoUse2 1
+    Weapon.AmmoGive1 0
+    Weapon.AmmoGive2 0
 
     AttackSound "hexenmarine/chaingunfire"
-    Decal "BulletChip"
+    Decal BulletScorch
 
     Weapon.SisterWeapon " S-Chaingun "
     +POwERED_UP
@@ -301,30 +303,14 @@ actor " Power S-Chaingun ": Weapon
 
     States
     {
-      Spawn:
-        HXCG Z -1
-        Loop
-      Ready:
-        HXCG A 1 A_WeaponReady
-        Loop
-      Deselect:
-        HXCG A 0 A_StopSound(CHAN_BODY)
-        HXCG A 0 A_Lower
-        HXCG A 1 A_Lower
-        Goto Deselect
-      Select:
-        HXCG A 0 A_Raise
-        HXCG A 1 A_Raise
-        Goto Select
-
       Fire:
         HXCG F 0 A_JumpIfInventory("Clip", 4, 1)
         goto Empty
-        HXCG F 1 bright A_FireBullets(1, 1, -1, 6, "ExplosiveSChaingunBulletPuff")
+        HXCG F 1 bright A_FireBullets(1, 1, -1, 6, "ExplosiveBulletPuff")
         HXCG B 2
         HXCG F 0 A_JumpIfInventory("Clip", 4, 1)
         goto Empty
-        HXCG G 1 bright A_FireBullets(1, 1, -1, 6, "ExplosiveSChaingunBulletPuff")
+        HXCG G 1 bright A_FireBullets(1, 1, -1, 6, "ExplosiveBulletPuff")
         HXCG DEE 1
         HXCG BCDDEEAABBBCCCDDDDEEEEE 1 A_Refire
         goto Ready
@@ -345,30 +331,6 @@ actor " Power S-Chaingun ": Weapon
         HXCG B 10
         HXCG A 2 A_PlaySound("hexenmarine/noammo")
         goto Ready
-    }
-}
-
-actor ExplosiveSChaingunBulletPuff: BulletPuff
-{
-    +PUFFONACTORS
-    +PUFFGETSOWNER
-    +FORCERADIUSDMG
-    Obituary "$STRIFEMARINE_MP_DWEAPCHAINGUN_POWER"
-    Vspeed 0
-    Decal BulletScorch
-    RenderStyle Add
-    Scale 0.5
-    States
-    {
-      Spawn:
-        TNT1 A 0
-        goto Death
-
-      Death:
-        MISL B 3 bright A_Explode(48,96, 0)
-        MISL C 6 bright
-        MISL D 4 bright
-        stop
     }
 }
 

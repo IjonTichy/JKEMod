@@ -28,6 +28,7 @@ actor SorcPlayer: PlayerPawn
     Player.StartItem " Sapphire Wand "
     Player.StartItem " Hellfist "
 
+    Player.StartItem "JKEMana", 50
     Player.StartItem "HellFistCounter", 100
 
 

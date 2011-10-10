@@ -61,91 +61,43 @@ actor " S-Enforcer ": Weapon
     }
 }
 
-actor " Power S-Enforcer ": Weapon
+actor " Power S-Enforcer ": " S-Enforcer "
 {
-    Weapon.AmmoType1 "Clip"
-    Weapon.AmmoType2 "Clip"
-    Weapon.AmmoUse1 1
-    Weapon.AmmoUse2 1
-
-    Weapon.Kickback 100
-
-    Scale 0.4
+    Weapon.AmmoGive1 0
 
     Weapon.SisterWeapon " S-Enforcer "
     +POWERED_UP
-
-    Weapon.UpSound "hexenmarine/enforcerup"
-    Decal "BulletChip"
 
     Obituary "$STRIFEMARINE_MP_DWEAPENFORCER_POWER"
     Decal BulletScorch
 
     States
     {
-      Spawn:
-        ENFC Z -1
-        Loop
-      Ready:
-        ENFC A 1 A_WeaponReady
-        Loop
-      Deselect:
-        ENFC AA 0 A_Lower
-        ENFC A 1 A_Lower
-        Loop
-      Select:
-        ENFC A 12
-      Select2:
-        ENFC AA 0 A_Raise
-        ENFC A 1 A_Raise
-        Loop
       Fire:
         ENFS A 0 A_GunFlash
         ENFS A 0 A_PlaySound("hexenmarine/enforcerfire", CHAN_WEAPON)
-        ENFS A 0 A_FireBullets (2, 2, 1, 8, "ExplosiveSEnforcerBulletPuff")
+        ENFS A 0 A_FireBullets (2, 2, 1, 8, "ExplosiveBulletPuff")
         ENFS A 1 bright
         ENFC C 1 bright
         ENFC EDCB 1
         ENFC A 5
         ENFC A 0 A_ReFire
         Goto Ready
+
       AltFire:
         ENFS A 0 A_GunFlash
         ENFS A 0 A_PlaySound("hexenmarine/enforcerfire", CHAN_WEAPON)
-        ENFS A 0 A_FireBullets (6, 6, -1, 8, "ExplosiveSEnforcerBulletPuff")
+        ENFS A 0 A_FireBullets (6, 6, -1, 8, "ExplosiveBulletPuff")
         ENFS A 1 bright
         ENFC E 1 bright
         ENFC DCB 1
         ENFC A 0 A_ReFire
         Goto Ready
+
       Flash:
         TNT1 A 1 A_Light2
         TNT1 A 1 A_Light1
         TNT1 A 0 A_Light0
         Stop
-    }
-}
-
-actor ExplosiveSEnforcerBulletPuff: BulletPuff
-{
-    +PUFFONACTORS
-    +PUFFGETSOWNER
-    +FORCERADIUSDMG
-    Obituary "$STRIFEMARINE_MP_DWEAPENFORCER_POWER"
-    Vspeed 0
-    Decal BulletScorch
-    RenderStyle Add
-    Scale 0.5
-    States
-    {
-      Spawn:
-        TNT1 A 0
-        goto Death
-
-      Death:
-        MISL B 3 bright A_Explode(48,96, 0)
-        MISL C 6 bright
-        MISL D 4 bright
-        stop
     }
 }

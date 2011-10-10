@@ -1,5 +1,7 @@
 actor " Sapphire Wand ": Weapon
 {
+    Weapon.SelectionOrder 1800
+
     Weapon.AmmoType1 "JKEMana"
     Weapon.AmmoType2 "JKEMana"
     Weapon.AmmoUse1 2
@@ -10,50 +12,52 @@ actor " Sapphire Wand ": Weapon
 
     Decal RailScorchLower
 
-    Weapon.SelectionOrder 3600
     Weapon.KickBack 0
     Weapon.YAdjust 9
+
+    Inventory.PickupMessage "$JKE_PK_SAPPHIRWAND"
+    Obituary "$JKE_MP_SAPPHIRWAND"
 
     States
     {
       Select:
-        MWND A 1 A_Raise
+        SPWN A 1 A_Raise
         loop
 
       Deselect:
-        MWND A 1 A_Lower
+        SPWN A 1 A_Lower
         loop
 
       Ready:
-        MWND A 1 A_WeaponReady
+        SPWN A 1 A_WeaponReady
         loop
 
       Fire:
-        MWND B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
-        MWND B 0 bright A_RailAttack(25, 0, 1, none, "00 00 FF", 1, 0)
-        MWND B 9 Bright offset(0, 48)
-        MWND A 3 offset(0, 40)
-        MWND A 3 offset(0, 36)
-        MWND A 3 A_ReFire
+        SPWN B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
+        SPWN B 0 bright A_RailAttack(25, 0, 1, none, "00 00 FF", 1, 0)
+        SPWN B 9 Bright offset(0, 48)
+        SPWN A 3 offset(0, 40)
+        SPWN A 3 offset(0, 36)
+        SPWN A 3 A_ReFire
         Goto Ready
 
       AltFire:
-        MWND B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
-        MWND B 0 bright A_RailAttack(25, 0, 1, none, "00 00 FF", 1, 0)
-        MWND B 3 Bright offset(0, 48)
-        MWND A 2 offset(0, 40)
+        SPWN B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
+        SPWN B 0 bright A_RailAttack(25, 0, 1, none, "00 00 FF", 1, 0)
+        SPWN B 3 Bright offset(0, 48)
+        SPWN A 2 offset(0, 40)
 
-        MWND B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
-        MWND B 0 bright A_RailAttack(25, 0, 1, none, "00 00 FF", 1, 0)
-        MWND B 3 Bright offset(0, 48)
-        MWND A 2 offset(0, 40)
+        SPWN B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
+        SPWN B 0 bright A_RailAttack(25, 0, 1, none, "00 00 FF", 1, 0)
+        SPWN B 3 Bright offset(0, 48)
+        SPWN A 2 offset(0, 40)
 
-        MWND B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
-        MWND B 0 bright A_RailAttack(25, 0, 1, none, "00 00 FF", 1, 0)
-        MWND B 3 Bright offset(0, 48)
-        MWND A 4 offset(0, 40)
-        MWND A 3 offset(0, 36)
-        MWND A 3 A_ReFire
+        SPWN B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
+        SPWN B 0 bright A_RailAttack(25, 0, 1, none, "00 00 FF", 1, 0)
+        SPWN B 3 Bright offset(0, 48)
+        SPWN A 4 offset(0, 40)
+        SPWN A 3 offset(0, 36)
+        SPWN A 3 A_ReFire
         Goto Ready
     }
 }
@@ -72,32 +76,32 @@ actor " Power Sapphire Wand ": " Sapphire Wand "
     States
     {
       Fire:
-        MWND B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
-        MWND B 0 bright A_RailAttack(75, 0, 1, none, "99 99 FF", 1, 0)
-        MWND B 6 Bright offset(0, 48)
-        MWND A 2 offset(0, 40)
-        MWND A 2 offset(0, 36)
-        MWND A 3 A_ReFire
+        SPWN B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
+        SPWN B 0 bright A_RailAttack(75, 0, 1, none, "99 99 FF", 1, 0)
+        SPWN B 6 Bright offset(0, 48)
+        SPWN A 2 offset(0, 40)
+        SPWN A 2 offset(0, 36)
+        SPWN A 3 A_ReFire
         Goto Ready
 
       AltFire:
-        MWND B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
-        MWND B 0 bright A_RailAttack(75, 0, 1, none, "99 99 FF", 1, 0)
-        MWND B 3 Bright offset(0, 48)
-        MWND A 1 offset(0, 40)
+        SPWN B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
+        SPWN B 0 bright A_RailAttack(75, 0, 1, none, "99 99 FF", 1, 0)
+        SPWN B 3 Bright offset(0, 48)
+        SPWN A 1 offset(0, 40)
 
-        MWND B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
-        MWND B 0 bright A_RailAttack(75, 0, 1, none, "99 99 FF", 1, 0)
-        MWND B 3 Bright offset(0, 48)
-        MWND A 1 offset(0, 40)
+        SPWN B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
+        SPWN B 0 bright A_RailAttack(75, 0, 1, none, "99 99 FF", 1, 0)
+        SPWN B 3 Bright offset(0, 48)
+        SPWN A 1 offset(0, 40)
 
-        MWND B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
-        MWND B 0 bright A_RailAttack(75, 0, 1, none, "99 99 FF", 1, 0)
-        MWND B 3 Bright offset(0, 48)
-        MWND A 1 offset(0, 40)
-        MWND A 3 A_ReFire
-        MWND A 3 offset(0, 36) A_ReFire
-        MWND A 3 A_ReFire
+        SPWN B 0 A_PlaySound("jkemod/sapphirewand/fire", CHAN_WEAPON)
+        SPWN B 0 bright A_RailAttack(75, 0, 1, none, "99 99 FF", 1, 0)
+        SPWN B 3 Bright offset(0, 48)
+        SPWN A 1 offset(0, 40)
+        SPWN A 3 A_ReFire
+        SPWN A 3 offset(0, 36) A_ReFire
+        SPWN A 3 A_ReFire
         Goto Ready
     }
 }

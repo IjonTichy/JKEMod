@@ -1,59 +1,3 @@
-decal BFGScorch1Big
-{
-    pic BFGSCRC1
-    shade "00 00 00"
-    randomflipx
-    randomflipy
-    x-scale 2
-    y-scale 2
-}
-
-decal BFGScorch2Big
-{
-    pic BFGSCRC2
-    shade "00 00 00"
-    randomflipx
-    randomflipy
-    x-scale 2
-    y-scale 2
-}
-
-decalgroup BFGScorchBig
-{
-    BFGScorch1      1
-    BFGScorch2      1
-}
-
-decal BFGLightning1Big
-{
-    pic BFGLITE1
-    shade "80 ff 80"
-    fullbright
-    randomflipx
-    animator GoAway2
-    lowerdecal BFGScorchBig
-    x-scale 2
-    y-scale 2
-}
-
-decal BFGLightning2Big
-{
-    pic BFGLITE2
-    shade "80 ff 80"
-    fullbright
-    randomflipy
-    animator GoAway2
-    lowerdecal BFGScorchBig
-    x-scale 2
-    y-scale 2
-}
-
-decalgroup BFGLightningBig
-{
-    BFGLightning1Big   1
-    BFGLightning2Big   1
-}
-
 decal CrossbowScorchBig
 {
     pic CBOWMARK
@@ -64,16 +8,6 @@ decal CrossbowScorchBig
     randomflipy
 }
 
-
-decal SmallScorch
-{
-    pic SCORCH1
-    shade "00 00 00"
-    x-scale 0.4
-    y-scale 0.4
-    randomflipx
-    randomflipy
-}
 
 decal SmallScorch
 {

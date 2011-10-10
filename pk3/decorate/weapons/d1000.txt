@@ -1,29 +1,34 @@
-
 actor " D-1000 ": Weapon
 {
-    +WEAPON.NOAUTOAIM
+    Weapon.SelectionOrder 300
 
     Weapon.AmmoType1 "Cell"
     Weapon.AmmoUse1 10
     Weapon.AmmoGive1 100
 
-    Weapon.SelectionOrder 300
-
+    +WEAPON.NOAUTOAIM
 
     Weapon.SisterWeapon " Power D-1000 "
 
+    Decal BFGScorch
+
     Inventory.PickupMessage "$JKE_PK_D1000"
     Obituary "$JKE_MP_D1000"
+
     States
     {
-      Ready:
-        D1VG A 1 A_WeaponReady
       Select:
         D1VG A 1 A_Raise
         loop
+
       Deselect:
         D1VG A 1 A_Lower
         loop
+
+      Ready:
+        D1VG A 1 A_WeaponReady
+        loop
+
       Fire:
         D1VG A 5
         D1VG A 15 A_PlaySound("jkemod/d1000/charge", CHAN_WEAPON)
@@ -77,30 +82,19 @@ actor " D-1000 ": Weapon
     }
 }
 
-actor " Power D-1000 ": Weapon
+actor " Power D-1000 ": " D-1000 "
 {
-    +WEAPON.NOAUTOAIM
-
-    Weapon.AmmoType1 "Cell"
     Weapon.AmmoUse1 20
-
-    Weapon.SelectionOrder 300
+    Weapon.AmmoGive1 0
 
     Weapon.SisterWeapon " D-1000 "
     +POWERED_UP
 
     Inventory.PickupMessage "$JKE_PK_D1000"
     Obituary "$JKE_MP_D1000_POWER"
+
     States
     {
-      Ready:
-        D1VG A 1 A_WeaponReady
-      Select:
-        D1VG A 1 A_Raise
-        loop
-      Deselect:
-        D1VG A 1 A_Lower
-        loop
       Fire:
         D1VG A 5
         D1VG A 15 A_PlaySound("jkemod/d1000/charge", CHAN_WEAPON)
@@ -135,10 +129,6 @@ actor " Power D-1000 ": Weapon
         D1VG B 2
         D1VG A 20
         goto Ready
-
-      Spawn:
-        D1VG Z -1
-        stop
     }
 }
 
@@ -156,6 +146,8 @@ actor D1000Plasma
 
     RenderStyle Add
     Alpha 0.75
+
+    Decal D1000LightningTiny
 
     DeathSound "jkemod/d1000/plasmaexplode"
 
@@ -186,6 +178,8 @@ actor D1000PlasmaBig
 
     RenderStyle Add
     Scale 0.7
+
+    Decal D1000LightningSmall
 
     DeathSound "jkemod/d1000/plasmabigexplode"
 
