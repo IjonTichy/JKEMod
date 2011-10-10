@@ -39,10 +39,11 @@ actor " Rail Repeater ": Weapon
 
       Fire:
       AltFire:
-        MING A 0 A_PlaySound("jkemod/railrepeater/revup", 7)
+        MING A 0 A_PlaySound("jkemod/railrepeater/revup", 7, 0.5)
+        MING A 3
         MING HGFEDCB 2
         MING AHGFEDBAHFC 1
-        MING A 0 A_PlaySoundEx("jkemod/railrepeater/hold", "SoundSlot7", 1)
+        MING A 0 A_PlaySound("jkemod/railrepeater/hold", 7, 0.5, 1)
         MING A 0 A_JumpIfInventory("MainFired", 1, "Hold1")
         MING A 0 A_JumpIfInventory("AltFired",  1, "Rev1")
         goto Down
@@ -100,7 +101,7 @@ actor " Rail Repeater ": Weapon
 
       Down:
         MING A 0 A_StopSoundEx("SoundSlot7")
-        MING A 0 A_PlaySound("jkemod/railrepeater/revdown", 7)
+        MING A 0 A_PlaySound("jkemod/railrepeater/revdown", 7, 0.5)
         MING CHFDBHGFEDCB 1
         MING HGFEDCB 2
         MING HGFE 3

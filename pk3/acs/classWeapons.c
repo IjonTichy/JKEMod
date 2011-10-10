@@ -17,7 +17,7 @@ script 682 (int which)
 
     if (GetCVar("sv_cheats") == 1)
     {
-        Print(s:"Use \"puke -877\" to get all your class' weapons\n(only when sv_cheats is 1)");
+        Print(s:"Use \"puke -878\" to get all your class' weapons\n(only when sv_cheats is 1)");
     }
 }
 
@@ -182,20 +182,40 @@ script 683 (int slot, int dropped)
 }
 
 
-script 877 (void)
+script 878 (void)
 {
     int i; int w;
+
+    int a1;  int a2;
+    int ca1; int ca2;
+
     int plc = classes[PlayerNumber()];
 
     if (GetCVar("sv_cheats") != 0 || GameType() == 0)
     {
+        GiveInventory("Backpack", 1);
+
         for (i = 0; i < SLOTCOUNT; i++)
         {
-            w = classWeps[plc][i][0];
+            w  = classWeps[plc][i][0];
+            a1 = classWeps[plc][i][2];
+            a2 = classWeps[plc][i][3];
 
             if (w != "None")
             {
                 GiveInventory(w, 1);
+            }
+
+            if (a1 != "None")
+            {
+                ca1 = CheckInventory(a1);
+                GiveInventory(a1, GetAmmoCapacity(a1) - ca1);
+            }
+
+            if (a2 != "None")
+            {
+                ca2 = CheckInventory(a2);
+                GiveInventory(a2, GetAmmoCapacity(a2) - ca2);
             }
         }
 
@@ -205,7 +225,7 @@ script 877 (void)
         }
     }
 
-    PrintBold(n:0, s:"\c- is being a cheater by calling script 877!");
+    PrintBold(n:0, s:"\c- is being a cheater by calling script 878!");
 
     if (GetCVar("sv_cheats") == 0)
     {

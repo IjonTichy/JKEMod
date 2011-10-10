@@ -8,6 +8,10 @@ ACS and DECORATE edits by Aiur850 and Ijon Tichy (also ijontichy@powernoob)
 Better Doom Weapons by Ijon Tichy
 Sprites and sounds for the Better Doom Weapons by perkristian
 
+Strife Marine by Ijon Tichy
+Sprites for the Strife Marine by many people
+Sounds for the Strife Marine by Epic Games, among other people
+
 Rail Repeater by Delta
 Rail Repeater Sprites by Croteam and TheDarkArchon
 Rail Repeater Flashes by Ijon Tichy

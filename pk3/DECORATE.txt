@@ -3,6 +3,7 @@
 #include "decorate/casings.txt"
 #include "decorate/classes.txt"
 #include "decorate/classitems.txt"
+#include "decorate/monsters.txt"
 #include "decorate/items.txt"
 #include "decorate/ammo.txt"
 #include "decorate/weapons.txt"
