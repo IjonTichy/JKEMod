@@ -1,6 +1,0 @@
-object FragmentChunk
-{
-    frame BAL1C { light RocketGlow2 }
-    frame BAL1D { light RocketGlow1 }
-    frame BAL1E { light RocketGlow0 }
-}
