@@ -1,0 +1,57 @@
+flickerlight2 JKEClassAttack
+{
+    color 1.0 0.8 0.2
+    size 48
+    secondarySize 56
+    interval 1
+    offset 0 40 0
+}
+
+flickerlight2 JKEClassAttack2
+{
+    color 0.4 0.4 1.0
+    size 48
+    secondarySize 56
+    interval 1
+    offset 0 40 0
+}
+
+////
+// General
+
+#include "gldefs/lightdefs/explosiveglows.txt"
+#include "gldefs/lightdefs/flameglows.txt"
+
+
+////
+// Doomguy/General
+
+#include "gldefs/lightdefs/rocketglows.txt"
+#include "gldefs/lightdefs/plasmaglows.txt"
+#include "gldefs/lightdefs/bfgglows.txt"
+
+
+////
+// Strife Marine
+
+#include "gldefs/lightdefs/clusterbombglows.txt"
+#include "gldefs/lightdefs/pulseglows.txt"
+#include "gldefs/lightdefs/y23hglows.txt"
+
+
+////
+// Leandro
+
+#include "gldefs/lightdefs/multigunglows.txt"
+#include "gldefs/lightdefs/powerfulglows.txt"
+
+
+////
+// Sorcerer
+
+#include "gldefs/lightdefs/hellfistglows.txt"
+#include "gldefs/lightdefs/etherealglows.txt"
+#include "gldefs/lightdefs/blackmagicglows.txt"
+#include "gldefs/lightdefs/ripperdiscglows.txt"
+#include "gldefs/lightdefs/wandofflamesglows.txt"
+#include "gldefs/lightdefs/firegloveglows.txt"

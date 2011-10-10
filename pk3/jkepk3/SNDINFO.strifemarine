@@ -1,0 +1,59 @@
+// DA HEXEN MARINE SOUNDS
+
+$playersound    StrifeMarine  male    *death      sounds/tichy/strifemarine/skin/probablydead.lmp
+$playersound    StrifeMarine  male    *xdeath     sounds/tichy/strifemarine/skin/definitelydead.flac
+$playersound    StrifeMarine  male    *gibbed     sounds/tichy/strifemarine/skin/saucy.lmp
+$playersound    StrifeMarine  male    *pain100    sounds/tichy/strifemarine/skin/ouchthathurts.flac
+$playersounddup StrifeMarine  male    *pain75     *pain100
+$playersounddup StrifeMarine  male    *pain50     *pain100
+$playersounddup StrifeMarine  male    *pain25     *pain100
+$playersound    StrifeMarine  male    *grunt      sounds/tichy/strifemarine/skin/stupidwall.flac
+$playersounddup StrifeMarine  male    *land       *grunt
+$playeralias    StrifeMarine  male    *jump       hexenmarine/emptysound
+$playersound    StrifeMarine  male    *fist       sounds/tichy/strifemarine/skin/ipunchyoo.flac
+$playersound    StrifeMarine  male    *usefail    sounds/tichy/strifemarine/skin/stupidwall.flac
+$playersound    StrifeMarine  male    *taunt      dstaunt
+
+// okay yeah done
+
+
+hexenmarine/emptysound      sounds/tichy/strifemarine/emptysound.ogg
+hexenmarine/noammo          sounds/tichy/strifemarine/noammo.ogg
+
+$pitchshiftrange 3
+hexenmarine/knifehit        sounds/tichy/strifemarine/knife_hit.ogg
+hexenmarine/knifemiss       sounds/tichy/strifemarine/knife_hitwall.ogg
+$pitchshiftrange 4
+
+hexenmarine/enforcerfire    sounds/tichy/strifemarine/enforcer_fire.ogg
+hexenmarine/enforcerup      sounds/tichy/strifemarine/enforcer_select.ogg
+
+hexenmarine/shotfire1       sounds/tichy/strifemarine/shotgun_fire1.ogg
+hexenmarine/shotfire2       sounds/tichy/strifemarine/shotgun_fire2.ogg
+hexenmarine/shotfire3       sounds/tichy/strifemarine/shotgun_fire3.ogg
+$random hexenmarine/shotfire    { hexenmarine/shotfire1 hexenmarine/shotfire2 hexenmarine/shotfire3 }
+hexenmarine/shotreload      sounds/tichy/strifemarine/shotgun_reload.ogg
+hexenmarine/shotaltfire     sounds/tichy/strifemarine/shotgun_dfire.ogg
+
+hexenmarine/chaingunup      sounds/tichy/strifemarine/chaingun_windup.ogg
+hexenmarine/chaingunrev     sounds/tichy/strifemarine/chaingun_rev.ogg
+hexenmarine/chaingundown    sounds/tichy/strifemarine/chaingun_winddown.ogg
+hexenmarine/chaingunfire    sounds/tichy/strifemarine/chaingun_fire1.ogg
+hexenmarine/chaingunaltfire sounds/tichy/strifemarine/chaingun_fire2.ogg
+
+
+hexenmarine/gspammerfire    sounds/tichy/strifemarine/gspammer_fire.ogg
+hexenmarine/gspammerreload  sounds/tichy/strifemarine/gspammer_reload.ogg
+hexenmarine/gspammerexplode sounds/tichy/strifemarine/gspammer_explode.ogg
+
+$pitchshiftrange 3
+hexenmarine/beamproj        sounds/tichy/strifemarine/plasmabeam_plasma.ogg
+hexenmarine/beamprojstop    sounds/tichy/strifemarine/plasmabeam_down.ogg
+$pitchshiftrange 4
+hexenmarine/beamshothit     sounds/tichy/strifemarine/plasmabeam_hit.ogg
+hexenmarine/beamfire        sounds/tichy/strifemarine/plasmabeam_beam.ogg
+
+
+$singular hexenmarine/beamfire
+hexenmarine/ionbeamcharge   sounds/tichy/strifemarine/ionstrike_charge.ogg
+hexenmarine/ionbeamblast    sounds/tichy/strifemarine/ionstrike_nuke.ogg

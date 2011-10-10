@@ -1,0 +1,101 @@
+
+actor " L-Spitfirer ": Weapon
+{
+    Weapon.AmmoType1 "Clip"
+    Weapon.AmmoType2 "ExplosiveAmmo"
+    Weapon.AmmoUse1 1
+    Weapon.AmmoUse2 1
+    Weapon.AmmoGive1 70
+    Weapon.AmmoGive2 4
+
+    Weapon.SelectionOrder 900
+
+    Decal BulletChip
+
+    Inventory.PickupMessage "$JKE_PK_SPITFIRER"
+    Obituary "$JKE_MP_SPITFIRER"
+
+    States
+    {
+      Select:
+        SPFR A 1 A_Raise
+        loop
+
+      Deselect:
+        SPFR A 1 A_Lower
+        loop
+
+      Ready:
+        SPFR A 1 A_WeaponReady
+        Loop
+
+      Fire:
+        SPFR A 0 A_GunFlash
+        SPFR A 0 A_PlaySound("jkemod/spitfirer/fire", CHAN_WEAPON)
+        SPFR A 0 A_FireCustomMissile("PistolCasing", -40, 0, 0, 6)
+        SPFR B 2 A_FireBullets(1.5, 1.5, 1, 8, "BulletPuff")
+        SPFR A 1
+        SPFR A 0 A_ReFire
+        goto Ready
+
+      AltFire:
+        SPFR B 0 A_PlaySound("jkemod/spitfirer/altfire", CHAN_WEAPON)
+        SPFR B 1 A_FireCustomMissile("SpitfirerGrenade", 0, 1, 2, 3)
+        SPFR G 1
+        SPFR I 10
+        SPFR I 10 A_PlaySound("jkemod/spitfirer/open", CHAN_WEAPON)
+        SPFR HGEB 1
+        goto Ready
+
+
+      Flash:
+        SPFR A 0 A_Jump(255, "Flash1", "Flash2")
+        goto LightDone
+
+      Flash1:
+        SPFR J 2 bright A_Light1
+        goto LightDone
+
+      Flash2:
+        SPFR K 2 bright A_Light1
+        goto LightDone
+
+
+      Spawn:
+        SPFR Z -1
+        stop
+    }
+}
+
+actor SpitfirerGrenade
+{
+    Height 4
+    Radius 4
+    Speed 35
+
+    Projectile
+    -NOGRAVITY
+    +DOOMBOUNCE
+    +DEHEXPLOSION
+
+    Damage 25
+    ReactionTime 3
+
+    Decal Scorch
+
+    Obituary "$JKE_MP_SPITFIRER_GRENADE"
+
+    States
+    {
+      Spawn:
+        GRPP A 35 A_Countdown
+        loop
+
+      Death:
+        BNG4 A 0 A_ChangeFlag("NOGRAVITY", 1)
+        BNG4 A 0 A_PlaySound("jkemod/assorted/explode")
+        BNG4 A 0 A_Explode(128, 128)
+        BNG4 BCDEFGHIJKLM 3 bright
+        stop
+    }
+}

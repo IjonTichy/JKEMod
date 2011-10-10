@@ -1,0 +1,58 @@
+// Light definitions in ripperglows.txt and blackmagicglows.txt
+
+object BlackMagicShot
+{
+    frame BLSH  { light RipperDiscGlow4 }
+
+    frame BFE1D { light RipperDiscGlow6 }
+    frame BFE1E { light RipperDiscGlow4 }
+    frame BFE1F { light RipperDiscGlow2 }
+}
+
+object PowerBlackMagicShot
+{
+    frame BLSH  { light RipperDiscGlow5 }
+
+    frame BFE1D { light RipperDiscGlow8 }
+    frame BFE1E { light RipperDiscGlow6 }
+    frame BFE1F { light RipperDiscGlow3 }
+}
+
+object BlackMagicFlameExplosion
+{
+    frame TNT1A0 { light BlackMagicFireGlow }
+    frame TNT1A  { light BlackMagicFireGlow }
+    frame TNT1   { light BlackMagicFireGlow }
+    frame TNT    { light BlackMagicFireGlow }
+    frame TN     { light BlackMagicFireGlow }
+    frame T      { light BlackMagicFireGlow }
+}
+    // yes, this is necessary
+
+object BlackMagicAltShot
+{
+    frame FX12  { light BlackMagicShotGlow4 }
+
+    frame MISLB { light BlackMagicShotGlow6 }
+    frame MISLC { light BlackMagicShotGlow4 }
+    frame MISLD { light BlackMagicShotGlow2 }
+}
+
+object PowerBlackMagicAltShot
+{
+    frame FX12  { light BlackMagicShotGlow5 }
+
+    frame MISLB { light BlackMagicShotGlow7 }
+    frame MISLC { light BlackMagicShotGlow5 }
+    frame MISLD { light BlackMagicShotGlow3 }
+}
+
+object BlackMagicAltTrail
+{
+    frame FX12C { light BlackMagicShotGlow3 }
+    frame FX12D { light BlackMagicShotGlow3 }
+    frame FX12E { light BlackMagicShotGlow2 }
+    frame FX12F { light BlackMagicShotGlow2 }
+    frame FX12G { light BlackMagicShotGlow1 }
+    frame FX12G { light BlackMagicShotGlow1 }
+}

@@ -1,0 +1,2 @@
+flat AMMOSPH1           range AMMOSPH4 tics 2
+flat AMMOSPH2           range AMMOSPH4 tics 4

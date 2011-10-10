@@ -1,0 +1,50 @@
+actor JKEClip: CustomInventory replaces Clip
+{
+    Inventory.PickupMessage "$JKE_PK_JKECLIP"
+
+    States
+    {
+      Spawn:
+        CLIP A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_GiveInventory("Clip", 10)
+        TNT1 A 0 A_GiveInventory("JKEMana", 15)
+        TNT1 A 0 A_GiveInventory("BerettaAmmo", 15)
+        TNT1 A 0 A_GiveInventory("JSniperAmmo", 4)
+        TNT1 A 0 A_GiveInventory("M249Ammo", 10)
+        TNT1 A 0 A_GiveInventory("MinigunAmmo", 10)
+        stop
+    }
+}
+
+actor JKEGoldWandAmmo: JKEClip replaces GoldWandAmmo
+{
+    States
+    {
+      Spawn:
+        AMG1 A -1
+        loop
+    }
+}
+
+actor JKEBlasterAmmo: JKEClip replaces BlasterAmmo
+{
+    States
+    {
+      Spawn:
+        AMB1 ABC 4
+        loop
+    }
+}
+
+actor JKEClipOfBullets: JKEClip replaces ClipOfBullets
+{
+    States
+    {
+      Spawn:
+        BLIT A -1
+        loop
+    }
+}

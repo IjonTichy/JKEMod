@@ -1,0 +1,31 @@
+actor FlameAmmo: Ammo
+{
+    Inventory.Amount 15
+    Inventory.MaxAmount 300
+    Ammo.BackpackAmount 15
+    Ammo.BackpackMaxAmount 600
+    Inventory.Icon "FLMAA0"
+
+    Inventory.PickupMessage "$JKE_PK_FLAMEAMMO"
+
+    States
+    {
+      Spawn:
+        FLMA ABC 8 Bright
+        Loop
+    }
+}
+
+actor FlameHefty: FlameAmmo
+{
+    Inventory.Amount 25
+
+    Inventory.PickupMessage "$JKE_PK_FLAMEHEFTY"
+
+    States
+    {
+      Spawn:
+        FLMH ABC 8 Bright
+        Loop
+    }
+}

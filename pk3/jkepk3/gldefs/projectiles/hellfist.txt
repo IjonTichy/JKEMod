@@ -1,0 +1,21 @@
+// Light definitions in hellfistglows.txt
+
+object HellfistBall
+{
+    frame BAL7A { light HellfistGlow3 }
+    frame BAL7B { light HellfistGlow3 }
+
+    frame BAL7C { light HellfistGlow4 }
+    frame BAL7D { light HellfistGlow3 }
+    frame BAL7E { light HellfistGlow2 }
+}
+
+object PowerHellfistBall
+{
+    frame BAL7A { light HellfistGlow4 }
+    frame BAL7B { light HellfistGlow4 }
+
+    frame BAL7C { light HellfistGlow5 }
+    frame BAL7D { light HellfistGlow4 }
+    frame BAL7E { light HellfistGlow3 }
+}

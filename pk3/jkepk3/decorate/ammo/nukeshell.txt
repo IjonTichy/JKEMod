@@ -1,0 +1,16 @@
+
+Actor NukeShell: Ammo
+{
+    Inventory.Amount 2
+    Inventory.MaxAmount 50
+    Ammo.BackpackAmount 0
+    Ammo.BackpackMaxAmount 100
+    Inventory.Icon "NKSHA0"
+    Inventory.PickupMessage "$JKE_PK_NUKESHELL"
+    States
+    {
+      Spawn:
+        NKSH A -1
+        Stop
+    }
+}

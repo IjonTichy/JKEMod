@@ -1,0 +1,177 @@
+
+actor " B-Chainsaw " : Weapon
+{
+    Weapon.SelectionOrder 2200
+
+    +WEAPON.MELEEWEAPON
+    +NOAUTOFIRE
+    +NOALERT
+
+    Weapon.SisterWeapon " Power B-Chainsaw "
+
+    Inventory.PickupMessage "$BDW_PK_CHAINSAW"
+    Obituary "$BDW_MP_CHAINSAW"
+
+    States
+    {
+      Ready:
+        SAWG A 0 A_JumpIfInventory("ChainsawOn", 1, "ReadyOn")
+        goto ReadyOff
+
+      ReadyOff:
+        SAWG D 1 A_WeaponReady
+        loop
+
+      ReadyOn:
+        SAWG C 0 A_PlaySound("betterdoomweapons/sawready", CHAN_WEAPON)
+        SAWG C 4 A_WeaponReady
+        SAWG C 0 A_AlertMonsters
+        SAWG D 4 A_WeaponReady
+        SAWG D 0 A_AlertMonsters
+        loop
+
+
+      Deselect:
+        SAWG C 1 A_Lower
+        loop
+
+      Select:
+        SAWG C 0 A_TakeInventory("ChainsawOn")
+        SAWG C 1 A_Raise
+        loop
+
+      Fire:
+        SAWG A 0 A_JumpIfInventory("ChainsawOn", 1, "FireOn")
+        goto TurnOn
+
+      FireOn:
+        SAWG A 0 A_AlertMonsters
+        SAWG A 0 A_JumpIfInventory("PowerBerserkStrength", 1, "ZerkSaw")
+        goto NormalSaw
+
+      TurnOn:     // the way you aren't
+        SAWG A 8 A_GiveInventory("ChainsawOn")
+        goto Ready
+
+      TurnOff:     // the way you ARE
+        SAWG A 8 A_TakeInventory("ChainsawOn")
+        goto Ready
+
+      NormalSaw:
+        SAWG AB 3 A_Saw("betterdoomweapons/sawmiss", "betterdoomweapons/sawhit", 2, "SawPuff")
+        SAWG A 0 A_Jump(24, "CheckZerk")
+        SAWG A 0 A_ReFire
+        goto Ready
+
+      ZerkSaw:
+        SAWG AB 3 A_Saw("betterdoomweapons/sawmiss", "betterdoomweapons/sawhit", 8, "SawPuff")
+        SAWG A 0 A_Jump(48, "CheckZerk")
+        SAWG A 0 A_ReFire
+        goto Ready
+
+
+      CheckZerk:
+        SAWG A 0 A_JumpIfInventory("TargetHit", 1, "RAAAAAGE")
+        SAWG A 0 A_TakeInventory("TargetHit")
+        SAWG A 0 A_ReFire
+        goto Ready
+
+      RAAAAAGE:
+        SAWG A 0 ACS_ExecuteAlways(464, 0, 0, 0, 0)
+        SAWG A 0 A_TakeInventory("TargetHit")
+        SAWG A 0 A_ReFire
+        goto Ready
+
+      AltFire:
+        SAWG A 0 A_JumpIfInventory("ChainsawOn", 1, "TurnOff")
+        goto Ready
+
+
+      Spawn:
+        CSAW A -1
+        stop
+    }
+}
+
+
+actor " Power B-Chainsaw " : " B-Chainsaw "
+{
+    Weapon.SisterWeapon " B-Chainsaw "
+    +POWERED_UP
+
+    Obituary "$BDW_MP_CHAINSAW_POWER"
+
+    States
+    {
+      Fire:
+        SAWG A 0 A_JumpIfInventory("ChainsawOn", 1, "FireOn")
+        goto TurnOn
+
+      FireOn:
+        SAWG A 0 A_AlertMonsters
+        SAWG A 0 A_JumpIfInventory("PowerBerserkStrength", 1, "ZerkSaw")
+        goto NormalSaw
+
+      TurnOn:
+        SAWG A 8 A_GiveInventory("ChainsawOn")
+        goto Ready
+
+      TurnOff:
+        SAWG A 8 A_TakeInventory("ChainsawOn")
+        goto Ready
+
+      NormalSaw:
+        SAWG AB 2 A_Saw("betterdoomweapons/sawmiss", "betterdoomweapons/sawhit", 5, "SawPuff")
+        SAWG A 0 A_Jump(48, "CheckZerk")
+        SAWG A 0 A_ReFire
+        goto Ready
+
+      ZerkSaw:
+        SAWG AB 2 A_Saw("betterdoomweapons/sawmiss", "betterdoomweapons/sawhit", 20, "SawPuff")
+        SAWG A 0 A_Jump(72, "CheckZerk")
+        SAWG A 0 A_ReFire
+        goto Ready
+
+
+      CheckZerk:
+        SAWG A 0 A_JumpIfInventory("TargetHit", 1, "RAAAAAGE")
+        SAWG A 0 A_TakeInventory("TargetHit")
+        SAWG A 0 A_ReFire
+        goto Ready
+
+      RAAAAAGE:
+        SAWG A 0 ACS_ExecuteAlways(464, 0, 0, 0, 0)
+        SAWG A 0 A_TakeInventory("TargetHit")
+        SAWG A 0 A_ReFire
+        goto Ready
+
+      AltFire:
+        SAWG A 0 A_JumpIfInventory("ChainsawOn", 1, "TurnOff")
+        goto Ready
+    }
+}
+
+
+actor ChainsawOn: Inventory { Inventory.MaxAmount 1 +UNDROPPABLE }
+
+actor SawPuff: BulletPuff
+{
+    +PUFFGETSOWNER
+    +PUFFONACTORS
+
+    States
+    {
+      Spawn:
+        TNT1 A 1
+        TNT1 A 0 A_GiveToTarget("TargetHit")
+        stop
+
+      Melee:
+        TNT1 A 1
+        TNT1 A 0 A_GiveToTarget("TargetHit")
+        stop
+
+      Crash:
+        goto Super::Spawn
+    }
+}

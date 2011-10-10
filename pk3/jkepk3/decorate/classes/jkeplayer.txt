@@ -1,0 +1,71 @@
+actor JKEPlayer: PlayerPawn
+{
+    Health 100
+    ReactionTime 0
+
+    PainChance 255
+
+    Radius 16
+    Height 56
+
+    Speed 1
+
+    Player.ColorRange 112, 127
+
+    Player.JumpZ 8
+
+    Player.SpawnClass "Mage"
+    Player.DisplayName "JKEGuy"
+    Player.InvulnerabilityMode "Reflective"
+    Player.HealRadiusType "Mana"
+    Player.HexenArmor 5, 5, 15, 10, 25
+
+    Player.StartItem "JKEGuyClassItem"
+
+    Player.StartItem " J-Fists "
+    Player.StartItem " J-Pistol "
+
+    Player.StartItem "Clip",  36
+    Player.StartItem "JPistolCounter", 14
+
+    States
+    {
+      Spawn:
+        JKGY A -1
+        stop
+
+      See:
+        JKGY ABCD 4
+        loop
+
+      Melee:
+        JKGY E 8 bright
+        goto Missile
+
+      Missile:
+        JKGY F 8
+        goto Spawn
+
+      Pain:
+        JKGY G 4
+        JKGY G 4 A_Pain
+        goto Spawn
+
+      Death:
+        JKGY H 6
+        JKGY I 6 A_PlayerScream
+        JKGY JK 6
+        JKGY L 6 A_NoBlocking
+        JKGY M 6
+        JKGY N -1
+        stop
+
+      XDeath:
+        JKGY O 5 A_PlayerScream
+        JKGY P 5
+        JKGY R 5 A_NoBlocking
+        JKGY STUV 5
+        JKGY W -1
+        stop
+    }
+}

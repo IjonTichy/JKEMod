@@ -1,0 +1,289 @@
+
+// NOTE:
+//
+// Please keep this in alphabetical order
+
+[ enu default ]
+
+//// Class pickup messages
+//
+
+JKE_PK_BDW_CLASS1                   = "How do i punched monstr";
+JKE_PK_BDW_CLASS1_2                 = "\crBLOOD! \cgBLOOD FOR THE BLOOD GOD!";
+JKE_PK_BDW_CLASS2                   = "A pistol. Maybe it's worth something.";
+JKE_PK_BDW_CLASS3                   = "Name's Doomguy. Cleanup.";
+JKE_PK_BDW_CLASS3_2                 = "Why doesn't this come with a noseguard?";
+JKE_PK_BDW_CLASS4                   = "Hey, chaingun! The hell with respect!";
+JKE_PK_BDW_CLASS5                   = "\cbROCKET LAUNCHER FOUND. COMMENCE FLYING.\c-";
+JKE_PK_BDW_CLASS6                   = "The sugar-sweet kiss of heavy ordinance!";
+JKE_PK_BDW_CLASS7                   = "... and my gun is very, very large.";
+JKE_PK_BDW_CLASS8                   = "Hail to the chief!";
+
+JKE_PK_SM_CLASS1                    = "Let's cut shit up.";
+JKE_PK_SM_CLASS2                    = "You picked up another enforcer!";
+JKE_PK_SM_CLASS3                    = "Those alien bastards are gonna \caPAY\c-.";
+JKE_PK_SM_CLASS4                    = "Because who needs breathable air?";
+JKE_PK_SM_CLASS5                    = "Accuracy? Never heard of it.";
+JKE_PK_SM_CLASS6                    = "I coulda sworn this was a pulse gun...";
+JKE_PK_SM_CLASS7                    = "\caPRETTY RED LIGHTS\c-";
+JKE_PK_SM_CLASS8                    = "Stay far away from the giant purple donuts.";
+
+JKE_PK_JKEGUY_CLASS1                = "You learned how to punch things again!";
+JKE_PK_JKEGUY_CLASS2                = "You got a pistol.";
+JKE_PK_JKEGUY_CLASS3                = "Let's hunt some deer.";
+JKE_PK_JKEGUY_CLASS3_2              = "A shotgun so big, it compensates for something.";
+JKE_PK_JKEGUY_CLASS4                = "Like a gangster.";
+JKE_PK_JKEGUY_CLASS4_2              = "Bullets gotta litter the air somehow.";
+JKE_PK_JKEGUY_CLASS5                = "Explosions for everyone!";
+JKE_PK_JKEGUY_CLASS5_2              = "Shrapnel for everyone!";
+JKE_PK_JKEGUY_CLASS6                = "Why does plasma have to be so \cnblue\c-?";
+JKE_PK_JKEGUY_CLASS6_2              = "So blue, it rips shit up - even logic.";
+JKE_PK_JKEGUY_CLASS7                = "Now \caYOU\c- can fire giant-ass molecules!";
+JKE_PK_JKEGUY_CLASS8                = "This really \cais\c- a BFG.";
+
+JKE_PK_LEANDRO_CLASS1               = "\cgRIP AND TEAR\c-";
+JKE_PK_LEANDRO_CLASS2               = "You got two pistols.";
+JKE_PK_LEANDRO_CLASS3               = "Feed a belt into this thing and it's a machine shotgun.";
+JKE_PK_LEANDRO_CLASS3_2             = "Easier than buying salsa dip!";
+JKE_PK_LEANDRO_CLASS4               = "Yes, you needed an early grenade launcher.";
+JKE_PK_LEANDRO_CLASS4_2             = "Who wants beef?";
+JKE_PK_LEANDRO_CLASS5               = "It's not quite a rocket launcher...";
+JKE_PK_LEANDRO_CLASS6               = "Plasma-sniper-thingy goooo!";
+JKE_PK_LEANDRO_CLASS7               = "Blues lines can kill now \caDON'T QUESTION IT.\c-";
+JKE_PK_LEANDRO_CLASS8               = "My other pistol destroys planets.";
+
+JKE_PK_SORCERER_CLASS1              = "Green fireballs for everyone!";
+JKE_PK_SORCERER_CLASS2              = "I wonder what happens if I find three of these...";
+JKE_PK_SORCERER_CLASS3              = "It's \camagical\c- green exploding shit!";
+JKE_PK_SORCERER_CLASS4              = "\chPITCHFORKS AREN'T MADE OF WANDS DAMMIT!\c-";
+JKE_PK_SORCERER_CLASS5              = "Green magic and red magic and pentagrams, oh my!";
+JKE_PK_SORCERER_CLASS6              = "Fire is good for you shut up!";
+JKE_PK_SORCERER_CLASS7              = "Your obsession with fire has been reaffirmed.";
+JKE_PK_SORCERER_CLASS8              = "This must be the powersphere's skull's arm.";
+
+
+
+//// Pickups
+//
+// PK means "pickup"
+
+// Items
+JKE_PK_POWERSPHERE                  = "The fires of Hell course through your veins...";
+JKE_PK_AMMOSPHERE                   = "Restocking feels less necessary.";
+JKE_PK_SUPERAMMOSPHERE              = "Restocking seems unnecessary now.";
+
+// Replacements
+JKE_PK_JKECLIP                      = "You picked up various bullets.";
+JKE_PK_JKECLIPBOX                   = "You picked up a pack of various bullets.";
+JKE_PK_JKESHELL                     = "You picked up shellstuff.";
+JKE_PK_JKESHELLBOX                  = "You picked up a bunch of shellstuff.";
+JKE_PK_JKEROCKETAMMO                = "You picked up a few explosives.";
+JKE_PK_JKEROCKETBOX                 = "You picked up a pack of explosives.";
+JKE_PK_JKECELL                      = "You picked up a battery and gasoline.";
+JKE_PK_JKECELLPACK                  = "You picked up a large battery and gasoline.";
+JKE_PK_JKECOMBOAMMO                 = "You picked up some of every ammo.";
+JKE_PK_JKECOMBOHEFTY                = "You picked up a bunch of every ammo.";
+
+
+// Ammo
+JKE_PK_ARROWAMMO                    = "You found 10 Ballesta arrows.";
+JKE_PK_ARROWQUIVER                  = "You found a Ballesta arrow quiver.";
+JKE_PK_BEAMAMMO                     = "You picked up a beam pack.";
+JKE_PK_BEAMPACK                     = "You picked up a large beam pack.";
+JKE_PK_BERETTAAMMO                  = "You found a Beretta clip.";
+JKE_PK_DEVASTATORAMMO               = "AMMO FOR DEVASTATOR";
+JKE_PK_DEVASTATORBOX                = "LOTS OF AMMO FOR DEVASTATOR";
+JKE_PK_EXPLOSIVEAMMO                = "You found polymorphic explosive ammo.";
+JKE_PK_FIREAMMO                     = "You found Pyro mana.";
+JKE_PK_FLAMEAMMO                    = "You found a flame gem.";
+JKE_PK_FLAMEHEFTY                   = "You found a large flame gem.";
+JKE_PK_GRAVITYAMMO                  = "You pluck some gravity ammo out of the air.";
+JKE_PK_JKEGAS                       = "You found a gasoline canister.";
+JKE_PK_JKEGAS_BIG                   = "You found a gasoline tank.";
+JKE_PK_JKEMANA                      = "You found some mana.";
+JKE_PK_JSNIPERRIFLE                 = "You found bolt-action sniper rounds.";
+JKE_PK_M249AMMO                     = "You picked up some .55cal bullets.";
+JKE_PK_NUKESHELL                    = "You found a nuclear bomb-sorry, shell.";
+
+// Weapons
+JKE_PK_BALLESTA                     = "You found the Ballesta!";
+JKE_PK_BEAMGUN                      = "You got the beam gun!";
+JKE_PK_BERSERKER                    = "You found Wolverine's claws. Huh.";
+JKE_PK_BFG7000                      = "You found a BFG9000 prototype!";
+JKE_PK_BLACKMAGIC                   = "Klaatu barata nikto...";
+JKE_PK_D1000                        = "You found the long-lost D-1000 plasma cannon!";
+JKE_PK_DKDEVASTATOR                 = "DEVASTATOR WEAPON";
+JKE_PK_DISINTEGRATOR                = "You got the disintegrator!";
+JKE_PK_DOUBLEBARRELSG               = "You got a double barreled shotgun!";
+JKE_PK_DRAGUNOV                     = "You got the Dragunov!";
+JKE_PK_DUALBERETTAS                 = "You picked up two berettas.";
+JKE_PK_DUALPISTOLS                  = "You picked up two pistols.";
+JKE_PK_DUALPLASMARIFLES             = "You got dual plasma rifles!";
+JKE_PK_ETHEREALCROSSBOW             = "You got the ethereal crossbow!";
+JKE_PK_EXPLOSIONFU                  = "Now you can kick explosions and punch fireballs!";
+JKE_PK_FIREGLOVES                   = "You got the fire gloves!";
+JKE_PK_FIRESSG                      = "You got the incendiary super shotgun!";
+JKE_PK_FLAREGUN                     = "You found a flare gun.";
+JKE_PK_FMODMINIGUN                  = "You got the Doom 3 chaingun... only better.";
+JKE_PK_FRAGMENTLAUNCHER             = "You got the fragment launcher!";
+JKE_PK_DKFREEZETHROWER              = "FREEZETHROWER!";
+JKE_PK_GHETTOBLASTER                = "Holy crap, this thing accepts 8-tracks!";
+JKE_PK_HANDSHOTGUN                  = "You got a concealable shotgun!";
+JKE_PK_HEAVYCHAINGUN                = "\ck*chk-chink*\c- Hehvy masheen gun!";
+JKE_PK_HELLFIST                     = "You found a hell knight's disembodied arm.";
+JKE_PK_JFLAMETHROWER                = "You got a flamethrower!";
+JKE_PK_JPISTOL                      = "You picked up a pistol.";
+JKE_PK_JPLASMARIFLE                 = "You picked up a plasma rifle!";
+JKE_PK_JRIPPER                      = "You got a ripper!";
+JKE_PK_JROCKETLAUNCHER              = "You picked up a rocket launcher!";
+JKE_PK_JSHOTGUN                     = "You picked up a shotgun.";
+JKE_PK_JSNIPERRIFLE                 = "You got a sniper rifle!";
+JKE_PK_JSUPERSHOTGUN                = "You got the Doom 3 super shotgun!";
+JKE_PK_KARASAWA                     = "You got the karasawa!";
+JKE_PK_M16                          = "You got an M16!";
+JKE_PK_M249MACHINEGUN               = "You picked up the M249 machine gun!";
+JKE_PK_MAGNUMSNIPER                 = "You got the magnum sniper!";
+JKE_PK_MEDISPENSER                  = "You leveled up in throwing medikits!";
+JKE_PK_MIGHTYFIST                   = "You picked up two disembodied arms. Eeewww.";
+JKE_PK_MOLECULESHOOTER              = "You got the molecule shooter!";
+JKE_PK_MULTIGUN                     = "You got the multigun!";
+JKE_PK_P200                         = "You got the P-200!";
+JKE_PK_PLASMADRIVER                 = "You got the plasma driver!";
+JKE_PK_POWERFUL                     = "You got the gravitational disintegration pistol!";
+JKE_PK_PROTOSSPLODER                = "You got the protoss-ploder!";
+JKE_PK_PYROCANNON                   = "You got the pyro cannon!";
+JKE_PK_QUADSHOT                     = "You got the quadshot!";
+JKE_PL_SAPPHIREWAND                 = "You got the sapphire wand.";
+JKE_PK_SKELETONORB                  = "You got the skeleton orb!";
+JKE_PK_SPITFIRER                    = "You got the spitfirer!";
+JKE_PK_STRIKER                      = "You got the striker!";
+JKE_PK_SUPERSHOTNUKE                = "You now possess the key to planetary destruction.";
+JKE_PK_TRISTAFF                     = "You got a pitchfork made of wands - wait what.";
+JKE_PK_UZI                          = "You got an Uzi!";
+JKE_PK_VOLTGUN                      = "You got the volt gun!";
+JKE_PK_WANDOFFLAMES                 = "You got the flame wand!";
+JKE_PK_Y23H                         = "You got the Y23H plasma cannon!";
+JKE_PK_ZENFIST                      = "You picked up two disembodied arms. Eeewww.";
+
+////
+// Monster Obituaries
+//
+// MON means "monster", as in "monster kill"
+//  %o: victim's name
+//  %k: killer's name
+//  %g: he /she/it, depending on the gender of the victim
+//  %h: him/her/it
+//  %p: his/her/its
+
+JKE_MON_BEANBAG                     = "%o got some beans in %p eyes.";
+
+//// Obituaries
+//
+// MP means "multiplayer", as in "multiplayer kill"
+
+
+JKE_MP_BALLESTA                     = "%k shoved an exploding arrow through %o.";
+JKE_MP_BEAMGUN                      = "%k shot %o with a supersonic explosion.";
+JKE_MP_BERSERKER                    = "%k gutted %o.";
+JKE_MP_BFG7000                      = "%k showed %o the power of the BFG7000.";
+JKE_MP_BFG7000_POWER                = "%o evaporated under %k's BFG7000.";
+JKE_MP_BLACKMAGIC_MELEE             = "%k tore up %o with a devastating spell.";
+JKE_MP_BLACKMAGIC_RIPPER            = "%k rended %o with terrible secrets.";
+JKE_MP_BLACKMAGIC_PENTAGRAM         = "%k sent %o to the seventh layer.";
+JKE_MP_BLACKMAGIC_POWER_MELEE       = "%k tore up %o with Hell itself.";
+JKE_MP_BLACKMAGIC_POWER_RIPPER      = "%k rended %o with Hell itself.";
+JKE_MP_BLACKMAGIC_EXPLOSION         = "%k unleashed Hell upon %o.";
+JKE_MP_D1000                        = "%k vaporised %o.";
+JKE_MP_DKDEVASTATOR                 = "%k devastated %o.";
+JKE_MP_DKFREEZETHROWER              = "%k froze %o.";
+JKE_MP_DISINTEGRATOR                = "%k disintegrated %o.";
+JKE_MP_DOUBLEBARRELSG               = "%k cleaned the floor of %o.";
+JKE_MP_DRAGUNOV                     = "%k punched a few holes into %o.";
+JKE_MP_DUALPISTOLS                  = "%k capped %o.";
+JKE_MP_DUALPLASMARIFLES_PLASMA      = "%k melted %o's face.";
+JKE_MP_DUALPLASMARIFLES_RAIL        = "%k blasted two gaping holes in %o.";
+JKE_MP_ETHEREALCROSSBOW_PRIMARY     = "%k etherealised %o.";
+JKE_MP_ETHEREALCROSSBOW_ALT         = "%o got too close to %k's ethereal crossbow.";
+JKE_MP_ETHEREALCROSSBOW_POWER_P     = "%k made %o a ghost.";
+JKE_MP_ETHEREALCROSSBOW_POWER_A     = "%o couldn't stand %k's powered ethereal crossbow.";
+JKE_MP_EXPLOSIONFU_MELEE            = "%k slammed into %o's face.";
+JKE_MP_EXPLOSIONFU_TRAIL            = "%o stood behind %k.";
+JKE_MP_EXPLOSIONFU_KICK             = "%k explosion-kicked %o's face in.";
+JKE_MP_EXPLOSIONFU_FIRE             = "%k firepunched %o.";
+JKE_MP_FIREGLOVES                   = "%k burned %o.";
+JKE_MP_FIRESSG1                     = "%k melted %o's face.";
+JKE_MP_FIRESSG2                     = "%k scorched the skin off of %o.";
+JKE_MP_FLAREGUN                     = "%k lit up %o.";
+JKE_MP_FMODMINIGUN                  = "%k poked a million holes into %o.";
+JKE_MP_FRAGMENTLAUNCHER1            = "%k tore and blew up %o.";
+JKE_MP_FRAGMENTLAUNCHER2            = "%k gave %o some shrapnel for %p troubles.";
+JKE_MP_FRAGMENTLAUNCHER1_POWER      = "%o found himself in %k's wall of flak.";
+JKE_MP_FRAGMENTLAUNCHER2_POWER      = "%k got a clean split on %o.";
+JKE_MP_GHETTOBLASTER_RICKROLL       = "%k never gave %o up, never let %h down, never turned around and deserted %h.";
+JKE_MP_GHETTOBLASTER_EXPLOSION      = "%o found %k's radio went to 11.";
+JKE_MP_HANDSHOTGUN                  = "%o found %k was hiding a shotgun.";
+JKE_MP_HEAVYCHAINGUN                = "%k filled %o full of lead.";
+JKE_MP_HEAVYCHAINGUN_POWER          = "%k made salsa dip out of %o.";
+JKE_MP_HELLFIST_ACID                = "%k flung some weak acid onto %o.";
+JKE_MP_HELLFIST_MELEE               = "%k ripped %o up.";
+JKE_MP_HELLFIST_POWER_ACID          = "%k flung some sulfuric acid onto %o.";
+JKE_MP_HELLFIST_POWER_MELEE         = "%k ripped apart %o with his \cgBARE DAMN HANDS.\c-";
+JKE_MP_JFLAMETHROWER_SHOT           = "%k toasted %o.";
+JKE_MP_JFLAMETHROWER_FLAME          = "%k toasted %o.";
+JKE_MP_JPISTOL                      = "%k picked off %o.";
+JKE_MP_JPISTOL_POWER                = "%k dusted off %o.";
+JKE_MP_JPLASMARIFLE_PLASMA          = "%k spewed some plasma on %o.";
+JKE_MP_JPLASMARIFLE_RAIL            = "%k nailed %o with blue rails.";
+JKE_MP_JPLASMARIFLE_PLASMA_POWER    = "%o ate %k's plasma.";
+JKE_MP_JPLASMARIFLE_RAIL_POWER      = "%k ripped searing blue holes into %o.";
+JKE_MP_JRIPPER                      = "%k sliced up %o.";
+JKE_MP_JROCKETLAUNCHER              = "%k blew up %o.";
+JKE_MP_JROCKETLAUNCHER_POWER        = "%o almost dodged %k's shrapnel rocket.";
+JKE_MP_JROCKETLAUNCHER_SHRAPNEL     = "%o tripped over %k's shrapnel.";
+JKE_MP_JSHOTGUN                     = "%k hunted down %o like a deer.";
+JKE_MP_JSHOTGUN_POWER               = "%k collected %o's smoking corpse.";
+JKE_MP_JSNIPERRIFLE                 = "%o never saw %k or the bullet.";
+JKE_MP_JSUPERSHOTGUN                = "%k blew %o's head off.";
+JKE_MP_JSUPERSHOTGUN_POWER          = "%k totally blew %o's body off.";
+JKE_MP_KARASAWA                     = "%k destabilised %o.";
+JKE_MP_KARASAWA_POWER               = "%k unbonded %o.";
+JKE_MP_M16                          = "%k eliminated %o.";
+JKE_MP_M249MACHINEGUN               = "%k littered %o with lead.";
+JKE_MP_MAGNUMSNIPER                 = "%k took out %o from the shadows.";
+JKE_MP_MEDISPENSER                  = "%k healed %o to death!";
+JKE_MP_MIGHTYFIST                   = "%k beat down %o.";
+JKE_MP_MOLECULESHOOTER              = "%k atomised %o.";
+JKE_MP_MOLECULESHOOTER_POWER        = "%k sub-atomised %o.";
+JKE_MP_MULTIGUN                     = "%k killed %o, but we're not entirely sure how.";
+JKE_MP_MULTIGUN_ROCKET              = "%o was surprised to see a rocket from %k";
+JKE_MP_MULTIGUN_ICE                 = "%k froze %o before %g knew ice was coming at him.";
+JKE_MP_MULTIGUN_FLAME               = "%o didn't expect %k to fire flame grenades.";
+JKE_MP_P200                         = "%k blasted %o.";
+JKE_MP_PLASMADRIVER                 = "%k drove a few rail slugs into %o.";
+JKE_MP_PLASMADRIVER_PLASMA          = "%k drove %o into %p painful death.";
+JKE_MP_POWERFUL                     = "%k broke the bonds of %o's atoms.";
+JKE_MP_PROTOSSPLODER                = "%k hit %o with a giant protoss glob.";
+JKE_MP_PYROCANNON_ROCKET            = "%k fire-blasted %o.";
+JKE_MP_PYROCANNON_SHRAPNEL          = "%k melted %o as a mere side-effect.";
+JKE_MP_PYROCANNON_FLAME             = "%o wandered into %k's firebomb.";
+JKE_MP_QUADSHOT                     = "%k jammed four shells into %o.";
+JKE_MP_SAPPHIREWAND                 = "%k beamed %o.";
+JKE_MP_SKELETONORB                  = "%k supported %o to death.";
+JKE_MP_SKELETONORB_POWER            = "%k supported %o to death.";
+JKE_MP_SPITFIRER                    = "%k hosed %o.";
+JKE_MP_SPITFIRER_GRENADE            = "%k bounced a grenade right to %o.";
+JKE_MP_STRIKER                      = "%k struck down %o.";
+JKE_MP_SUPERSHOTNUKE                = "%k undid %o.";
+JKE_MP_TRISTAFF                     = "%k beamed %o.";
+JKE_MP_UZI                          = "%k sprayed %o down.";
+JKE_MP_UZI_POWER                    = "%k sprayed %o with exploding death.";
+JKE_MP_VOLTGUN                      = "%k electrocuted %o.";
+JKE_MP_WANDOFFLAMES_FIREBALL        = "%k fireblasted %o.";
+JKE_MP_WANDOFFLAMES_FIRE            = "%k melted %o.";
+JKE_MP_WANDOFFLAMES_P_FIREBALL      = "%k firebombed %o.";
+JKE_MP_WANDOFFLAMES_P_FIRE          = "%k liquidated %o.";
+JKE_MP_Y23H                         = "%k burned %o with exploding plasma death.";
+JKE_MP_ZENFIST                      = "%k beat the everloving snot out of %o.";
+JKE_MP_ZENFIST_KICK                 = "%k kicked in %o's chin.";
+JKE_MP_ZENFIST_POWER                = "%o ran into %k's wall of fists.";
+JKE_MP_ZENFIST_KICK_POWER           = "%k kicked off %o's head.";

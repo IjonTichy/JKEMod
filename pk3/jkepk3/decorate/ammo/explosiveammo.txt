@@ -1,0 +1,18 @@
+
+actor ExplosiveAmmo: Ammo
+{
+    Inventory.Amount 8
+    Inventory.MaxAmount 60
+    Ammo.BackpackAmount 10
+    Ammo.BackpackMaxAmount 120
+    Inventory.PickupSound "misc/i_pkup"
+    Inventory.PickupMessage "$JKE_PK_EXPLOSIVEAMMO"
+    Inventory.Icon "XPAMA0"
+
+    States
+    {
+      Spawn:
+        XPAM A -1
+        stop
+    }
+}

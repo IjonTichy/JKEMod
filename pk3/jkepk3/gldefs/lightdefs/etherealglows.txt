@@ -1,0 +1,41 @@
+pointlight EtherealGlow0
+{
+    color 0.2 1.0 0.2
+    size 12
+}
+
+pointlight EtherealGlow1
+{
+    color 0.2 1.0 0.2
+    size 24
+}
+
+pointlight EtherealGlow2
+{
+    color 0.2 1.0 0.2
+    size 36
+}
+
+pointlight EtherealGlow3
+{
+    color 0.2 1.0 0.2
+    size 48
+}
+
+pointlight EtherealGlow4
+{
+    color 0.2 1.0 0.2
+    size 60
+}
+
+pointlight EtherealGlow5
+{
+    color 0.2 1.0 0.2
+    size 72
+}
+
+pointlight EtherealGlow6
+{
+    color 0.2 1.0 0.2
+    size 84
+}

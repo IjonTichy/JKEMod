@@ -1,0 +1,4 @@
+-----
+S: [Aa][Cc][Tt][Oo][Rr] " Power ([- A-Za-z0-9]+) ": ([Dd]oom)?[Ww]eapon
+R: actor " Power \1 ": " \1 "
+-----

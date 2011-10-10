@@ -1,0 +1,25 @@
+actor BeanBag
+{
+    Radius 25
+    Height 64
+    Mass 0x7FFFFFFF
+
+    Monster
+    Health 2000000000
+
+    +FLOORCLIP
+    +NOBLOOD
+
+    Obituary "$JKE_MON_BEANBAG"
+
+    States
+    {
+      Spawn:
+        BBAG A -1
+        stop
+
+      Death:
+        BBAG A 0
+        stop
+    }
+}

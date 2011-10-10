@@ -1,0 +1,371 @@
+
+actor BFGCounter: Inventory
+{
+    inventory.maxamount 0x7FFFFFFF
+    inventory.amount 1
+    +UNDROPPABLE
+}
+
+actor " B-BFG9000 ": DoomWeapon
+{
+    Weapon.SelectionOrder 2800
+    Weapon.AmmoUse1  40
+    Weapon.AmmoUse2  1
+    Weapon.AmmoGive1    80
+    Weapon.AmmoType1       "Cell"
+    Weapon.AmmoType2       "Cell"
+
+    Weapon.SisterWeapon " Power B-BFG9000 "
+
+    +NOAUTOFIRE
+    +NOAUTOAIM
+
+    Inventory.PickupMessage "$BDW_PK_BFG9000"
+    Obituary "$BDW_MP_BFG9000SPLASH"
+    States
+    {
+      Ready:
+        BBFG A 1 A_WeaponReady
+        loop
+      Deselect:
+        BBFG A 1 A_Lower
+        loop
+      Select:
+        BBFG A 1 A_Raise
+        loop
+
+      Fire:
+        BBFG B 30 bright        A_PlaySound("betterdoomweapons/bfgfire", CHAN_WEAPON)
+        BBFG B 0                A_GunFlash
+        BBFG B 0                A_FireCustomMissile("BetterBFGBall")
+        BBFG B 1 bright offset(0, 36)
+        BBFG B 2 bright offset(0, 40)
+        BBFG C 7 bright offset(0, 32) A_Recoil(4)
+        BBFG C 1 bright offset(0, 26) A_ReFire
+        BBFG C 3 bright
+        BBFG B 4 bright offset(0, 32)
+        goto Ready
+
+      Hold:
+        BBFG C 1 bright offset(0, 26) A_PlaySound("betterdoomweapons/bfgfire", CHAN_WEAPON)
+        BBFG C 3 bright
+        BBFG B 4 bright offset(0, 32)
+        BBFG B 22 bright
+        goto Fire+1
+
+      AltFire:
+        BBFG A 30               A_PlaySound("betterdoomweapons/bfgfire", CHAN_WEAPON)
+        BBFG B 0                A_GunFlash
+        BBFG B 0                A_FireCustomMissile("BetterBFGPlasma1", random(-5, 5), 1, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BBFG B 1 bright offset(0, 36) A_FireCustomMissile("BetterBFGPlasma2", random(-5, 5), 0, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BBFG B 0                A_FireCustomMissile("BetterBFGPlasma1", random(-5, 5), 1, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BBFG B 1 bright offset(0, 36) A_FireCustomMissile("BetterBFGPlasma2", random(-5, 5), 0, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+
+      AltFireLoop:
+        BBFG B 0 A_GiveInventory("BFGCounter", 1)
+        BBFG B 0 A_FireCustomMissile("BetterBFGPlasma1", random(-5, 5), 1, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BBFG B 1 bright offset(0, 40) A_FireCustomMissile("BetterBFGPlasma2", random(-5, 5), 0, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BFGG B 0 A_JumpIfInventory("BFGCounter", 38, "AltFireEnd")
+        loop
+
+      AltFireEnd:
+        BBFG B 0 A_TakeInventory("BFGCounter")
+        BBFG B 8 bright offset(0, 40)
+        BBFG B 3 bright offset(0, 38)
+        BBFG B 3 bright offset(0, 34)
+        goto Ready
+
+      Flash:
+        BBFF A  3 bright A_Light1
+        BBFF B  7 bright A_Light2
+        BBFF C  4 bright A_Light1
+        BBFF DE 6 bright
+        Goto LightDone
+
+      Spawn:
+        BBFG Z -1
+        stop
+    }
+}
+
+actor " Power B-BFG9000 ": " B-BFG9000 "   // oh dear god
+{
+    Weapon.SelectionOrder 2800
+    Weapon.AmmoUse1  100
+    Weapon.AmmoUse2  4
+    Weapon.AmmoGive1    80
+    Weapon.AmmoType1       "Cell"
+    Weapon.AmmoType2       "Cell"
+
+    Weapon.SisterWeapon " B-BFG9000 "
+
+    +NOAUTOFIRE
+    +NOAUTOAIM
+    +POWERED_UP
+
+    Inventory.PickupMessage "$BDW_PK_BFG9000"
+    Obituary "$BDW_MP_BFG9000SPLASH_POWERED"
+    States
+    {
+      Ready:
+        BBFG A 1 A_WeaponReady
+        loop
+      Deselect:
+        BBFG A 1 A_Lower
+        loop
+      Select:
+        BBFG A 1 A_Raise
+        loop
+
+      Fire:
+        BBFG B 30 bright        A_PlaySound("betterdoomweapons/bfgfire", CHAN_WEAPON)
+        BBFG B 0                A_GunFlash
+        BBFG B 0                A_FireCustomMissile("BetterPowerBFGBall")
+        BBFG B 1 bright offset(0, 36)
+        BBFG B 2 bright offset(0, 40)
+        BBFG C 7 bright offset(0, 32) A_Recoil(4)
+        BBFG C 1 bright offset(0, 26) A_ReFire
+        BBFG C 3 bright
+        BBFG B 4 bright offset(0, 32)
+        goto Ready
+
+      Hold:
+        BBFG C 1 bright offset(0, 26) A_PlaySound("betterdoomweapons/bfgfire", CHAN_WEAPON)
+        BBFG C 3 bright
+        BBFG B 4 bright offset(0, 32)
+        BBFG B 22 bright
+        goto Fire+1
+
+      AltFire:
+        BBFG A 30               A_PlaySound("betterdoomweapons/bfgfire", CHAN_WEAPON)
+        BBFG B 0                A_GunFlash
+        BBFG B 0                A_FireCustomMissile("BetterPowerBFGPlasma1", random(-5, 5), 1, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BBFG B 1 bright offset(0, 36) A_FireCustomMissile("BetterPowerBFGPlasma2", random(-5, 5), 0, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BBFG B 0                A_FireCustomMissile("BetterPowerBFGPlasma1", random(-5, 5), 1, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BBFG B 1 bright offset(0, 36) A_FireCustomMissile("BetterPowerBFGPlasma2", random(-5, 5), 0, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+
+      AltFireLoop:
+        BBFG B 0 A_GiveInventory("BFGCounter", 1)
+        BBFG B 0 A_FireCustomMissile("BetterPowerBFGPlasma1", random(-5, 5), 1, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BBFG B 1 bright offset(0, 40) A_FireCustomMissile("BetterPowerBFGPlasma2", random(-5, 5), 0, random(-6, 6), random(-6, 6), 0, random(-2, 2) )
+        BFGG B 0 A_JumpIfInventory("BFGCounter", 38, "AltFireEnd")
+        loop
+
+      AltFireEnd:
+        BBFG B 0 A_TakeInventory("BFGCounter")
+        BBFG B 8 bright offset(0, 40)
+        BBFG B 3 bright offset(0, 38)
+        BBFG B 3 bright offset(0, 34)
+        goto Ready
+
+      Flash:
+        BBFF A  3 bright A_Light1
+        BBFF B  7 bright A_Light2
+        BBFF C  4 bright A_Light1
+        BBFF DE 6 bright
+        Goto LightDone
+
+      Spawn:
+        BBFG Z -1
+        stop
+    }
+}
+
+
+
+actor BetterBFGBall
+{
+    Radius 13
+    Height 8
+    Speed 25
+
+    // if only (390 + 10d41) would work
+
+    Projectile
+    Damage (400 + random(0, 40) + random(0, 40) + random(0, 40) + random(0, 40) + random(0, 40) + random(0, 40) + random(0, 40) + random(0, 40) + random(0, 40) + random(0, 40) + random(0, 40) )
+
+    +RANDOMIZE
+    +FORCERADIUSDMG
+
+    Renderstyle Add
+    Alpha 0.75
+    Decal BFGLightning
+
+    DeathSound "betterdoomweapons/bfgexplode"
+    Obituary "$BDW_MP_BFG9000"
+
+    States
+    {
+      Spawn:
+        BBFP AB 4 bright
+        loop
+
+      Death:
+        BBFP C 0             A_Explode(192, 128)
+        BBFP C 0             A_Explode(128, 256, 0)
+        BBFP CD 4     bright A_BFGSpray("BetterBFGSplash", 10, 12)
+        BBFP E 4      bright A_BFGSpray("BetterBFGSplash", 10, 12)
+        BBFP FGGHHH 4 bright A_BFGSpray("BetterBFGSplash", 10, 12)
+        stop
+    }
+}
+
+actor BetterPowerBFGBall
+{
+    Radius 13
+    Height 8
+    Speed 25
+
+    Projectile
+    Damage (800 + (random(1, 10) * 20) )
+
+    +RANDOMIZE
+    +FORCERADIUSDMG
+
+    Renderstyle Add
+    Alpha 0.75
+    Decal BFGLightningBig
+
+    DeathSound "betterdoomweapons/bfgexplode"
+    Obituary "$BDW_MP_BFG9000_POWER"
+
+    States
+    {
+      Spawn:
+        BBFP AB 4 bright
+        loop
+      Death:
+        BBFP C 0             A_Explode(512, 256, 0)
+        BBFP CD 4     bright A_BFGSpray("BetterBFGSplash", 15, 15)
+        BBFP E 4      bright A_BFGSpray("BetterBFGSplash", 15, 15)
+        BBFP FGGHHH 4 bright A_BFGSpray("BetterBFGSplash", 15, 15)
+        stop
+    }
+}
+
+actor BetterBFGSplash
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+    RenderStyle Add
+    Alpha 0.75
+    States
+    {
+      Spawn:
+        BBFE ABCD 4 bright
+        stop
+    }
+}
+
+
+actor BetterBFGPlasma
+{
+    Radius 13
+    Height 8
+    Speed 35
+
+    Projectile
+    Damage 0
+
+    +RANDOMIZE
+    +FORCERADIUSDMG
+
+    Alpha 0.75
+    RenderStyle Add
+
+    SeeSound "betterdoomweapons/plasmafire"
+    DeathSound "betterdoomweapons/plasmaexplode"
+
+    Obituary "$BDW_MP_BFG9000PLASMA"
+}
+
+
+actor BetterBFGPlasma1: BetterBFGPlasma
+{
+    Decal PlasmaScorchRed
+
+    States
+    {
+      Spawn:
+        RPLS AB 6 bright
+        loop
+      Death:
+        RPLS A 0 A_Explode(72,64, 0)
+        RPLS CDEFG 4 bright
+        stop
+    }
+}
+
+
+actor BetterBFGPlasma2: BetterBFGPlasma
+{
+    Decal PlasmaScorchGreen
+
+    States
+    {
+      Spawn:
+        GPLS AB 6 bright
+        loop
+      Death:
+        GPLS A 0 A_Explode(72,64, 0)
+        GPLS CDEFG 4 bright
+        stop
+    }
+}
+
+
+actor BetterPowerBFGPlasma
+{
+    Radius 13
+    Height 8
+    Speed 35
+
+    Projectile
+    Damage 10
+
+    +RANDOMIZE
+    +FORCERADIUSDMG
+    +RIPPER
+
+    Alpha 0.75
+    RenderStyle Add
+
+    SeeSound "betterdoomweapons/plasmafire"
+    DeathSound "betterdoomweapons/plasmaexplode"
+
+    Obituary "$BDW_MP_BFG9000PLASMA_POWER"
+}
+
+
+actor BetterPowerBFGPlasma1: BetterPowerBFGPlasma
+{
+    Decal PlasmaScorchRed
+
+    States
+    {
+      Spawn:
+        RPLS AB 6 bright
+        loop
+      Death:
+        RPLS A 0 A_Explode(32,64, 0)
+        RPLS CDEFG 4 bright
+        stop
+    }
+}
+
+
+actor BetterPowerBFGPlasma2: BetterPowerBFGPlasma
+{
+    Decal PlasmaScorchGreen
+
+    States
+    {
+      Spawn:
+        GPLS AB 6 bright
+        loop
+      Death:
+        GPLS A 0 A_Explode(32,64, 0)
+        GPLS CDEFG 4 bright
+        stop
+    }
+}

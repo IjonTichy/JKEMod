@@ -1,0 +1,653 @@
+
+// NOTE:
+//
+// Please keep this in alphabetical order
+
+////
+//   ASSORTED
+////
+
+///
+// None
+
+jkemod/assorted/none                    sounds/assorted/none.ogg
+
+///
+// Click
+
+jkemod/assorted/click                   sounds/assorted/click.wav
+
+///
+// Generic Explosion
+
+$random jkemod/assorted/explode
+{
+    jkemod/assorted/explode1
+    jkemod/assorted/explode2
+    jkemod/assorted/explode3
+    jkemod/assorted/explode4
+    jkemod/assorted/explode5
+}
+
+jkemod/assorted/explode1                sounds/assorted/explode1.wav
+jkemod/assorted/explode2                sounds/assorted/explode2.wav
+jkemod/assorted/explode3                sounds/assorted/explode3.wav
+jkemod/assorted/explode4                sounds/assorted/explode4.wav
+jkemod/assorted/explode5                sounds/assorted/explode5.wav
+
+///
+// Shell casings
+
+$random jkemod/casings/bounce
+{
+    jkemod/casings/bounce1
+    jkemod/casings/bounce2
+    jkemod/casings/bounce3
+    jkemod/casings/bounce4
+    jkemod/casings/bounce5
+    jkemod/casings/bounce6
+    jkemod/casings/bounce7
+}
+
+jkemod/casings/bounce1                  sounds/casings/bounce1.wav
+jkemod/casings/bounce2                  sounds/casings/bounce2.wav
+jkemod/casings/bounce3                  sounds/casings/bounce3.wav
+jkemod/casings/bounce4                  sounds/casings/bounce4.wav
+jkemod/casings/bounce5                  sounds/casings/bounce5.wav
+jkemod/casings/bounce6                  sounds/casings/bounce6.wav
+jkemod/casings/bounce7                  sounds/casings/bounce7.wav
+
+
+////
+//   BALLESTA
+////
+
+jkemod/ballesta/fire                    sounds/weapons/ballesta/fire.lmp
+jkemod/ballesta/explode                 sounds/weapons/ballesta/explode.wav
+
+
+////
+//   BEAM GUN
+////
+
+$alias jkemod/beamgun/charge            jkemod/dualplasmarifles/charge
+
+jkemod/beamgun/fire                     sounds/weapons/beamgun/fire.wav
+
+$alias jkemod/beamgun/load1             jkemod/dualplasmarifles/load1
+$alias jkemod/beamgun/load2             jkemod/dualplasmarifles/load2
+$alias jkemod/beamgun/load3             jkemod/dualplasmarifles/load3
+
+
+////
+//   BERSERKER
+////
+
+jkemod/berserker/hit                    sounds/weapons/berserker/hit.wav
+
+
+////
+//   BLACK MAGIC
+////
+
+$alias jkemod/blackmagic/charge         jkemod/tristaff/up
+$alias jkemod/blackmagic/hold           jkemod/voltgun/fire
+
+jkemod/blackmagic/fire                  sounds/weapons/blackmagic/fire.wav
+jkemod/blackmagic/hit                   sounds/weapons/blackmagic/hit.wav
+
+jkemod/blackmagic/altstart              sounds/weapons/blackmagic/altstart.wav
+
+$alias jkemod/blackmagic/altfire        jkemod/firegloves/fire1
+
+$alias jkemod/blackmagic/explode        betterdoomweapons/rocketexplode
+
+
+////
+//   BFG7000
+////
+
+$alias jkemod/bfg7000/plasmaexplode     weapons/plasmax
+$alias jkemod/bfg7000/explode           weapons/bfgx
+
+jkemod/bfg7000/load                     sounds/weapons/bfg7000/load.wav
+jkemod/bfg7000/fire                     sounds/weapons/bfg7000/fire.wav
+jkemod/bfg7000/plasmafire               sounds/weapons/bfg7000/plasma.wav
+
+$limit jkemod/bfg7000/plasmafire        0
+$limit jkemod/bfg7000/plasmaexplode     0
+
+
+////
+//   D-1000
+////
+
+$alias jkemod/d1000/charge              weapons/bfg10kf
+$alias jkemod/d1000/cool                weapons/bfg10kcool
+$alias jkemod/d1000/plasmaexplode       weapons/plasmax
+$alias jkemod/d1000/plasmabigexplode    weapons/bfgx
+$alias jkemod/d1000/puffexplode         weapons/rocklx
+
+////
+//   DEVASTATOR
+////
+
+jkemod/dkdevastator/fire                sounds/weapons/dkdevastator/fire.wav
+jkemod/dkdevastator/explode             sounds/weapons/dkdevastator/explode.wav
+
+$limit jkemod/dkdevastator/fire         0
+$limit jkemod/dkdevastator/explode      0
+$volume jkemod/dkdevastator/explode     0.3
+
+
+////
+//   DISINTEGRATOR
+////
+
+jkemod/disintegrator/fire               sounds/weapons/disintegrator/fire.lmp
+
+
+////
+//   DOUBLE BARRELED SHOTGUN
+////
+
+jkemod/doublebarrelsg/up                sounds/weapons/doublebarrelsg/up.wav
+jkemod/doublebarrelsg/fire              sounds/weapons/doublebarrelsg/fire.wav
+jkemod/doublebarrelsg/open              sounds/weapons/doublebarrelsg/open.wav
+jkemod/doublebarrelsg/load              sounds/weapons/doublebarrelsg/load.wav
+jkemod/doublebarrelsg/close             sounds/weapons/doublebarrelsg/close.wav
+
+
+////
+//   DRAGUNOV
+////
+
+jkemod/dragunov/fire                    sounds/weapons/dragunov/fire.wav
+jkemod/dragunov/load                    sounds/weapons/dragunov/load.wav
+
+
+////
+//   DUAL BERETTAS
+////
+
+jkemod/dualberettas/up                  sounds/weapons/dualberettas/up.wav
+jkemod/dualberettas/fire                sounds/weapons/dualberettas/fire.wav
+jkemod/dualberettas/open                sounds/weapons/dualberettas/open.wav
+jkemod/dualberettas/load1               sounds/weapons/dualberettas/load1.wav
+jkemod/dualberettas/load2               sounds/weapons/dualberettas/load2.wav
+
+////
+//   DUAL PISTOLS
+////
+
+jkemod/dualpistols/fire                 sounds/weapons/dualpistols/fire.wav
+
+
+////
+//   DUAL PLASMA RIFLES
+////
+
+$alias jkemod/dualplasmarifles/up       jkemod/doublebarrelsg/up
+jkemod/dualplasmarifles/fire            sounds/weapons/dualplasmarifles/fire.lmp
+jkemod/dualplasmarifles/explode         sounds/weapons/dualplasmarifles/explode.wav
+jkemod/dualplasmarifles/charge          sounds/weapons/dualplasmarifles/charge.lmp
+jkemod/dualplasmarifles/unload          sounds/weapons/dualplasmarifles/unload.lmp
+jkemod/dualplasmarifles/slide           sounds/weapons/dualplasmarifles/slide.lmp
+
+jkemod/dualplasmarifles/load1           sounds/weapons/dualplasmarifles/load1.wav
+jkemod/dualplasmarifles/load2           sounds/weapons/dualplasmarifles/load2.wav
+jkemod/dualplasmarifles/load3           sounds/weapons/dualplasmarifles/load3.wav
+
+$limit jkemod/dualplasmarifles/fire 0
+$limit jkemod/dualplasmarifles/explode 0
+
+
+////
+//   ETHEREAL CROSSBOW
+////
+
+jkemod/etherealcrossbow/fire            sounds/weapons/etherealcrossbow/fire.wav
+jkemod/etherealcrossbow/hit             sounds/weapons/etherealcrossbow/hit.wav
+
+
+////
+//   EXPLOSION-FU
+////
+
+jkemod/explosionfu/melee                DSPUNCH
+$alias jkemod/explosionfu/trail         imp/attack
+$alias jkemod/explosionfu/kick          betterdoomweapons/rocketexplode
+$alias jkemod/explosionfu/fire          jkemod/firegloves/fire2
+
+
+////
+//   FIRE GLOVES
+////
+
+$alias jkemod/firegloves/fire           vile/start
+$alias jkemod/firegloves/crackle        vile/firecrkl
+$alias jkemod/firegloves/explode        jkemod/assorted/explode4
+
+jkemod/firegloves/fire1                 sounds/weapons/firegloves/fire1.wav
+jkemod/firegloves/fire2                 sounds/weapons/firegloves/fire2.wav
+jkemod/firegloves/explode1              sounds/weapons/firegloves/explode.wav
+$alias jkemod/firegloves/explode1       betterdoomweapons/rocketexplode
+$alias jkemod/firegloves/explode2       betterdoomweapons/rocketexplode
+
+$volume jkemod/firegloves/explode1      0.5
+
+$limit jkemod/firegloves/fire1 0
+$limit jkemod/firegloves/fire2 0
+$limit jkemod/firegloves/explode1 0
+
+
+////
+//   FIRE SSG
+////
+
+$alias jkemod/firessg/up                jkemod/doublebarrelsg/up
+$alias jkemod/firessg/fire              jkemod/doublebarrelsg/fire
+$alias jkemod/firessg/open              jkemod/doublebarrelsg/open
+$alias jkemod/firessg/load              jkemod/doublebarrelsg/load
+$alias jkemod/firessg/close             jkemod/doublebarrelsg/close
+
+
+////
+//   FLARE GUN
+////
+
+$alias jkemod/flaregun/up               jkemod/ballesta/up
+
+jkemod/flaregun/fire                    sounds/weapons/flaregun/fire.wav
+jkemod/flaregun/open                    sounds/weapons/flaregun/open.wav
+jkemod/flaregun/load                    sounds/weapons/flaregun/load.wav
+jkemod/flaregun/close                   sounds/weapons/flaregun/close.wav
+
+$alias  jkemod/flaregun/explode         weapons/rocklx
+$volume jkemod/flaregun/explode         0.4
+
+
+////
+//   FMOD MINIGUN
+////
+
+jkemod/fmodminigun/up                   sounds/weapons/fmodminigun/up.wav
+jkemod/fmodminigun/spin                 sounds/weapons/fmodminigun/spin.wav
+jkemod/fmodminigun/down                 sounds/weapons/fmodminigun/down.wav
+
+jke/mg/f1                               sounds/weapons/fmodminigun/fire1.wav
+jke/mg/f2                               sounds/weapons/fmodminigun/fire2.wav
+jke/mg/f3                               sounds/weapons/fmodminigun/fire3.wav
+
+$random jkemod/fmodminigun/fire
+{
+    jke/mg/f1
+    jke/mg/f2
+    jke/mg/f3
+}
+
+////
+//   FRAGMENT LAUNCHER
+////
+
+jkemod/fragmentlauncher/fire            sounds/weapons/fragmentlauncher/fire.lmp
+jkemod/fragmentlauncher/open            sounds/weapons/fragmentlauncher/open.lmp
+jkemod/fragmentlauncher/load            sounds/weapons/fragmentlauncher/load.lmp
+
+jkemod/fragmentlauncher/shellexplode    sounds/weapons/fragmentlauncher/load.lmp
+
+$alias  jkemod/fragmentlauncher/chunkexplode weapons/rocklx
+$volume jkemod/fragmentlauncher/chunkexplode 0.4
+
+
+////
+//   FREEZETHROWER
+////
+
+jkemod/dkfreezethrower/fire             sounds/weapons/dkfreezethrower/fire.lmp
+jkemod/dkfreezethrower/explode          sounds/weapons/dkfreezethrower/explode.lmp
+
+
+////
+//   GHETTO BLASTER
+////
+
+jkemod/ghettoblaster/rickroll           sounds/weapons/ghettoblaster/rickroll.ogg
+$alias jkemod/ghettoblaster/explode     jkemod/supershotnuke/fire
+
+////
+//   HAND SHOTGUN
+////
+
+jkemod/handshotgun/fire                 sounds/weapons/handshotgun/fire.lmp
+$alias jkemod/handshotgun/open          betterdoomweapons/ssgopen
+$alias jkemod/handshotgun/load          betterdoomweapons/ssgload
+$alias jkemod/handshotgun/close         betterdoomweapons/ssgclose
+
+
+////
+//   HEAVY CHAINGUN
+////
+
+jkemod/heavychaingun/up                 sounds/weapons/heavychaingun/up.wav
+jkemod/heavychaingun/load               sounds/weapons/heavychaingun/load.lmp
+jkemod/heavychaingun/fire               sounds/weapons/heavychaingun/fire.wav
+jkemod/heavychaingun/altfire            sounds/weapons/heavychaingun/altfire.lmp
+
+
+////
+//   HELL FIST
+////
+
+$alias jkemod/hellfist/fire             baron/attack
+$alias jkemod/hellfist/explode          baron/shotx
+
+
+////
+//   J-FLAMETHROWER
+////
+
+jkemod/jflamethrower/fire               sounds/weapons/jflamethrower/fire.ogg
+jkemod/jflamethrower/down               sounds/weapons/jflamethrower/down.ogg
+jkemod/jflamethrower/flame              sounds/weapons/jflamethrower/flame.wav
+
+$limit jkemod/jflamethrower/flame       0
+
+
+////
+//   J-PISTOL
+////
+
+jkemod/jpistol/fire                     sounds/weapons/jpistol/fire.lmp
+$alias jkemod/jpistol/load              jkemod/doublebarrelsg/load
+
+
+////
+//   J-RIPPER
+////
+
+jkemod/jripper/up                       sounds/weapons/jripper/up.lmp
+jkemod/jripper/down                     sounds/weapons/jripper/down.lmp
+jkemod/jripper/hit                      sounds/weapons/jripper/hit.lmp
+
+
+////
+//   J-ROCKET LAUNCHER
+////
+
+jkemod/jrocketlauncher/fire             sounds/weapons/jrocketlauncher/fire.wav
+$alias jkemod/jrocketlauncher/explode   betterdoomweapons/rocketexplode
+$alias jkemod/jrocketlauncher/explodequiet betterdoomweapons/rocketexplode
+
+$volume jkemod/jrocketlauncher/explodequiet 0.5
+
+
+////
+//   J-PLASMA RIFLE
+////
+
+jkemod/jplasmarifle/fire                sounds/weapons/jplasmarifle/fire.wav
+jkemod/jplasmarifle/hit                 sounds/weapons/jplasmarifle/hit.wav
+
+////
+//   J-SHOTGUN
+////
+
+jkemod/jshotgun/fire                    sounds/weapons/jshotgun/fire.wav
+jkemod/jshotgun/load                    sounds/weapons/jshotgun/load.lmp
+jkemod/jshotgun/pump                    sounds/weapons/jshotgun/pump.wav
+
+
+////
+//   J-SNIPER RIFLE
+////
+
+jkemod/jsniperrifle/fire                sounds/weapons/jsniperrifle/fire.wav
+jkemod/jsniperrifle/load                sounds/weapons/jsniperrifle/load.wav
+
+
+////
+//   J-SUPER SHOTGUN
+////
+
+jkemod/jsupershotgun/fire               sounds/weapons/jsupershotgun/fire.lmp
+jkemod/jsupershotgun/open               sounds/weapons/jsupershotgun/open.lmp
+jkemod/jsupershotgun/load               sounds/weapons/jsupershotgun/load.lmp
+jkemod/jsupershotgun/close              sounds/weapons/jsupershotgun/close.lmp
+
+
+////
+//   KARASAWA
+////
+
+jkemod/karasawa/ready                   sounds/weapons/karasawa/ready.wav
+jkemod/karasawa/fire                    sounds/weapons/karasawa/fire.wav
+jkemod/karasawa/charge                  sounds/weapons/karasawa/charge.wav
+jkemod/karasawa/hit                     sounds/weapons/karasawa/hit.wav
+
+
+
+////
+//   M16
+////
+
+jkemod/m16/fire                         sounds/weapons/m16/fire.lmp
+jkemod/m16/out                          sounds/weapons/m16/out.wav
+jkemod/m16/in                           sounds/weapons/m16/in.wav
+
+
+////
+//   M249 MACHINE GUN
+////
+
+jkemod/m249machinegun/up                sounds/weapons/m249machinegun/up.lmp
+jkemod/m249machinegun/fire              sounds/weapons/m249machinegun/fire.lmp
+jkemod/m249machinegun/open              sounds/weapons/m249machinegun/open.lmp
+jkemod/m249machinegun/load1             sounds/weapons/m249machinegun/load1.lmp
+jkemod/m249machinegun/load2             sounds/weapons/m249machinegun/load2.lmp
+jkemod/m249machinegun/close             sounds/weapons/m249machinegun/close.lmp
+
+
+////
+//   MAGNUM SNIPER
+////
+
+jkemod/magnumsniper/fire                sounds/weapons/magnumsniper/fire.lmp
+jkemod/magnumsniper/load                sounds/weapons/magnumsniper/load.lmp
+jkemod/magnumsniper/out                 sounds/weapons/magnumsniper/out.wav
+jkemod/magnumsniper/in                  sounds/weapons/magnumsniper/in.wav
+
+
+////
+//   MEDISPENSER
+////
+
+$alias jkemod/medispenser/fire          jkemod/doublebarrelsg/up
+
+////
+//   MIGHTY FIST
+////
+
+jkemod/mightyfist/fire                  sounds/weapons/mightyfist/fire.lmp
+jkemod/mightyfist/hit                   DSPUNCH
+
+
+////
+//   MOLECULE SHOOTER
+////
+
+$alias jkemod/moleculeshooter/load      jkemod/bfg7000/load
+$alias jkemod/moleculeshooter/fire      betterdoomweapons/rocketaltfire   // See SNDINFO.tichy
+jkemod/moleculeshooter/up               sounds/weapons/moleculeshooter/up.lmp
+
+
+////
+//   MULTIGUN
+////
+
+jkemod/multigun/load                    sounds/weapons/multigun/load.lmp
+jkemod/multigun/switch                  sounds/weapons/multigun/mswitch.wav  // Heretic has a sound named "switch"
+
+$alias jkemod/multigun/rocketfire       jkemod/jrocketlauncher/fire
+$alias jkemod/multigun/rocketexplode    jkemod/assorted/explode
+
+jkemod/multigun/icefire                 sounds/weapons/multigun/icefire.wav
+jkemod/multigun/iceexplode              sounds/weapons/multigun/iceexplode.wav
+
+$alias jkemod/multigun/flamefire        jkemod/fragmentlauncher/fire
+$alias jkemod/multigun/flameexplode     jkemod/assorted/explode
+$alias jkemod/multigun/flame            vile/firecrkl
+
+$limit jkemod/multigun/flame            0
+
+////
+//   P-200
+////
+
+jkemod/p200/fire                        sounds/weapons/p200/fire.wav
+jkemod/p200/altfire                     sounds/weapons/p200/altfire.lmp
+
+$alias jkemod/p200/explode              weapons/plasmax
+
+
+////
+//   PLASMA DRIVER
+////
+
+jkemod/plasmadriver/fire                sounds/weapons/plasmadriver/fire.wav
+$alias jkemod/plasmadriver/explode      weapons/plasmax
+
+
+////
+//   PROTOSS-PLODER
+////
+
+jkemod/protossploder/fire               sounds/weapons/protossploder/fire.wav
+jkemod/protossploder/explode            sounds/weapons/protossploder/explode.wav
+
+
+////
+//   POWERFUL
+////
+
+jkemod/powerful/fire                    sounds/weapons/powerful/fire.wav
+$alias jkemod/powerful/explode          jkemod/assorted/explosion4
+
+
+////
+//   PYRO CANNON
+////
+
+$alias jkemod/pyrocannon/up             jkemod/heavychaingun/up
+jkemod/pyrocannon/fire                  sounds/weapons/pyrocannon/fire.wav
+
+$alias jkemod/pyrocannon/flame          jkemod/multigun/flame
+
+
+////
+//   QUADSHOT
+////
+
+$alias jkemod/quadshot/fire             jkemod/jsupershotgun/fire
+$alias jkemod/quadshot/load             jkemod/doublebarrelsg/load
+
+
+////
+//   SAPPHIRE WAND
+////
+
+$alias jkemod/sapphirewand/fire         jkemod/tristaff/fire
+
+
+////
+//   SKELETON ORB
+////
+
+jkemod/skeletonorb/fire                 sounds/weapons/skeletonorb/fire.ogg
+jkemod/skeletonorb/hold                 sounds/weapons/skeletonorb/hold.ogg
+jkemod/skeletonorb/end                  sounds/weapons/skeletonorb/end.ogg
+
+
+////
+//   SPITFIRER
+////
+
+jkemod/spitfirer/fire                   sounds/weapons/spitfirer/fire.wav
+$alias jkemod/spitfirer/altfire         jkemod/fragmentlauncher/fire
+$alias jkemod/spitfirer/open            jkemod/fragmentlauncher/open
+
+
+////
+//   STRIKER
+////
+
+jkemod/striker/fire                     sounds/weapons/striker/fire.wav
+jkemod/striker/in                       sounds/weapons/striker/in.wav
+jkemod/striker/load                     sounds/weapons/striker/load.wav
+jkemod/striker/out                      sounds/weapons/striker/out.wav
+
+
+////
+//   SUPER SHOTNUKE
+////
+
+jkemod/supershotnuke/fire               sounds/weapons/supershotnuke/fire.wav
+$alias jkemod/supershotnuke/open        betterdoomweapons/ssgopen
+$alias jkemod/supershotnuke/load        betterdoomweapons/ssgload
+$alias jkemod/supershotnuke/close       betterdoomweapons/ssgclose
+
+
+////
+//   TRI-STAFF
+////
+
+jkemod/tristaff/up                      sounds/weapons/tristaff/up.lmp
+jkemod/tristaff/fire                    sounds/weapons/tristaff/fire.lmp
+
+
+////
+//   UZI
+////
+
+jkemod/uzi/fire                         sounds/weapons/uzi/fire.wav
+
+$alias jkemod/uzi/open                  jkemod/dualberettas/open
+$alias jkemod/uzi/load                  jkemod/flaregun/load
+
+jkemod/uzi/cock                         sounds/weapons/uzi/cock.wav
+
+
+////
+//   VOLT GUN
+////
+
+jkemod/voltgun/fire                     sounds/weapons/voltgun/fire.lmp
+jkemod/voltgun/altfire                  sounds/weapons/voltgun/altfire.wav
+
+
+////
+//   WAND OF FLAMES
+////
+
+jkemod/wandofflames/open                sounds/weapons/wandofflames/open.ogg
+jkemod/wandofflames/fire                sounds/weapons/wandofflames/fire.ogg
+jkemod/wandofflames/altfire             sounds/weapons/wandofflames/altfire.wav
+jkemod/wandofflames/explode             sounds/weapons/wandofflames/explode.ogg
+
+$limit jkemod/wandofflames/fire         0
+
+
+////
+//   Y23H
+////
+
+jkemod/y23h/fire                        sounds/weapons/y23h/fire.wav
+$alias jkemod/y23h/explode              weapons/plasmax
+
+$limit jkemod/y23h/fire                 0
+
+////
+//   ZEN FISTS
+////
+
+jkemod/zenfist/altfire                  DSPUNCH

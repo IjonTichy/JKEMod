@@ -1,0 +1,16 @@
+
+actor JSniperAmmo: Ammo
+{
+    Inventory.Amount 4
+    Inventory.MaxAmount 40
+    Inventory.PickupMessage "$JKE_PK_JSNIPERAMMO"
+    Inventory.Icon "SNAMA0"
+    Ammo.BackpackAmount 4
+    Ammo.BackpackMaxAmount 80
+    States
+    {
+      Spawn:
+        SNAM A -1
+        Stop
+    }
+}
