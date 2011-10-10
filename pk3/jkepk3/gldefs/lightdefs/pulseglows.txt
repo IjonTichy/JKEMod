@@ -1,0 +1,23 @@
+flickerlight2 PulseProj
+{
+    color 0.3 1.0 0.0
+    size 32
+    secondarySize 48
+    interval 0.01
+}
+
+flickerlight2 PulseProjSmall
+{
+    color 0.3 1.0 0.0
+    size 16
+    secondarySize 24
+    interval 0.01
+}
+
+flickerlight2 PulseProjLarge
+{
+    color 0.3 1.0 0.0
+    size 48
+    secondarySize 64
+    interval 0.01
+}

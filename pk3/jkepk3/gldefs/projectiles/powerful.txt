@@ -1,0 +1,19 @@
+object PowerfulShot
+{
+    frame NKE1A { light PowerfulGlow1 }
+    frame NKE1B { light PowerfulGlow2 }
+    frame NKE1C { light PowerfulGlow3 }
+    frame NKE1D { light PowerfulGlow4 }
+    frame NKE1E { light PowerfulGlow5 }
+    frame NKE1F { light PowerfulGlow6 }
+    frame NKE1G { light PowerfulGlow7 }
+    frame NKE1H { light PowerfulGlow8 }
+    frame NKE1I { light PowerfulGlow9 }
+    frame NKE1J { light PowerfulGlow10 }
+    frame NKE1K { light PowerfulGlow11 }
+    frame NKE1L { light PowerfulGlow12 }
+    frame NKE1M { light PowerfulGlow13 }
+    frame NKE1A { light PowerfulGlow14 }
+    frame NKE1N { light PowerfulGlow15 }
+    frame NKE1P { light PowerfulGlow16 }
+}

@@ -1,0 +1,5 @@
+[ enu default ]
+
+JKE_PK_RAILREPEATER             = "You got the Rail Repeater!";
+
+JKE_MP_RAILREPEATER             = "%k punched gaping holes into %o.";

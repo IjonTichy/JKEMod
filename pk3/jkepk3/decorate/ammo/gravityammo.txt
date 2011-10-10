@@ -1,0 +1,16 @@
+
+actor GravityAmmo : Ammo
+{
+    Inventory.Amount 1
+    Inventory.MaxAmount 10
+    Ammo.BackpackAmount 2
+    Ammo.BackpackMaxAmount 10
+    Inventory.PickupMessage "$JKE_PK_GRAVITYAMMO"
+    Inventory.Icon "TNT1A0"
+    states
+    {
+      Spawn:
+        TNT1 A -1
+        stop
+    }
+}

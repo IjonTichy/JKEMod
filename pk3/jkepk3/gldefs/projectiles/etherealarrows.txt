@@ -1,0 +1,97 @@
+// Light definitions in etherealglows.txt
+
+object EtherealCrossbowTrail
+{
+    frame MCBS { light EtherealGlow1 }
+}
+
+object EtherealCrossbowShot
+{
+    frame MCBSB { light EtherealGlow2 }
+
+    frame MCBSH { light EtherealGlow3 }
+    frame MCBSI { light EtherealGlow2 }
+    frame MCBSJ { light EtherealGlow1 }
+}
+
+object PowerEtherealCrossbowShot
+{
+    frame MCBSB { light EtherealGlow3 }
+
+    frame MCBSH { light EtherealGlow4 }
+    frame MCBSI { light EtherealGlow3 }
+    frame MCBSJ { light EtherealGlow2 }
+}
+
+object EtherealCrossbowShotSide1
+{
+    frame MCBSA { light EtherealGlow1 }
+
+    frame MCBSC { light EtherealGlow2 }
+    frame MCBSD { light EtherealGlow1 }
+    frame MCBSE { light EtherealGlow0 }
+}
+
+object EtherealCrossbowShotSide2
+{
+    frame MCBSA { light EtherealGlow1 }
+
+    frame MCBSC { light EtherealGlow2 }
+    frame MCBSD { light EtherealGlow1 }
+    frame MCBSE { light EtherealGlow0 }
+}
+
+object PowerEtherealCrossbowShotSide1
+{
+    frame MCBSA { light EtherealGlow2 }
+
+    frame MCBSC { light EtherealGlow3 }
+    frame MCBSD { light EtherealGlow2 }
+    frame MCBSE { light EtherealGlow1 }
+}
+
+object PowerEtherealCrossbowShotSide2
+{
+    frame MCBSA { light EtherealGlow2 }
+
+    frame MCBSC { light EtherealGlow3 }
+    frame MCBSD { light EtherealGlow2 }
+    frame MCBSE { light EtherealGlow1 }
+}
+
+
+object EtherealCrossbowAltShot
+{
+    frame MCBSB { light EtherealGlow3 }
+
+    frame MCBSH { light EtherealGlow4 }
+    frame MCBSI { light EtherealGlow3 }
+    frame MCBSJ { light EtherealGlow2 }
+}
+
+object PowerEtherealCrossbowAltShot
+{
+    frame MCBSB { light EtherealGlow4 }
+
+    frame MCBSH { light EtherealGlow5 }
+    frame MCBSI { light EtherealGlow4 }
+    frame MCBSJ { light EtherealGlow3 }
+}
+
+object EtherealCrossbowAltShot2
+{
+    frame MCBSB { light EtherealGlow2 }
+
+    frame MCBSC { light EtherealGlow3 }
+    frame MCBSD { light EtherealGlow2 }
+    frame MCBSE { light EtherealGlow1 }
+}
+
+object PowerEtherealCrossbowAltShot2
+{
+    frame MCBSB { light EtherealGlow3 }
+
+    frame MCBSC { light EtherealGlow4 }
+    frame MCBSD { light EtherealGlow3 }
+    frame MCBSE { light EtherealGlow2 }
+}

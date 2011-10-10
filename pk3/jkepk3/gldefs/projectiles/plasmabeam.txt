@@ -1,0 +1,22 @@
+// Light definitions in pulseglows.txt
+
+object PlasmaBeamBeam
+{
+    frame PLSP {light PulseProjSmall}
+}
+
+object PowerPlasmaBeamBeam
+{
+    frame PLSP {light PulseProj}
+}
+
+object PlasmaBeamShot
+{
+    frame PLSP {light PulseProj}
+}
+
+object PowerPlasmaBeamShot
+{
+    frame PLSP {light PulseProjLarge}
+}
+

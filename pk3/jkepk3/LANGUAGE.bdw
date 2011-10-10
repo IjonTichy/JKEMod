@@ -1,0 +1,45 @@
+[ enu default ]
+
+BDW_PK_CHAINSAW             = "\crBLOOD! \cgBLOOD FOR THE BLOOD GOD!";
+BDW_PK_PISTOL               = "A pistol. Maybe it's worth something.";
+BDW_PK_SHOTGUN              = "Name's Doomguy. Cleanup.";
+BDW_PK_SUPERSHOTGUN         = "Can't you break your nose with this thing's recoil?";
+BDW_PK_CHAINGUN             = "Hey, chaingun! The hell with respect!";
+BDW_PK_ROCKETLAUNCHER       = "\cbROCKET LAUNCHER FOUND. COMMENCE FLYING.\c-";
+BDW_PK_PLASMARIFLE          = "You got the plasma rifle!";
+BDW_PK_BFG9000              = "... and my gun is very, very large.";
+
+BDW_MP_FISTS                = "%k pummeled %o.";
+BDW_MP_FISTS_POWER          = "%k broke %o.";
+BDW_MP_CHAINSAW             = "%k sacrificed %o to Khorne.";
+BDW_MP_CHAINSAW_POWER       = "%k added %o to the rivers of blood.";
+BDW_MP_PISTOL               = "%k picked off %o with his pistol.";
+BDW_MP_PISTOL_POWER         = "%k picked off %o with very great prejudice.";
+BDW_MP_SHOTGUN              = "%o questioned %k's authority.";
+BDW_MP_SHOTGUN_POWER        = "%o questioned %k's tyranny.";
+BDW_MP_SUPERSHOTGUN         = "%k wiped away %o.";
+BDW_MP_SUPERSHOTGUN_POWER   = "%k obliterated %o's face.";
+BDW_MP_CHAINGUN             = "%k cut down %o.";
+BDW_MP_CHAINGUN_POWER       = "%k rended %o.";
+BDW_MP_ROCKETLAUNCHER       = "%k sent %o on a fiery trip to death.";
+BDW_MP_ROCKETLAUNCHER2      = "%k unloaded some heavy artillery on %o.";
+BDW_MP_ROCKETLAUNCHER_POWER = "%k's rocket took %o straight to hell.";
+BDW_MP_ROCKETLAUNCHER2_POWER= "%k took out %o's world.";
+BDW_MP_PLASMARIFLE          = "%k scorched %o's skull.";
+BDW_MP_PLASMARIFLE2         = "%k tore through %o.";
+BDW_MP_PLASMARIFLE_POWER    = "%k melted %o's skull.";
+BDW_MP_PLASMARIFLE2_POWER   = "%k tore apart %o.";
+BDW_MP_BFG9000              = "%k cleansed the map of %o.";
+BDW_MP_BFG9000SPLASH        = "%o was caught in %k's view.";
+BDW_MP_BFG9000PLASMA        = "%k celebrated Hell's Christmas on %o.";
+BDW_MP_BFG9000_POWER        = "%k completely annihilated %o.";
+BDW_MP_BFG9000SPLASH_POWER  = "%o was foolish enough to be near %k.";
+BDW_MP_BFG9000PLASMA_POWER  = "%k thoroughly eviscerated %o.";
+
+OB_MPTELEFRAG               = "%k scrambled %o.";
+OB_RAILGUN                  = "%k punched some holes in %o.";
+
+OB_FRIENDLY1                = "%k owes someone an apology.";
+OB_FRIENDLY2                = "%k thought his teammate was an enemy.";
+OB_FRIENDLY3                = "%k forgot who to shoot.";
+OB_FRIENDLY4                = "%k betrayed his team.";

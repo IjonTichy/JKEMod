@@ -1,0 +1,114 @@
+
+actor " L-Minigun ": Weapon
+{
+    Weapon.AmmoType2 "MinigunAmmo"
+    Weapon.AmmoUse2 1
+    Weapon.AmmoGive2 100
+
+    +NOALERT
+    Weapon.SelectionOrder 550
+
+    AttackSound "jkemod/fmodminigun/fire"
+
+    Decal BulletChip
+
+    Inventory.PickupMessage "$JKE_PK_FMODMINIGUN"
+    Obituary "$JKE_MP_FMODMINIGUN"
+
+    States
+    {
+
+      Select:
+        D3CG A 1 A_Raise
+        loop
+
+      Deselect:
+        D3CG A 1 A_Lower
+        loop
+
+      Ready:
+        D3CG A 1 A_WeaponReady
+        Loop
+
+      Fire:
+        D3CG A 1
+        D3CG A 0 A_ReFire
+        goto Ready
+
+      AltFire:
+        D3CG B 0 A_PlaySound("jkemod/fmodminigun/up", 6)
+        D3CG BA 6
+        D3CG BA 5
+        D3CG BA 4
+        D3CG BA 3
+        D3CG BA 2
+        D3CG BA 1
+        D3CG A 0 A_ReFire
+        goto Down
+
+      AltHold:
+        D3CG A 0 ACS_Execute(876, 0, 1, 0, 0)
+        D3CG A 0 A_PlaySound("jkemod/fmodminigun/spin", 6)
+        D3CG BABABA 1 A_JumpIfInventory("MainFired", 1, "Shoot")
+        D3CG A 0 A_ReFire
+        goto Down
+
+      Shoot:
+        D3CG A 0 A_AlertMonsters
+        D3CG A 0 ACS_ExecuteAlways(876, 0, 0, 20, 0)
+        D3CG A 0 Radius_Quake(2, 3, 0, 1, 0)
+        D3CG A 0 A_GunFlash
+
+        D3CF A 0 A_FireCustomMissile("AssaultCasing", random(-400, -700)/10.0, 0, 3, 3)
+        D3CG A 1 bright A_FireBullets(5, 5, 1, 10, "BulletPuff")
+
+        D3CF A 0 A_FireCustomMissile("AssaultCasing", random(-400, -700)/10.0, 0, 3, 3)
+        D3CG B 1 bright A_FireBullets(5, 5, 1, 10, "BulletPuff")
+
+        D3CG A 0 A_JumpIfNoAmmo("Down")
+        D3CG A 0 A_JumpIfInventory("AltFired", 1, 1)
+        goto Down
+
+        D3CG A 0 A_JumpIfInventory("MainFired", 1, "Shoot")
+        D3CG A 0 A_ReFire
+        goto Down
+
+      Down:
+        D3CG A 0 ACS_Execute(876, 0, 1, 0, 0)
+        D3CG BA 1 A_ReFire
+        D3CG BA 2 A_ReFire
+        D3CG A 2 A_PlaySound("jkemod/fmodminigun/down", 6)
+        D3CG BA 3 A_ReFire
+        D3CG BA 4
+        D3CG BA 5
+        D3CG BA 6
+        goto Ready
+
+      AltFlash:
+        D3CF A 0 A_Jump(255, "AltFlash1", "AltFlash2", "AltFlash3", "AltFlash4")
+
+      AltFlash1:
+        D3CF A 2 bright A_Light1
+        D3CF A 0 A_Light0
+        goto LightDone
+
+      AltFlash2:
+        D3CF B 2 bright A_Light1
+        D3CF A 0 A_Light0
+        goto LightDone
+
+      AltFlash3:
+        D3CF C 2 bright A_Light1
+        D3CF A 0 A_Light0
+        goto LightDone
+
+      AltFlash4:
+        D3CF D 2 bright A_Light1
+        D3CF A 0 A_Light0
+        goto LightDone
+
+      Spawn:
+        D3CG Z -1
+        stop
+    }
+}

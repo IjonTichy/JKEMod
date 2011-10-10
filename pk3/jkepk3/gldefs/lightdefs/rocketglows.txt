@@ -1,0 +1,73 @@
+pointlight RocketGlow-2
+{
+    color 1.0 0.4 0.0
+    size 32
+    offset -32 0 0
+}
+
+pointlight RocketGlow-1
+{
+    color 1.0 0.4 0.0
+    size 32
+    offset -32 0 0
+}
+
+pointlight RocketGlow0
+{
+    color 1.0 0.2 0.0
+    size 32
+}
+
+pointlight RocketGlow1
+{
+    color 1.0 0.4 0.0
+    size 64
+}
+
+pointlight RocketGlow2
+{
+    color 1.0 0.6 0.0
+    size 96
+}
+
+pointlight RocketGlow3
+{
+    color 1.0 0.8 0.0
+    size 128
+}
+
+pointlight RocketGlow4
+{
+    color 1.0 1.0 0.0
+    size 160
+}
+
+pointlight RocketGlow5
+{
+    color 1.0 1.0 0.2
+    size 192
+}
+
+pointlight RocketGlow6
+{
+    color 1.0 1.0 0.4
+    size 224
+}
+
+pointlight RocketGlow7
+{
+    color 1.0 1.0 0.6
+    size 256
+}
+
+pointlight RocketGlow8
+{
+    color 1.0 1.0 0.8
+    size 288
+}
+
+pointlight RocketGlow9
+{
+    color 1.0 1.0 1.0
+    size 320
+}

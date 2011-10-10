@@ -1,0 +1,16 @@
+
+Actor JKEMana: Ammo
+{
+    Inventory.Amount 20
+    Inventory.MaxAmount 500
+    Inventory.Icon "JMANA0"
+    Inventory.PickupMessage "$JKE_PK_JKEMANA"
+    Ammo.BackpackAmount 20
+    Ammo.BackpackMaxAmount 1000
+    States
+    {
+      Spawn:
+        JMAN ABCDEFGHIJKLMNOP 3
+        Loop
+    }
+}

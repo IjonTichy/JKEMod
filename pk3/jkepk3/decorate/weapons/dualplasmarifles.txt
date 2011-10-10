@@ -1,0 +1,95 @@
+
+actor " Dual Plasma Rifles ": Weapon
+{
+    +DONTBOB
+    Weapon.SelectionOrder 400
+    Weapon.AmmoUse1 1
+    Weapon.AmmoUse2 10
+    Weapon.AmmoGive 120
+    Weapon.AmmoType1 "Cell"
+    Weapon.AmmoType2 "Cell"
+    Inventory.PickupMessage "$JKE_PK_DUALPLASMARIFLES"
+    Obituary "$JKE_MP_DUALPLASMARIFLES_RAIL"
+    Weapon.UpSound "jkemod/dualplasmarifles/up"
+    States
+    {
+      Ready:
+        PSMG A 1 A_WeaponReady
+        Loop
+      Deselect:
+        PSMG A 1 A_Lower
+        Loop
+      Select:
+        PSMG A 1 A_Raise
+        Loop
+
+      Fire:
+        PSMF A 1 bright
+        PSMF B 2 bright
+        PSMF C 0        A_FireCustomMissile("DualPlasmaRifleBall", 0, 1, -4, 0)
+        PSMF C 3 bright A_FireCustomMissile("DualPlasmaRifleBall", 0, 1,  4, 0)
+        PSMF C 1 bright A_ReFire
+        PSMF C 1
+        Goto Ready
+
+      AltFire:
+        PSMG A 20 A_PlaySound("jkemod/dualplasmarifles/charge", CHAN_WEAPON)
+        PSMF A 3 A_Light1
+        PSMF B 3 bright A_GunFlash
+        PSMF B 0 A_RailAttack(130,  4, 1, "ff 00 00", "00 00 00", 0, 0)
+        PSMF B 0 A_RailAttack(130, -4, 0, "ff 00 00", "00 00 00", 0, 0)
+        PSMF C 3 A_Light0
+        PSMG A 3 A_Light1
+        PSMF B 3 bright A_GunFlash
+        PSMF B 0 A_RailAttack(130,  4, 1, "ff 00 00", "00 00 00", 0, 0)
+        PSMF B 0 A_RailAttack(130, -4, 0, "ff 00 00", "00 00 00", 0, 0)
+        PSMF C 3 A_Light0
+        PSMG A 3 A_Light1
+        PSMF B 3 bright A_GunFlash
+        PSMF B 0 A_RailAttack(130,  4, 1, "ff 00 00", "00 00 00", 0, 0)
+        PSMF B 0 A_RailAttack(130, -4, 0, "ff 00 00", "00 00 00", 0, 0)
+        PSMF C 3 A_Light0
+        PSMG A 25
+        PSMG B 3 A_PlaySound("jkemod/dualplasmarifles/unload", CHAN_WEAPON)
+        PSMG CDEFGHIJKLM 2
+        PSMG N 2 A_PlaySound("jkemod/dualplasmarifles/slide", CHAN_WEAPON)
+        PSMG OPQRSTUV 2
+        PSM2 ABCDEFGHIJ 2
+        PSM2 K 2 A_PlaySound("jkemod/dualplasmarifles/slide", CHAN_WEAPON)
+        PSM2 LMNOPQ 2
+        PSMG A 5 A_PlaySound("jkemod/dualplasmarifles/load1", CHAN_WEAPON)
+        PSMG A 3 A_PlaySound("jkemod/dualplasmarifles/load2", CHAN_WEAPON)
+        PSMG A 15 A_PlaySound("jkemod/dualplasmarifles/load3", CHAN_WEAPON)
+        Goto Ready
+      Spawn:
+        PSMP A -1
+        Stop
+    }
+}
+
+Actor DualPlasmaRifleBall
+{
+    Radius 8
+    Height 5
+    Speed 40
+
+    RenderStyle Add
+    Scale 0.5
+
+    Projectile
+    Damage (30 + random(1, 20))
+
+    SeeSound "jkemod/dualplasmarifles/fire"
+    DeathSound "jkemod/dualplasmarifles/explode"
+
+    Obituary "$JKE_MP_DUALPLASMARIFLES_PLASMA"
+    States
+    {
+      Spawn:
+        JDPL ABCDEFGHIJ 2
+        Loop
+      Death:
+        JDPL KLMNOPQRST 2
+        Stop
+    }
+}

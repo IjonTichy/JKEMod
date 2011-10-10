@@ -1,0 +1,33 @@
+// Light definitions in bfgglows.txt
+
+object D1000Plasma
+{
+    frame DSLS  { light D1000Glow4 }
+    frame DSBXA { light D1000Glow3 }
+    frame DSBXB { light D1000Glow4 }
+    frame DSBXC { light D1000Glow5 }
+    frame DSBXD { light D1000Glow6 }
+    frame DSBXE { light D1000Glow7 }
+}
+
+object D1000PlasmaBig
+{
+    frame DSS1  { light D1000Glow3 }
+    frame DSE1A { light D1000Glow3 }
+    frame DSE1B { light D1000Glow2 }
+    frame DSE1C { light D1000Glow1 }
+    frame DSE1D { light D1000Glow3 }
+    frame DSE1E { light D1000Glow5 }
+    frame DSE1E { light D1000Glow7 }
+}
+
+
+object D1000Puff
+{
+    frame DSE1A { light D1000Glow1 }
+    frame DSE1B { light D1000Glow1 }
+    frame DSE1C { light D1000Glow0 }
+    frame DSE1D { light D1000Glow2 }
+    frame DSE1E { light D1000Glow4 }
+    frame DSE1E { light D1000Glow6 }
+}

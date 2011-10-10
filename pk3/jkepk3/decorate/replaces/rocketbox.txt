@@ -1,0 +1,54 @@
+actor JKERocketBox: CustomInventory replaces RocketBox
+{
+    Inventory.PickupMessage "$JKE_PK_JKEROCKETBOX"
+
+    States
+    {
+      Spawn:
+        BROK A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_GiveInventory("RocketAmmo", 5)
+        TNT1 A 0 A_GiveInventory("ExplosiveAmmo", 5)
+        TNT1 A 0 A_GiveInventory("BallestaAmmo", 15)
+        TNT1 A 0 A_GiveInventory("DevastatorAmmo", 25)
+        TNT1 A 0 A_GiveInventory("FireAmmo", 50)
+        TNT1 A 0 A_Jump(64, "Gravity")
+        stop
+
+      Gravity:
+        TNT1 A 0 A_GiveInventory("GravityAmmo", 1)
+        stop
+    }
+}
+
+actor JKEPhoenixRodHefty: JKERocketBox replaces PhoenixRodHefty
+{
+    States
+    {
+      Spawn:
+        AMP2 ABC 4
+        loop
+    }
+}
+
+actor JKECrateOfMissiles: JKERocketBox replaces CrateOfMissiles
+{
+    States
+    {
+      Spawn:
+        ROKT A -1
+        loop
+    }
+}
+
+actor JKEPhosphorusGrenadeRounds: JKERocketBox replaces PhosphorusGrenadeRounds
+{
+    States
+    {
+      Spawn:
+        GRN2 A -1
+        loop
+    }
+}

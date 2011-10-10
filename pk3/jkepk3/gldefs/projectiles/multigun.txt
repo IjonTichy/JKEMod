@@ -1,0 +1,24 @@
+// Light definitions in flameglows.txt and multigunglows.txt
+
+object MultigunFire
+{
+    frame FIREA { light FGFlameGlow1 }
+    frame FIREB { light FGFlameGlow2 }
+    frame FIREC { light FGFlameGlow3 }
+    frame FIRED { light FGFlameGlow4 }
+    frame FIREE { light FGFlameGlow5 }
+    frame FIREF { light FGFlameGlow6 }
+    frame FIREG { light FGFlameGlow7 }
+    frame FIREH { light FGFlameGlow8 }
+}
+
+object MultigunIce
+{
+    frame SHRD  { light MultigunIce0 }
+
+    frame SHEXA { light MultigunIce1 }
+    frame SHEXB { light MultigunIce2 }
+    frame SHEXC { light MultigunIce3 }
+    frame SHEXD { light MultigunIce4 }
+    frame SHEXE { light MultigunIce5 }
+}

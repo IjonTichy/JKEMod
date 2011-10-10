@@ -1,0 +1,143 @@
+actor JKEClass1HereticPickup: JKEClass1Pickup replaces Gauntlets
+{
+    States
+    {
+      Spawn:
+        WGNT A -1
+        stop
+    }
+}
+actor JKEClass1HereticDrop: JKEClass1Drop
+{
+    States
+    {
+      Spawn:
+        WGNT A -1
+        stop
+    }
+}
+
+
+actor JKEClass2HereticPickup: JKEClass2Pickup replaces GoldWand
+{
+    States
+    {
+      Spawn:
+        PIST A -1  // heretic doesn't have a gold wand sprite
+        stop
+    }
+}
+actor JKEClass2HereticDrop: JKEClass2Drop
+{
+    States
+    {
+      Spawn:
+        PIST A -1
+        stop
+    }
+}
+
+
+actor JKEClass3HereticPickup: JKEClass3Pickup replaces Crossbow
+{
+    States
+    {
+      Spawn:
+        WBOW A -1
+        stop
+    }
+}
+actor JKEClass3HereticDrop: JKEClass3Drop
+{
+    States
+    {
+      Spawn:
+        WBOW A -1
+        stop
+    }
+}
+
+
+actor JKEClass4HereticPickup: JKEClass4Pickup replaces Blaster
+{
+    States
+    {
+      Spawn:
+        WBLS A -1
+        stop
+    }
+}
+actor JKEClass4HereticDrop: JKEClass4Drop
+{
+    States
+    {
+      Spawn:
+        WBLS A -1
+        stop
+    }
+}
+
+
+actor JKEClass5HereticPickup: JKEClass6Pickup replaces SkullRod
+{
+    States
+    {
+      Spawn:
+        WSKL A -1
+        stop
+    }
+}
+actor JKEClass5HereticDrop: JKEClass6Drop
+{
+    States
+    {
+      Spawn:
+        WSKL A -1
+        stop
+    }
+}
+
+
+actor JKEClass6HereticPickup: JKEClass5Pickup replaces PhoenixRod
+{
+    States
+    {
+      Spawn:
+        WPHX A -1
+        stop
+    }
+}
+actor JKEClass6HereticDrop: JKEClass5Drop
+{
+    States
+    {
+      Spawn:
+        WPHX A -1
+        stop
+    }
+}
+
+
+actor JKEClass7HereticPickup: JKEClass7Pickup replaces Mace
+{
+    States
+    {
+      Spawn:
+        WMCE A -1
+        stop
+    }
+}
+actor JKEClass7HereticDrop: JKEClass7Drop
+{
+    States
+    {
+      Spawn:
+        WMCE A -1
+        stop
+    }
+}
+
+
+//
+// NO BFG10k FOR YOU
+//

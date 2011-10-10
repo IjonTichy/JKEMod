@@ -1,0 +1,304 @@
+pointlight FireGloveRedGlow0
+{
+    color 1.0 0.3 0.0
+    size 8
+}
+
+pointlight FireGloveRedGlow1
+{
+    color 1.0 0.3 0.0
+    size 16
+}
+
+pointlight FireGloveRedGlow2
+{
+    color 1.0 0.3 0.0
+    size 24
+}
+
+pointlight FireGloveRedGlow2_0
+{
+    color 1.0 0.3 0.0
+    size 48
+    offset 0 140 0
+}
+
+pointlight FireGloveRedGlow3
+{
+    color 1.0 0.3 0.0
+    size 32
+}
+
+pointlight FireGloveRedGlow4
+{
+    color 1.0 0.3 0.0
+    size 40
+}
+
+pointlight FireGloveRedGlow4_0
+{
+    color 1.0 0.3 0.0
+    size 64
+    offset 0 120 0
+}
+
+pointlight FireGloveRedGlow5
+{
+    color 1.0 0.3 0.0
+    size 48
+}
+
+pointlight FireGloveRedGlow6
+{
+    color 1.0 0.3 0.0
+    size 56
+}
+
+pointlight FireGloveRedGlow6_0
+{
+    color 1.0 0.3 0.0
+    size 80
+    offset 0 100 0
+}
+
+pointlight FireGloveRedGlow7
+{
+    color 1.0 0.3 0.0
+    size 64
+}
+
+pointlight FireGloveRedGlow8
+{
+    color 1.0 0.3 0.0
+    size 72
+}
+
+pointlight FireGloveRedGlow8_0
+{
+    color 1.0 0.3 0.0
+    size 96
+    offset 0 80 0
+}
+
+pointlight FireGloveRedGlow9
+{
+    color 1.0 0.3 0.0
+    size 80
+}
+
+pointlight FireGloveRedGlow10
+{
+    color 1.0 0.3 0.0
+    size 88
+}
+
+pointlight FireGloveRedGlow10_0
+{
+    color 1.0 0.3 0.0
+    size 112
+    offset 0 60 0
+}
+
+pointlight FireGloveRedGlow11
+{
+    color 1.0 0.3 0.0
+    size 96
+}
+
+pointlight FireGloveRedGlow12
+{
+    color 1.0 0.3 0.0
+    size 104
+}
+
+pointlight FireGloveRedGlow12_0
+{
+    color 1.0 0.3 0.0
+    size 128
+    offset 0 40 0
+}
+
+pointlight FireGloveRedGlow13
+{
+    color 1.0 0.3 0.0
+    size 112
+}
+
+pointlight FireGloveRedGlow14
+{
+    color 1.0 0.3 0.0
+    size 120
+}
+
+pointlight FireGloveRedGlow14_0
+{
+    color 1.0 0.3 0.0
+    size 144
+    offset 0 20 0
+}
+
+pointlight FireGloveRedGlow15
+{
+    color 1.0 0.3 0.0
+    size 128
+}
+
+pointlight FireGloveRedGlow16
+{
+    color 1.0 0.3 0.0
+    size 136
+}
+
+pointlight FireGloveRedGlow17
+{
+    color 1.0 0.3 0.0
+    size 144
+}
+
+pointlight FireGloveRedGlow18
+{
+    color 1.0 0.3 0.0
+    size 152
+}
+
+pointlight FireGloveRedGlow19
+{
+    color 1.0 0.3 0.0
+    size 160
+}
+
+pointlight FireGloveRedGlow20
+{
+    color 1.0 0.3 0.0
+    size 168
+}
+
+
+
+
+
+pointlight FGFireballGlow0
+{
+    color 1.0 0.7 0.2
+    size 8
+}
+
+pointlight FGFireballGlow1
+{
+    color 1.0 0.7 0.2
+    size 16
+}
+
+pointlight FGFireballGlow2
+{
+    color 1.0 0.7 0.2
+    size 24
+}
+
+pointlight FGFireballGlow3
+{
+    color 1.0 0.7 0.2
+    size 32
+}
+
+pointlight FGFireballGlow4
+{
+    color 1.0 0.7 0.2
+    size 40
+}
+
+pointlight FGFireballGlow5
+{
+    color 1.0 0.7 0.2
+    size 48
+}
+
+pointlight FGFireballGlow6
+{
+    color 1.0 0.7 0.2
+    size 56
+}
+
+pointlight FGFireballGlow7
+{
+    color 1.0 0.7 0.2
+    size 64
+}
+
+pointlight FGFireballGlow8
+{
+    color 1.0 0.7 0.2
+    size 72
+}
+
+pointlight FGFireballGlow9
+{
+    color 1.0 0.7 0.2
+    size 80
+}
+
+pointlight FGFireballGlow10
+{
+    color 1.0 0.7 0.2
+    size 88
+}
+
+pointlight FGFireballGlow11
+{
+    color 1.0 0.7 0.2
+    size 96
+}
+
+pointlight FGFireballGlow12
+{
+    color 1.0 0.7 0.2
+    size 104
+}
+
+pointlight FGFireballGlow13
+{
+    color 1.0 0.7 0.2
+    size 112
+}
+
+pointlight FGFireballGlow14
+{
+    color 1.0 0.7 0.2
+    size 120
+}
+
+pointlight FGFireballGlow15
+{
+    color 1.0 0.7 0.2
+    size 128
+}
+
+pointlight FGFireballGlow16
+{
+    color 1.0 0.7 0.2
+    size 136
+}
+
+pointlight FGFireballGlow17
+{
+    color 1.0 0.7 0.2
+    size 144
+}
+
+pointlight FGFireballGlow18
+{
+    color 1.0 0.7 0.2
+    size 152
+}
+
+pointlight FGFireballGlow19
+{
+    color 1.0 0.7 0.2
+    size 160
+}
+
+pointlight FGFireballGlow20
+{
+    color 1.0 0.7 0.2
+    size 168
+}

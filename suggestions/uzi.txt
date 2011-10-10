@@ -1,0 +1,140 @@
+
+actor " J-Uzi ": Weapon
+{
+    Weapon.AmmoType1 "Clip"
+    Weapon.AmmoType2 "Clip"
+    Weapon.AmmoUse1 1
+    Weapon.AmmoUse2 1
+    Weapon.AmmoGive1 50
+
+    Weapon.SelectionOrder 1000
+    AttackSound "jkemod/uzi/fire"
+    Weapon.SisterWeapon " Power J-Uzi "
+
+    Inventory.PickupMessage "$JKE_PK_UZI"
+    Obituary "$JKE_MP_UZI"
+
+    States
+    {
+      Select:
+        UZIC AAAAAAAAAAAAAAA 1 A_Raise
+        UZIC BC 3
+        UZIC D 0 A_PlaySound("jkemod/uzi/cock", CHAN_WEAPON)
+        UZIC DEFBA 3
+        goto Ready
+
+      Deselect:
+        UZIG AA 0 A_Lower
+        UZIG A 1
+        loop
+
+      Ready:
+        UZIG A 1 A_WeaponReady
+        Loop
+
+
+      Fire:
+        UZIG B 1 bright A_Light1
+        UZIG C 0 A_FireCustomMissile("PistolCasing", -40, 0, 2, 6)
+        UZIG C 1 bright A_FireBullets(1, 1, 1, 8, "BulletPuff")
+        UZIG D 1 bright A_Light0
+        UZIG A 3 A_ReFire
+        goto Ready
+
+
+      AltFire:
+        UZIG B 1 bright A_Light1
+        goto AltHold
+
+      AltHold:
+        UZIG B 0 bright A_Light1
+        UZIG C 0 A_FireCustomMissile("PistolCasing", -40, 0, 2, 6)
+        UZIG C 1 bright A_FireBullets(8, 8, 1, 8, "BulletPuff")
+        UZIG D 1 bright A_Light0
+        UZIG A 0 A_ReFire
+        goto Ready
+
+      Spawn:
+        UZIP A -1
+        stop
+    }
+}
+
+actor " Power J-Uzi ": Weapon
+{
+    Weapon.AmmoType1 "Clip"
+    Weapon.AmmoType2 "Clip"
+    Weapon.AmmoUse1 1
+    Weapon.AmmoUse2 1
+    Weapon.AmmoGive1 50
+
+    Weapon.SelectionOrder 1000
+    Weapon.SisterWeapon " J-Uzi "
+    AttackSound "jkemod/uzi/fire"
+    +POWERED_UP
+
+    States
+    {
+      Select:
+        UZIC AAAAAAAAAAAAAAA 1 A_Raise
+        UZIC BC 3
+        UZIC D 0 A_PlaySound("jkemod/uzi/cock", CHAN_WEAPON)
+        UZIC DEFBA 3
+        goto Ready
+
+      Deselect:
+        UZIG AA 0 A_Lower
+        UZIG A 1
+        loop
+
+      Ready:
+        UZIG A 1 A_WeaponReady
+        Loop
+
+
+      Fire:
+        UZIG B 1 bright A_Light1
+        UZIG C 0 A_FireCustomMissile("PistolCasing", -40, 0, 2, 6)
+        UZIG C 1 bright A_FireBullets(1, 1, 1, 8, "ExplosiveJUziBulletpuff")
+        UZIG D 1 bright A_Light0
+        UZIG A 3 A_ReFire
+        goto Ready
+
+
+      AltFire:
+        UZIG B 1 bright A_Light1
+        goto AltHold
+
+      AltHold:
+        UZIG B 0 bright A_Light1
+        UZIG C 0 A_FireCustomMissile("PistolCasing", -40, 0, 2, 6)
+        UZIG C 1 bright A_FireBullets(8, 8, 1, 8, "ExplosiveJUziBulletPuff")
+        UZIG D 1 bright A_Light0
+        UZIG A 0 A_ReFire
+        goto Ready
+    }
+}
+
+actor ExplosiveJUziBulletPuff: BulletPuff
+{
+    +PUFFONACTORS
+    +PUFFGETSOWNER
+    +FORCERADIUSDMG
+    Obituary "$JKE_MP_UZI_POWER"
+    Vspeed 0
+    Decal BulletScorch
+    RenderStyle Add
+    Scale 0.5
+    States
+    {
+      Spawn:
+        TNT1 A 0
+        TNT1 A 0
+        MISL B 3 bright A_Explode(48,96, 0)
+
+      Death:
+        MISL C 6 bright
+        MISL D 4 bright
+        stop
+    }
+}

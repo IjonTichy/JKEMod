@@ -1,0 +1,30 @@
+
+actor DevastatorAmmo: Ammo
+{
+    Inventory.Amount 5
+    Inventory.MaxAmount 100
+
+    Ammo.BackpackAmount 15
+    Ammo.BackpackMaxAmount 200
+
+    Inventory.PickupMessage "$JKE_PK_DEVASTATORAMMO"
+    Inventory.Icon "MNRAA0"
+    states
+    {
+      Spawn:
+        MNRA A -1
+        stop
+    }
+}
+
+Actor DevastatorBox: DevastatorAmmo
+{
+    Inventory.Amount 25
+    Inventory.PickupMessage "$JKE_PK_DEVASTATORBOX"
+    States
+    {
+      Spawn:
+        MNRB A -1
+        Stop
+    }
+}

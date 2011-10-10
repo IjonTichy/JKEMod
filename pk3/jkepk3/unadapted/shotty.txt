@@ -1,0 +1,49 @@
+
+actor Shotty : Weapon
+{
+    Inventory.PickupMessage "You got the shotty, pretty useful"
+    Weapon.AmmoGive1 10
+    Weapon.AmmoType1 "Shell"
+    Weapon.AmmoUse1 2
+    Weapon.SelectionOrder 1300
+    Obituary "No obituary for you"
+    AttackSound "weapons/sttyfire"
+    Scale 0.4
+    States
+    {
+      Ready:
+        TSTH A 1 A_WeaponReady
+        Loop
+      Select:
+        TSTH A 1 A_Raise
+        loop
+      Deselect:
+        TSTH A 1 A_Lower
+        loop
+      Fire:
+        TSTH A 0 A_Light1
+        TSTF A 2 bright A_FireBullets(6, 3, 13, 7, "Bulletpuff", 1)
+        TSTF B 3 bright
+        TSTF A 2 bright A_Light0
+        TSTH A 10
+        TSTH A 0 A_JumpIfNoAmmo(13)
+        TSTH G 2
+        TSTH F 3
+        TSTH E 2
+        TSTH D 3 A_PlaySound("weapons/sttyout", CHAN_WEAPON)
+        TSTH C 3
+        TSTH B 15
+        TSTH C 3
+        TSTH D 2
+        TSTH E 3 A_PlaySound("weapons/sttyin", CHAN_WEAPON)
+        TSTH F 2
+        TSTH G 3
+        TSTH A 1 A_ReFire
+        TSTH A 0
+        TSTH A 3
+        goto Ready
+      Spawn:
+        TSTZ A -1
+        stop
+    }
+}

@@ -1,0 +1,28 @@
+
+actor BeamAmmo: Ammo
+{
+    Inventory.Amount 7
+    Inventory.MaxAmount 40
+    Ammo.BackpackAmount 5
+    Ammo.BackpackMaxAmount 80
+    Inventory.PickupMessage "$JKE_PK_BEAMAMMO"
+    Inventory.Icon "B1PKA0"
+    States
+    {
+      Spawn:
+        B1PK A -1
+        stop
+    }
+}
+
+actor BeamPack: BeamAmmo
+{
+    Inventory.Amount 14
+    Inventory.PickupMessage "$JKE_PK_BEAMPACK"
+    States
+    {
+      Spawn:
+        B2PK A -1
+        Stop
+    }
+}

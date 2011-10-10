@@ -1,0 +1,157 @@
+actor JKEClass1StrifePickup: JKEClass1Pickup replaces PunchDagger
+{
+    States
+    {
+      Spawn:
+        CSAW A -1
+        stop
+    }
+}
+actor JKEClass1StrifeDrop: JKEClass1Drop
+{
+    States
+    {
+      Spawn:
+        CSAW A -1
+        stop
+    }
+}
+
+
+actor JKEClass3StrifePickup: JKEClass3Pickup replaces StrifeCrossbow
+{
+    States
+    {
+      Spawn:
+        CBOW A -1
+        stop
+    }
+}
+actor JKEClass3StrifeDrop: JKEClass3Drop
+{
+    States
+    {
+      Spawn:
+        CBOW A -1
+        stop
+    }
+}
+
+
+
+actor JKEClass3StrifePickup2: JKEClass3Pickup2 replaces MiniMissileLauncher
+{
+    States
+    {
+      Spawn:
+        MMSL A -1
+        stop
+    }
+}
+actor JKEClass3StrifeDrop2: JKEClass3Drop2
+{
+    States
+    {
+      Spawn:
+        MMSL A -1
+        stop
+    }
+}
+
+actor JKEClass4StrifePickup: JKEClass4Pickup replaces AssaultGun
+{
+    States
+    {
+      Spawn:
+        RIFL A -1
+        stop
+    }
+}
+actor JKEClass4StrifePickup2: JKEClass4Pickup2 replaces AssaultGunStanding
+{
+    States
+    {
+      Spawn:
+        RIFL B -1
+        stop
+    }
+}
+
+actor JKEClass4StrifeDrop: JKEClass4Drop
+{
+    States
+    {
+      Spawn:
+        RIFL A -1
+        stop
+    }
+}
+actor JKEClass4StrifeDrop2: JKEClass4Drop2
+{
+    States
+    {
+      Spawn:
+        RIFL B -1
+        stop
+    }
+}
+
+
+actor JKEClass5StrifePickup: JKEClass5Pickup replaces StrifeGrenadeLauncher
+{
+    States
+    {
+      Spawn:
+        GRND A -1
+        stop
+    }
+}
+actor JKEClass5StrifeDrop: JKEClass5Drop
+{
+    States
+    {
+      Spawn:
+        GRND A -1
+        stop
+    }
+}
+
+
+actor JKEClass6StrifePickup: JKEClass6Pickup replaces Flamethrower
+{
+    States
+    {
+      Spawn:
+        FLAM A -1
+        stop
+    }
+}
+actor JKEClass6StrifeDrop: JKEClass6Drop
+{
+    States
+    {
+      Spawn:
+        FLAM A -1
+        stop
+    }
+}
+
+
+actor JKEClass7StrifePickup: JKEClass7Pickup replaces Mauler
+{
+    States
+    {
+      Spawn:
+        TRPD A -1
+        stop
+    }
+}
+actor JKEClass7StrifeDrop: JKEClass7Drop
+{
+    States
+    {
+      Spawn:
+        TRPD A -1
+        stop
+    }
+}

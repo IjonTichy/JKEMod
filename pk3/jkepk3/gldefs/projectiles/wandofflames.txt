@@ -1,0 +1,133 @@
+// Lights defined in wandofflamesglows.txt
+
+object WOFTrail
+{
+    frame WEMPH { light WandOfFlamesGlow4 }
+    frame WEMPI { light WandOfFlamesGlow3 }
+    frame WEMPJ { light WandOfFlamesGlow2 }
+}
+
+
+object WOFShot1
+{
+    frame WEMP  { light WandOfFlamesGlow5 }
+
+    frame FREXA { light WandOfFlamesGlow7 }
+    frame FREXB { light WandOfFlamesGlow5 }
+    frame FREXC { light WandOfFlamesGlow3 }
+}
+
+object WOFShot2
+{
+    frame WEMP  { light WandOfFlamesGlow5 }
+
+    frame FREXA { light WandOfFlamesGlow7 }
+    frame FREXB { light WandOfFlamesGlow5 }
+    frame FREXC { light WandOfFlamesGlow3 }
+}
+
+object WOFShot3
+{
+    frame WEMP  { light WandOfFlamesGlow5 }
+
+    frame FREXA { light WandOfFlamesGlow7 }
+    frame FREXB { light WandOfFlamesGlow5 }
+    frame FREXC { light WandOfFlamesGlow3 }
+}
+
+object PowerWOFShot1
+{
+    frame WEMP  { light WandOfFlamesGlow7 }
+
+    frame FREXA { light WandOfFlamesGlow9 }
+    frame FREXB { light WandOfFlamesGlow6 }
+    frame FREXC { light WandOfFlamesGlow3 }
+}
+
+object PowerWOFShot2
+{
+    frame WEMP  { light WandOfFlamesGlow7 }
+
+    frame FREXA { light WandOfFlamesGlow7 }
+    frame FREXB { light WandOfFlamesGlow6 }
+    frame FREXC { light WandOfFlamesGlow3 }
+}
+
+object PowerWOFShot3
+{
+    frame WEMP  { light WandOfFlamesGlow7 }
+
+    frame FREXA { light WandOfFlamesGlow9 }
+    frame FREXB { light WandOfFlamesGlow6 }
+    frame FREXC { light WandOfFlamesGlow3 }
+}
+
+object WOFFlame
+{
+    frame WEMFA { light WandOfFlamesFGlow3 }
+    frame WEMFB { light WandOfFlamesFGlow3 }
+    frame WEMFC { light WandOfFlamesFGlow3 }
+    frame WEMFD { light WandOfFlamesFGlow3 }
+    frame WEMFE { light WandOfFlamesFGlow3 }
+    frame WEMFF { light WandOfFlamesFGlow3 }
+    frame WEMFG { light WandOfFlamesFGlow3 }
+    frame WEMFH { light WandOfFlamesFGlow3 }
+    frame WEMFI { light WandOfFlamesFGlow3 }
+    frame WEMFJ { light WandOfFlamesFGlow3 }
+    frame WEMFK { light WandOfFlamesFGlow3 }
+    frame WEMFL { light WandOfFlamesFGlow3 }
+    frame WEMFM { light WandOfFlamesFGlow3 }
+    frame WEMFN { light WandOfFlamesGlow2_0 }
+    frame WEMFO { light WandOfFlamesGlow1_0 }
+    frame WEMFP { light WandOfFlamesGlow0_0 }
+}
+
+object PowerWOFFlame
+{
+    frame WEMFA { light WandOfFlamesFGlow4 }
+    frame WEMFB { light WandOfFlamesFGlow4 }
+    frame WEMFC { light WandOfFlamesFGlow4 }
+    frame WEMFD { light WandOfFlamesFGlow4 }
+    frame WEMFE { light WandOfFlamesFGlow4 }
+    frame WEMFF { light WandOfFlamesFGlow4 }
+    frame WEMFG { light WandOfFlamesFGlow4 }
+    frame WEMFH { light WandOfFlamesFGlow4 }
+    frame WEMFI { light WandOfFlamesFGlow4 }
+    frame WEMFJ { light WandOfFlamesFGlow4 }
+    frame WEMFK { light WandOfFlamesFGlow4 }
+    frame WEMFL { light WandOfFlamesFGlow4 }
+    frame WEMFM { light WandOfFlamesFGlow4 }
+    frame WEMFN { light WandOfFlamesGlow2_0 }
+    frame WEMFO { light WandOfFlamesGlow1_0 }
+    frame WEMFP { light WandOfFlamesGlow0_0 }
+}
+
+object WOFFire1
+{
+    frame WEM2 { light WOFFireFGlow1 }
+}
+
+object WOFFire2
+{
+    frame WEM2 { light WOFFireFGlow1 }
+}
+
+object WOFFire3
+{
+    frame WEM2 { light WOFFireFGlow1 }
+}
+
+object PowerWOFFire1
+{
+    frame WEM2 { light WOFFireFGlow2 }
+}
+
+object PowerWOFFire2
+{
+    frame WEM2 { light WOFFireFGlow2 }
+}
+
+object PowerWOFFire3
+{
+    frame WEM2 { light WOFFireFGlow2 }
+}
