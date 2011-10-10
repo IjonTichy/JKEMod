@@ -8,10 +8,12 @@ actor " J-Plasma Rifle ": Weapon
 
     Weapon.SelectionOrder 1360
 
-    Inventory.PickupMessage "$JKE_PK_JPLASMARIFLE"
-    Obituary "$JKE_MP_JPLASMARIFLE_RAIL"
+    Weapon.SisterWeapon " Power J-Plasma Rifle "
 
     Decal RailScorch
+
+    Inventory.PickupMessage "$JKE_PK_JPLASMARIFLE"
+    Obituary "$JKE_MP_JPLASMARIFLE_RAIL"
 
     States
     {
@@ -28,26 +30,58 @@ actor " J-Plasma Rifle ": Weapon
 
       Fire:
         NWPF B 0 A_PlaySound("jkemod/jplasmarifle/fire", CHAN_WEAPON)
-        NWPF B 1 A_FireCustomMissile("JPlasmaShot", 0, 1, 8)
-        NWPF CD 1
+        NWPF B 1 bright A_FireCustomMissile("JPlasmaShot", 0, 1, 8)
+        NWPF CD 1 bright
         NWPF A 18 A_ReFire
         goto Ready
 
       AltFire:
         NWPF B 0 A_PlaySound("jkemod/jplasmarifle/fire", CHAN_WEAPON)
-        NWPF B 1 A_RailAttack(75, 3, 1, none, "00 00 FF", 1, 0, "Bulletpuff")
+        NWPF B 1 bright A_RailAttack(75, 3, 1, none, "00 00 FF", 1, 0, "Bulletpuff")
 
         NWPF C 0 A_PlaySound("jkemod/jplasmarifle/fire", CHAN_WEAPON)
-        NWPF C 1 A_RailAttack(75, 3, 1, none, "00 00 FF", 1, 0, "Bulletpuff")
+        NWPF C 1 bright A_RailAttack(75, 3, 1, none, "00 00 FF", 1, 0, "Bulletpuff")
 
         NWPF D 0 A_PlaySound("jkemod/jplasmarifle/fire", CHAN_WEAPON)
-        NWPF D 1 A_RailAttack(75, 3, 1, none, "00 00 FF", 1, 0, "Bulletpuff")
-        NWPF CDA 1
-        NWPF A 15
+        NWPF D 1 bright A_RailAttack(75, 3, 1, none, "00 00 FF", 1, 0, "Bulletpuff")
+        NWPF CD 1 bright
+        NWPF A 16
         goto Ready
       Spawn:
         NWPG Z -1
         stop
+    }
+}
+
+actor " Power J-Plasma Rifle ": " J-Plasma Rifle "
+{
+    Weapon.AmmoUse2 6
+    Weapon.AmmoGive1 0
+
+    Weapon.SisterWeapon " J-Plasma Rifle "
+    +POWERED_UP
+
+    Obituary "$JKE_MP_JPLASMARIFLE_RAIL_POWER"
+
+    States
+    {
+      Fire:
+        NWPF B 0 A_PlaySound("jkemod/jplasmarifle/fire", CHAN_WEAPON)
+        NWPF B 1 A_FireCustomMissile("PowerJPlasmaShot", 0, 1, 8)
+        NWPF CD 1
+        NWPF A 18 A_ReFire
+        goto Ready
+
+      AltFire:
+        NWPF B 0 A_PlaySound("weapons/railgf", CHAN_WEAPON)
+        NWPF B 0 A_RailAttack(500, 3, 1, "00 40 FF", "00 00 FF", 1, 0, "Bulletpuff")
+        NWPF C 1 bright
+        NWPF D 8
+        NWPF C 4
+        NWPF B 2
+        NWPF A 4
+        NWPF A 0 A_Refire
+        goto Ready
     }
 }
 
@@ -77,6 +111,27 @@ actor JPlasmaShot
         loop
       Death:
         PLSE ABCDE 4 bright
+        stop
+    }
+}
+
+actor PowerJPlasmaShot: JPlasmaShot
+{
+    Damage (40 + random(1, 10) )
+
+    +FORCERADIUSDMG
+    +NODAMAGETHRUST
+
+    Obituary "$JKE_MP_JPLASMARIFLE_PLASMA_POWER"
+
+    States
+    {
+      Spawn:
+        D3PP ABCDEFGHIJKLMNOPQRSTU 1 bright
+        loop
+      Death:
+        PLSE B 0 A_Explode(24, 96, 0)
+        PLSE BCDE 4 bright
         stop
     }
 }
