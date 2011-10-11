@@ -1,61 +1,16 @@
-#!/usr/bin/python3
-
-tmp1 = """
-pointlight [name]{0}
-{{
-    color [r] [g] [b]
-    size {1}
-}}
+lol = """\
+        BFE1 B 0 A_CustomMissile("RipperMoleculeDebris",    0, 0, {},{} CMF_AIMDIRECTION|CMF_TRACKOWNER, 0)
+        BFE1 B 0 A_CustomMissile("ExplosiveMoleculeDebris", 0, 0, {},{} CMF_AIMDIRECTION|CMF_TRACKOWNER, 0)
 """
 
-tmp2 = """
-pointlight [name]{0}
-{{
-    color {1} {2} {3}
-    size [s]
-}}
-"""
-
-MAX = 30
-LIGHTMULT = 8
-
-STEPS = 13
-
-NAME = "MultigunRocketGlow"
-
-RED   = 255
-GREEN = 231
-BLUE  = 201
-
-SIZE = 144
-
-MAXA = MAX + 1
-REDA, GREENA, BLUEA = (round(i/255.0, 2) if (i > 1) else i for i in (RED, GREEN, BLUE) )
-
-TAGS = (("name", NAME),
-        ("s", SIZE),
-        #("r", REDA),
-        #("g", GREENA),
-        #("b", BLUEA)
-       )
-
-lol = open("tmp.txt", "w")
-
-tmp = tmp2
-
-for i in TAGS:
-    tag = "[{0}]".format(i[0])
-    var = i[1]
-    tmp = tmp.replace(tag, str(var) )
+lolFile = open("tmp.txt", "w")
 
 
+for i in range(0, 360, 10):
 
-for i in range(STEPS, 0, -1):
+    len1 = " " * (3-len(str(i  ) ) )
+    len2 = " " * (3-len(str(i+5) ) )
 
-    j = i / float(STEPS)
+    lolFile.write(lol.format(i, len1, i+5, len2) )
 
-    newR = round(REDA   * j, 2)
-    newG = round(GREENA * j, 2)
-    newB = round(BLUEA  * j, 2)
-
-    lol.write(tmp.format(i, newR, newG, newB) )
+lolFile.close()

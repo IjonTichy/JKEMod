@@ -1,12 +1,12 @@
 actor " Karasawa ": Weapon
 {
     Weapon.AmmoType1 "Cell"
-    Weapon.AmmoUse1 3
+    Weapon.AmmoUse1 6
     Weapon.AmmoGive1 60
 
     Weapon.SelectionOrder 1500
 
-    Decal PlasmaScorch
+    Weapon.SisterWeapon " Power Karasawa "
 
     Inventory.PickupMessage "$JKE_PK_KARASAWA"
     Obituary "$JKE_MP_KARASAWA"
@@ -44,6 +44,33 @@ actor " Karasawa ": Weapon
     }
 }
 
+
+actor " Power Karasawa ": " Karasawa "
+{
+    Weapon.AmmoUse1 15
+    Weapon.AmmoGive1 0
+
+    Weapon.SisterWeapon " Karasawa "
+    +POWERED_UP
+
+    Obituary "$JKE_MP_KARASAWA_POWER"
+
+    States
+    {
+      Fire:
+        KSAW A 0 A_StopSoundEx("SoundSlot5")
+        KSAW DE 2 bright
+        KSAW F 3 bright A_FireCustomMissile("PowerKarasawaShot")
+        KSAW G 4 bright
+        KSAW H 4 bright A_ReFire
+        KSAW I 10
+        KSAW J 0 A_PlaySound("jkemod/karasawa/charge", CHAN_WEAPON)
+        KSAW NMLKJ 4
+        goto Ready
+    }
+}
+
+
 actor KarasawaShot
 {
     Radius 6
@@ -63,6 +90,8 @@ actor KarasawaShot
 
     RenderStyle Add
     Alpha 0.8
+
+    Decal PlasmaScorch
 
     SeeSound   "jkemod/karasawa/fire"
     DeathSound "jkemod/karasawa/hit"
@@ -89,6 +118,47 @@ actor KarasawaTrail
     {
       Spawn:
         KWBR AB 4 bright
+        stop
+    }
+}
+
+
+actor PowerKarasawaShot: KarasawaShot
+{
+    +FORCERADIUSDMG
+    -HEXENBOUNCE
+    -RIPPER
+
+    Obituary "$JKE_MP_KARASAWA_POWER"
+
+    States
+    {
+      Spawn:
+        KWBB ABCD 3 bright A_SpawnItemEx("KarasawaTrail")
+        loop
+      Death:
+        KWBD A 0 A_Explode(96, 96, 0)
+        KWBD A 0 Bright A_SpawnItemEx("PowerKarasawaShotSplit", 0, 0, 0, 40, 0, random(-3,3), -45)
+        KWBD A 0 Bright A_SpawnItemEx("PowerKarasawaShotSplit", 0, 0, 0, 40, 0, random(-3,3), -15)
+        KWBD A 0 Bright A_SpawnItemEx("PowerKarasawaShotSplit", 0, 0, 0, 40, 0, random(-3,3), 15)
+        KWBD A 0 Bright A_SpawnItemEx("PowerKarasawaShotSplit", 0, 0, 0, 40, 0, random(-3,3), 45)
+        KWBD ABCDEF 3 bright
+        stop
+    }
+}
+
+actor PowerKarasawaShotSplit: KarasawaShot
+{
+    +FORCERADIUSDMG
+    +PUFFGETSOWNER
+
+    Obituary "$JKE_MP_KARASAWA_POWER"
+
+    States
+    {
+      Death:
+        KWBD A 0 A_Explode(96, 96, 0)
+        KWBD ABCDEF 3 bright
         stop
     }
 }

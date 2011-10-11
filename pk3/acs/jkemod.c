@@ -8,6 +8,11 @@ int multigunStrings[3] = {
     "Ice shards",
     "Flame grenades"};
 
+script 872 (int num) // generic number printer
+{
+    PrintBold(d:num);
+}
+
 script 873 (int which, int arg1, int arg2)  // get inventory
 {
     switch (which)
