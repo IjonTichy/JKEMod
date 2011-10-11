@@ -1,61 +1,44 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 
-tmp1 = """
-pointlight [name]{0}
+lol = """\
+actor JKE{0}Pickup: JKEClassPickupSpawner replaces {0}
 {{
-    color [r] [g] [b]
-    size {1}
+    +NOINTERACTION
+
+    States
+    {{
+        Spawn:
+          TNT1 A 0
+          TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(684) == 1, "DropSpawn")
+          goto NormSpawn
+
+        DropSpawn:
+          TNT1 A 0 A_SpawnItemEx("JKEClass{1}Drop{2}", 0, 0, 0, momx, momy, momz)
+          stop
+
+        NormSpawn:
+          TNT1 A 0 A_SpawnItemEx("JKEClass{1}Pickup{2}", 0, 0, 0, momx, momy, momz)
+          stop
+    }}
 }}
+
 """
 
-tmp2 = """
-pointlight [name]{0}
-{{
-    color {1} {2} {3}
-    size [s]
-}}
-"""
 
-MAX = 30
-LIGHTMULT = 8
+tmpList = [["Chainsaw"], ["Pistol"], ["Shotgun", "SuperShotgun"],
+           ["Chaingun", "Minigun"], ["RocketLauncher", "GrenadeLauncher"],
+           ["PlasmaRifle", "Railgun"], ["BFG9000"], ["BFG10k"]]
 
-STEPS = 13
+tmpFile = open("tmp.txt", "w")
 
-NAME = "MultigunRocketGlow"
+for n, i in enumerate(tmpList):
+    n += 1
 
-RED   = 255
-GREEN = 231
-BLUE  = 201
+    for m, j in enumerate(i):
 
-SIZE = 144
+        if m == 0:
+            m = ""
+        else:
+            m += 1
 
-MAXA = MAX + 1
-REDA, GREENA, BLUEA = (round(i/255.0, 2) if (i > 1) else i for i in (RED, GREEN, BLUE) )
-
-TAGS = (("name", NAME),
-        ("s", SIZE),
-        #("r", REDA),
-        #("g", GREENA),
-        #("b", BLUEA)
-       )
-
-lol = open("tmp.txt", "w")
-
-tmp = tmp2
-
-for i in TAGS:
-    tag = "[{0}]".format(i[0])
-    var = i[1]
-    tmp = tmp.replace(tag, str(var) )
-
-
-
-for i in range(STEPS, 0, -1):
-
-    j = i / float(STEPS)
-
-    newR = round(REDA   * j, 2)
-    newG = round(GREENA * j, 2)
-    newB = round(BLUEA  * j, 2)
-
-    lol.write(tmp.format(i, newR, newG, newB) )
+        tmpFile.write(lol.format(j, n, m) )

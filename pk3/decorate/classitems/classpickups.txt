@@ -1,4 +1,4 @@
-actor JKEClass1Pickup: JKEClassPickup replaces Chainsaw
+actor JKEClass1Pickup: JKEClassPickup
 {
     States
     {
@@ -28,7 +28,7 @@ actor JKEClass1Drop: JKEClassPickup
 }
 
 
-actor JKEClass2Pickup: JKEClassPickup replaces Pistol
+actor JKEClass2Pickup: JKEClassPickup
 {
     States
     {
@@ -58,7 +58,7 @@ actor JKEClass2Drop: JKEClassPickup
 }
 
 
-actor JKEClass3Pickup: JKEClassPickup replaces Shotgun
+actor JKEClass3Pickup: JKEClassPickup
 {
     States
     {
@@ -71,7 +71,7 @@ actor JKEClass3Pickup: JKEClassPickup replaces Shotgun
         goto NoGone
     }
 }
-actor JKEClass3Pickup2: JKEClassPickup replaces SuperShotgun
+actor JKEClass3Pickup2: JKEClassPickup
 {
     States
     {
@@ -114,7 +114,7 @@ actor JKEClass3Drop2: JKEClassPickup
 }
 
 
-actor JKEClass4Pickup: JKEClassPickup replaces Chaingun
+actor JKEClass4Pickup: JKEClassPickup
 {
     States
     {
@@ -127,7 +127,7 @@ actor JKEClass4Pickup: JKEClassPickup replaces Chaingun
         goto NoGone
     }
 }
-actor JKEClass4Pickup2: JKEClassPickup replaces Minigun
+actor JKEClass4Pickup2: JKEClassPickup
 {
     States
     {
@@ -170,7 +170,7 @@ actor JKEClass4Drop2: JKEClassPickup
 }
 
 
-actor JKEClass5Pickup: JKEClassPickup replaces RocketLauncher
+actor JKEClass5Pickup: JKEClassPickup
 {
     States
     {
@@ -183,7 +183,7 @@ actor JKEClass5Pickup: JKEClassPickup replaces RocketLauncher
         goto NoGone
     }
 }
-actor JKEClass5Pickup2: JKEClassPickup replaces GrenadeLauncher
+actor JKEClass5Pickup2: JKEClassPickup
 {
     States
     {
@@ -226,7 +226,7 @@ actor JKEClass5Drop2: JKEClassPickup
 }
 
 
-actor JKEClass6Pickup: JKEClassPickup replaces PlasmaRifle
+actor JKEClass6Pickup: JKEClassPickup
 {
     States
     {
@@ -239,7 +239,7 @@ actor JKEClass6Pickup: JKEClassPickup replaces PlasmaRifle
         goto NoGone
     }
 }
-actor JKEClass6Pickup2: JKEClassPickup replaces Railgun
+actor JKEClass6Pickup2: JKEClassPickup
 {
     States
     {
@@ -282,7 +282,7 @@ actor JKEClass6Drop2: JKEClassPickup
 }
 
 
-actor JKEClass7Pickup: JKEClassPickup replaces BFG9000
+actor JKEClass7Pickup: JKEClassPickup
 {
     States
     {
@@ -312,7 +312,7 @@ actor JKEClass7Drop: JKEClassPickup
 }
 
 
-actor JKEClass8Pickup: JKEClassPickup replaces BFG10k
+actor JKEClass8Pickup: JKEClassPickup
 {
     States
     {

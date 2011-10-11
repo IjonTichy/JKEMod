@@ -2,6 +2,7 @@
 #include "decorate/classitems/classsetters.txt"
 #include "decorate/classitems/classpickups.txt"
 
+#include "decorate/classitems/classdoom.txt"
 #include "decorate/classitems/classheretic.txt"
 #include "decorate/classitems/classstrife.txt"
 

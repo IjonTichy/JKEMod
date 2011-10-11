@@ -512,7 +512,7 @@ actor PowerFragmentShard: FragmentShard
         FSHD ABC 3
         loop
       Death:
-        BAL A 0
+        BAL1 A 0
         stop
     }
 }

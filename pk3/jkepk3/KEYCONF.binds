@@ -1,8 +1,0 @@
-alias +jkeload "use ReloadButtonOn"
-alias -jkeload "use ReloadButtonOff"
-
-defaultbind r +jkeload
-
-
-addkeysection "JKEMod" "JKEMod"
-addmenukey "Reload" +jkeload
