@@ -13,7 +13,7 @@ actor JKEClassItem: CustomInventory
 }
 
 
-actor BDWClassItem:    JKEClassItem
+actor BDWClassItem:         JKEClassItem
 {
     States
     {
@@ -23,7 +23,7 @@ actor BDWClassItem:    JKEClassItem
     }
 }
 
-actor SMClassItem:     JKEClassItem
+actor SMClassItem:          JKEClassItem
 {
     States
     {
@@ -33,7 +33,7 @@ actor SMClassItem:     JKEClassItem
     }
 }
 
-actor JKEGuyClassItem: JKEClassItem
+actor JKEGuyClassItem:      JKEClassItem
 {
     States
     {
@@ -43,7 +43,7 @@ actor JKEGuyClassItem: JKEClassItem
     }
 }
 
-actor LeandroClassItem: JKEClassItem
+actor LeandroClassItem:     JKEClassItem
 {
     States
     {
@@ -53,7 +53,7 @@ actor LeandroClassItem: JKEClassItem
     }
 }
 
-actor SorcererClassItem: JKEClassItem
+actor SorcererClassItem:    JKEClassItem
 {
     States
     {

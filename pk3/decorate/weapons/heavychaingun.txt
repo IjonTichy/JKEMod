@@ -1,4 +1,3 @@
-
 actor " Heavy Chaingun ": Weapon
 {
     Weapon.AmmoType1 "Clip"
@@ -10,6 +9,8 @@ actor " Heavy Chaingun ": Weapon
     Weapon.SelectionOrder 360
 
     Weapon.UpSound "jkemod/heavychaingun/up"
+
+    Weapon.SisterWeapon " Power Heavy Chaingun "
 
     Decal BulletChip
 
@@ -34,15 +35,15 @@ actor " Heavy Chaingun ": Weapon
 
         CHG2 B 0 A_PlaySound("jkemod/heavychaingun/fire", CHAN_WEAPON)
         CHG2 B 0 A_Recoil(0.2)
-        CHG2 B 0 A_FireBullets(5, 5, 1, 7, "BulletPuff", 1)
-        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 47, 0, 0, 7)
-        CHG2 B 4 bright A_Light1
+        CHG2 B 0 A_FireBullets(2, 2, 1, 7, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 B 6 bright A_Light1
 
         CHG2 C 0 A_PlaySound("jkemod/heavychaingun/fire", CHAN_WEAPON)
         CHG2 C 0 A_Recoil(0.2)
-        CHG2 B 0 A_FireBullets(5, 5, 1, 7, "BulletPuff", 1)
-        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 47, 0, 0, 7)
-        CHG2 C 4 bright A_Light0
+        CHG2 B 0 A_FireBullets(2, 2, 1, 7, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 C 6 bright A_Light0
 
         CHG2 B 0 A_ReFire
         goto End
@@ -50,14 +51,14 @@ actor " Heavy Chaingun ": Weapon
       Hold:
         CHG2 B 0 A_PlaySound("jkemod/heavychaingun/fire", CHAN_WEAPON)
         CHG2 B 0 A_Recoil(0.4)
-        CHG2 B 0 A_FireBullets(5, 5, 1, 7, "BulletPuff", 1)
-        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 47, 0, 0, 7)
+        CHG2 B 0 A_FireBullets(2, 2, 1, 7, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
         CHG2 B 1 bright A_Light1
 
         CHG2 C 0 A_PlaySound("jkemod/heavychaingun/fire", CHAN_WEAPON)
         CHG2 C 0 A_Recoil(0.2)
-        CHG2 B 0 A_FireBullets(5, 5, 1, 7, "BulletPuff", 1)
-        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 47, 0, 0, 7)
+        CHG2 B 0 A_FireBullets(2, 2, 1, 7, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
         CHG2 C 1 bright A_Light0
 
         CHG2 B 0 A_ReFire
@@ -69,15 +70,15 @@ actor " Heavy Chaingun ": Weapon
 
         CHG2 B 0 A_PlaySound("jkemod/heavychaingun/altfire", CHAN_WEAPON)
         CHG2 B 0 A_Recoil(0.4)
-        CHG2 B 0 A_FireBullets(5, 5, 2, 7, "BulletPuff", 1)
-        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 47, 0, 0, 7)
-        CHG2 B 4 bright A_Light1
+        CHG2 B 0 A_FireBullets(2, 2, 2, 7, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 B 6 bright A_Light1
 
         CHG2 C 0 A_PlaySound("jkemod/heavychaingun/altfire", CHAN_WEAPON)
         CHG2 C 0 A_Recoil(0.4)
-        CHG2 B 0 A_FireBullets(5, 5, 2, 7, "BulletPuff", 1)
-        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 47, 0, 0, 7)
-        CHG2 C 4 bright A_Light0
+        CHG2 B 0 A_FireBullets(2, 2, 2, 7, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 C 6 bright A_Light0
 
         CHG2 B 0 A_ReFire
         goto End
@@ -85,14 +86,13 @@ actor " Heavy Chaingun ": Weapon
       AltHold:
         CHG2 B 0 A_PlaySound("jkemod/heavychaingun/altfire", CHAN_WEAPON)
         CHG2 B 0 A_Recoil(0.4)
-        CHG2 B 0 A_FireBullets(5, 5, 2, 7, "BulletPuff", 1)
-        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 47, 0, 0, 7)
+        CHG2 B 0 A_FireBullets(5, 5, 1, 7, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
         CHG2 B 1 bright A_Light1
-
         CHG2 C 0 A_PlaySound("jkemod/heavychaingun/altfire", CHAN_WEAPON)
         CHG2 C 0 A_Recoil(0.4)
-        CHG2 B 0 A_FireBullets(5, 5, 2, 7, "BulletPuff", 1)
-        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 47, 0, 0, 7)
+        CHG2 BB 0 A_FireBullets(5, 5, 1, 7, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
         CHG2 C 1 bright A_Light0
 
         CHG2 B 0 A_ReFire
@@ -105,5 +105,99 @@ actor " Heavy Chaingun ": Weapon
       Spawn:
         CHG2 Z -1
         Stop
+    }
+}
+
+
+actor " Power Heavy Chaingun ": " Heavy Chaingun "
+{
+    Weapon.AmmoType1 "Clip"
+    Weapon.AmmoType2 "Clip"
+    Weapon.AmmoUse1 1
+    Weapon.AmmoUse2 1
+    Weapon.AmmoGive 80
+
+    Weapon.SelectionOrder 360
+
+    Weapon.UpSound "jkemod/heavychaingun/up"
+
+    Weapon.SisterWeapon " Heavy Chaingun "
+    +POWERED_UP
+
+    Decal BulletChip
+
+    Inventory.PickupMessage "$JKE_PK_HEAVYCHAINGUN"
+    Obituary "$JKE_MP_HEAVYCHAINGUN"
+    States
+    {
+      Fire:
+        CHG2 B 0 A_PlaySound("jkemod/heavychaingun/fire", CHAN_WEAPON)
+        CHG2 B 0 A_Recoil(0.2)
+        CHG2 B 0 A_FireBullets(2, 2, 1, 12, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 B 6 bright A_Light1
+
+        CHG2 C 0 A_PlaySound("jkemod/heavychaingun/fire", CHAN_WEAPON)
+        CHG2 C 0 A_Recoil(0.2)
+        CHG2 B 0 A_FireBullets(2, 2, 1, 12, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 C 6 bright A_Light0
+
+        CHG2 B 0 A_ReFire
+        goto End
+
+      Hold:
+        CHG2 B 0 A_PlaySound("jkemod/heavychaingun/fire", CHAN_WEAPON)
+        CHG2 B 0 A_Recoil(0.4)
+        CHG2 BBB 0 A_FireBullets(2, 2, -1, 12, "BulletPuff", 1)
+        CHG2 BBB 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 B 2 bright A_Light1
+
+        CHG2 C 0 A_PlaySound("jkemod/heavychaingun/fire", CHAN_WEAPON)
+        CHG2 C 0 A_Recoil(0.2)
+        CHG2 BBB 0 A_FireBullets(2, 2, -1, 12, "BulletPuff", 1)
+        CHG2 BBB 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 C 2 bright A_Light0
+
+        CHG2 B 0 A_ReFire
+        goto End
+
+
+      AltFire:
+        CHG2 B 0 A_PlaySound("jkemod/heavychaingun/altfire", CHAN_WEAPON)
+        CHG2 B 0 A_Recoil(0.4)
+        CHG2 B 0 A_FireBullets(5, 5, 1, 12, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 B 6 bright A_Light1
+
+        CHG2 C 0 A_PlaySound("jkemod/heavychaingun/altfire", CHAN_WEAPON)
+        CHG2 C 0 A_Recoil(0.4)
+        CHG2 B 0 A_FireBullets(5, 5, 1, 12, "BulletPuff", 1)
+        CHG2 B 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 C 6 bright A_Light0
+
+        CHG2 B 0 A_ReFire
+        goto End
+
+      AltHold:
+        CHG2 B 0 A_PlaySound("jkemod/heavychaingun/altfire", CHAN_WEAPON)
+        CHG2 B 0 A_Recoil(0.4)
+        CHG2 BBB 0 A_FireBullets(5, 5, -1, 12, "BulletPuff", 1)
+        CHG2 BBB 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 B 1 bright A_Light1
+
+        CHG2 C 0 A_PlaySound("jkemod/heavychaingun/altfire", CHAN_WEAPON)
+        CHG2 C 0 A_Recoil(0.4)
+        CHG2 BBB 0 A_FireBullets(5, 5, -1, 12, "BulletPuff", 1)
+        CHG2 BBB 0 A_FireCustomMissile("AssaultCasing", 90+random(-4,4), 0, 0, 0)
+        CHG2 C 1 bright A_Light0
+
+        CHG2 B 0 A_ReFire
+        goto End
+
+      End:
+        CHG2 A 2
+        CHG2 D 27
+        Goto Ready
     }
 }

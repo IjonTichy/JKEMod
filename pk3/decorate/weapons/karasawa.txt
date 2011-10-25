@@ -84,8 +84,8 @@ actor KarasawaShot
     +RIPPER
     +SPAWNSOUNDSOURCE
 
-    BounceFactor 0.97
-    WallBounceFactor 0.97
+    BounceFactor 0.95
+    WallBounceFactor 0.95
     ReactionTime 10
 
     RenderStyle Add
