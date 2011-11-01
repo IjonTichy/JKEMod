@@ -7,7 +7,6 @@ actor " Quake GL ": Weapon replaces PlasmaRifle
     Weapon.AmmoGive 5
     Weapon.AmmoType "QuakeExplosive"
 
-    +NOAUTOAIM
     +FLOATBOB
 
     Inventory.Icon "W_GLA0"

@@ -8,7 +8,6 @@ actor " Quake SNG ": Weapon replaces Chaingun
 
     Weapon.SlotNumber 5
 
-    +NOAUTOAIM
     +FLOATBOB
 
     Inventory.Icon "WSNGA0"

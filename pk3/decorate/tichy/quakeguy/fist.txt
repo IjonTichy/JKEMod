@@ -4,7 +4,6 @@ actor " Quake Fist ": Weapon replaces Fist
     Weapon.Kickback 100
     Weapon.SlotNumber 1
 
-    +NOAUTOAIM
     +WEAPON.MELEEWEAPON
     +FLOATBOB
 

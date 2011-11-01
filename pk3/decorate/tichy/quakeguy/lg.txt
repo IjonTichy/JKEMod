@@ -8,7 +8,6 @@ actor " Quake LG ": Weapon replaces BFG9000
 
     Weapon.SlotNumber 8
 
-    +NOAUTOAIM
     +FLOATBOB
 
     Inventory.Icon "W_LGA0"

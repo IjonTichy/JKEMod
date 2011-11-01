@@ -8,7 +8,6 @@ actor " Quake NG ": Weapon replaces Shotgun
 
     Weapon.SlotNumber 4
 
-    +NOAUTOAIM
     +FLOATBOB
 
     Inventory.Icon "W_NGA0"

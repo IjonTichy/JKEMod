@@ -7,7 +7,6 @@ actor " Quake RL ": Weapon replaces RocketLauncher
     Weapon.AmmoGive 5
     Weapon.AmmoType "QuakeExplosive"
 
-    +NOAUTOAIM
     +FLOATBOB
 
     Inventory.Icon "W_RLA0"

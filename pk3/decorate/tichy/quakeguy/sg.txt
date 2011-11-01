@@ -8,7 +8,6 @@ actor " Quake SG ": Weapon replaces Pistol
 
     Weapon.SlotNumber 2
 
-    +NOAUTOAIM
     +FLOATBOB
 
     Inventory.Icon "W_SGA0"

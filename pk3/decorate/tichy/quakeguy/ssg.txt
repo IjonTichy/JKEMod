@@ -8,7 +8,6 @@ actor " Quake SSG ": Weapon replaces SuperShotgun
 
     Weapon.SlotNumber 3
 
-    +NOAUTOAIM
     +FLOATBOB
 
     Inventory.Icon "WSSGA0"
