@@ -15,7 +15,7 @@ actor JKEClip: CustomInventory replaces Clip
         TNT1 A 0 A_GiveInventory("JSniperAmmo", 4)
         TNT1 A 0 A_GiveInventory("M249Ammo", 10)
         TNT1 A 0 A_GiveInventory("MinigunAmmo", 10)
-        TNT1 A 0 A_GiveInventory("QuakeNails", 25)
+        TNT1 A 0 A_GiveInventory("QuakeNails", 15)
         stop
     }
 }

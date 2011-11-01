@@ -28,6 +28,7 @@ script 648 (int mode)
 
 
             GiveInventory("Clip", 1);
+            GiveInventory("QuakeNails", 1);
             GiveInventory("Cell", 1);
 
             GiveInventory("BerettaAmmo", 1);
@@ -49,14 +50,17 @@ script 648 (int mode)
 
             if (check % 6 == 0)
             {
+                GiveInventory("QuakeShell", 1);
                 GiveInventory("Shell", 1);
                 GiveInventory("EtherealAmmo", 1);
 
+                GiveInventory("QuakeExplosive", 1);
                 GiveInventory("RocketAmmo", 1);
                 GiveInventory("ExplosiveAmmo", 1);
 
                 GiveInventory("BeamAmmo", 1);
                 GiveInventory("JSniperAmmo", 1);
+                GiveInventory("QuakeCell", 1);
             }
 
             if (check % 35 == 0)
@@ -92,6 +96,7 @@ script 648 (int mode)
 
 
             GiveInventory("Clip", 1);
+            GiveInventory("QuakeNails", 1);
             GiveInventory("Cell", 1);
 
             GiveInventory("BerettaAmmo", 1);
@@ -113,14 +118,17 @@ script 648 (int mode)
 
             if (check % 6 == 0)
             {
+                GiveInventory("QuakeShell", 1);
                 GiveInventory("Shell", 1);
                 GiveInventory("EtherealAmmo", 1);
 
+                GiveInventory("QuakeExplosive", 1);
                 GiveInventory("RocketAmmo", 1);
                 GiveInventory("ExplosiveAmmo", 1);
 
                 GiveInventory("BeamAmmo", 1);
                 GiveInventory("JSniperAmmo", 1);
+                GiveInventory("QuakeCell", 1);
             }
 
             if (check % 35 == 0)

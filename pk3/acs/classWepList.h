@@ -143,11 +143,11 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {" Quake SNG ",         "QuakeClass5Message", "QuakeNails", "None"},
         {" Quake SNG ",         "QuakeClass5Message", "QuakeNails", "None"},
 
-        {" Quake GL ",          "QuakeClass6Message", "QuakeExplosive", "None"},
-        {" Quake GL ",          "QuakeClass6Message", "QuakeExplosive", "None"},
+        {" Quake RL ",          "QuakeClass7Message", "QuakeExplosive", "None"},
+        {" Quake RL ",          "QuakeClass7Message", "QuakeExplosive", "None"},
 
-        {" Quake RL ",          "QuakeClass7Message", "QuakeExplosive", "None"},
-        {" Quake RL ",          "QuakeClass7Message", "QuakeExplosive", "None"},
+        {" Quake GL ",          "QuakeClass6Message", "QuakeExplosive", "None"},
+        {" Quake GL ",          "QuakeClass6Message", "QuakeExplosive", "None"},
 
         {" Quake LG ",          "QuakeClass8Message", "QuakeCell", "JKEMana"},
         {" Quake LG ",          "QuakeClass8Message", "QuakeCell", "None"},
