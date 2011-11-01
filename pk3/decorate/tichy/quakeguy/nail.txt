@@ -1,0 +1,32 @@
+actor QuakeNails: Ammo replaces Clip
+{
+    inventory.amount 25
+    inventory.maxamount 200
+    ammo.backpackamount 25
+    ammo.backpackmaxamount 300
+
+    inventory.pickupmessage "You got the nails"
+    inventory.icon "ABNLA0"
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        ASNL A -1 bright
+        stop
+    }
+}
+
+actor QuakeNailBox: QuakeNails replaces ClipBox
+{
+    inventory.pickupmessage "You got the nail pack"
+    inventory.amount 50
+
+    States
+    {
+      Spawn:
+        ABNL A -1 bright
+        stop
+    }
+}

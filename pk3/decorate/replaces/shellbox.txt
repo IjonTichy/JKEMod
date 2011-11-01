@@ -11,6 +11,7 @@ actor JKEShellBox: CustomInventory replaces ShellBox
       Pickup:
         TNT1 A 0 A_GiveInventory("Shell", 20)
         TNT1 A 0 A_GiveInventory("EtherealAmmo", 20)
+        TNT1 A 0 A_GiveInventory("QuakeShell", 40)
         stop
     }
 }

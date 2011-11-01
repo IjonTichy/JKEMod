@@ -1,0 +1,15 @@
+#include "decorate/tichy/quakeguy/fist.txt"
+#include "decorate/tichy/quakeguy/sg.txt"
+#include "decorate/tichy/quakeguy/ssg.txt"
+#include "decorate/tichy/quakeguy/ng.txt"
+#include "decorate/tichy/quakeguy/sng.txt"
+#include "decorate/tichy/quakeguy/gl.txt"
+#include "decorate/tichy/quakeguy/rl.txt"
+#include "decorate/tichy/quakeguy/lg.txt"
+
+#include "decorate/tichy/quakeguy/shell.txt"
+#include "decorate/tichy/quakeguy/nail.txt"
+#include "decorate/tichy/quakeguy/rocket.txt"
+#include "decorate/tichy/quakeguy/cell.txt"
+
+#include "decorate/tichy/quakeguy/quakeguy.txt"

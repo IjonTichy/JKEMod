@@ -12,6 +12,7 @@ addslotdefault 1 " L-Ripper "
 addslotdefault 1 " Medispenser "  // yeah, it really doesn't fall into any of them
 addslotdefault 1 " Mighty Fist "
 addslotdefault 1 " J-Fists "
+addslotdefault 1 " Quake Fist "
 
 ////
 //   SLOT 2 - PISTOL CLASS
@@ -20,6 +21,7 @@ addslotdefault 1 " J-Fists "
 addslotdefault 2 " Dual Berettas "
 addslotdefault 2 " L-Dual Pistols "
 addslotdefault 2 " S-Enforcer "
+addslotdefault 1 " Quake SG "
 addslotdefault 2 " J-Pistol "
 addslotdefault 2 " B-Pistol "
 addslotdefault 2 " Sapphire Wand "
@@ -35,6 +37,7 @@ addslotdefault 3 " Hand Shotgun "
 addslotdefault 3 " J-Shotgun "
 addslotdefault 3 " B-Shotgun "
 addslotdefault 3 " L-Striker "
+addslotdefault 3 " Quake SSG "
 
 ////
 //   SLOT 3.5 - SSG  CLASS
@@ -56,6 +59,7 @@ addslotdefault 4 " M249 Machine Gun "
 addslotdefault 4 " L-Spitfirer "
 addslotdefault 4 " J-Uzi "
 addslotdefault 4 " Tri-Staff "
+addslotdefault 4 " Quake NG "
 
 ////
 //   SLOT 4.5 - MINIGUN CLASS
@@ -78,6 +82,7 @@ addslotdefault 5 " Fragment Launcher "
 addslotdefault 5 " L-Multigun "
 addslotdefault 5 " B-Rocket Launcher "
 addslotdefault 5 " J-Rocket Launcher "
+addslotdefault 5 " Quake SNG "
 
 
 ////
@@ -96,6 +101,7 @@ addslotdefault 6 " B-Plasma Rifle "
 addslotdefault 6 " J-Plasma Rifle "
 addslotdefault 6 " Volt Gun "
 addslotdefault 6 " Wand of Flames "
+addslotdefault 6 " Quake GL "
 
 
 ////
@@ -111,6 +117,7 @@ addslotdefault 7 " Protoss-Ploder "
 addslotdefault 7 " Pyro Cannon "
 addslotdefault 7 " Rail Repeater "
 addslotdefault 7 " Y23H "
+addslotdefault 7 " Quake RL "
 
 
 ////
@@ -124,6 +131,7 @@ addslotdefault 8 " Ghetto Blaster "
 addslotdefault 8 " Powerful "
 addslotdefault 8 " Skeleton Orb "
 addslotdefault 8 " Super Shotnuke "
+addslotdefault 8 " Quake LG "
 
 ////
 //   SLOT 0 - SNIPER CLASS

@@ -1,0 +1,39 @@
+actor QuakeClass1Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_QUAKE_CLASS1"
+}
+
+actor QuakeClass2Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_QUAKE_CLASS2"
+}
+
+actor QuakeClass3Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_QUAKE_CLASS3"
+}
+
+actor QuakeClass4Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_QUAKE_CLASS4"
+}
+
+actor QuakeClass5Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_QUAKE_CLASS5"
+}
+
+actor QuakeClass6Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_QUAKE_CLASS6"
+}
+
+actor QuakeClass7Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_QUAKE_CLASS7"
+}
+
+actor QuakeClass8Message: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_QUAKE_CLASS8"
+}

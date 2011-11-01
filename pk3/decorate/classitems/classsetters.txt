@@ -62,3 +62,13 @@ actor SorcererClassItem:    JKEClassItem
         stop
     }
 }
+
+actor QuakeClassItem:       JKEClassItem
+{
+    States
+    {
+      Pickup:
+        TNT1 A 0 ACS_ExecuteAlways(682, 0, 6,0,0)
+        stop
+    }
+}

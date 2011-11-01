@@ -13,6 +13,7 @@ actor JKECell: CustomInventory replaces Cell
         TNT1 A 0 A_GiveInventory("BeamAmmo", 7)
         TNT1 A 0 A_GiveInventory("JKEGas", 20)
         TNT1 A 0 A_GiveInventory("FlameAmmo", 30)
+        TNT1 A 0 A_GiveInventory("QuakeCell", 6)
         stop
     }
 }
