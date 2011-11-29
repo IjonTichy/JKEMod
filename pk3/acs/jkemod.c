@@ -8,6 +8,11 @@ int multigunStrings[3] = {
     "Ice shards",
     "Flame grenades"};
 
+script 872 (int num) // generic number printer
+{
+    PrintBold(d:num);
+}
+
 script 873 (int which, int arg1, int arg2)  // get inventory
 {
     switch (which)
@@ -67,12 +72,14 @@ script 877 (int arg, int which)
         case 2:
             SetActorProperty(0, APROP_RenderStyle, STYLE_None);
             SetActorProperty(0, APROP_NoTarget, 1);
+            GiveInventory("InvisOn", 1);
             SetPlayerProperty(0, 1, 1);
             break;
 
         case 3:
             SetActorProperty(0, APROP_RenderStyle, STYLE_Normal);
             SetActorProperty(0, APROP_NoTarget, 0);
+            GiveInventory("InvisOff", 1);
             SetPlayerProperty(0, 0, 1);
             break;
 

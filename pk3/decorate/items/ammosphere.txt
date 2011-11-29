@@ -15,12 +15,10 @@ actor AmmoIndicator2: PowerProtection
 actor AmmosphereLock: Inventory
 {
     +UNDROPPABLE
+    +INTERHUBSTRIP
 }
 
-actor AmmosphereLock2: Inventory
-{
-    +UNDROPPABLE
-}
+actor AmmosphereLock2: AmmosphereLock {}
 
 
 

@@ -26,6 +26,10 @@ actor JKEComboAmmo: CustomInventory replaces MaceAmmo
         TNT1 A 0 A_GiveInventory("FireAmmo", 10)
         TNT1 A 0 A_GiveInventory("Shell", 4)
         TNT1 A 0 A_GiveInventory("EtherealAmmo", 5)
+        TNT1 A 0 A_GiveInventory("QuakeShell", 20)
+        TNT1 A 0 A_GiveInventory("QuakeNails", 15)
+        TNT1 A 0 A_GiveInventory("QuakeExplosive", 5)
+        TNT1 A 0 A_GiveInventory("QuakeCell", 6)
         TNT1 A 0 A_Jump(12, "Gravity")
         stop
 
@@ -63,6 +67,10 @@ actor JKEComboHefty: CustomInventory replaces MaceHefty
         TNT1 A 0 A_GiveInventory("FireAmmo", 50)
         TNT1 A 0 A_GiveInventory("Shell", 20)
         TNT1 A 0 A_GiveInventory("EtherealAmmo", 25)
+        TNT1 A 0 A_GiveInventory("QuakeShell", 40)
+        TNT1 A 0 A_GiveInventory("QuakeNails", 30)
+        TNT1 A 0 A_GiveInventory("QuakeExplosive", 10)
+        TNT1 A 0 A_GiveInventory("QuakeCell", 12)
         TNT1 A 0 A_Jump(60, "Gravity")
         stop
 

@@ -1,2 +1,3 @@
 #include "decorate/items/ammosphere.txt"
 #include "decorate/items/powersphere.txt"
+#include "decorate/items/invisitems.txt"

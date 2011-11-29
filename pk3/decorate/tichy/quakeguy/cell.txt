@@ -1,0 +1,32 @@
+actor QuakeCell: Ammo replaces Cell
+{
+    inventory.amount 6
+    inventory.maxamount 100
+    ammo.backpackamount 6
+    ammo.backpackmaxamount 200
+
+    inventory.pickupmessage "You got the cells"
+    inventory.icon "ABCLA0"
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        ASCL A -1 bright
+        stop
+    }
+}
+
+actor QuakeCellPack: QuakeCell replaces CellPack
+{
+    inventory.pickupmessage "You got the cell pack"
+    inventory.amount 12
+
+    States
+    {
+      Spawn:
+        ABCL A -1 bright
+        stop
+    }
+}

@@ -10,3 +10,8 @@ loopstuff
 berserker
 powerfade
 chaingunRecoil
+
+
+// Quakeguy ACS
+
+instantswitch

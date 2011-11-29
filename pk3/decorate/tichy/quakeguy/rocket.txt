@@ -1,0 +1,32 @@
+actor QuakeExplosive: Ammo replaces RocketAmmo
+{
+    inventory.amount 5
+    inventory.maxamount 100
+    ammo.backpackamount 5
+    ammo.backpackmaxamount 100
+
+    inventory.pickupmessage "You got the rockets"
+    inventory.icon "ABRKA0"
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        ASRK A -1 bright
+        stop
+    }
+}
+
+actor QuakeExplosiveBox: QuakeExplosive replaces RocketBox
+{
+    inventory.pickupmessage "You got the rocket pack"
+    inventory.amount 10
+
+    States
+    {
+      Spawn:
+        ABRK A -1 bright
+        stop
+    }
+}

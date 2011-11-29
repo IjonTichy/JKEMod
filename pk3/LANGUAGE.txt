@@ -61,6 +61,15 @@ JKE_PK_SORCERER_CLASS6              = "Fire is good for you shut up!";
 JKE_PK_SORCERER_CLASS7              = "Your obsession with fire has been reaffirmed.";
 JKE_PK_SORCERER_CLASS8              = "This must be the powersphere's skull's arm.";
 
+JKE_PK_QUAKE_CLASS1                 = "You got your own fist";
+JKE_PK_QUAKE_CLASS2                 = "You got the shotgun";
+JKE_PK_QUAKE_CLASS3                 = "You got the nailgun";
+JKE_PK_QUAKE_CLASS4                 = "You got the super shotgun";
+JKE_PK_QUAKE_CLASS5                 = "You got the super nailgun";
+JKE_PK_QUAKE_CLASS6                 = "You got the grenade launcher";
+JKE_PK_QUAKE_CLASS7                 = "You got the rocket launcher";
+JKE_PK_QUAKE_CLASS8                 = "You got the thunderbolt";
+
 
 
 //// Pickups

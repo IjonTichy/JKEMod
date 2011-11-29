@@ -12,3 +12,4 @@
 #include "decorate/classitems/jkeguymessages.txt"
 #include "decorate/classitems/leandromessages.txt"
 #include "decorate/classitems/sorcerermessages.txt"
+#include "decorate/classitems/quakemessages.txt"

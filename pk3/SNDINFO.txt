@@ -531,7 +531,9 @@ jkemod/protossploder/explode            sounds/weapons/protossploder/explode.wav
 ////
 
 jkemod/powerful/fire                    sounds/weapons/powerful/fire.wav
-$alias jkemod/powerful/explode          jkemod/assorted/explosion4
+jkemod/powerful/explode                 sounds/weapons/supershotnuke/fire.wav
+
+$rolloff jkemod/powerful/explode        1024 8192
 
 
 ////

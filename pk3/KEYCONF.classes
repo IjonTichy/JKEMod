@@ -4,3 +4,4 @@ addplayerclass StrifeMarine
 addplayerclass JKEPlayer
 addplayerclass LeandroPlayer
 addplayerclass SorcPlayer
+addplayerclass QuakePlayer

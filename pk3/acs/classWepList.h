@@ -1,13 +1,6 @@
-#define CLASSCOUNT 5
+#define CLASSCOUNT 6
 #define SLOTCOUNT  16
 #define WEPCOUNT 1
-
-int classItems[CLASSCOUNT] =
-{
-    "BDWClassItem",
-    "SMClassItem",
-    "JKEGuyClassItem"
-};
 
 int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
 {
@@ -136,5 +129,30 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
 
         {" Skeleton Orb ",      "SorcererClass8Message", "JKEMana", "None"},
         {"None",                "None",                  "None", "None"},
-    }
+    },
+    {
+        {" Quake Fist ",        "QuakeClass1Message", "None", "None"},
+        {"None",                "None",               "None", "None"},
+
+        {" Quake SG ",          "QuakeClass2Message", "QuakeShell", "None"},
+        {" Quake SG ",          "QuakeClass2Message", "QuakeShell", "None"},
+
+        {" Quake SSG ",         "QuakeClass4Message", "QuakeShell", "None"},
+        {" Quake NG ",          "QuakeClass3Message", "QuakeNails", "None"},
+
+        {" Quake SNG ",         "QuakeClass5Message", "QuakeNails", "None"},
+        {" Quake SNG ",         "QuakeClass5Message", "QuakeNails", "None"},
+
+        {" Quake RL ",          "QuakeClass7Message", "QuakeExplosive", "None"},
+        {" Quake RL ",          "QuakeClass7Message", "QuakeExplosive", "None"},
+
+        {" Quake GL ",          "QuakeClass6Message", "QuakeExplosive", "None"},
+        {" Quake GL ",          "QuakeClass6Message", "QuakeExplosive", "None"},
+
+        {" Quake LG ",          "QuakeClass8Message", "QuakeCell", "JKEMana"},
+        {" Quake LG ",          "QuakeClass8Message", "QuakeCell", "None"},
+
+        {"None",                "None",               "None", "None"},
+        {"None",                "None",               "None", "None"},
+    },
 };

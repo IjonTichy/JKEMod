@@ -1,0 +1,32 @@
+actor QuakeShell: Ammo replaces Shell
+{
+    inventory.amount 20
+    inventory.maxamount 100
+    ammo.backpackamount 20
+    ammo.backpackmaxamount 150
+
+    inventory.pickupmessage "You got the shells"
+    inventory.icon "ABSHA0"
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        ASSH A -1 bright
+        stop
+    }
+}
+
+actor QuakeShellBox: QuakeShell replaces ShellBox
+{
+    inventory.pickupmessage "You got the shell pack"
+    inventory.amount 40
+
+    States
+    {
+      Spawn:
+        ABSH A -1 bright
+        stop
+    }
+}
