@@ -17,7 +17,7 @@ script 682 (int which)
 
     if (GetCVar("sv_cheats") == 1)
     {
-        Print(s:"Use \"puke -878\" to get all your class' weapons\n(only when sv_cheats is 1)");
+        Print(s:"Use \"puke -689\" to get all your class' weapons\n(only when sv_cheats is 1)");
     }
 }
 
@@ -181,8 +181,13 @@ script 683 (int slot, int dropped)
     SetResultValue(ret);
 }
 
+script 684 (void)
+{
+    SetResultValue(GetActorProperty(0, APROP_DROPPED) );
+}
 
-script 878 (void)
+
+script 689 (void)
 {
     int i; int w;
 
@@ -225,7 +230,7 @@ script 878 (void)
         }
     }
 
-    PrintBold(n:0, s:"\c- is being a cheater by calling script 878!");
+    PrintBold(n:0, s:"\c- is being a cheater by calling script 689!");
 
     if (GetCVar("sv_cheats") == 0)
     {
