@@ -17,7 +17,31 @@ actor ExplosiveBulletPuff: BulletPuff
         goto Death
 
       Death:
-        MISL B 3 bright A_Explode(48,96, 0)
+        MISL B 3 bright A_Explode(48, 96, 0)
+        MISL C 6 bright
+        MISL D 4 bright
+        stop
+    }
+}
+
+actor ExplosiveBulletPuff32: ExplosiveBulletPuff
+{
+    States
+    {
+      Death:
+        MISL B 3 bright A_Explode(32, 96, 0)
+        MISL C 6 bright
+        MISL D 4 bright
+        stop
+    }
+}
+
+actor ExplosiveBulletPuff64: ExplosiveBulletPuff
+{
+    States
+    {
+      Death:
+        MISL B 3 bright A_Explode(64, 96, 0)
         MISL C 6 bright
         MISL D 4 bright
         stop

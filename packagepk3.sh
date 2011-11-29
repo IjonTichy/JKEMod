@@ -2,7 +2,7 @@
 
 BASEDIR=$(cd $(dirname $0) && pwd)
 FILENAME=$(basename $BASEDIR)
-TESTFLAGS="+map map01"
+TESTFLAGS="-iwad doom2 +map map01"
 
 function usage_and_exit
 {

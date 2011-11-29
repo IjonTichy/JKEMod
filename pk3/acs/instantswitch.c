@@ -12,6 +12,11 @@ function int sqrt(int number)
   return val;
 }
 
+function int percFloat(int intg, int frac)
+{
+    return (intg << 16) + ((frac << 16) / 100);
+}
+
 script 583 (int x, int y, int z)
 {
     SetResultValue(sqrt(x*x + y*y + z*z) );
@@ -30,11 +35,13 @@ script 584 (int take)
     }
 }
 
-script 585 (int div)
+script 585 (int divI, int divF)
 {
+    int div = percFloat(divI, divF);
+
     int x = GetActorVelX(0);
     int y = GetActorVelY(0);
     int z = GetActorVelZ(0);
 
-    SetActorVelocity(0, x / div, y / div, z / div, 0, 1);
+    SetActorVelocity(0, FixedDiv(x, div), FixedDiv(y, div), FixedDiv(z, div), 0, 1);
 }

@@ -84,7 +84,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {"None",                "None",                  "None", "None"},
         {" L-Ripper ",          "LeandroClass1Message",  "None", "None"},
 
-        {" L-Dual Pistols ",    "LeandroClass2Message",  "Clip", "None"},
+        {" Dual Berettas ",     "LeandroClass2Message",  "Clip", "None"},
         {"None",                "None",                  "None", "None"},
 
         {" L-Striker ",         "LeandroClass3Message",  "Shell", "None"},

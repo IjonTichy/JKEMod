@@ -25,9 +25,10 @@ actor LeandroPlayer: PlayerPawn
     Player.StartItem "LeandroClassItem"
 
     Player.StartItem " L-Ripper "
-    Player.StartItem " L-Dual Pistols "
+    Player.StartItem " Dual Berettas "
 
-    Player.StartItem "Clip",  50
+    Player.StartItem "BerettaCounter",  30
+    Player.StartItem "BerettaAmmo",  30
 
 
     States

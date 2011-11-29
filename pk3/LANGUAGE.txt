@@ -42,10 +42,10 @@ JKE_PK_JKEGUY_CLASS7                = "Now \caYOU\c- can fire giant-ass molecule
 JKE_PK_JKEGUY_CLASS8                = "This really \cais\c- a BFG.";
 
 JKE_PK_LEANDRO_CLASS1               = "\cgRIP AND TEAR\c-";
-JKE_PK_LEANDRO_CLASS2               = "You got two pistols.";
+JKE_PK_LEANDRO_CLASS2               = "Glocks are still cooler.";
 JKE_PK_LEANDRO_CLASS3               = "Feed a belt into this thing and it's a machine shotgun.";
 JKE_PK_LEANDRO_CLASS3_2             = "Easier than buying salsa dip!";
-JKE_PK_LEANDRO_CLASS4               = "Yes, you needed an early grenade launcher.";
+JKE_PK_LEANDRO_CLASS4               = "This thing fires bullets?";
 JKE_PK_LEANDRO_CLASS4_2             = "Who wants beef?";
 JKE_PK_LEANDRO_CLASS5               = "It's not quite a rocket launcher...";
 JKE_PK_LEANDRO_CLASS6               = "Plasma-sniper-thingy goooo!";
