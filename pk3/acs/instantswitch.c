@@ -14,7 +14,7 @@ function int sqrt(int number)
 
 script 583 (int x, int y, int z)
 {
-    SetResultValue(sqrt(x*X + y*y + z*z) );
+    SetResultValue(sqrt(x*x + y*y + z*z) );
 }
 
 script 584 (int take)
@@ -28,4 +28,13 @@ script 584 (int take)
     {
         TakeInventory("QuakeCell", ret);
     }
+}
+
+script 585 (int div)
+{
+    int x = GetActorVelX(0);
+    int y = GetActorVelY(0);
+    int z = GetActorVelZ(0);
+
+    SetActorVelocity(0, x / div, y / div, z / div, 0, 1);
 }

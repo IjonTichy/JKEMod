@@ -1,16 +1,14 @@
 lol = """\
-        BFE1 B 0 A_CustomMissile("RipperMoleculeDebris",    0, 0, {},{} CMF_AIMDIRECTION|CMF_TRACKOWNER, 0)
-        BFE1 B 0 A_CustomMissile("ExplosiveMoleculeDebris", 0, 0, {},{} CMF_AIMDIRECTION|CMF_TRACKOWNER, 0)
+        TNT1 A 1 A_Explode({}, {})
 """
 
 lolFile = open("tmp.txt", "w")
 
+lolRate1 = int(8192 / (35 * 5) )
+lolRate2 = int(512 / (35 * 5) )
 
-for i in range(0, 360, 10):
-
-    len1 = " " * (3-len(str(i  ) ) )
-    len2 = " " * (3-len(str(i+5) ) )
-
-    lolFile.write(lol.format(i, len1, i+5, len2) )
+for i in range(0, 35*5):
+    lolWrite = lol.format(8192 - (i * lolRate1), 2048 - (i * lolRate2) )
+    lolFile.write(lolWrite)
 
 lolFile.close()
