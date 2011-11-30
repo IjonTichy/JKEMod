@@ -1,9 +1,9 @@
-
 actor " L-Ripper ": Weapon
 {
     +WEAPON.MELEEWEAPON
-
     Weapon.SelectionOrder 1500
+
+    Weapon.SisterWeapon " Power L-Ripper "
 
     AttackSound "jkemod/jripper/hit"
 
@@ -42,6 +42,41 @@ actor " L-Ripper ": Weapon
         S2WG A 3
         S2WG B 4
         S2WG A 5
+        goto Ready
+
+      Hold:
+        S2WG A 0 A_PlaySound("jkemod/jripper/up", CHAN_WEAPON)
+        goto Fire2
+
+      Spawn:
+        S2WG Z -1
+        stop
+    }
+}
+
+
+actor " Power L-Ripper ": " L-Ripper "
+{
+    Weapon.SisterWeapon " L-Ripper "
+    +POWERED_UP
+
+    Inventory.PickupMessage "$JKE_PK_JRIPPER"
+    Obituary "$JKE_MP_JRIPPER"
+
+    States
+    {
+      Fire:
+        S2WG A 4
+        S2WG B 2
+        S2WG A 0 A_PlaySound("jkemod/jripper/up", CHAN_WEAPON)
+        goto Fire2
+
+      Fire2:
+        S2WG AB 1 A_CustomPunch(random(5, 10), 1, 0, "Bulletpuff", 0)
+        S2WG A 0 A_ReFire
+        S2WG A 0 A_PlaySound("jkemod/jripper/down", CHAN_WEAPON)
+        S2WG A 2
+        S2WG B 6
         goto Ready
 
       Hold:
