@@ -115,7 +115,7 @@ actor " Power L-Striker ": " L-Striker "
 
         STKK A 0 A_FireCustomMissile("ShellCasing", -48, 0, 3, 6)
         STKK A 0 A_PlaySound("jkemod/striker/fire", CHAN_WEAPON)
-        STKK A 0 A_FireBullets(3, 3, 10, 5, "Bulletpuff")
+        STKK A 0 A_FireBullets(3, 3, 15, 7, "Bulletpuff")
         STKF AB 2 bright A_Light1
         STKK A 2 A_Light0
         goto Ready
