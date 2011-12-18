@@ -121,7 +121,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {" Black Magic ",       "SorcererClass5Message", "JKEMana", "None"},
         {"None",                "None",                  "None", "None"},
 
-        {" Wand of Flames ",    "SorcererClass6Message", "JKEMana", "None"},
+        {" Wand of Flames ",    "SorcererClass6Message", "FlameAmmo", "None"},
         {"None",                "None",                  "None", "None"},
 
         {" Fire Gloves ",       "SorcererClass7Message", "FireAmmo", "JKEMana"},
