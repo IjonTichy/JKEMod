@@ -59,7 +59,6 @@ actor " J-Super Shotgun ": Weapon
 
 actor " Power J-Super Shotgun ": " J-Super Shotgun "
 {
-    Weapon.AmmoUse1 4
     Weapon.AmmoGive 0
 
     Decal BulletScorch

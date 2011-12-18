@@ -254,9 +254,7 @@ actor FragmentShell
         goto FragShellEnd
 
       FragShellEnd:
-        BNG4 A 0 A_ChangeFlag("NOGRAVITY", 0)
-        BNG4 A 0 A_Stop
-        BNG4 ABCDEFGHIJKLM 3 bright
+        BNG4 A 0 A_SpawnItemEx("JKEModExplosion")
         stop
     }
 }

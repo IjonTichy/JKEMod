@@ -117,7 +117,7 @@ actor " Tri-Staff ": Weapon
 
 actor " Power Tri-Staff ": " Tri-Staff "
 {
-    Weapon.AmmoUse1 4
+    Weapon.AmmoUse1 2
     Weapon.AmmoUse2 0
     Weapon.AmmoGive1 0
 

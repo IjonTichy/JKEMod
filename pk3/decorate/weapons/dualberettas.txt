@@ -146,6 +146,8 @@ actor " Power Dual Berettas ": " Dual Berettas "
     Weapon.SisterWeapon " Dual Berettas "
     +POWERED_UP
 
+    Decal BulletScorch
+
     Obituary "$JKE_MP_DUALBERETTAS_POWER"
 
     states

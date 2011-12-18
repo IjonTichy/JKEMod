@@ -1,0 +1,14 @@
+actor JKEModExplosion
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+
+    States
+    {
+      Spawn:
+        BNG4 A 0 bright
+        BNG4 A 0 bright A_PlaySound("jkemod/assorted/explode")
+        BNG4 BCDEFGHIJKLM 3 bright
+        stop
+    }
+}

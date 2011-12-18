@@ -1,4 +1,25 @@
-actor JKEClip: CustomInventory replaces Clip
+actor JKEClipPickup: JKEClassPickupSpawner replaces Clip
+{
+    +NOINTERACTION
+
+    States
+    {
+        Spawn:
+          TNT1 A 0
+          TNT1 A 0 A_JumpIf(ACS_ExecuteWithResult(684) == 1, "DropSpawn")
+          goto NormSpawn
+
+        DropSpawn:
+          TNT1 A 0 A_SpawnItemEx("JKEClipSmall", 0, 0, 0, momx, momy, momz)
+          stop
+
+        NormSpawn:
+          TNT1 A 0 A_SpawnItemEx("JKEClip", 0, 0, 0, momx, momy, momz)
+          stop
+    }
+}
+
+actor JKEClip: CustomInventory
 {
     Inventory.PickupMessage "$JKE_PK_JKECLIP"
 
@@ -16,6 +37,28 @@ actor JKEClip: CustomInventory replaces Clip
         TNT1 A 0 A_GiveInventory("M249Ammo", 10)
         TNT1 A 0 A_GiveInventory("MinigunAmmo", 10)
         TNT1 A 0 A_GiveInventory("QuakeNails", 15)
+        stop
+    }
+}
+
+actor JKEClipSmall: CustomInventory
+{
+    Inventory.PickupMessage "$JKE_PK_JKECLIP"
+
+    States
+    {
+      Spawn:
+        CLIP A -1
+        stop
+
+      Pickup:
+        TNT1 A 0 A_GiveInventory("Clip", 5)
+        TNT1 A 0 A_GiveInventory("JKEMana", 8)
+        TNT1 A 0 A_GiveInventory("BerettaAmmo", 8)
+        TNT1 A 0 A_GiveInventory("JSniperAmmo", 2)
+        TNT1 A 0 A_GiveInventory("M249Ammo", 5)
+        TNT1 A 0 A_GiveInventory("MinigunAmmo", 5)
+        TNT1 A 0 A_GiveInventory("QuakeNails", 8)
         stop
     }
 }
