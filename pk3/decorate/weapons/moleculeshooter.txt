@@ -52,7 +52,7 @@ actor " Molecule Shooter ": Weapon
 
 actor " Power Molecule Shooter ": " Molecule Shooter "
 {
-    Weapon.AmmoUse1  80
+    Weapon.AmmoUse1  100
     Weapon.AmmoGive1 0
 
     Weapon.SisterWeapon " Molecule Shooter "

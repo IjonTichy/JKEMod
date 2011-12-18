@@ -489,13 +489,11 @@ jkemod/multigun/load                    sounds/weapons/multigun/load.lmp
 jkemod/multigun/switch                  sounds/weapons/multigun/mswitch.wav  // Heretic has a sound named "switch"
 
 $alias jkemod/multigun/rocketfire       jkemod/jrocketlauncher/fire
-$alias jkemod/multigun/rocketexplode    jkemod/assorted/explode
 
 jkemod/multigun/icefire                 sounds/weapons/multigun/icefire.wav
 jkemod/multigun/iceexplode              sounds/weapons/multigun/iceexplode.wav
 
 $alias jkemod/multigun/flamefire        jkemod/fragmentlauncher/fire
-$alias jkemod/multigun/flameexplode     jkemod/assorted/explode
 $alias jkemod/multigun/flame            vile/firecrkl
 
 $limit jkemod/multigun/flame            0

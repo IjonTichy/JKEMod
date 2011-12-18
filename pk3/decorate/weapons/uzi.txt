@@ -64,8 +64,6 @@ actor " J-Uzi ": Weapon
 
 actor " Power J-Uzi ": " J-Uzi "
 {
-    Weapon.AmmoUse1 2
-    Weapon.AmmoUse2 2
     Weapon.AmmoGive1 0
 
     Weapon.SisterWeapon " J-Uzi "

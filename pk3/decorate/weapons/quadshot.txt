@@ -127,6 +127,8 @@ actor QuadshotFire
     RenderStyle Add
     Scale 0.3
 
+    Decal BulletScorch
+
     SeeSound "jkemod/jflamethrower/flame"
 
     Obituary "$JKE_MP_QUADSHOT_POWER"

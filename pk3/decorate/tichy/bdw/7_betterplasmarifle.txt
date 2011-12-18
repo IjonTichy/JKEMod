@@ -16,7 +16,7 @@ ACTOR " B-Plasma Rifle ": DoomWeapon
     Weapon.SelectionOrder 100
 
     Weapon.AmmoUse1  1
-    Weapon.AmmoUse2  4
+    Weapon.AmmoUse2  3
     Weapon.AmmoGive1   40
     Weapon.AmmoType1     "Cell"
     Weapon.AmmoType2     "Cell"
@@ -87,8 +87,8 @@ actor " Power B-Plasma Rifle ": " B-Plasma Rifle "
 {
     Weapon.SelectionOrder 100
 
-    Weapon.AmmoUse1  2
-    Weapon.AmmoUse2  16
+    Weapon.AmmoUse1  1
+    Weapon.AmmoUse2  6
     Weapon.AmmoGive1 0
 
     +POWERED_UP

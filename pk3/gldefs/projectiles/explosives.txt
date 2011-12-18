@@ -3,23 +3,9 @@
 object MultigunRocket
 {
     frame MGMS  { light MultigunRocket1 }
-
-    frame BNG4A { light ExplosiveGlow13 }
-    frame BNG4B { light ExplosiveGlow12 }
-    frame BNG4C { light ExplosiveGlow11 }
-    frame BNG4D { light ExplosiveGlow10 }
-    frame BNG4E { light ExplosiveGlow9 }
-    frame BNG4F { light ExplosiveGlow8 }
-    frame BNG4G { light ExplosiveGlow7 }
-    frame BNG4H { light ExplosiveGlow6 }
-    frame BNG4I { light ExplosiveGlow5 }
-    frame BNG4J { light ExplosiveGlow4 }
-    frame BNG4K { light ExplosiveGlow3 }
-    frame BNG4L { light ExplosiveGlow2 }
-    frame BNG4M { light ExplosiveGlow1 }
 }
 
-object MultigunFlameGrenade
+object JKEModExplosion
 {
     frame BNG4A { light ExplosiveGlow13 }
     frame BNG4B { light ExplosiveGlow12 }
@@ -35,38 +21,3 @@ object MultigunFlameGrenade
     frame BNG4L { light ExplosiveGlow2 }
     frame BNG4M { light ExplosiveGlow1 }
 }
-
-object FragmentShell
-{
-    frame BNG4A { light ExplosiveGlow13 }
-    frame BNG4B { light ExplosiveGlow12 }
-    frame BNG4C { light ExplosiveGlow11 }
-    frame BNG4D { light ExplosiveGlow10 }
-    frame BNG4E { light ExplosiveGlow9 }
-    frame BNG4F { light ExplosiveGlow8 }
-    frame BNG4G { light ExplosiveGlow7 }
-    frame BNG4H { light ExplosiveGlow6 }
-    frame BNG4I { light ExplosiveGlow5 }
-    frame BNG4J { light ExplosiveGlow4 }
-    frame BNG4K { light ExplosiveGlow3 }
-    frame BNG4L { light ExplosiveGlow2 }
-    frame BNG4M { light ExplosiveGlow1 }
-}
-
-object SpitfirerGrenade
-{
-    frame BNG4A { light ExplosiveGlow13 }
-    frame BNG4B { light ExplosiveGlow12 }
-    frame BNG4C { light ExplosiveGlow11 }
-    frame BNG4D { light ExplosiveGlow10 }
-    frame BNG4E { light ExplosiveGlow9 }
-    frame BNG4F { light ExplosiveGlow8 }
-    frame BNG4G { light ExplosiveGlow7 }
-    frame BNG4H { light ExplosiveGlow6 }
-    frame BNG4I { light ExplosiveGlow5 }
-    frame BNG4J { light ExplosiveGlow4 }
-    frame BNG4K { light ExplosiveGlow3 }
-    frame BNG4L { light ExplosiveGlow2 }
-    frame BNG4M { light ExplosiveGlow1 }
-}
-

@@ -64,14 +64,10 @@ actor " Sapphire Wand ": Weapon
 
 actor " Power Sapphire Wand ": " Sapphire Wand "
 {
-    Weapon.AmmoUse1 4
-    Weapon.AmmoUse2 4
     Weapon.AmmoGive1 0
 
     Weapon.SisterWeapon " Sapphire Wand "
     +POWERED_UP
-
-    Decal RailScorchLower
 
     States
     {

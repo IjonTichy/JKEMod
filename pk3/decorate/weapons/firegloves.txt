@@ -389,8 +389,6 @@ actor FireGloveFireballSmall
 
 actor " Power Fire Gloves ": " Fire Gloves "
 {
-    Weapon.AmmoUse1 5
-    Weapon.AmmoUse2 10
     Weapon.AmmoGive1 0
     Weapon.AmmoGive2 0
 

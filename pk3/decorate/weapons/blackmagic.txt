@@ -455,18 +455,10 @@ actor BlackMagicAltTrail
 
 actor " Power Black Magic ": " Black Magic "
 {
-    Weapon.AmmoType1 "JKEMana"
-    Weapon.AmmoType2 "JKEMana"
-    Weapon.AmmoUse1 40
-    Weapon.AmmoUse2 200
     Weapon.AmmoGive1 0
 
     Weapon.SisterWeapon " Black Magic "
     +POWERED_UP
-
-    Weapon.SelectionOrder 910
-
-    Inventory.PickupMessage "$JKE_PK_BLACKMAGIC"
 
     Obituary "$JKE_MP_BLACKMAGIC_POWER_MELEE"
 
