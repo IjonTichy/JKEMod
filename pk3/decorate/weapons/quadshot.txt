@@ -59,16 +59,16 @@ actor " L-Quadshot ": Weapon
         goto NoLoad
 
         QSHT A 0 A_PlaySound("jkemod/quadshot/load", CHAN_WEAPON)
-        QSHT DE 4
+        QSHT DE 4 A_WeaponReady(4)
         QSHT A 0 A_GiveInventory("QuadShotCounter", 1)
         QSHT A 0 A_TakeInventory("Shell", 4)
-        QSHT A 8
+        QSHT AAAAAAAA 1 A_WeaponReady(12)
         goto Ready
 
       NoLoad:
         QSHT A 1
+        QSHT A 1 A_WeaponReady
         goto Ready
-
 
       Spawn:
         QSHT Z -1
