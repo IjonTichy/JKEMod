@@ -51,11 +51,11 @@ actor " L-Striker ": Weapon
         goto NoReload
 
       ReloadStart:
-        STKK B 3
-        STKR A 10
+        STKK B 3 A_WeaponReady(14)
+        STKR A 10 A_WeaponReady(14)
         STKR B 0 A_PlaySound("jkemod/striker/out", CHAN_WEAPON)
-        STKR B 3
-        STKR CDEFGHIIIII 2
+        STKR B 3 A_WeaponReady(14)
+        STKR CCCDDDDEEEFFGHIIIIIIIII 1 A_WeaponReady(14)
         goto ReloadLoop
 
       ReloadLoop:
@@ -66,17 +66,20 @@ actor " L-Striker ": Weapon
         goto ReloadEnd
 
       ReloadEnd:
-        STKR IIIIIHGFEDC 2
+        STKR IIIIIIIIIIIHGED 1 A_WeaponReady(14)
+        STKR C 1 offset(0, 28) A_WeaponReady(14)
         STKR B 0 A_PlaySound("jkemod/striker/in", CHAN_WEAPON)
-        STKR B 3
+        STKR B 2 offset(0, 30) A_WeaponReady(14)
+        STKR B 1 offset(0, 39) A_WeaponReady(14)
+        STKR B 5 A_WeaponReady(14)
         STKR J 0 A_PlaySound("jkemod/striker/load", CHAN_WEAPON)
-        STKR JJJKKJJJ 2
-        STKK B 3
-        STKK A 4
+        STKR JJJKKJJJ 2 A_WeaponReady(14)
+        STKK B 3 A_WeaponReady(14)
+        STKK A 4 A_WeaponReady(14)
         goto Ready
 
       NoReload:
-        STKK A 1
+        STKK A 1 A_WeaponReady(14)
         STKK A 0 A_ReFire
         goto Ready
 

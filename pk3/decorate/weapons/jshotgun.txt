@@ -55,30 +55,32 @@ actor " J-Shotgun " : Weapon
         Goto NoReload
 
       ReloadStart:
-        DHSG F 3
-        DHSR G 8
+        DHSG F 3 A_WeaponReady(14)
+        DHSR G 8 A_WeaponReady(14)
         Goto ReloadLoop
 
       ReloadLoop:
-        DHSR A 3
-        DHSR B 2
-        DHSR C 2
-        DHSR D 2 A_PlaySound("jkemod/jshotgun/load", CHAN_WEAPON)
-        DHSR E 1
-        DHSR E 0
+        DHSR A 3 A_WeaponReady(14)
+        DHSR B 2 A_WeaponReady(14)
+        DHSR C 2 A_WeaponReady(14)
+        DHSR D 0 A_PlaySound("jkemod/jshotgun/load", CHAN_WEAPON)
+        DHSR D 2 A_WeaponReady(14)
+        DHSR E 1 A_WeaponReady(14)
         DHSR E 0 A_TakeInventory("Shell", 1)
         DHSR E 0 A_GiveInventory("JShellCounter", 1)
-        DHSR E 1
-        DHSR F 2 A_JumpIfInventory("MainFired", 1, "ReloadEnd")
-        DHSR G 3
+        DHSR E 1 A_WeaponReady(14)
+        DHSR F 0 A_JumpIfInventory("MainFired", 1, "ReloadEnd")
+        DHSR F 2 A_WeaponReady(14)
+        DHSR G 3 A_WeaponReady(14)
         DHSR G 0 A_JumpIfInventory("JShellCounter", 8, "ReloadEnd")
         DHSR G 0 A_JumpIfInventory("Shell", 1, "ReloadLoop")
         Goto ReloadEnd
 
       ReloadEnd:
-        DHSR H 5  A_PlaySound("jkemod/jshotgun/pump", CHAN_WEAPON)
-        DHSR G 8
-        DHSG F 3
+        DHSR H 0 A_PlaySound("jkemod/jshotgun/pump", CHAN_WEAPON)
+        DHSR H 5 A_WeaponReady(14)
+        DHSR G 8 A_WeaponReady(14)
+        DHSG F 3 A_WeaponReady(14)
         Goto Ready
 
       NoReload:
