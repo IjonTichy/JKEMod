@@ -10,11 +10,11 @@ actor JKEClassPickup: CustomInventory
         stop
 
       NoGone:
-        TNT1 A 1 A_FadeIn(0.0)
+        TNT1 A 1 A_SetBlend("0,0,0",0,0)
         fail
 
       Gone:
-        TNT1 A 1 A_FadeIn(0.0)
+        TNT1 A 1 A_SetBlend("0,0,0",0,0)
         stop
     }
 }
