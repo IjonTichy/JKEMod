@@ -45,6 +45,7 @@ actor " Dual Berettas ": Weapon
 
       Ready:
         BRT2 A 1 A_WeaponReady
+        BRT2 A 0 A_JumpIfInventory("ReloadButton", 1, "AltFire")
         loop
 
       Fire:
@@ -128,8 +129,8 @@ actor " Dual Berettas ": Weapon
         Goto Ready
 
       NoReload:
-        BRT2 A 1
-        BRT2 A 0 A_ReFire
+        BRT2 A 1 A_WeaponReady(14)
+        BRT2 A 0 A_WeaponReady
         goto Ready
 
       Spawn:

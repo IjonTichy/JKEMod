@@ -28,7 +28,7 @@ actor LeandroPlayer: PlayerPawn
     Player.StartItem " L-Ripper "
 
     Player.StartItem "BerettaCounter",  30
-    Player.StartItem "BerettaAmmo",  30
+    Player.StartItem "Clip",  30
 
 
     States

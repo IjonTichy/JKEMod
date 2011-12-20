@@ -14,7 +14,9 @@ PACKAGE_ACT = "package"
 
 USAGE = "usage: {} [{}] <args>".format(os.path.basename(sys.argv[0]), "|".join([MAKE_ACT, TEST_ACT, PACKAGE_ACT]))
 
-ACC_ERROR = "**** ERROR ****"
+ACS_EXTS    = ("c", "acs")
+ACC_ERROR   = "**** ERROR ****"
+
 DEFAULT_ARGS = ["-warp 01"]
 
 def warn(reason):
@@ -163,7 +165,7 @@ def makePK3(aArgs):
             
             sys.stdout.flush()
             
-            if file.rsplit(".", 1)[1] == "c":  # ACS
+            if file.rsplit(".", 1)[1] in ACS_EXTS:  # ACS
                 objFile = compileACS(file)
                 pk3Zip.write(objFile, objFile.lstrip("./"))
 
