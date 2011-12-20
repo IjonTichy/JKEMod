@@ -43,25 +43,27 @@ NO_VERSION  = 7
 
 PK3NAME     = os.path.basename(os.path.realpath("."))
 
-WAD_DIR = os.getenv("HOME") + "/.zdoom"
+WAD_DIR = os.environ["HOME"] + "/.zdoom"
 
 if not os.path.isdir(WAD_DIR):
     warn("{} does not exist - no pk3 auto-installation will be done".format(WAD_DIR))
     WAD_DIR = None
 
+zdoomExe = "zdoom" + (".exe" if sys.platform[:3] == "win" else "")
+skulltagExe = "skulltag" + (".exe" if sys.platform[:3] == "win" else "")
 
-if which.is_exe("zdoom"):
-    ZDOOM = os.path.realpath("zdoom")
+if which.is_exe(zdoomExe):
+    ZDOOM = os.path.realpath(zdoomExe)
 else:
-    ZDOOM = which.which("zdoom")
+    ZDOOM = which.which(zdoomExe)
 
     if ZDOOM is None:
         warn("no zdoom in PATH or PWD")
 
-if which.is_exe("skulltag"):
-    SKULLTAG = os.path.realpath("skulltag")
+if which.is_exe(skulltagExe):
+    SKULLTAG = os.path.realpath(skulltagExe)
 else:
-    SKULLTAG = which.which("skulltag")
+    SKULLTAG = which.which(skulltagExe)
 
     if SKULLTAG is None:
         warn("no skulltag in PATH or PWD")
@@ -133,7 +135,7 @@ def compileACS(file):
 
 def makePK3(aArgs):
     if not os.path.isdir("pk3"):
-        usageExit(NO_PK3, "no pk3/ directory")
+        errorExit(NO_PK3, "no pk3/ directory")
 
     pk3Walk = pathwalker.PathWalker('pk3')
     
@@ -174,7 +176,8 @@ def makePK3(aArgs):
         sys.exit(127)
 
     except RuntimeError as exc:
-        errorExit(1, exc.args[0])
+        print()
+        errorExit(1, "\n" + exc.args[0])
     
     pk3Zip.close()
     os.chdir(oldDir)

@@ -205,7 +205,7 @@ script 689 (void)
             w  = classWeps[plc][i][0];
             a1 = classWeps[plc][i][2];
             a2 = classWeps[plc][i][3];
-
+            
             if (w != "None")
             {
                 GiveInventory(w, 1);

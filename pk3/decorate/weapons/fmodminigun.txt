@@ -150,13 +150,7 @@ actor " Power L-Minigun ": " L-Minigun "
         D3CG A 0 Radius_Quake(2, 3, 0, 1, 0)
         D3CG A 0 A_GunFlash
 
-        // NOTE TO SELF: When at home, replace with Power Quadshot-style shots
-        D3CF A 0 A_FireCustomMissile("AssaultCasing", random(-400, -700)/10.0, 0, 3, 3)
-        D3CG A 1 bright A_FireBullets(5, 5, 3, 10, "BulletPuff")
-
-        D3CF A 0 A_FireCustomMissile("AssaultCasing", random(-400, -700)/10.0, 0, 3, 3)
-        D3CG B 1 bright A_FireBullets(5, 5, 3, 10, "BulletPuff")
-
+        D3CG AB 1 A_FireCustomMissile("LMinigunFire", random(-30, 30)/10.0, 1, 0, 0, 0, random(-30, 30)/10.0)
         D3CG A 0 A_JumpIfNoAmmo("Down")
         D3CG A 0 A_JumpIfInventory("AltFired", 1, 1)
         goto Down
@@ -201,3 +195,93 @@ actor " Power L-Minigun ": " L-Minigun "
     }
 }
 
+actor LMinigunFire
+{
+    Radius 14
+    Height 8
+    Speed 40
+
+    Projectile
+    Damage (2)
+    +NODAMAGETHRUST
+    +FORCERADIUSDMG
+
+    RenderStyle Add
+    Scale 0.3
+
+    Decal BulletScorch
+
+    SeeSound "jkemod/jflamethrower/flame"
+
+    Obituary "$JKE_MP_FMODMINIGUN_POWER"
+
+    States
+    {
+      Spawn:
+        SOD0 E 0 bright
+        SOD0 E 0 bright A_Explode(16, 64, 0)
+        SOD0 E 0 bright ACS_ExecuteAlways(585, 0, 1, random(0, 50))
+        SOD0 EF 2 A_Explode(8, 64, 0)
+        TNT1 A 0 A_SpawnItemEx("LMinigunFlame", 0,0,0, random(0,4), 0, random(0,3), random(0,359), 0, 128)
+        SOD0 GH 2 A_Explode(8, 64, 0)
+        TNT1 A 0 A_SpawnItemEx("LMinigunFlame", 0,0,0, random(0,4), 0, random(0,3), random(0,359), 0, 128)
+        SOD0 IJ 2 A_Explode(8, 64, 0)
+        TNT1 A 0 A_SpawnItemEx("LMinigunFlame", 0,0,0, random(0,4), 0, random(0,3), random(0,359), 0, 128)
+        SOD0 KL 2 A_Explode(8, 64, 0)
+        TNT1 A 0 A_SpawnItemEx("LMinigunFlame", 0,0,0, random(0,4), 0, random(0,3), random(0,359), 0, 128)
+        SOD0 MN 2 A_Explode(8, 64, 0)
+        TNT1 A 0 A_SpawnItemEx("LMinigunFlame", 0,0,0, random(0,4), 0, random(0,3), random(0,359), 0, 128)
+        SOD0 O 2 A_Explode(8, 64, 0)
+        goto NormDeath
+
+      Death:
+        TNT1 AAA 0 A_SpawnItemEx("LMinigunFlame", 0,0,0, random(0,4), 0, random(0,3), random(0,359), 0, 128)
+        SOD0 ACEGIKMO 1 A_Explode(8, 64, 0)
+        stop
+      
+      NormDeath:
+        TNT1 A 0 A_SpawnItemEx("LMinigunFlame", 0,0,0, random(0,4), 0, random(0,3), random(0,359), 0, 128)
+        stop
+    }
+}
+
+actor LMinigunFlame
+{
+    Speed 5
+
+    Projectile
+    -NOGRAVITY
+    +NOCLIP
+    +RIPPER
+    +NOEXPLODEFLOOR
+    +NODAMAGETHRUST
+    +FORCERADIUSDMG
+    +SLIDESONWALLS
+    +PUFFGETSOWNER
+
+    RenderStyle Add
+    Scale 0.4
+
+    Obituary "$JKE_MP_FMODMINIGUN_POWER"
+
+    States
+    {
+      Spawn:
+        FLME AB 2 bright A_Explode(4, 80, 0)
+        FLME A 0 A_ChangeFlag("NOCLIP", 0)
+        FLME CDEFGHIJKLMNABCDEFGHIJKLMN 2 bright A_Explode(4, 80, 0)
+        goto XDeath
+
+      Crash:
+      Death:
+        FLME A 0 A_Stop
+        goto Spawn
+
+      XDeath:
+        FLME A 0 A_Jump(128, "Spawn")
+        FLME O 2 bright A_Explode(6, 80, 0)
+        FLME P 2 bright A_Explode(4, 80, 0)
+        FLME Q 2 bright A_Explode(2, 80, 0)
+        stop
+    }
+}

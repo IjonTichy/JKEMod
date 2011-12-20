@@ -6,8 +6,9 @@ actor " S-Shotgun ": Weapon
     Weapon.AmmoType2 "Shell"
     Weapon.AmmoUse1 0
     Weapon.AmmoUse2 0
-    Weapon.AmmoGive2 8
-
+    Weapon.AmmoGive 2
+    Weapon.AmmoGive2 6
+    
     Weapon.SisterWeapon " Power S-Shotgun "
 
     Inventory.PickupMessage "$STRIFEMARINE_PK_DWEAPSHOTGUN"
@@ -173,6 +174,7 @@ actor " S-Shotgun ": Weapon
 
 actor " Power S-Shotgun ": " S-Shotgun "
 {
+    Weapon.AmmoGive1 0
     Weapon.AmmoGive2 0
 
     Weapon.SisterWeapon " S-Shotgun "
@@ -255,11 +257,11 @@ actor " Power S-Shotgun ": " S-Shotgun "
         goto Ready
 
       F:
-        HMSG A 0 A_GunFlash
-        HMSG A 0 A_AlertMonsters
-        HMSG A 0 A_TakeInventory("ShellsPumped", 2)
-        HMSG A 0 A_FireBullets(4, 4, 10, 6, "ExplosiveBulletPuff")
-        HMSG A 0 A_PlaySound("hexenmarine/shotfire", CHAN_WEAPON)
+        HMSG A  0 A_GunFlash
+        HMSG A  0 A_AlertMonsters
+        HMSG A  0 A_TakeInventory("ShellsPumped", 2)
+        HMSG A  0 A_FireBullets(4, 4, 10, 6, "ExplosiveBulletPuff")
+        HMSG A  0 A_PlaySound("hexenmarine/shotfire", CHAN_WEAPON)
         HMSG D  1 bright
         HMSG ED 2 bright
         HMSG CB 1 bright
