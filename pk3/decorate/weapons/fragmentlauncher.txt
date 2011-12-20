@@ -115,7 +115,7 @@ actor FragmentChunk
     +DOOMBOUNCE
     +DEHEXPLOSION
 
-    Decal RevenantScorch
+    Decal SmallScorch
 
     DeathSound "jkemod/fragmentlauncher/chunkexplode"
     Obituary "$JKE_MP_FRAGMENTLAUNCHER1"

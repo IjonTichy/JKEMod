@@ -47,15 +47,24 @@ class FileTree(object):
         self.__dirs = new
 
 
-    def flattenFiles(self):
+    def flattenFiles(self, rel=0):
+        return self.__flattenFiles(rel, self.dir)
 
-        ret = self.files
+    def __flattenFiles(self, rel, baseDir):
+        if len(self.files) == 0:
+            return []
+
+        firstFile = self.files[0]
+
+        if firstFile.startswith(baseDir) and bool(rel):
+            ret = [i.replace(baseDir, "./", 1) for i in self.files]
+        else:
+            ret = self.files
 
         for d in self.dirs:
-            ret += d.flattenFiles()
+            ret += d.__flattenFiles(rel, baseDir)
 
         return ret
-
 
     def flattenDirs(self):
 

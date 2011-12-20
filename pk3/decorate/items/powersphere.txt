@@ -21,7 +21,7 @@ actor 115SpeedPower: PowerSpeed
 }
 
 
-actor PowerSphere: CustomInventory replaces Doomsphere
+actor Powersphere: CustomInventory replaces Doomsphere
 {
     +ALWAYSPICKUP
     +FANCYPICKUPSOUND

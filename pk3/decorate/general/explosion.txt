@@ -3,6 +3,8 @@ actor JKEModExplosion
     +NOINTERACTION
     +CLIENTSIDEONLY
 
+    RenderStyle Add
+
     States
     {
       Spawn:

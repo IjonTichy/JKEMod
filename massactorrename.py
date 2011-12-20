@@ -6,7 +6,7 @@ import shutil
 import collections
 
 from pad import pad
-from pathwalker.classes import pathwalker
+from pathwalker import pathwalker
 
 PROGNAME = os.path.basename(sys.argv[0])
 USAGE = "usage: {0} <oldnames> <newnames> <dir>".format(PROGNAME)
