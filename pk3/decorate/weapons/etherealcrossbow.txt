@@ -29,11 +29,11 @@ actor " Ethereal Crossbow ": Weapon
 
       Fire:
         MCRB D 0 A_PlaySound("jkemod/etherealcrossbow/fire", CHAN_WEAPON)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShot", 0, 1)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShotSide2", -15, 0)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShotSide1",  -3, 0)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShotSide1",   3, 0)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowShotSide2",  15, 0)
+        MCRB D 0 A_FireCustomMissile("ECBowShot", 0, 1)
+        MCRB D 0 A_FireCustomMissile("ECBowShotSide2", -15, 0)
+        MCRB D 0 A_FireCustomMissile("ECBowShotSide1",  -3, 0)
+        MCRB D 0 A_FireCustomMissile("ECBowShotSide1",   3, 0)
+        MCRB D 0 A_FireCustomMissile("ECBowShotSide2",  15, 0)
         MCRB D 6 bright
         MCRB EFGH 3 bright
         MCRB AB 4 bright
@@ -42,11 +42,11 @@ actor " Ethereal Crossbow ": Weapon
 
       AltFire:
         MCRB D 0 A_PlaySound("jkemod/etherealcrossbow/fire", CHAN_WEAPON)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot", 0, 1)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot", -15, 0)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot2", -8, 0)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot2", 8, 0)
-        MCRB D 0 A_FireCustomMissile("EtherealCrossbowAltShot", 15, 0)
+        MCRB D 0 A_FireCustomMissile("ECBowAltShot", 0, 1)
+        MCRB D 0 A_FireCustomMissile("ECBowAltShot", -15, 0)
+        MCRB D 0 A_FireCustomMissile("ECBowAltShot2", -8, 0)
+        MCRB D 0 A_FireCustomMissile("ECBowAltShot2", 8, 0)
+        MCRB D 0 A_FireCustomMissile("ECBowAltShot", 15, 0)
         MCRB D 8 bright
         MCRB EFGH 4 bright
         MCRB AB 4 bright
@@ -59,7 +59,7 @@ actor " Ethereal Crossbow ": Weapon
     }
 }
 
-actor EtherealCrossbowShot
+actor ECBowShot
 {
     Radius 11
     Height 8
@@ -89,7 +89,7 @@ actor EtherealCrossbowShot
     }
 }
 
-actor EtherealCrossbowShotSide1: EtherealCrossbowShot
+actor ECBowShotSide1: ECBowShot
 {
     Speed 35
     Damage (15+random(0,10))
@@ -110,7 +110,7 @@ actor EtherealCrossbowShotSide1: EtherealCrossbowShot
     }
 }
 
-actor EtherealCrossbowShotSide2: EtherealCrossbowShotSide1
+actor ECBowShotSide2: ECBowShotSide1
 {
     Scale 0.7
     Damage (10+random(0,7))
@@ -127,7 +127,7 @@ actor EtherealCrossbowShotSide2: EtherealCrossbowShotSide1
     }
 }
 
-actor EtherealCrossbowAltShot
+actor ECBowAltShot
 {
     Radius 11
     Height 8
@@ -157,7 +157,7 @@ actor EtherealCrossbowAltShot
     }
 }
 
-actor EtherealCrossbowAltShot2: EtherealCrossbowAltShot
+actor ECBowAltShot2: ECBowAltShot
 {
     Speed 35
     Damage (12+random(0,6))
@@ -192,13 +192,15 @@ actor " Power Ethereal Crossbow ": " Ethereal Crossbow "
     {
       Fire:
         MCRB D 0 A_PlaySound("jkemod/etherealcrossbow/fire", CHAN_WEAPON)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShot", 0, 1)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide2", -15, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide1",  -6, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide1",  -3, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide1",   3, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide1",   6, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowShotSide2",  15, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowShot", 0, 1)
+        MCRB D 0 A_FireCustomMissile("PowerECBowShotSide2", -15, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowShotSide1",  -6, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowShotSide1",  -3, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowShotSide1",  -1, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowShotSide1",   1, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowShotSide1",   3, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowShotSide1",   6, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowShotSide2",  15, 0)
         MCRB D 6 bright
         MCRB EFGH 3 bright
         MCRB AB 4 bright
@@ -207,13 +209,17 @@ actor " Power Ethereal Crossbow ": " Ethereal Crossbow "
 
       AltFire:
         MCRB D 0 A_PlaySound("jkemod/etherealcrossbow/fire", CHAN_WEAPON)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot", 0, 1)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot2", -15, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot", -12, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot2", -6, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot2", 6, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot", 12, 0)
-        MCRB D 0 A_FireCustomMissile("PowerEtherealCrossbowAltShot2", 15, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot", 0, 1)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot2", -15, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot", -12, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot2", -9, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot2", -6, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot3", -3, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot3", 3, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot2", 6, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot2", 9, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot", 12, 0)
+        MCRB D 0 A_FireCustomMissile("PowerECBowAltShot2", 15, 0)
         MCRB D 8 bright
         MCRB EFGH 4 bright
         MCRB AB 4 bright
@@ -224,7 +230,7 @@ actor " Power Ethereal Crossbow ": " Ethereal Crossbow "
 
 
 
-actor PowerEtherealCrossbowShot
+actor PowerECBowShot
 {
     Radius 11
     Height 8
@@ -243,18 +249,18 @@ actor PowerEtherealCrossbowShot
     States
     {
       Spawn:
-        MCBS B 1 bright A_SpawnItemEx("EtherealCrossbowTrail", 0, random(-4, 4), random(-4, 4), random(-4, 4))
+        MCBS B 1 bright A_SpawnItemEx("ECBowTrail", 0, random(-4, 4), random(-4, 4), random(-4, 4))
         loop
 
       Death:
-        MCBS HHHH 0 A_SpawnItemEx("EtherealCrossbowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
+        MCBS HHHH 0 A_SpawnItemEx("ECBowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
         MCBS H 0 A_Explode(96, 96, 0)
         MCBS HIJ 8 bright
         stop
     }
 }
 
-actor PowerEtherealCrossbowShotSide1: EtherealCrossbowShot
+actor PowerECBowShotSide1: ECBowShot
 {
     Speed 35
     Damage (12+random(0,6))
@@ -271,14 +277,14 @@ actor PowerEtherealCrossbowShotSide1: EtherealCrossbowShot
         loop
 
       Death:
-        MCBS HH 0 A_SpawnItemEx("EtherealCrossbowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
+        MCBS HH 0 A_SpawnItemEx("ECBowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
         MCBS A 0 A_Explode(8, 96, 0)
         MCBS CDE 8 bright
         Stop
     }
 }
 
-actor PowerEtherealCrossbowShotSide2: EtherealCrossbowShotSide1
+actor PowerECBowShotSide2: ECBowShotSide1
 {
     Scale 0.7
     Damage (6+random(0,4))
@@ -293,14 +299,14 @@ actor PowerEtherealCrossbowShotSide2: EtherealCrossbowShotSide1
         loop
 
       Death:
-        MCBS HH 0 A_SpawnItemEx("EtherealCrossbowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
+        MCBS HH 0 A_SpawnItemEx("ECBowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
         MCBS A 0 A_Explode(4, 96, 0)
         MCBS CDE 8 bright
         Stop
     }
 }
 
-actor PowerEtherealCrossbowAltShot
+actor PowerECBowAltShot
 {
     Radius 11
     Height 8
@@ -325,14 +331,14 @@ actor PowerEtherealCrossbowAltShot
 
       Death:
         MCBS H 0 A_Stop
-        MCBS HHHHHHHH 0 A_SpawnItemEx("EtherealCrossbowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
+        MCBS HHHHHHHH 0 A_SpawnItemEx("ECBowTrail", 0,0,0, random(-5, 5),random(-5, 5),random(-5, 5))
         MCBS H 0 A_Explode(96, 96, 0)
         MCBS HIJ 8 bright
         stop
     }
 }
 
-actor PowerEtherealCrossbowAltShot2: PowerEtherealCrossbowAltShot
+actor PowerECBowAltShot2: PowerECBowAltShot
 {
     Speed 35
     Damage (10+random(0,6))
@@ -356,7 +362,17 @@ actor PowerEtherealCrossbowAltShot2: PowerEtherealCrossbowAltShot
 }
 
 
-actor EtherealCrossbowTrail
+actor PowerECBowAltShot3: PowerECBowAltShot
+{
+    States
+    {
+      Spawn:
+        MCBS B 6 bright
+        goto Super::Death
+    }
+}
+
+actor ECBowTrail
 {
     +NOINTERACTION
     +CLIENTSIDEONLY

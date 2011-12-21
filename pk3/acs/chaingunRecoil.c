@@ -11,7 +11,7 @@ script 474 (int recoilInt, int recoilFrac)
 
     int dx = FixedMul(cos(angle), recoil);
         dx = -FixedMul(dx, cos(pitch));
-
+    
     int dy = FixedMul(sin(angle), recoil);
         dy = -FixedMul(dy, cos(pitch));
 

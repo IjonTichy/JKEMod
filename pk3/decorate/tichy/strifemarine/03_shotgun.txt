@@ -207,10 +207,11 @@ actor " Power S-Shotgun ": " S-Shotgun "
         HMSG I 0 A_PlaySoundEx("hexenmarine/shotreload", "SoundSlot5")
         HMSG I 0 A_GiveInventory("ShellsPumped", 1)
         HMSG I 0 A_TakeInventory("Shell", 1)
-        HMSG JKLKJ 2
+        HMSG JKLK 2
         HMSG J 0 A_JumpIfInventory("ReloadButton", 1, "PCheck")
         HMSG J 0 A_JumpIfInventory("MainFired",    1, "FPCheck")
         HMSG J 0 A_JumpIfInventory("AltFired",     1, "APCheck")
+        HMSG J 2
         goto PEnd
 
       PCheck:
@@ -241,9 +242,10 @@ actor " Power S-Shotgun ": " S-Shotgun "
         HMSG I 0 A_PlaySoundEx("hexenmarine/shotreload", "SoundSlot5")
         HMSG I 0 A_GiveInventory("ShellsPumped", 1)
         HMSG I 0 A_TakeInventory("Shell", 1)
-        HMSG JKLKJ 2
+        HMSG JKLK 2
         HMSG J 0 A_JumpIfInventory("MainFired", 1, "FPCheck")
         HMSG J 0 A_JumpIfInventory("AltFired",  1, "APCheck")
+        HMSG J 2
         goto FPEnd
 
       FPCheck:
@@ -285,9 +287,10 @@ actor " Power S-Shotgun ": " S-Shotgun "
         HMSG I 0 A_PlaySoundEx("hexenmarine/shotreload", "SoundSlot5")
         HMSG I 0 A_GiveInventory("ShellsPumped", 1)
         HMSG I 0 A_TakeInventory("Shell", 1)
-        HMSG JKLKJ 2
+        HMSG JKLK 2
         HMSG J 0 A_JumpIfInventory("AltFired",  1, "APCheck")
         HMSG J 0 A_JumpIfInventory("MainFired", 1, "APCheck")
+        HMSG J 2
         goto FPEnd
 
       APCheck:
@@ -301,15 +304,15 @@ actor " Power S-Shotgun ": " S-Shotgun "
         goto Ready
 
       A:
-        HMSG A 0 A_GunFlash
-        HMSG A 0 A_AlertMonsters
-        HMSG A 0 A_TakeInventory("ShellsPumped", 5)
-        HMSG A 0 A_FireBullets(6, 6, 30, 0, "ExplosiveBulletPuff")
-        HMSG A 0 A_PlaySound("hexenmarine/shotaltfire", CHAN_WEAPON)
+        HMSG A  0        A_GunFlash
+        HMSG A  0        A_AlertMonsters
+        HMSG A  0        A_TakeInventory("ShellsPumped", 5)
+        HMSG A  0        A_FireBullets(6, 6, 30, 0, "ExplosiveBulletPuff")
+        HMSG A  0        A_PlaySound("hexenmarine/shotaltfire", CHAN_WEAPON)
         HMSG E  3 bright
         HMSG D  2 bright
         HMSG CB 1 bright
-        HMSG A 0 A_CheckReload
+        HMSG A  0        A_CheckReload
         goto Ready
 
     ////
