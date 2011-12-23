@@ -1,3 +1,0 @@
-#include "decorate/classes/jkeplayer.txt"
-#include "decorate/classes/leandroplayer.txt"
-#include "decorate/classes/sorcplayer.txt"

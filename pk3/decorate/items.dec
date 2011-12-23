@@ -1,0 +1,3 @@
+#include "decorate/items/ammosphere.dec"
+#include "decorate/items/powersphere.dec"
+#include "decorate/items/invisitems.dec"

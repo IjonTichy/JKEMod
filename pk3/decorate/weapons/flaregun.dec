@@ -1,0 +1,90 @@
+
+actor FlareGunTrail
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+
+    RenderStyle Add
+    States
+    {
+      Spawn:
+        FRTR ABCDEFG 3
+        Stop
+    }
+}
+
+actor FlareGunShot
+{
+    Height 4
+    Radius 4
+    Speed 50
+
+    Projectile
+    -NOGRAVITY
+    +DEHEXPLOSION
+    +NODAMAGETHRUST
+
+    Gravity 0.125
+
+    DeathSound "jkemod/flaregun/explode"
+
+    States
+    {
+      Spawn:
+        FLAR A 8 bright A_SpawnItemEx("FlareGunTrail")
+        loop
+
+      Death:
+        FREX A 0 A_Stop
+        FREX A 0 A_ChangeFlag("NOGRAVITY", 1)
+        FREX AAAABBBBCCCC 2 bright A_Explode(16, 96)
+        Stop
+    }
+}
+
+actor " Flare Gun ": Weapon
+{
+    weapon.AmmoGive 10
+    weapon.AmmoType "ExplosiveAmmo"
+    weapon.AmmoUse 1
+
+    weapon.upsound "jkemod/flaregun/up"
+
+    weapon.selectionorder 560
+
+    Inventory.PickupMessage "$JKE_PK_FLAREGUN"
+    Obituary "$JKE_MP_FLAREGUN"
+    states
+    {
+      Ready:
+        FRGN A 1 A_WeaponReady
+        Loop
+      Select:
+        FRGN A 0 A_Raise
+        FRGN A 1 A_Raise
+        Loop
+      Deselect:
+        FRGN A 0 A_Lower
+        FRGN A 1 A_Lower
+        Loop
+      Fire:
+        FRGN B 0 A_Light2
+        FRGN B 0 A_PlaySound("jkemod/flaregun/fire", CHAN_WEAPON)
+        FRGN B 1 bright A_FireCustomMissile("FlareGunShot")
+        FRGN C 2 bright
+        FRGN A 3
+        FRGN F 4 A_Light0
+        FRGN G 4
+        FRGN H 4 A_PlaySound("jkemod/flaregun/open", CHAN_WEAPON)
+        FRGN I 4
+        FRGN J 4 A_PlaySound("jkemod/flaregun/load", CHAN_WEAPON)
+        FRGN K 4
+        FRGN G 4 A_PlaySound("jkemod/flaregun/close", CHAN_WEAPON)
+        FRGN F 4
+        FRGN E 4 A_ReFire
+        Goto Ready
+      Spawn:
+        FRGP A -1
+        stop
+    }
+}

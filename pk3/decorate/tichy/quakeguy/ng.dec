@@ -1,0 +1,235 @@
+actor " Quake NG ": Weapon
+{
+    Weapon.Kickback 100
+    Weapon.SelectionOrder 5
+    Weapon.AmmoUse 1
+    Weapon.AmmoGive 30
+    Weapon.AmmoType "QuakeNails"
+
+    Weapon.SlotNumber 4
+
+    +FLOATBOB
+
+    Inventory.Icon "W_NGA0"
+    Inventory.PickupMessage "You got the nailgun"
+    Obituary "%o is nailed by %k"
+
+    States
+    {
+      Deselect:
+        TNT1 AAAAAAAAAAAAAAAAAAA 0 A_Lower
+        PKCG A 1 A_Lower
+        Loop
+
+      Select:
+        TNT1 AAAAAAAAAAAAAAAAAAA 0 A_Raise
+        PKCG A 1 A_Raise
+        Loop
+
+      Ready:
+        PKCG D 0 A_TakeInventory("NailgunFrame")
+        PKCG A 1 A_WeaponReady
+        Loop
+
+
+
+      Fire:
+        PKCG A 0 A_GunFlash
+        PKCG A 0 A_PlaySound("weapons/pistol", CHAN_WEAPON)
+        goto FireNail
+
+
+
+      FireNail:
+        PKCG A 0 A_JumpIfInventory("NailgunSide", 1, "NailRight")
+        goto NailLeft
+
+
+      NailLeft:
+        PKCG A 0 A_FireCustomMissile("QNTrail1",  0, 0, -7)
+        PKCG A 0 A_FireCustomMissile("QNTrail2",  0, 0, -7)
+        PKCG A 0 A_FireCustomMissile("QNTrail3",  0, 0, -7)
+        PKCG A 0 A_FireCustomMissile("QuakeNail", 0, 1, -7)
+        PKCG A 0 A_GiveInventory("NailgunSide")
+        goto FireAnimate
+
+      NailRight:
+        PKCG A 0 A_FireCustomMissile("QNTrail1",  0, 0, 7)
+        PKCG A 0 A_FireCustomMissile("QNTrail2",  0, 0, 7)
+        PKCG A 0 A_FireCustomMissile("QNTrail3",  0, 0, 7)
+        PKCG A 0 A_FireCustomMissile("QuakeNail", 0, 1, 7)
+        PKCG A 0 A_TakeInventory("NailgunSide")
+        goto FireAnimate
+
+      FireAnimate:
+        PKCG A 0 A_JumpIfInventory("NailgunFrame", 4, "FireFromA")
+        PKCG A 0 A_JumpIfInventory("NailgunFrame", 3, "FireFromD")
+        PKCG A 0 A_JumpIfInventory("NailgunFrame", 2, "FireFromC")
+        PKCG A 0 A_JumpIfInventory("NailgunFrame", 1, "FireFromB")
+        goto FireFromA  // panic?
+
+      FireFromA:
+        PKCG A 1 bright A_Light1
+        PKCG B 1 bright A_Light1
+        PKCG C 1 bright A_Light0
+        PKCG D 0 A_TakeInventory("NailgunFrame")
+        PKCG D 0 A_GiveInventory("NailgunFrame", 3)
+        PKCG D 0 A_Refire
+        goto FireEnd
+
+      FireFromB:
+        PKCG B 1 bright A_Light1
+        PKCG C 1 bright A_Light1
+        PKCG D 1 bright A_Light0
+        PKCG D 0 A_TakeInventory("NailgunFrame")
+        PKCG D 0 A_GiveInventory("NailgunFrame", 4)
+        PKCG D 0 A_Refire
+        goto FireEnd
+
+      FireFromC:
+        PKCG C 1 bright A_Light1
+        PKCG D 1 bright A_Light1
+        PKCG A 1 bright A_Light0
+        PKCG D 0 A_TakeInventory("NailgunFrame")
+        PKCG D 0 A_GiveInventory("NailgunFrame", 1)
+        PKCG D 0 A_Refire
+        goto FireEnd
+
+      FireFromD:
+        PKCG D 1 bright A_Light1
+        PKCG A 1 bright A_Light1
+        PKCG B 1 bright A_Light0
+        PKCG D 0 A_TakeInventory("NailgunFrame")
+        PKCG D 0 A_GiveInventory("NailgunFrame", 2)
+        PKCG D 0 A_Refire
+        goto FireEnd
+
+      FireEnd:
+        PKCG A 0 A_Refire
+        PKCG A 0 A_JumpIfInventory("NailgunFrame", 4, "Ready")   // no need to play an end
+        PKCG A 0 A_JumpIfInventory("NailgunFrame", 3, "FireEndC")
+        PKCG A 0 A_JumpIfInventory("NailgunFrame", 2, "FireEndB")
+        PKCG A 0 A_JumpIfInventory("NailgunFrame", 1, "FireEndA")
+        goto Ready  // more panic?
+
+      FireEndA:
+        PKCG BC 1 A_WeaponReady
+        PKCG C 0 A_GiveInventory("NailgunFrame", 1)
+        PKCG CD 1 A_WeaponReady
+        PKCG D 0 A_TakeInventory("NailgunFrame")
+        PKCG DD 1 A_WeaponReady
+        goto Ready
+
+      FireEndB:
+        PKCG CD 1 A_WeaponReady
+        PKCG D 0 A_TakeInventory("NailgunFrame")
+        PKCG D 1 A_WeaponReady
+        goto Ready
+
+      FireEndC:
+        PKCG D 1 A_WeaponReady
+        PKCG D 0 A_TakeInventory("NailgunFrame")
+        goto Ready
+
+      Flash:
+        TNT1 A 2 A_Light2
+        Goto LightDone
+
+      Spawn:
+        W_NG A -1 bright
+        Stop
+    }
+}
+
+actor QNTrail1
+{
+    Speed 36
+
+    Projectile
+
+    States
+    {
+      Spawn:
+        TNT1 A 0
+        TNT1 A 0 ACS_ExecuteAlways(586, 0, 1, 38, 88)
+        goto SpawnLoop
+
+      SpawnLoop:
+        TNT1 A 1 A_SpawnItemEx("QuakeNailTrail", 0,0,0, random(-3,3)/10.0,random(-3,3)/10.0,random(-3, 3)/10.0)
+        loop
+
+    }
+}
+
+actor QNTrail2: QNTrail1
+{
+    Speed 25
+
+    States
+    {
+      Spawn:
+        TNT1 A 0
+        TNT1 A 0 ACS_ExecuteAlways(586, 0, 2,0,0)
+        goto SpawnLoop
+    }
+}
+
+actor QNTrail3: QNTrail1
+{
+    Speed 12
+
+    States
+    {
+      Spawn:
+        TNT1 A 0
+        TNT1 A 0 ACS_ExecuteAlways(586, 0, 4, 16, 66)
+        goto SpawnLoop
+    }
+}
+
+actor QuakeNail
+{
+    Height 4
+    Radius 4
+    Speed 50
+
+    Projectile
+    Damage (15)
+
+    +SPAWNSOUNDSOURCE
+    
+    States
+    {
+      Spawn:
+        DART A 0
+        goto SpawnLoop
+
+      SpawnLoop:
+        DART A 1 A_SpawnItemEx("QuakeNailTrail", 0,0,0, random(-3,3)/10.0,random(-3,3)/10.0,random(-3, 3)/10.0)
+        loop
+
+      Death:
+        TNT1 A 0 A_SpawnItemEx("BulletPuff", 0,0,0, 0,0,1)
+        stop
+    }
+}
+
+actor QuakeNailTrail: BulletPuff
+{
+    Alpha 0.2
+
+    +CLIENTSIDEONLY
+    +NOINTERACTION
+}
+
+actor NailgunSide: Inventory
+{
+    inventory.maxamount 2
+    +UNDROPPABLE
+}
+
+actor NailgunFrame: Inventory
+{
+    inventory.maxamount 4
+    +UNDROPPABLE
+}

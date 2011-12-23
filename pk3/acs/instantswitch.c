@@ -38,10 +38,21 @@ script 584 (int take)
 script 585 (int divI, int divF, int divF1)
 {
     int div = percFloat(divI, divF, divF1);
-
+ 
     int x = GetActorVelX(0);
     int y = GetActorVelY(0);
     int z = GetActorVelZ(0);
 
     SetActorVelocity(0, FixedDiv(x, div), FixedDiv(y, div), FixedDiv(z, div), 0, 1);
+}
+
+script 586 (int divI, int divF, int divF1)
+{
+    int div = percFloat(divI, divF, divF1);
+
+    int x = GetActorVelX(0);
+    int y = GetActorVelY(0);
+    int z = GetActorVelZ(0);
+
+    SetActorVelocity(0, FixedMul(x, div), FixedMul(y, div), FixedMul(z, div), 0, 1);
 }

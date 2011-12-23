@@ -1,0 +1,10 @@
+
+#include "decorate/replaces/clip.dec"
+#include "decorate/replaces/clipbox.dec"
+#include "decorate/replaces/comboammo.dec"
+#include "decorate/replaces/shell.dec"
+#include "decorate/replaces/shellbox.dec"
+#include "decorate/replaces/rocketammo.dec"
+#include "decorate/replaces/rocketbox.dec"
+#include "decorate/replaces/cell.dec"
+#include "decorate/replaces/cellpack.dec"
