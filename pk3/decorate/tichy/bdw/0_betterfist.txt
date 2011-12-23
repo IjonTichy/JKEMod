@@ -79,8 +79,8 @@ actor " B-Fists ": DoomWeapon
       BerserkLeftJab:
         LPUN A 0 A_GiveInventory("PunchIndicator")
         LPUN B 1
-        LPUN C 3
-        LPUN D 3 A_CustomPunch(8*random(1,10), 1, 0, "BerserkPunchPuff")
+        LPUN C 2
+        LPUN D 2 A_CustomPunch(8*random(1,10), 1, 0, "BerserkPunchPuff")
         LPUN EFG 1
         LPUN B 0 A_Jump(24, "ZerkCheck")
         LPUN B 0 A_TakeInventory("TargetHit")
@@ -90,8 +90,8 @@ actor " B-Fists ": DoomWeapon
       BerserkRightJab:
         RPUN A 0 A_TakeInventory("PunchIndicator")
         RPUN B 1
-        RPUN C 3
-        RPUN D 3 A_CustomPunch(8*random(1,10), 1, 0, "BerserkPunchPuff")
+        RPUN C 2
+        RPUN D 2 A_CustomPunch(8*random(1,10), 1, 0, "BerserkPunchPuff")
         RPUN EFG 1
         RPUN B 0 A_Jump(24, "ZerkCheck")
         RPUN B 0 A_TakeInventory("TargetHit")

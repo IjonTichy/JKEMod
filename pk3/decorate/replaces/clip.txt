@@ -37,6 +37,7 @@ actor JKEClip: CustomInventory
         TNT1 A 0 A_GiveInventory("M249Ammo", 10)
         TNT1 A 0 A_GiveInventory("MinigunAmmo", 10)
         TNT1 A 0 A_GiveInventory("QuakeNails", 15)
+        TNT1 A 0 A_GiveInventory("QuakeShell", 2)
         stop
     }
 }
@@ -59,6 +60,7 @@ actor JKEClipSmall: CustomInventory
         TNT1 A 0 A_GiveInventory("M249Ammo", 5)
         TNT1 A 0 A_GiveInventory("MinigunAmmo", 5)
         TNT1 A 0 A_GiveInventory("QuakeNails", 8)
+        TNT1 A 0 A_GiveInventory("QuakeShell", 1)
         stop
     }
 }

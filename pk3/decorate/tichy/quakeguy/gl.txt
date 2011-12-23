@@ -94,19 +94,21 @@ actor QuakeGrenade
         loop
 
       StopSpawnStart:
+        SGRN A 0 A_NoGravity
+        SGRN A 0 A_ChangeFlag("SOLID", 1)
+        SGRN A 0 A_Stop
         goto StopSpawn
 
       StopSpawn:
-        SGRN A 1 A_Stop
-        SGRN A 0 A_Countdown
+        SGRN A 1 A_Countdown
         loop
 
       Death:
         MISL A 0 A_Stop
         MISL A 0 A_PlayerScream
         MISL B 0 Bright A_NoGravity
-        MISL B 0 A_Explode(112, 128, 0)
-        MISL B 0 A_Explode(64, 128)
+        MISL B 0 A_Explode(192, 160, 0)
+        MISL B 0 A_Explode(64,  160)
         MISL B 8 bright
         MISL C 6 bright
         MISL D 4 bright

@@ -135,6 +135,54 @@ actor " Quake NG ": Weapon replaces Shotgun
     }
 }
 
+actor QNTrail1
+{
+    Speed 36
+
+    Projectile
+
+    States
+    {
+      Spawn:
+        TNT1 A 0
+        TNT1 A 0 A_SpawnItemEx("Megasphere")
+        TNT1 A 0 ACS_ExecuteAlways(585, 0, 1, 38, 88)
+        goto SpawnLoop
+
+      SpawnLoop:
+        DART A 1 A_SpawnItemEx("QuakeNailTrail", 0,0,0, random(-3,3)/10.0,random(-3,3)/10.0,random(-3, 3)/10.0)
+        loop
+
+    }
+}
+
+actor QNTrail2: QNTrail1
+{
+    Speed 24
+
+    States
+    {
+      Spawn:
+        TNT1 A 0
+        TNT1 A 0 A_SpawnItemEx("Blursphere")
+        TNT1 A 0 ACS_ExecuteAlways(585, 0, 2,0,0)
+        goto SpawnLoop
+    }
+}
+
+actor QNTrail3: QNTrail1
+{
+    Speed 12
+
+    States
+    {
+      Spawn:
+        TNT1 A 0
+        TNT1 A 0 A_SpawnItemEx("Soulsphere")
+        TNT1 A 0 ACS_ExecuteAlways(585, 0, 4, 16, 66)
+        goto SpawnLoop
+    }
+}
 
 actor QuakeNail
 {
@@ -143,23 +191,34 @@ actor QuakeNail
     Speed 50
 
     Projectile
-    Damage (14)
+    Damage (15)
 
     +SPAWNSOUNDSOURCE
 
-    Scale 0.15
-    Translation "160:167=152:159", "168:191=157:159", "1:3=125:127", "144:151=126:126", "128:143=127:127", "78:78=0:0"
 
     States
     {
       Spawn:
-        MISL A -1
+        DART A 0
+        DART A 0 A_SpawnItemEx("QNTrail1", 0,0,0, momx,momy,momz)
+        DART A 0 A_SpawnItemEx("QNTrail2", 0,0,0, momx,momy,momz)
+        DART A 0 A_SpawnItemEx("QNTrail3", 0,0,0, momx,momy,momz)
+        goto SpawnLoop
+
+      SpawnLoop:
+        DART A 1 A_SpawnItemEx("QuakeNailTrail", 0,0,0, random(-3,3)/10.0,random(-3,3)/10.0,random(-3, 3)/10.0)
         loop
 
       Death:
         TNT1 A 0 A_SpawnItemEx("BulletPuff", 0,0,0, 0,0,1)
         stop
     }
+}
+
+actor QuakeNailTrail: BulletPuff
+{
+    +CLIENTSIDEONLY
+    +NOINTERACTION
 }
 
 actor NailgunSide: Inventory

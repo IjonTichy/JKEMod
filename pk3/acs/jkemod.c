@@ -6,7 +6,8 @@
 int multigunStrings[3] = {
     "Missiles",
     "Ice shards",
-    "Flame grenades"};
+    "Flame grenades",
+};
 
 script 872 (int num) // generic number printer
 {

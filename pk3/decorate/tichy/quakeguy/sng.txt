@@ -120,7 +120,7 @@ actor QuakeSNGReplace: RandomSpawner replaces Minigun
 
 actor QuakeSuperNail: QuakeNail
 {
-    Damage (28)
+    Damage (30)
 }
 
 actor SuperNailgunFrame: Inventory

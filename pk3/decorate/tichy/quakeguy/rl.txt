@@ -86,8 +86,8 @@ actor QuakeRocket
         loop
 
       Death:
-        MISL B 0 A_Explode(112, 128, 0)
-        MISL B 0 A_Explode(64, 128)
+        MISL B 0 A_Explode(180, 160, 0)
+        MISL B 0 A_Explode(64,  160)
         MISL B 8 bright
         MISL C 6 bright
         MISL D 4 bright

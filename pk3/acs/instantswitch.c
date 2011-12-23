@@ -12,9 +12,9 @@ function int sqrt(int number)
   return val;
 }
 
-function int percFloat(int intg, int frac)
+function int percFloat(int intg, int frac, int frac1000)
 {
-    return (intg << 16) + ((frac << 16) / 100);
+    return (intg << 16) + ((frac << 16) / 100) + ((frac1000 << 16) / 10000);
 }
 
 script 583 (int x, int y, int z)
@@ -35,9 +35,9 @@ script 584 (int take)
     }
 }
 
-script 585 (int divI, int divF)
+script 585 (int divI, int divF, int divF1)
 {
-    int div = percFloat(divI, divF);
+    int div = percFloat(divI, divF, divF1);
 
     int x = GetActorVelX(0);
     int y = GetActorVelY(0);

@@ -45,9 +45,9 @@ actor " J-Fists ": Weapon
         FIST C 3 A_CustomPunch(random(1,10) * 2, 1, 0, "ZenFistPuff")
         FIST BA 2
         FIST A 0 A_GiveInventory("PunchSide")
+        Goto Ready
 
       RightJab:
-        Goto Ready
         FIST D 2
         FIST E 3 A_CustomPunch(random(1,10) * 2, 1, 0, "ZenFistPuff")
         FIST DA 2

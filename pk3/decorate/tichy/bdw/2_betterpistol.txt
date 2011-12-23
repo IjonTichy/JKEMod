@@ -74,11 +74,11 @@ actor " Power B-Pistol ": " B-Pistol "
     States
     {
       Fire:
-        PKPI B    0 A_GunFlash
-        PKPI B    0 A_PlaySound("betterdoomweapons/pistolfire", CHAN_WEAPON)
-        PKPI B    1 A_FireBullets(0.5, 0.5, -1, 9, "ExplosiveBulletPuff")
-        PKPI CEED 1
-        PKPI CB   1 A_WeaponReady
+        PKPI B   0 A_GunFlash
+        PKPI B   0 A_PlaySound("betterdoomweapons/pistolfire", CHAN_WEAPON)
+        PKPI B   1 A_FireBullets(0.5, 0.5, -1, 9, "ExplosiveBulletPuff")
+        PKPI CEE 1
+        PKPI DCB 1 A_WeaponReady
         goto Ready
 
       AltFire:

@@ -159,7 +159,7 @@ actor LGPuff: BulletPuff
     {
       Spawn:
         PLSE A 0
-        PLSE A 0 A_Explode(61, 4, 0)
+        PLSE A 0 A_Explode(101, 4, 0)
         PLSE ABCDE 4 bright
         stop
     }
@@ -181,8 +181,8 @@ actor LGDischarge
     {
       Spawn:
         TNT1 A 0
-        TNT1 A 0 A_Explode(35 * ACS_ExecuteWithResult(584),    4096, 0)
-        TNT1 A 0 A_Explode(35 * ACS_ExecuteWithResult(584, 1), 4096)
+        TNT1 A 0 A_Explode(50 * ACS_ExecuteWithResult(584),    4096, 0)
+        TNT1 A 0 A_Explode(50 * ACS_ExecuteWithResult(584, 1), 4096)
         stop
     }
 }
