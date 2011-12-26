@@ -24,6 +24,7 @@ addslotdefault 2 " S-Enforcer "
 addslotdefault 2 " Quake SG "
 addslotdefault 2 " J-Pistol "
 addslotdefault 2 " B-Pistol "
+addslotdefault 2 " B-Pistols "
 addslotdefault 2 " Sapphire Wand "
 
 

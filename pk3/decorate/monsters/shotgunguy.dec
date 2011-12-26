@@ -1,0 +1,12 @@
+actor JKEShotgunGuy: ShotgunGuy replaces ShotgunGuy
+{
+    dropitem "JKEShotguyShell"
+    dropitem "JKEClass3Drop"
+}
+
+actor JKEShotguyShell: RandomSpawner
+{
+    dropitem "JKEShellSmall" 128 7
+    dropitem "JKEShell"      128 2
+    dropitem "JKEShellBig"   128 1
+}

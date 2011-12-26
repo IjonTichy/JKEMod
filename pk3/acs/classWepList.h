@@ -9,7 +9,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {" B-Chainsaw ",        "BDWClass1Message2",     "None", "None"},
 
         {" B-Pistol ",          "BDWClass2Message",      "Clip", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" B-Pistols ",         "BDWClass2Message2",     "Clip", "None"},
 
         {" B-Shotgun ",         "BDWClass3Message",      "Shell", "None"},
         {" B-Super Shotgun ",   "BDWClass3Message2",     "Shell", "None"},
@@ -35,7 +35,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {"None",                "None",                  "None", "None"},
 
         {" S-Enforcer ",        "SMClass2Message",       "Clip", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" S-Enforcer ",        "SMClass2Message",       "Clip", "None"},
 
         {" S-Shotgun ",         "SMClass3Message",       "Shell", "None"},
         {" S-Shotgun ",         "SMClass3Message",       "Shell", "None"},
@@ -60,7 +60,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {"None",                "None",                  "None", "None"},
 
         {" J-Pistol ",          "JKEGuyClass2Message",   "Clip", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" J-Pistol ",          "JKEGuyClass2Message",   "Clip", "None"},
 
         {" J-Shotgun ",         "JKEGuyClass3Message",   "Shell", "None"},
         {" J-Super Shotgun ",   "JKEGuyClass3Message2",  "Shell", "None"},
@@ -85,7 +85,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {" L-Ripper ",          "LeandroClass1Message",  "None", "None"},
 
         {" Dual Berettas ",     "LeandroClass2Message",  "Clip", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" Dual Berettas ",     "LeandroClass2Message",  "Clip", "None"},
 
         {" L-Striker ",         "LeandroClass3Message",  "Shell", "None"},
         {" L-Quadshot ",        "LeandroClass3Message2", "Shell", "None"},
@@ -110,7 +110,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {"None",                "None",                  "None", "None"},
 
         {" Sapphire Wand ",     "SorcererClass2Message", "JKEMana", "None"},
-        {"None",                "None",                  "None", "None"},
+        {" Sapphire Wand ",     "SorcererClass2Message", "JKEMana", "None"},
 
         {" Ethereal Crossbow ", "SorcererClass3Message", "EtherealAmmo", "None"},
         {" Ethereal Crossbow ", "SorcererClass3Message", "EtherealAmmo", "None"},

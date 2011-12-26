@@ -16,6 +16,7 @@ actor " B-Fists ": DoomWeapon
     {
       Select:
         RPUN A 0 A_TakeInventory("PunchIndicator")
+        RPUN AA 0 A_Raise
         RPUN A 1 A_Raise
         loop
 
@@ -36,10 +37,12 @@ actor " B-Fists ": DoomWeapon
         goto RightDeselect
 
       LeftDeselect:
+        LPUN AA 0 A_Lower
         LPUN A 1 A_Lower
         loop
 
       RightDeselect:
+        RPUN AA 0 A_Lower
         RPUN A 1 A_Lower
         loop
 

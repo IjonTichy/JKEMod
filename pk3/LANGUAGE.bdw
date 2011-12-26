@@ -2,6 +2,7 @@
 
 BDW_PK_CHAINSAW             = "\crBLOOD! \cgBLOOD FOR THE BLOOD GOD!";
 BDW_PK_PISTOL               = "A pistol. Maybe it's worth something.";
+BDW_PK_PISTOLS              = "Another pistol. Two's the charm...";
 BDW_PK_SHOTGUN              = "Name's Doomguy. Cleanup.";
 BDW_PK_SUPERSHOTGUN         = "Can't you break your nose with this thing's recoil?";
 BDW_PK_CHAINGUN             = "Hey, chaingun! The hell with respect!";
@@ -15,6 +16,8 @@ BDW_MP_CHAINSAW             = "%k sacrificed %o to Khorne.";
 BDW_MP_CHAINSAW_POWER       = "%k added %o to the rivers of blood.";
 BDW_MP_PISTOL               = "%k picked off %o with his pistol.";
 BDW_MP_PISTOL_POWER         = "%k picked off %o with very great prejudice.";
+BDW_MP_PISTOLS              = "%k ventilated %o.";
+BDW_MP_PISTOLS_POWER        = "%k ventilated and smelted %o.";
 BDW_MP_SHOTGUN              = "%o questioned %k's authority.";
 BDW_MP_SHOTGUN_POWER        = "%o questioned %k's tyranny.";
 BDW_MP_SUPERSHOTGUN         = "%k wiped away %o.";

@@ -11,6 +11,7 @@
 JKE_PK_BDW_CLASS1                   = "How do i punched monstr";
 JKE_PK_BDW_CLASS1_2                 = "\crBLOOD! \cgBLOOD FOR THE BLOOD GOD!";
 JKE_PK_BDW_CLASS2                   = "A pistol. Maybe it's worth something.";
+JKE_PK_BDW_CLASS2_2                 = "Another pistol. Two's the charm...";
 JKE_PK_BDW_CLASS3                   = "Name's Doomguy. Cleanup.";
 JKE_PK_BDW_CLASS3_2                 = "Why doesn't this come with a noseguard?";
 JKE_PK_BDW_CLASS4                   = "Hey, chaingun! The hell with respect!";
@@ -82,11 +83,15 @@ JKE_PK_AMMOSPHERE                   = "Restocking feels less necessary.";
 JKE_PK_SUPERAMMOSPHERE              = "Restocking seems unnecessary now.";
 
 // Replacements
+JKE_PK_JKECLIP_SMALL                = "You picked up scattered bullets.";
 JKE_PK_JKECLIP                      = "You picked up various bullets.";
+JKE_PK_JKECLIP_BIG                  = "You picked up assortments of bullets.";
 JKE_PK_JKECLIPBOX                   = "You picked up a pack of various bullets.";
+JKE_PK_JKESHELL_SMALL               = "You picked up a couple shellstuff.";
 JKE_PK_JKESHELL                     = "You picked up shellstuff.";
-JKE_PK_JKESHELLBOX                  = "You picked up a bunch of shellstuff.";
-JKE_PK_JKEROCKETAMMO                = "You picked up a few explosives.";
+JKE_PK_JKESHELL_BIG                 = "You picked up much shellstuff.";
+JKE_PK_JKESHELLBOX                  = "You picked up a box of shellstuff.";
+JKE_PK_JKEROCKETAMMO                = "You picked up a couple explosives.";
 JKE_PK_JKEROCKETBOX                 = "You picked up a pack of explosives.";
 JKE_PK_JKECELL                      = "You picked up a battery and gasoline.";
 JKE_PK_JKECELLPACK                  = "You picked up a large battery and gasoline.";

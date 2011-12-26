@@ -40,8 +40,3 @@ actor " Quake Fist ": Weapon
         stop
     }
 }
-
-actor ChainsawShells: RandomSpawner replaces Chainsaw
-{
-    dropitem "QuakeShellBox"
-}
