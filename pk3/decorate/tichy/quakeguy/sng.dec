@@ -116,11 +116,6 @@ actor " Quake SNG ": Weapon
     }
 }
 
-actor QuakeSNGReplace: RandomSpawner replaces Minigun
-{
-    dropitem " Quake SNG "
-}
-
 actor QuakeSuperNail: QuakeNail
 {
     Damage (30)

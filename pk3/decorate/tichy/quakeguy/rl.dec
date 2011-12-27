@@ -55,12 +55,6 @@ actor " Quake RL ": Weapon
     }
 }
 
-actor QuakeRLReplace: RandomSpawner replaces GrenadeLauncher
-{
-    dropitem " Quake RL "
-}
-
-
 actor QuakeRocket
 {
     Radius 4

@@ -182,8 +182,3 @@ actor LGDischarge
         stop
     }
 }
-
-actor QuakeLGReplace: RandomSpawner replaces BFG10k
-{
-    dropitem " Quake LG "
-}
