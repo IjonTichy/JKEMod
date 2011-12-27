@@ -1,8 +1,0 @@
-#include "decorate/tichy/strifemarine/00_strifemarine.dec"
-#include "decorate/tichy/strifemarine/01_knife.dec"
-#include "decorate/tichy/strifemarine/02_enforcer.dec"
-#include "decorate/tichy/strifemarine/03_shotgun.dec"
-#include "decorate/tichy/strifemarine/04_chaingun.dec"
-#include "decorate/tichy/strifemarine/05_grenadespammer.dec"
-#include "decorate/tichy/strifemarine/06_plasmabeam.dec"
-#include "decorate/tichy/strifemarine/07_ionstrike.dec"

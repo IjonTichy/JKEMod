@@ -1,9 +1,1 @@
-#include "decorate/ammo.dec"
-#include "decorate/casings.dec"
-#include "decorate/classes.dec"
-#include "decorate/classitems.dec"
-#include "decorate/general.dec"
-#include "decorate/items.dec"
-#include "decorate/monsters.dec"
-#include "decorate/replaces.dec"
-#include "decorate/weapons.dec"
+#include {decorate}

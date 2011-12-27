@@ -1,4 +1,0 @@
-#include "decorate/monsters/zombieman.dec"
-#include "decorate/monsters/shotgunguy.dec"
-
-#include "decorate/monsters/beanbag.dec"

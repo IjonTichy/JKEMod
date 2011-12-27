@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
-import sys, os, shutil, zipfile
+import sys, os, shutil, zipfile, tempfile
 from subprocess import Popen, PIPE
 
 import which
 from pathwalker import pathwalker
+from decpreproc import *
+
+LINEPROCS   = [defineproc.DefineProc, includeproc.IncludeDirProc, ]#includeproc.IncludeProc]
 
 NUMBERS     = "0123456789"
 
@@ -39,7 +42,10 @@ Examples:
                              # /home/derp/.zdoom/derpWAD1_5.pk3
 """
 
-ACS_EXTS    = ("c", "acs")
+DECORATE_EXTS   = ("dec",)
+ACS_EXTS        = ("c", "acs")
+ACS_OBJ_EXTS    = ("o",)
+
 ACC_ERROR   = "**** ERROR ****"
 
 DEFAULT_ARGS = ["-warp 01"]
@@ -189,13 +195,37 @@ def makePK3(aArgs):
             print(("\b"*oLen) + perc, end="")
 
             sys.stdout.flush()
+            
+            fPath, fName = os.path.realpath(file).rsplit("/", 1)
+            fExt = file.rsplit(".", 1)[1]
 
-            if file.rsplit(".", 1)[1] in ACS_EXTS:  # ACS
+            zipFName = file.lstrip("./")
+
+            if fExt in DECORATE_EXTS:  # DECORATE
+                prevDir = os.getcwd()
+
+                os.chdir(fPath)
+
+                dTmpName = tempfile.mkstemp(prefix="dec")[1]
+                dTmp     = open(dTmpName, "w")
+                
+                dTmp.write(fileproc.processFile(fName, LINEPROCS))
+                dTmp.close()
+                
+                os.chdir(prevDir)
+
+                pk3Zip.write(dTmpName, zipFName)
+            
+            elif fExt in ACS_OBJ_EXTS:  # ACS .o - will be handled later
+                pass
+
+            elif fExt in ACS_EXTS:  # ACS
                 objFile = compileACS(file)
                 pk3Zip.write(objFile, objFile.lstrip("./"))
-
-
-            pk3Zip.write(file, file.lstrip("./"))
+                pk3Zip.write(file, zipFName)
+            
+            else:
+                pk3Zip.write(file, zipFName)
 
     except KeyboardInterrupt:
         print( ("\b" * (nLen + 2)) + "aborted.")
