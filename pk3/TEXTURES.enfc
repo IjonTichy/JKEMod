@@ -1,0 +1,187 @@
+sprite ENFCA0, 320, 240
+{
+    patch ENFORC1, 193, 78 {}
+}
+
+sprite ENFCB0, 320, 240
+{
+    patch ENFORC2, 195, 80 {}
+}
+
+sprite ENFCC0, 320, 240
+{
+    patch ENFORC3, 197, 81 {}
+}
+
+sprite ENFCD0, 320, 240
+{
+    patch ENFORC4, 200, 83 {}
+}
+
+sprite ENFCE0, 320, 240
+{
+    patch ENFORC5, 201, 84 {}
+}
+
+sprite ENFSA0, 320, 240
+{
+    patch ENFORCF1, 179, 73 {}
+}
+
+sprite ENFSB0, 320, 240
+{
+    patch ENFORCF2, 159, 62 {}
+}
+
+
+
+sprite LENFA0, 320, 240
+{
+    patch ENFORC1, 40, 78 { FlipX }
+}
+
+sprite LENFB0, 320, 240
+{
+    patch ENFORC2, 38, 80 { FlipX }
+}
+
+sprite LENFC0, 320, 240
+{
+    patch ENFORC3, 36, 81 { FlipX }
+}
+
+sprite LENFD0, 320, 240
+{
+    patch ENFORC4, 33, 83 { FlipX }
+}
+
+sprite LENFE0, 320, 240
+{
+    patch ENFORC5, 32, 84 { FlipX }
+}
+
+sprite LEFSA0, 320, 240
+{
+    patch ENFORCF1, 40, 73 { FlipX }
+}
+
+sprite LEFSB0, 320, 240
+{
+    patch ENFORCF2, 40, 62 { FlipX }
+}
+
+
+
+sprite BENFA0, 320, 240
+{
+    patch ENFORC1, 193, 78 {}
+    patch ENFORC1, 40, 78 { FlipX }
+}
+
+sprite BENFB0, 320, 240
+{
+    patch ENFORC2, 195, 80 {}
+    patch ENFORC2, 38, 80 { FlipX }
+}
+
+sprite BENFC0, 320, 240
+{
+    patch ENFORC3, 197, 81 {}
+    patch ENFORC3, 36, 81 { FlipX }
+}
+
+sprite BENFD0, 320, 240
+{
+    patch ENFORC4, 200, 83 {}
+    patch ENFORC4, 33, 83 { FlipX }
+}
+
+sprite BENFE0, 320, 240
+{
+    patch ENFORC5, 201, 84 {}
+    patch ENFORC5, 32, 84 { FlipX }
+}
+
+sprite BEFSA0, 320, 240
+{
+    patch ENFORCF1, 179, 73 {}
+    patch ENFORCF1, 40, 73 { FlipX }
+}
+
+sprite BEFSB0, 320, 240
+{
+    patch ENFORCF2, 159, 62 {}
+    patch ENFORCF2, 40, 62 { FlipX }
+}
+
+sprite BENFF0, 320, 240
+{
+    patch ENFORCF1, 179, 73 {}
+    patch ENFORC1, 40, 78 { FlipX }
+}
+
+sprite BENFG0, 320, 240
+{
+    patch ENFORCF2, 159, 62 {}
+    patch ENFORC1, 40, 78 { FlipX }
+}
+
+sprite BENFH0, 320, 240
+{
+    patch ENFORC3, 197, 81 {}
+    patch ENFORCF1, 40, 73 { FlipX }
+}
+
+sprite BENFI0, 320, 240
+{
+    patch ENFORC4, 200, 83 {}
+    patch ENFORCF2, 40, 62 { FlipX }
+}
+
+sprite BENFJ0, 320, 240
+{
+    patch ENFORC5, 201, 84 {}
+    patch ENFORC3, 36, 81 { FlipX }
+}
+
+sprite BENFK0, 320, 240
+{
+    patch ENFORC4, 200, 83 {}
+    patch ENFORC4, 33, 83 { FlipX }
+}
+
+sprite BENFL0, 320, 240
+{
+    patch ENFORC3, 197, 81 {}
+    patch ENFORC5, 32, 84 { FlipX }
+}
+
+sprite BENFM0, 320, 240
+{
+    patch ENFORC2, 195, 80 {}
+    patch ENFORC4, 33, 83 { FlipX }
+}
+
+sprite BENFN0, 320, 240
+{
+    patch ENFORC1, 193, 78 {}
+    patch ENFORC3, 36, 81 { FlipX }
+}
+
+sprite BENFO0, 320, 240
+{
+    patch ENFORC1, 193, 78 {}
+    patch ENFORC2, 38, 80 { FlipX }
+}
+
+sprite BENFP0, 320, 240
+{
+    patch ENFORCF1, 179, 73 {}
+    patch ENFORC3, 36, 81 { FlipX }
+}
+
+sprite BENFQ0, 320, 240
+{
+    patch ENFORCF2, 159, 62 {}
+    patch ENFORC2, 38, 80 { FlipX }
+}

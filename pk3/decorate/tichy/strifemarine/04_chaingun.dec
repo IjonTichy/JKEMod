@@ -319,8 +319,8 @@ actor " Power S-Chaingun ": " S-Chaingun "
         HXCG F 0 A_JumpIfInventory("RocketAmmo", 1, 1)
         goto Empty
         HXCG F 0 A_PlaySound("hexenmarine/chaingunaltfire", CHAN_WEAPON)
-        HXCG F 1 bright A_FireCustomMissile("SChaingunGrenade", random(-4, 4)/2.0, 1, 6, 0, random(-4, 4)/2.0)
-        HXCG B 2
+        HXCG F 1 bright A_FireCustomMissile("SChaingunGrenade", random(-4, 4)/10.0, 1, 10, 6, random(-4, 4)/10.0)
+        HXCG B 1
         HXCG CDE 1
         HXCG BCDDEEAABBBCCCDDDDEEEEE 1 A_Refire
         goto Ready

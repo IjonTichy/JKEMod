@@ -22,6 +22,7 @@ JKE_PK_BDW_CLASS8                   = "Hail to the chief!";
 
 JKE_PK_SM_CLASS1                    = "Let's cut shit up.";
 JKE_PK_SM_CLASS2                    = "You picked up another enforcer!";
+JKE_PK_SM_CLASS2_2                  = "You picked up another enforcer!";
 JKE_PK_SM_CLASS3                    = "Those alien bastards are gonna \caPAY\c-.";
 JKE_PK_SM_CLASS4                    = "Because who needs breathable air?";
 JKE_PK_SM_CLASS5                    = "Accuracy? Never heard of it.";

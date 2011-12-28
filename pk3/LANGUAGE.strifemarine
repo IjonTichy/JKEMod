@@ -3,6 +3,7 @@
 
 STRIFEMARINE_PK_DWEAPKNIFE                      = "You picked up a combat knife.";
 STRIFEMARINE_PK_DWEAPENFORCER                   = "You picked up another enforcer!";
+STRIFEMARINE_PK_DWEAPENFORCERS                  = "You picked up another enforcer!";
 STRIFEMARINE_PK_DWEAPSHOTGUN                    = "Those alien bastards are gonna PAY.";
 STRIFEMARINE_PK_DWEAPCHAINGUN                   = "Because who needs breathable air?";
 STRIFEMARINE_PK_DWEAPCLUSTERBOMBER              = "Because accuracy is optional.";
@@ -13,6 +14,8 @@ STRIFEMARINE_PK_DWEAPIONSTRIKE                  = "\caWARNING: \cgDO NOT USE IN 
 STRIFEMARINE_MP_DWEAPKNIFE                      = "%k murdered %o.";
 STRIFEMARINE_MP_DWEAPENFORCER                   = "%k riddled %o full of holes with the enforcer.";
 STRIFEMARINE_MP_DWEAPENFORCER_POWER             = "%k tore apart %o with the enforcer.";
+STRIFEMARINE_MP_DWEAPENFORCERS                  = "%k corked up %o with dual enforcers.";
+STRIFEMARINE_MP_DWEAPENFORCERS_POWER            = "%k corked apart %o with dual enforcers.";
 STRIFEMARINE_MP_DWEAPSHOTGUN                    = "%o learned why you don't shoot down %k's ride.";
 STRIFEMARINE_MP_DWEAPSHOTGUN_POWER              = "%k ripped %o's head off and shat down %p neck.";
 STRIFEMARINE_MP_DWEAPCHAINGUN                   = "%k punched a few hundred holes into %o.";

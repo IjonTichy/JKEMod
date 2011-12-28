@@ -8,5 +8,5 @@ actor JKEZombieClip: RandomSpawner
 {
     dropitem "JKEClipSmall" 255 7
     dropitem "JKEClip"      255 2
-    dropitem "JKEClipBig"      255 2
+    dropitem "JKEClipBig"   255 2
 }

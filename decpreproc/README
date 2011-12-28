@@ -1,0 +1,2 @@
+Since ZDoom DECORATE lacks a robust preprocessor (it only supports #include),
+this attempts to fill in the gap. It might not do a good job, though.

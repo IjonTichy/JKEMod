@@ -8,6 +8,11 @@ actor SMClass2Message: JKEClassMessage
     Inventory.PickupMessage "$JKE_PK_SM_CLASS2"
 }
 
+actor SMClass2Message2: JKEClassMessage
+{
+    Inventory.PickupMessage "$JKE_PK_SM_CLASS2_2"
+}
+
 actor SMClass3Message: JKEClassMessage
 {
     Inventory.PickupMessage "$JKE_PK_SM_CLASS3"

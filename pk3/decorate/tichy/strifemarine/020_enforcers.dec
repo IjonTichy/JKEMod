@@ -1,0 +1,142 @@
+actor " S-Enforcers ": Weapon
+{
+    Weapon.AmmoType1 "Clip"
+    Weapon.AmmoType2 "Clip"
+    Weapon.AmmoUse1 1
+    Weapon.AmmoUse2 1
+    Weapon.AmmoGive1 24
+
+    Weapon.Kickback 100
+
+    Scale 0.4
+
+    Weapon.SisterWeapon " Power S-Enforcers "
+
+    Weapon.UpSound "hexenmarine/enforcerup"
+    Decal "BulletChip"
+
+    Inventory.PickupMessage "$STRIFEMARINE_PK_DWEAPENFORCERS"
+    Obituary "$STRIFEMARINE_MP_DWEAPENFORCERS"
+
+    States
+    {
+      Spawn:
+        BENF Z -1
+        Loop
+
+      Ready:
+        BENF A 1 A_WeaponReady
+        Loop
+
+      Deselect:
+        BENF AA 0 A_Lower
+        BENF A 1 A_Lower
+        Loop
+
+      Select:
+        BENF A 4
+        BENF A 8 A_PlaySound("hexenmarine/enforcerup", 7)
+        goto Select2
+
+      Select2:
+        BENF AA 0 A_Raise
+        BENF A 1 A_Raise
+        Loop
+
+      Fire:
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire", 5)
+        BENF A 0 A_FireBullets (2, 2, -1, 7, "BulletPuff")
+        BENF FG 1 bright
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire", 6)
+        BENF A 0 A_FireBullets (2, 2, -1, 7, "BulletPuff")
+        BENF HI 1 bright
+        BENF JKLMNO 1
+        BENF A 2
+        BENF A 0 A_ReFire
+        Goto Ready
+
+      AltFire:
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire", 5)
+        BENF A 0 A_FireBullets (6, 6, -1, 7, "BulletPuff")
+        BENF FG 1 bright
+        goto AltFire2
+
+      AltFire2:
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire", 6)
+        BENF A 0 A_FireBullets (6, 6, -1, 7, "BulletPuff")
+        BENF HI 1 bright
+        BENF JKLM 1
+        BENF A 0 A_ReFire
+        BENF NO 1
+        Goto Ready
+
+      AltHold:
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire", 6)
+        BENF A 0 A_FireBullets (6, 6, -1, 7, "BulletPuff")
+        BENF PQ 1 bright
+        goto AltFire2
+
+      Flash:
+        TNT1 A 2 A_Light2
+        TNT1 A 1 A_Light1
+        TNT1 A 0 A_Light0
+        Stop
+    }
+}
+
+actor " Power S-Enforcers ": " S-Enforcers "
+{
+    Weapon.AmmoGive1 0
+
+    Weapon.SisterWeapon " S-Enforcers "
+    +POWERED_UP
+
+    Decal "BulletScorch"
+
+    Obituary "$STRIFEMARINE_MP_DWEAPENFORCERS_POWER"
+
+    States
+    {
+      Fire:
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire", 5)
+        BENF A 0 A_FireBullets (2, 2, -1, 8, "ExplosiveBulletPuff")
+        BENF FG 1 bright
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire", 6)
+        BENF A 0 A_FireBullets (2, 2, -1, 8, "ExplosiveBulletPuff")
+        BENF HI 1 bright
+        BENF JKLMNO 1
+        BENF A 0 A_ReFire
+        Goto Ready
+
+      AltFire:
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire")
+        BENF A 0 A_FireBullets (6, 6, -1, 8, "ExplosiveBulletPuff")
+        BENF FG 1 bright
+        goto AltFire2
+
+      AltFire2:
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire")
+        BENF A 0 A_FireBullets (6, 6, -1, 8, "ExplosiveBulletPuff")
+        BENF HI 1 bright
+        BENF JL 1
+        BENF A 0 A_ReFire
+        BENF NO 1
+        Goto Ready
+
+      AltHold:
+        BENF A 0 A_GunFlash
+        BENF A 0 A_PlaySound("hexenmarine/enforcerfire")
+        BENF A 0 A_FireBullets (6, 6, -1, 7, "BulletPuff")
+        BENF PQ 1 bright
+        goto AltFire2
+    }
+}

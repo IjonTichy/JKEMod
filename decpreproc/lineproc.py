@@ -19,3 +19,6 @@ class LineProc(object):
 
     def process(self, line, lineno):
         return line
+
+    def processEnd(self):
+        pass

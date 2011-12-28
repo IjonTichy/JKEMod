@@ -35,7 +35,7 @@ int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
         {"None",                "None",                  "None", "None"},
 
         {" S-Enforcer ",        "SMClass2Message",       "Clip", "None"},
-        {" S-Enforcer ",        "SMClass2Message",       "Clip", "None"},
+        {" S-Enforcers ",       "SMClass2Message2",      "Clip", "None"},
 
         {" S-Shotgun ",         "SMClass3Message",       "Shell", "None"},
         {" S-Shotgun ",         "SMClass3Message",       "Shell", "None"},

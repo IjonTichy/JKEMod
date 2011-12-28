@@ -22,14 +22,19 @@ class FileProc(object):
                 tmp = proc.processLines(tmp, i)
 
             ret.append(tmp)
+        
+        for proc in self.lineprocs:
+            tmp = proc.processEnd()
 
+            if tmp:
+                ret.append(tmp)
+        
         return "\n".join(ret)
 
 
 def processFile(file, procs):
     string = open(file, "r").read()
 
-    procs = [proc() for proc in procs]
     fileProc = FileProc(procs)
     ret = fileProc.process(string)
 

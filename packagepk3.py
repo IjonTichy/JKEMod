@@ -7,7 +7,7 @@ import which
 from pathwalker import pathwalker
 from decpreproc import *
 
-LINEPROCS   = [defineproc.DefineProc, includeproc.IncludeDirProc, ]#includeproc.IncludeProc]
+LINEPROCS   = [defineproc.DefineProc(), includeproc.IncludeDirProc()]
 
 NUMBERS     = "0123456789"
 
