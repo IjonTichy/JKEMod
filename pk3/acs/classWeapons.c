@@ -26,7 +26,7 @@ script 683 (int slot, int dropped)
 {
     int pln = PlayerNumber();
     int found;
-    int ret;
+    int ret = 0;
     int wep;
     int ammo1; int ammo2;
 
@@ -63,7 +63,7 @@ script 683 (int slot, int dropped)
     if (ret & NOCLASS)
     {
         // Tichy: for some reason, without sv_weaponstay on, this always prints
-        //Print(s:"something broke - no classes found\nReport the weapon you picked up and the class you're using to Ijon Tichy (gztichy@lavabit.com)");
+        Print(s:"something broke - no classes found\nReport the weapon you picked up and the class you're using to Ijon Tichy (gztichy@lavabit.com)");
         SetResultValue(ret);
         terminate;
     }

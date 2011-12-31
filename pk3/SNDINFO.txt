@@ -359,7 +359,7 @@ $limit jkemod/jflamethrower/flame       0
 ////
 
 jkemod/jpistol/fire                     sounds/weapons/jpistol/fire.lmp
-$alias jkemod/jpistol/load              jkemod/doublebarrelsg/load
+$alias jkemod/jpistol/load              jkemod/doublebarrelsg/close
 
 
 ////

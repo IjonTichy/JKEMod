@@ -1,0 +1,26 @@
+actor JKESuperShotgunGuy: SuperShotgunGuy replaces SuperShotgunGuy
+{
+    dropitem "JKESuperShotguyShell"
+    dropitem "JKEClass3Drop2"
+
+    States
+    {
+      Missile:
+        GPOS E 0 A_PlaySound("weapons/sshotc", CHAN_WEAPON)
+        GPOS E 7 A_FaceTarget
+        GPOS E 3
+        GPOS F 7 bright A_CustomBulletAttack(11.2, 7.1, 10, 5, "BulletPuff")
+        GPOS EA 7
+        GPOS A 14 A_PlaySound("weapons/sshoto", CHAN_WEAPON)
+        GPOS A 7 A_PlaySound("weapons/sshotl", CHAN_WEAPON)
+        GPOS E 6
+        Goto See
+    }
+}
+
+actor JKESuperShotguyShell: RandomSpawner
+{
+    dropitem "JKEShellSmall" 255 7
+    dropitem "JKEShell"      255 2
+    dropitem "JKEShellBig"   255 1
+}

@@ -1,6 +1,6 @@
-#define CLASSCOUNT 6
-#define SLOTCOUNT  16
-#define WEPCOUNT 1
+#define CLASSCOUNT  6
+#define SLOTCOUNT   16
+#define WEPCOUNT    1
 
 int classWeps[CLASSCOUNT][SLOTCOUNT][WEPCOUNT+3] =
 {

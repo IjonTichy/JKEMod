@@ -1,7 +1,13 @@
-actor JKEShotgunGuy: ShotgunGuy replaces ShotgunGuy
+actor JKEShotgunGuy: ShotgunGuy
 {
     dropitem "JKEShotguyShell"
     dropitem "JKEClass3Drop"
+}
+
+actor JKEShotguySpawner: RandomSpawner replaces ShotgunGuy
+{
+    dropitem "JKEShotgunGuy" 255 5
+    dropitem "JKESuperShotgunGuy" 255 1
 }
 
 actor JKEShotguyShell: RandomSpawner

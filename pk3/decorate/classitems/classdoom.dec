@@ -1,7 +1,5 @@
 actor JKEChainsawPickup: JKEClassPickupSpawner replaces Chainsaw
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -21,8 +19,6 @@ actor JKEChainsawPickup: JKEClassPickupSpawner replaces Chainsaw
 
 actor JKEPistolPickup: JKEClassPickupSpawner replaces Pistol
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -42,8 +38,6 @@ actor JKEPistolPickup: JKEClassPickupSpawner replaces Pistol
 
 actor JKEShotgunPickup: JKEClassPickupSpawner replaces Shotgun
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -63,8 +57,6 @@ actor JKEShotgunPickup: JKEClassPickupSpawner replaces Shotgun
 
 actor JKESuperShotgunPickup: JKEClassPickupSpawner replaces SuperShotgun
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -84,8 +76,6 @@ actor JKESuperShotgunPickup: JKEClassPickupSpawner replaces SuperShotgun
 
 actor JKEChaingunPickup: JKEClassPickupSpawner replaces Chaingun
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -105,8 +95,6 @@ actor JKEChaingunPickup: JKEClassPickupSpawner replaces Chaingun
 
 actor JKEMinigunPickup: JKEClassPickupSpawner replaces Minigun
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -126,8 +114,6 @@ actor JKEMinigunPickup: JKEClassPickupSpawner replaces Minigun
 
 actor JKERocketLauncherPickup: JKEClassPickupSpawner replaces RocketLauncher
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -147,8 +133,6 @@ actor JKERocketLauncherPickup: JKEClassPickupSpawner replaces RocketLauncher
 
 actor JKEGrenadeLauncherPickup: JKEClassPickupSpawner replaces GrenadeLauncher
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -168,8 +152,6 @@ actor JKEGrenadeLauncherPickup: JKEClassPickupSpawner replaces GrenadeLauncher
 
 actor JKEPlasmaRiflePickup: JKEClassPickupSpawner replaces PlasmaRifle
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -189,8 +171,6 @@ actor JKEPlasmaRiflePickup: JKEClassPickupSpawner replaces PlasmaRifle
 
 actor JKERailgunPickup: JKEClassPickupSpawner replaces Railgun
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -210,8 +190,6 @@ actor JKERailgunPickup: JKEClassPickupSpawner replaces Railgun
 
 actor JKEBFG9000Pickup: JKEClassPickupSpawner replaces BFG9000
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:
@@ -231,8 +209,6 @@ actor JKEBFG9000Pickup: JKEClassPickupSpawner replaces BFG9000
 
 actor JKEBFG10kPickup: JKEClassPickupSpawner replaces BFG10k
 {
-    +NOINTERACTION
-
     States
     {
         Spawn:

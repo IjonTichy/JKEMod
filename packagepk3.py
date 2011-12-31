@@ -176,7 +176,7 @@ def makePK3(aArgs):
     os.chdir("pk3")
 
     pk3Name     = "{}.pk3".format(PK3NAME)
-    pk3Name2    = "../{}.pk3".format(PK3NAME)
+    pk3Name2    = os.path.realpath("../{}.pk3".format(PK3NAME) )
     pk3Zip      = zipfile.ZipFile(pk3Name2, "w")
     pk3Files    = pk3Walk.walk(abs=1, fFilter=lambda x: not x.endswith("*.o")).flattenFiles(rel=1)
     pk3Total    = len(pk3Files)
