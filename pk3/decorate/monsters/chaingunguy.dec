@@ -1,0 +1,32 @@
+actor JKEChaingunGuy: ChaingunGuy replaces ChaingunGuy
+{
+    PainChance 96
+
+    DropItem "JKEClass4Drop"
+    DropItem "JkeChainguyDrop1"
+    DropItem "JkeChainguyDrop2"
+    ReactionTime 0
+    +MISSILEEVENMORE
+
+    States
+    {
+      Missile:
+        CPOS E 10 A_FaceTarget
+        CPOS FE 4 bright A_CustomBulletAttack(6, 6, 1, 5, "BulletPuff")
+        CPOS F 0 A_CPosRefire
+        goto Missile+1
+    }
+}
+
+actor JKEChainguyDrop1: RandomSpawner
+{
+    dropitem "JKEClipSmall" 255 1
+    dropitem "JKEClip"      255 2
+    dropitem "JKEClipBig"   255 7
+}
+
+actor JKEChainguyDrop2: RandomSpawner
+{
+    dropitem "JKEClipBig"   255 7
+    dropitem "JKEClipBox"   255 1
+}

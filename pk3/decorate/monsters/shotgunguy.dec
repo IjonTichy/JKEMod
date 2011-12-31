@@ -2,6 +2,26 @@ actor JKEShotgunGuy: ShotgunGuy
 {
     dropitem "JKEShotguyShell"
     dropitem "JKEClass3Drop"
+
+    ReactionTime 0
+    +MISSILEEVENMORE
+
+    States
+    {
+      Missile:
+        SPOS E 10 A_FaceTarget
+        SPOS F 6 bright A_CustomBulletAttack(10, 10, 7, 5, "BulletPuff")
+        SPOS E 6 A_FaceTarget
+        SPOS C 3 A_Chase("","")
+        SPOS D 4 A_Chase("","")
+        SPOS E 0 A_CPosRefire
+        goto ReMissile
+
+      ReMissile:
+        SPOS AA 4 A_Chase("","")
+        //SPOS B 1 A_Chase("","")
+        goto Missile
+    }
 }
 
 actor JKEShotguySpawner: RandomSpawner replaces ShotgunGuy

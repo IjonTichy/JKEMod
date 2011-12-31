@@ -3,18 +3,26 @@ actor JKESuperShotgunGuy: SuperShotgunGuy replaces SuperShotgunGuy
     dropitem "JKESuperShotguyShell"
     dropitem "JKEClass3Drop2"
 
+    ReactionTime 0
+    +MISSILEEVENMORE
+
     States
     {
       Missile:
         GPOS E 0 A_PlaySound("weapons/sshotc", CHAN_WEAPON)
         GPOS E 7 A_FaceTarget
-        GPOS E 3
-        GPOS F 7 bright A_CustomBulletAttack(11.2, 7.1, 10, 5, "BulletPuff")
-        GPOS EA 7
-        GPOS A 14 A_PlaySound("weapons/sshoto", CHAN_WEAPON)
-        GPOS A 7 A_PlaySound("weapons/sshotl", CHAN_WEAPON)
-        GPOS E 6
-        Goto See
+        GPOS E 0 A_FaceTarget
+        GPOS F 7 bright A_CustomBulletAttack(11.2, 7.1, 20, 5, "BulletPuff")
+        GPOS E 8
+        GPOS A 4 A_Chase("", "")
+        GPOS B 2 A_Chase("", "")
+        GPOS B 2 A_PlaySound("weapons/sshoto", CHAN_WEAPON)
+        GPOS CDA 4 A_Chase("", "")
+        GPOS A 0 A_PlaySound("weapons/sshotl", CHAN_WEAPON)
+        GPOS E 0 A_CPosRefire
+        GPOS AB 4 A_Chase("", "")
+        GPOS C 1 A_Chase("", "")
+        Goto Missile
     }
 }
 

@@ -2,11 +2,24 @@ actor JKEZombieman: Zombieman replaces Zombieman
 {
     dropitem "JKEZombieClip"
     dropitem "JKEClass2Drop", 32
+    
+    ReactionTime 0
+    +MISSILEEVENMORE
+
+    States
+    {
+      Missile:
+        POSS E 4 A_FaceTarget
+        POSS F 4 bright A_PosAttack
+        POSS E 6
+        POSS E 0 A_CPosRefire
+        Goto Missile
+    }
 }
 
 actor JKEZombieClip: RandomSpawner
 {
     dropitem "JKEClipSmall" 255 7
-    dropitem "JKEClip"      255 2
+    dropitem "JKEClip"      255 4
     dropitem "JKEClipBig"   255 2
 }
