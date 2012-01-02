@@ -1,5 +1,8 @@
 actor JKEZombieman: Zombieman replaces Zombieman
 {
+    Health 100
+    PainChance 96
+
     dropitem "JKEZombieClip"
     dropitem "JKEClass2Drop", 32
     

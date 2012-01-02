@@ -1,5 +1,6 @@
 actor JKEChaingunGuy: ChaingunGuy replaces ChaingunGuy
 {
+    Health 100
     PainChance 96
 
     DropItem "JKEClass4Drop"

@@ -1,0 +1,155 @@
+actor JKEDoomImp: DoomImp replaces DoomImp
+{
+    Health 120
+    PainChance 64   // you might notice a trend
+    
+    ReactionTime 0
+    +MISSILEEVENMORE
+    
+    States
+    {
+      Melee:
+        TROO EF 4 A_FaceTarget
+        TROO G 4 A_TroopAttack
+      
+      Missile:
+        TROO A 0 A_JumpIfCloser(256, "Missile256")
+        TROO A 0 A_JumpIfCloser(512, "Missile512")
+        goto Missile1024
+
+      Missile256:
+        TROO EF 8 A_FaceTarget
+        TROO G 0 A_FaceTarget
+        TROO G 6 A_CustomMissile("JKEImpBallC")
+        TROO F 5
+        goto See
+     
+     Missile512:
+        TROO EF 2 A_FaceTarget
+        TROO G  0 A_FaceTarget
+        TROO G  2 A_CustomMissile("JKEImpBallBase")
+        TROO EF 2 A_FaceTarget
+        TROO G  0 A_FaceTarget
+        TROO G  2 A_CustomMissile("JKEImpBallBase")
+        TROO EF 2 A_FaceTarget
+        TROO G  0 A_FaceTarget
+        TROO G  2 A_CustomMissile("JKEImpBallBase")
+        goto See
+
+     Missile1024:
+        TROO EF 12 A_FaceTarget
+        TROO G 0 A_FaceTarget
+        TROO G 0 A_CustomMissile("JKEImpBallW1")
+        TROO G 0 A_CustomMissile("JKEImpBallW2")
+        TROO G 0 A_CustomMissile("JKEImpBallW3")
+        TROO G 0 A_CustomMissile("JKEImpBallW4")
+        TROO G 8 A_CustomMissile("JKEImpBallW5")
+        TROO F 6
+        goto See
+    }
+}
+
+actor JKEImpBallBase
+{
+    Radius 6
+    Height 8
+    Speed 20
+    FastSpeed 40
+    
+    Projectile
+    Damage (15)
+
+    RenderStyle Add
+    +RANDOMIZE
+    
+    SeeSound "imp/attack"
+    DeathSound "imp/shotx"
+
+    States
+    {
+      Spawn:
+        BAL1 AB 4 bright
+        loop
+
+      Death:
+        BAL1 CDE 8 bright
+        stop
+    }
+}
+
+actor JKEImpBallC: JKEImpBallBase
+{
+    Damage (8)
+
+    States
+    {
+      Death:
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 0,   6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 72,  6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 144, 6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 216, 6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 288, 6, 20)
+       goto Super::Death
+    }
+}
+
+actor JKEImpShrapnel: JKEImpBallBase
+{
+    Scale 0.8
+    Damage (10)
+    
+    -NOGRAVITY
+    Gravity 0.5
+}
+
+actor JKEImpBallW1: JKEImpBallBase
+{ 
+    Damage (12)
+    
+    States
+    {
+      Spawn:
+        BAL1 AABB 2 bright A_BishopMissileWeave
+        loop
+    }
+}
+
+actor JKEImpBallW2: JKEImpBallW1
+{
+    States
+    {
+      Spawn:
+        BAL1 AAAAAAAA 0 bright A_BishopMissileWeave
+        goto Super::Spawn
+    }
+}
+
+actor JKEImpBallW3: JKEImpBallW1
+{
+    States
+    {
+      Spawn:
+        BAL1 AAAAAAAAAAAAAAAA 0 bright A_BishopMissileWeave
+        goto Super::Spawn
+    }
+}
+
+actor JKEImpBallW4: JKEImpBallW1
+{
+    States
+    {
+      Spawn:
+        BAL1 AAAAAAAAAAAAAAAAAAAAAAAA 2 bright A_BishopMissileWeave
+        goto Super::Spawn
+    }
+}
+
+actor JKEImpBallW5: JKEImpBallW1
+{
+    States
+    {
+      Spawn:
+        BAL1 AB 4 bright
+        loop
+    }
+}

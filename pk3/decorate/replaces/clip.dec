@@ -1,4 +1,4 @@
-actor JKEClip: CustomInventory
+actor JKEClip: CustomInventory replaces Clip
 {
     Inventory.PickupMessage "$JKE_PK_JKECLIP"
 

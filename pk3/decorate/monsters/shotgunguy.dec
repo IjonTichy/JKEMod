@@ -1,5 +1,8 @@
 actor JKEShotgunGuy: ShotgunGuy
 {
+    Health 100
+    PainChance 96
+
     dropitem "JKEShotguyShell"
     dropitem "JKEClass3Drop"
 
