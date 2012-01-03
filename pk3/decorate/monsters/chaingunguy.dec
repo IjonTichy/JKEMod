@@ -1,9 +1,10 @@
 actor JKEChaingunGuy: ChaingunGuy replaces ChaingunGuy
 {
+    DropItem "JKEClass4Drop"
+#ifdef HARDER_MONSTERS
     Health 100
     PainChance 96
 
-    DropItem "JKEClass4Drop"
     DropItem "JkeChainguyDrop1"
     DropItem "JkeChainguyDrop2"
     ReactionTime 0
@@ -30,4 +31,5 @@ actor JKEChainguyDrop2: RandomSpawner
 {
     dropitem "JKEClipBig"   255 7
     dropitem "JKEClipBox"   255 1
+#endif
 }

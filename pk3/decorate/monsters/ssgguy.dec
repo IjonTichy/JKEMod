@@ -1,10 +1,12 @@
 actor JKESuperShotgunGuy: SuperShotgunGuy replaces SuperShotgunGuy
 {
+    dropitem "JKEClass3Drop2"
+
+#ifdef HARDER_MONSTERS
     Health 100
     PainChance 96
 
     dropitem "JKESuperShotguyShell"
-    dropitem "JKEClass3Drop2"
 
     ReactionTime 0
     +MISSILEEVENMORE
@@ -34,4 +36,5 @@ actor JKESuperShotguyShell: RandomSpawner
     dropitem "JKEShellSmall" 255 7
     dropitem "JKEShell"      255 2
     dropitem "JKEShellBig"   255 1
+#endif
 }

@@ -1,10 +1,12 @@
 actor JKEShotgunGuy: ShotgunGuy
 {
+    dropitem "JKEClass3Drop"
+
+#ifdef HARDER_MONSTERS
     Health 100
     PainChance 96
 
     dropitem "JKEShotguyShell"
-    dropitem "JKEClass3Drop"
 
     ReactionTime 0
     +MISSILEEVENMORE
@@ -38,4 +40,5 @@ actor JKEShotguyShell: RandomSpawner
     dropitem "JKEShellSmall" 128 7
     dropitem "JKEShell"      128 2
     dropitem "JKEShellBig"   128 1
+#endif
 }

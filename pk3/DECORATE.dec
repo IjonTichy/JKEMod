@@ -1,1 +1,3 @@
+#define HARDER_MONSTERS
+
 #include {decorate}

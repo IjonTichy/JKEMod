@@ -16,19 +16,20 @@ class FileProc(object):
         ret = []
 
         for i, line in enumerate(lines):
-            tmp = line
+            try:
+                tmp = line
+                
+                for proc in self.lineprocs:
+                    tmp = proc.processLines(tmp, i)
+                
+                    if tmp == lineproc.NOLINE:
+                        raise lineproc.NoLineException
             
-            for proc in self.lineprocs:
-                tmp = proc.processLines(tmp, i)
-
-            ret.append(tmp)
-        
-        for proc in self.lineprocs:
-            tmp = proc.processEnd()
-
-            if tmp:
+            except lineproc.NoLineException:
+                continue
+            else:
                 ret.append(tmp)
-        
+
         return "\n".join(ret)
 
 

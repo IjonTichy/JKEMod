@@ -1,3 +1,4 @@
+#ifdef HARDER_MONSTERS
 actor JKEDoomImp: DoomImp replaces DoomImp
 {
     Health 120
@@ -85,10 +86,13 @@ actor JKEImpBallC: JKEImpBallBase
     {
       Death:
        BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 0,   6, 20)
-       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 72,  6, 20)
-       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 144, 6, 20)
-       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 216, 6, 20)
-       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 288, 6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 45,  6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 90,  6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 135, 6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 180, 6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 225, 6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 270, 6, 20)
+       BAL1 A 0 A_CustomMissile("JKEImpShrapnel", 0,0, 315, 6, 20)
        goto Super::Death
     }
 }
@@ -153,3 +157,4 @@ actor JKEImpBallW5: JKEImpBallW1
         loop
     }
 }
+#endif

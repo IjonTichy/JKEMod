@@ -2,7 +2,9 @@
 
 __all__ = ("LineProcError", "LineProc")
 
+class NOLINE(object): pass
 class LineProcError(Exception): pass
+class NoLineException(Exception): pass
 
 class LineProc(object):
     
@@ -11,9 +13,14 @@ class LineProc(object):
     
     def processLines(self, lines, lineno):
         ret = []
-
+        
         for line in lines.split("\n"):
-            ret.append(self.process(line, lineno))
+            result = self.process(line, lineno)
+            
+            if result == NOLINE:
+                return NOLINE
+            
+            ret.append(result)
         
         return "\n".join(ret)
 
