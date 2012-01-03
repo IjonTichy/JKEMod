@@ -74,7 +74,7 @@ def usageFull():
     usage()
     print(USAGE_FULL)
 
-NO_ARGS, NO_PK3, NO_ACC, NO_VERSION, ACC_FAIL, NO_BINARY = range(4, 10)
+NO_ARGS, NO_PK3, NO_ACC, NO_VERSION, ACC_FAIL, NO_BINARY, PREPROC_FAIL = range(4, 11)
 
 PK3NAME = os.path.basename(os.path.realpath("."))
 
@@ -209,8 +209,18 @@ def makePK3(aArgs):
                 dTmpName = tempfile.mkstemp(prefix="dec")[1]
                 dTmp     = open(dTmpName, "w")
                 
-                dTmp.write(fileproc.processFile(fName, LINEPROCS))
-                dTmp.close()
+                try:
+                    dTmp.write(fileproc.processFile(fName, LINEPROCS))
+                except lineproc.LineProcError as exc:
+                    reason = exc.args[0]
+
+                    print("\n !!! ERROR !!!", file=sys.stderr)
+                    print("  In file {}:".format(fPath), file=sys.stderr)
+                    print("    {}".format(reason), file=sys.stderr)
+                    sys.exit(PREPROC_FAIL)
+
+                finally:
+                    dTmp.close()
                 
                 os.chdir(prevDir)
 

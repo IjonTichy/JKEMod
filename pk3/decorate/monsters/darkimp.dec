@@ -1,0 +1,169 @@
+#ifdef HARDER_MONSTERS
+actor JKEDarkImp: DarkImp replaces DarkImp
+{
+    Health 200
+    PainChance 64
+    
+    ReactionTime 0
+    +MISSILEEVENMORE
+    
+    States
+    {
+      Melee:
+        DIMP EF 4 A_FaceTarget
+        DIMP G 4 A_CustomMeleeAttack(20, "imp/melee")
+        goto See
+ 
+      Missile:
+        DIMP A 0 A_JumpIfCloser(256, "Missile256")
+        DIMP A 0 A_JumpIfCloser(512, "Missile512")
+        goto Missile1024
+
+      Missile256:
+        DIMP EF 8 A_FaceTarget
+        DIMP G 0 A_FaceTarget
+        DIMP G 0 A_CustomMissile("JKEDImpBallC", 32, -8)
+        DIMP G 6 A_CustomMissile("JKEDImpBallC", 32,  8)
+        DIMP F 5
+        goto See
+     
+     Missile512:
+        DIMP EF 1 A_FaceTarget
+        DIMP G  0 A_FaceTarget
+        DIMP G  2 A_CustomMissile("JKEDImpBallBase")
+        DIMP EF 1 A_FaceTarget
+        DIMP G  0 A_FaceTarget
+        DIMP G  2 A_CustomMissile("JKEDImpBallBase")
+        DIMP EF 1 A_FaceTarget
+        DIMP G  0 A_FaceTarget
+        DIMP G  2 A_CustomMissile("JKEDImpBallBase")
+        goto See
+
+     Missile1024:
+        DIMP EF 12 A_FaceTarget
+        DIMP G 0 A_FaceTarget
+        DIMP G 0 A_CustomMissile("JKEDImpBallL1", 32, -8)
+        DIMP G 8 A_CustomMissile("JKEDImpBallL2", 32, 8)
+        DIMP F 6
+        goto See
+    }
+}
+
+actor JKEDImpBallBase
+{
+    Radius 6
+    Height 8
+    Speed 25
+    FastSpeed 50
+    
+    Projectile
+    Damage (20)
+
+    RenderStyle Add
+    +RANDOMIZE
+    
+    SeeSound "imp/attack"
+    DeathSound "imp/shotx"
+    States
+    {
+      Spawn:
+        BAL4 AB 4 bright
+        loop
+
+      Death:
+        BAL4 CDE 6 bright
+        stop
+    }
+}
+
+actor JKEDImpBallC: JKEDImpBallBase
+{
+    Speed 4
+    FastSpeed 4
+    
+    Damage (30)
+    
+    -NOGRAVITY
+    Gravity 0.6
+
+    States
+    {
+      Death:
+       BAL4 A 0 A_CustomMissile("JKEDImpShrapnel", 0,0, -80, 6, 10)
+       BAL4 A 0 A_CustomMissile("JKEDImpShrapnel", 0,0, -40, 6, 10)
+       BAL4 A 0 A_CustomMissile("JKEDImpShrapnel", 0,0, -10, 6, 10)
+       BAL4 A 0 A_CustomMissile("JKEDImpShrapnel", 0,0, 0,   6, 10)
+       BAL4 A 0 A_CustomMissile("JKEDImpShrapnel", 0,0, 10,  6, 10)
+       BAL4 A 0 A_CustomMissile("JKEDImpShrapnel", 0,0, 40,  6, 10)
+       BAL4 A 0 A_CustomMissile("JKEDImpShrapnel", 0,0, 80,  6, 10)
+       goto Super::Death
+    }
+}
+
+actor JKEDImpShrapnel: JKEDImpBallBase
+{
+    Scale 0.8
+    Damage (12)
+    
+    -NOGRAVITY
+    Gravity 0.5
+    
+    States
+    {
+      Spawn:
+        BAL4 AAAABBBB 1 bright A_SpawnItemEx("JKEDimpTrail")
+        loop
+    }
+}
+
+actor JKEDImpTrail
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+    
+    Scale 0.8
+    RenderStyle Add
+
+    States
+    {
+      Spawn:
+        BAL4 AAAABBBB 1 A_FadeOut(0.05)
+        loop
+    }
+}
+
+
+actor JKEDImpBallL1: JKEDImpBallBase
+{
+    Damage (40)
+
+    States
+    {
+      Spawn:
+        BAL4 A 2 bright
+        BAL4 A 0 A_CustomMissile("JKEDimpShrapnel", 0,0, 110,6, 5)
+        BAL4 A 0 A_CustomMissile("JKEDimpShrapnel", 0,0, 90,6, 5)
+        BAL4 AB 2 bright
+        BAL4 B 0 A_CustomMissile("JKEDimpShrapnel", 0,0, 130,6, 5)
+        BAL4 B 0 A_CustomMissile("JKEDimpShrapnel", 0,0, 90,6, 5)
+        BAL4 B 2
+        loop
+    }
+}
+
+actor JKEDImpBallL2: JKEDImpBallL1
+{
+    States
+    {
+      Spawn:
+        BAL4 A 2 bright
+        BAL4 A 0 A_CustomMissile("JKEDimpShrapnel", 0,0, -110,6, 5)
+        BAL4 A 0 A_CustomMissile("JKEDimpShrapnel", 0,0, -90,6, 5)
+        BAL4 AB 2 bright
+        BAL4 B 0 A_CustomMissile("JKEDimpShrapnel", 0,0, -110,6, 5)
+        BAL4 B 0 A_CustomMissile("JKEDimpShrapnel", 0,0, -90,6, 5)
+        BAL4 B 2
+        loop
+    }
+}
+#endif

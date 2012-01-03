@@ -12,7 +12,8 @@ actor JKEDoomImp: DoomImp replaces DoomImp
       Melee:
         TROO EF 4 A_FaceTarget
         TROO G 4 A_TroopAttack
-      
+        goto See
+ 
       Missile:
         TROO A 0 A_JumpIfCloser(256, "Missile256")
         TROO A 0 A_JumpIfCloser(512, "Missile512")

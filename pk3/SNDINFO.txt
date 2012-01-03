@@ -35,6 +35,15 @@ jkemod/assorted/explode3                sounds/assorted/explode3.wav
 jkemod/assorted/explode4                sounds/assorted/explode4.wav
 jkemod/assorted/explode5                sounds/assorted/explode5.wav
 
+$alias jkemod/monsters/pistol           grunt/attack
+$alias jkemod/monsters/shotgun          shotguy/attack
+$alias jkemod/monsters/ssg              ssgguy/attack
+
+$limit jkemod/monsters/pistol           0
+$limit jkemod/monsters/shotgun          0
+$limit jkemod/monsters/ssg              0
+
+
 ///
 // Shell casings
 

@@ -1,7 +1,8 @@
 actor JKEShotgunGuy: ShotgunGuy
 {
     dropitem "JKEClass3Drop"
-
+    
+    AttackSound "jkemod/monsters/shotgun"
 #ifdef HARDER_MONSTERS
     Health 100
     PainChance 96

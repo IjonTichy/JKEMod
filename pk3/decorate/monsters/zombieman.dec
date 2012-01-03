@@ -2,6 +2,8 @@ actor JKEZombieman: Zombieman replaces Zombieman
 {
     dropitem "JKEZombieClip"
     dropitem "JKEClass2Drop", 32
+    
+    AttackSound "jkemod/monsters/pistol"
 #ifdef HARDER_MONSTERS
     Health 100
     PainChance 96

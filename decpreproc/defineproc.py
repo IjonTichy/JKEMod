@@ -125,7 +125,6 @@ class DefineProc(lineproc.LineProc):
         newIfDef = ifdefItem(not match.group(1), match.group(2))
         self.defStack.append(newIfDef)
         
-        print(newIfDef)
 
         return lineproc.NOLINE
 
@@ -155,7 +154,6 @@ class DefineProc(lineproc.LineProc):
         
         lastDef.flip()
         
-        print(lastDef)
         return lineproc.NOLINE
 
     def processCheckIf(self, line, lineno):

@@ -1,6 +1,6 @@
 *.o
 *.pyc
-*.swp
+*.sw?
 pk3~*
 jkemod*.pk3
 jkemod*.zip

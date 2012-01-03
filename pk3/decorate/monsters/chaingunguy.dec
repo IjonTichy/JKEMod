@@ -1,6 +1,8 @@
 actor JKEChaingunGuy: ChaingunGuy replaces ChaingunGuy
 {
     DropItem "JKEClass4Drop"
+    
+    AttackSound "jkemod/monsters/shotgun"
 #ifdef HARDER_MONSTERS
     Health 100
     PainChance 96

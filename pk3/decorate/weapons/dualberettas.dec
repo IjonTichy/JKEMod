@@ -59,14 +59,14 @@ actor " Dual Berettas ": Weapon
 
       RightFire:
         BRT2 B 3 bright A_GiveInventory("BerettaSide")
-        BRT2 C 0 A_ReFire
         BRT2 D 2
+        BRT2 C 0 A_ReFire
         goto Ready
 
       LeftFire:
         BRT2 F 3 bright A_TakeInventory("BerettaSide")
-        BRT2 G 0 A_ReFire
         BRT2 H 2
+        BRT2 G 0 A_ReFire
         goto Ready
 
 
@@ -80,14 +80,14 @@ actor " Dual Berettas ": Weapon
 
       RightHold:
         BRT2 E 3 bright A_GiveInventory("BerettaSide")
-        BRT2 C 0 A_ReFire
         BRT2 D 2
+        BRT2 C 0 A_ReFire
         goto Ready
 
       LeftHold:
         BRT2 I 3 bright A_TakeInventory("BerettaSide")
-        BRT2 G 0 A_ReFire
         BRT2 H 2
+        BRT2 G 0 A_ReFire
         goto Ready
 
 
@@ -160,14 +160,14 @@ actor " Power Dual Berettas ": " Dual Berettas "
 
       RightFire:
         BRT2 B 2 bright A_GiveInventory("BerettaSide")
-        BRT2 C 0 A_ReFire
         BRT2 D 1
+        BRT2 C 0 A_ReFire
         goto Ready
 
       LeftFire:
         BRT2 F 2 bright A_TakeInventory("BerettaSide")
-        BRT2 G 0 A_ReFire
         BRT2 H 1
+        BRT2 G 0 A_ReFire
         goto Ready
 
 
@@ -182,14 +182,14 @@ actor " Power Dual Berettas ": " Dual Berettas "
 
       RightHold:
         BRT2 E 2 bright A_GiveInventory("BerettaSide")
-        BRT2 C 0 A_ReFire
         BRT2 D 1
+        BRT2 C 0 A_ReFire
         goto Ready
 
       LeftHold:
         BRT2 I 2 bright A_TakeInventory("BerettaSide")
-        BRT2 G 0 A_ReFire
         BRT2 H 1
+        BRT2 G 0 A_ReFire
         goto Ready
 
       Spawn:
