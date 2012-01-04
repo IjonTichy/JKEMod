@@ -32,43 +32,41 @@ actor JKEDemon: Demon replaces Demon
         goto Charge
      
       Charge:
-        SARG A 2 A_Recoil(-18)
+        SARG A 2 A_Recoil(-15)
         SARG A 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG B 2 A_Recoil(-18)
+        SARG B 2 A_Recoil(-15)
         SARG B 0 A_JumpIfCloser(96, "ChargeBite")
         SARG B 0 A_FaceTarget
-        SARG C 2 A_Recoil(-18)
+        SARG C 2 A_Recoil(-15)
         SARG C 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG D 2 A_Recoil(-18)
+        SARG D 2 A_Recoil(-15)
         SARG D 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG B 0 A_FaceTarget
-        SARG A 2 A_Recoil(-18)
+        SARG D 0 A_JumpIfCloser(256, "ChargeClose")
+        SARG D 0 A_JumpIf(ACS_ExecuteWithResult(583, momx, momy, momz) < 8, "ChargeEnd")
+        loop
+
+      ChargeClose:
+        SARG A 2 A_Recoil(-15)
         SARG A 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG B 2 A_Recoil(-18)
+        SARG B 2 A_Recoil(-15)
         SARG B 0 A_JumpIfCloser(96, "ChargeBite")
         SARG B 0 A_FaceTarget
-        SARG C 2 A_Recoil(-18)
+        SARG C 2 A_Recoil(-15)
         SARG C 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG D 2 A_Recoil(-18)
+        SARG D 2 A_Recoil(-15)
         SARG D 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG B 0 A_FaceTarget
-        SARG A 2 A_Recoil(-18)
-        SARG A 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG B 2 A_Recoil(-18)
-        SARG B 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG B 0 A_FaceTarget
-        SARG C 2 A_Recoil(-18)
-        SARG C 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG D 2 A_Recoil(-18)
-        SARG D 0 A_JumpIfCloser(96, "ChargeBite")
-        SARG B 0 A_FaceTarget
-        SARG A 8
+        goto ChargeEnd
+        
+      ChargeEnd:
+        SARG D 2
+        SARG C 4
+        SARG B 12
         goto See
-      
+
       ChargeBite:
         SARG E 0 A_PlaySound("demon/melee", CHAN_WEAPON)
-        SARG E 2 A_Recoil(-18)
-        SARG F 2 A_Recoil(-18)
+        SARG E 2 A_Recoil(-15)
+        SARG F 2 A_Recoil(-15)
         SARG G 18 A_CustomMeleeAttack(70)
         goto See
     }
