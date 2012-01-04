@@ -1,0 +1,76 @@
+#ifdef HARDER_MONSTERS
+actor JKEDemon: Demon replaces Demon
+{
+    Health 250
+
+    ReactionTime 0
+    +MISSILEEVENMORE
+    +NODAMAGETHRUST
+    
+    MeleeRange 64
+
+    States
+    {
+      Spawn:
+        SARG AABB 5 A_Look
+        loop
+      
+      See:
+        SARG AAAABBBBCCCCDDDD 1 A_Chase
+        loop
+
+      Melee:
+        SARG E  0 A_PlaySound("demon/melee", CHAN_WEAPON)
+        SARG EF 4 A_FaceTarget
+        SARG G 8 A_CustomMeleeAttack(20)
+        goto See
+      
+      Missile:
+        SARG A 0 A_JumpIfCloser(256, "See")
+        SARG A 12 A_FaceTarget
+        SARG A 0 A_FaceTarget
+        goto Charge
+     
+      Charge:
+        SARG A 2 A_Recoil(-18)
+        SARG A 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 2 A_Recoil(-18)
+        SARG B 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_FaceTarget
+        SARG C 2 A_Recoil(-18)
+        SARG C 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG D 2 A_Recoil(-18)
+        SARG D 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_FaceTarget
+        SARG A 2 A_Recoil(-18)
+        SARG A 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 2 A_Recoil(-18)
+        SARG B 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_FaceTarget
+        SARG C 2 A_Recoil(-18)
+        SARG C 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG D 2 A_Recoil(-18)
+        SARG D 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_FaceTarget
+        SARG A 2 A_Recoil(-18)
+        SARG A 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 2 A_Recoil(-18)
+        SARG B 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_FaceTarget
+        SARG C 2 A_Recoil(-18)
+        SARG C 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG D 2 A_Recoil(-18)
+        SARG D 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_FaceTarget
+        SARG A 8
+        goto See
+      
+      ChargeBite:
+        SARG E 0 A_PlaySound("demon/melee", CHAN_WEAPON)
+        SARG E 2 A_Recoil(-18)
+        SARG F 2 A_Recoil(-18)
+        SARG G 18 A_CustomMeleeAttack(70)
+        goto See
+    }
+}
+#endif

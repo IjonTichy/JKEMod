@@ -2,7 +2,7 @@ actor JKESuperShotgunGuy: SuperShotgunGuy replaces SuperShotgunGuy
 {
     dropitem "JKEClass3Drop2"
 
-    AttackSound "jkemod/monsters/ssg/"
+    AttackSound "jkemod/monsters/ssg"
 #ifdef HARDER_MONSTERS
     Health 100
     PainChance 96
