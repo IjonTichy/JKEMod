@@ -87,7 +87,7 @@ class DefineProc(lineproc.LineProc):
         match = self.conRE.search(line)
         
         if not match:
-            return
+            return line
 
         matches = list(self.conRE.finditer(line) )
         ret = self.conRE.split(line)[::1 + self.conRE.groups]

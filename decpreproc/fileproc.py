@@ -2,7 +2,6 @@
 
 __all__ = ("FileProc", "processFile")
 
-import sys
 from . import lineproc
 
 

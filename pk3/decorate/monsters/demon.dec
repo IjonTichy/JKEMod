@@ -32,6 +32,110 @@ actor JKEDemon: Demon replaces Demon
         goto Charge
      
       Charge:
+        SARG A 0 A_Recoil(-15)
+        SARG AA 1 A_SpawnItemEx("DemonTrail1")
+        SARG A 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_Recoil(-15)
+        SARG BB 1 A_SpawnItemEx("DemonTrail2")
+        SARG B 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_FaceTarget
+        SARG C 0 A_Recoil(-15)
+        SARG CC 1 A_SpawnItemEx("DemonTrail3")
+        SARG C 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG D 0 A_Recoil(-15)
+        SARG DD 1 A_SpawnItemEx("DemonTrail4")
+        SARG D 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG D 0 A_JumpIfCloser(256, "ChargeClose")
+        SARG D 0 A_JumpIf(ACS_ExecuteWithResult(583, momx, momy, momz) < 8, "ChargeEnd")
+        loop
+
+      ChargeClose:
+        SARG A 0 A_Recoil(-15)
+        SARG AA 1 A_SpawnItemEx("DemonTrail1")
+        SARG A 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_Recoil(-15)
+        SARG BB 1 A_SpawnItemEx("DemonTrail2")
+        SARG B 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG B 0 A_FaceTarget
+        SARG C 0 A_Recoil(-15)
+        SARG CC 1 A_SpawnItemEx("DemonTrail3")
+        SARG C 0 A_JumpIfCloser(96, "ChargeBite")
+        SARG D 0 A_Recoil(-15)
+        SARG DD 1 A_SpawnItemEx("DemonTrail4")
+        SARG D 0 A_JumpIfCloser(96, "ChargeBite")
+        goto ChargeEnd
+        
+      ChargeEnd:
+        SARG D 2
+        SARG C 4
+        SARG B 12
+        goto See
+
+      ChargeBite:
+        SARG E 0 A_PlaySound("demon/melee", CHAN_WEAPON)
+        SARG E 2 A_Recoil(-15)
+        SARG F 2 A_Recoil(-15)
+        SARG G 18 A_CustomMeleeAttack(70)
+        goto See
+    }
+}
+
+actor DemonTrail1
+{
+    +NOINTERACTION
+    +CLIENTSIDEONLY
+
+    States
+    {
+      Spawn:
+        SARG A 1 A_FadeOut(0.1)
+        loop
+    }
+}
+
+actor DemonTrail2: DemonTrail1
+{
+    States
+    {
+      Spawn:
+        SARG B 1 A_FadeOut(0.1)
+        loop
+    }
+}
+
+actor DemonTrail3: DemonTrail1
+{
+    States
+    {
+      Spawn:
+        SARG C 1 A_FadeOut(0.1)
+        loop
+    }
+}
+
+actor DemonTrail4: DemonTrail1
+{
+    States
+    {
+      Spawn:
+        SARG D 1 A_FadeOut(0.1)
+        loop
+    }
+}
+
+actor JKESpectre: JKEDemon replaces Spectre
+{
+    RenderStyle Fuzzy
+
+    States
+    {
+      Missile:
+        SARG A 0 A_JumpIfCloser(256, "See")
+        SARG A 12 A_FaceTarget
+        SARG A 0 A_FaceTarget
+        goto Charge
+     
+      Charge:
         SARG A 2 A_Recoil(-15)
         SARG A 0 A_JumpIfCloser(96, "ChargeBite")
         SARG B 2 A_Recoil(-15)
