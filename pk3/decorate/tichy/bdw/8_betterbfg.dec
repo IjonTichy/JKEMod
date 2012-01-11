@@ -107,16 +107,6 @@ actor " Power B-BFG9000 ": " B-BFG9000 "   // oh dear god
     Obituary "$BDW_MP_BFG9000SPLASH_POWERED"
     States
     {
-      Ready:
-        BBFG A 1 A_WeaponReady
-        loop
-      Deselect:
-        BBFG A 1 A_Lower
-        loop
-      Select:
-        BBFG A 1 A_Raise
-        loop
-
       Fire:
         BBFG B 30 bright        A_PlaySound("betterdoomweapons/bfgfire", CHAN_WEAPON)
         BBFG B 0                A_GunFlash
@@ -164,10 +154,6 @@ actor " Power B-BFG9000 ": " B-BFG9000 "   // oh dear god
         BBFF C  4 bright A_Light1
         BBFF DE 6 bright
         Goto LightDone
-
-      Spawn:
-        BBFG Z -1
-        stop
     }
 }
 

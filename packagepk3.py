@@ -48,7 +48,7 @@ ACS_OBJ_EXTS    = ("o",)
 
 ACC_ERROR   = "**** ERROR ****"
 
-DEFAULT_ARGS = ["-warp 01"]
+DEFAULT_ARGS = ["-iwad doom2", "-warp 01"]
 
 def warn(reason):
     print("warning:", reason, file=sys.stderr)
