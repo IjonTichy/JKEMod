@@ -16,6 +16,7 @@ actor " Hellfist ": Weapon
     Weapon.SisterWeapon " Power Hellfist "
 
     +INVENTORY.UNDROPPABLE
+    +NOALERT
 
     Inventory.PickupMessage "$JKE_PK_HELLFIST"
     Obituary "$JKE_MP_HELLFIST_MELEE"
@@ -38,6 +39,7 @@ actor " Hellfist ": Weapon
 
       Fire:
         BHND DE 3 bright
+        BHND F 0 bright A_AlertMonsters
         BHND F 6 bright A_FireCustomMissile("HellfistBall", 0, 1, 4, 0)
         BHND ED 3 bright
         goto Ready
