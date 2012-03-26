@@ -107,7 +107,7 @@ actor JPlasmaShot
     States
     {
       Spawn:
-        D3PP ABCDEFGHIJKLMNOPQRSTU 1 bright
+        D3PP ABCDEFGHIJKLMNPQRSTU 1 bright
         loop
       Death:
         PLSE ABCDE 4 bright
@@ -126,9 +126,6 @@ actor PowerJPlasmaShot: JPlasmaShot
 
     States
     {
-      Spawn:
-        D3PP ABCDEFGHIJKLMNOPQRSTU 1 bright
-        loop
       Death:
         PLSE B 0 A_Explode(24, 96, 0)
         PLSE BCDE 4 bright

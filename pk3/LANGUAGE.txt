@@ -232,6 +232,7 @@ JKE_MP_FIRESSG1                     = "%k melted %o's face.";
 JKE_MP_FIRESSG2                     = "%k scorched the skin off of %o.";
 JKE_MP_FLAREGUN                     = "%k lit up %o.";
 JKE_MP_FMODMINIGUN                  = "%k poked a million holes into %o.";
+JKE_MP_FMODMINIGUN_POWER            = "%k barbequed %o.";
 JKE_MP_FRAGMENTLAUNCHER1            = "%k tore and blew up %o.";
 JKE_MP_FRAGMENTLAUNCHER2            = "%k gave %o some shrapnel for %p troubles.";
 JKE_MP_FRAGMENTLAUNCHER1_POWER      = "%o found himself in %k's wall of flak.";
